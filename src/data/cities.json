@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "countryCode": "JP",
+    "flagEmoji": "🇯🇵",
+    "continent": "Asia",
+    "coordinates": { "lat": 35.6762, "lng": 139.6503 },
+    "timezone": "Asia/Tokyo",
+    "population": 13960000,
+    "tags": ["neon", "tech", "street-food", "transit"],
+    "videos": [
+      {
+        "youtubeId": "OeSHNuupmK8",
+        "label": "4K Tokyo Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "3FUIYAwQ7Xs",
+        "label": "4K Tokyo Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": false
+      }
+    ],
+    "culture": {
+      "greeting": "こんにちは (Konnichiwa)",
+      "currency": "Japanese Yen (¥)",
+      "bestSeason": "Spring (March–May) for cherry blossoms",
+      "mustEat": ["Ramen", "Sushi", "Takoyaki", "Matcha anything"],
+      "localTip": "Carry cash — many small shops are cash-only. Bow slightly when greeting.",
+      "funFact": "Tokyo has more Michelin-starred restaurants than any other city on Earth.",
+      "culturalDos": ["Remove shoes indoors", "Queue in order", "Speak quietly in transit"],
+      "culturalDonts": ["Tip at restaurants", "Eat while walking", "Talk on phone on trains"]
+    }
+  },
+  {
+    "slug": "istanbul",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "flagEmoji": "🇹🇷",
+    "continent": "Europe",
+    "coordinates": { "lat": 41.0082, "lng": 28.9784 },
+    "timezone": "Europe/Istanbul",
+    "population": 15460000,
+    "tags": ["historic", "coastal", "bazaar", "bridges"],
+    "videos": [
+      {
+        "youtubeId": "09yi1wNAntw",
+        "label": "4K Istanbul Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "f64-pIZdqNU",
+        "label": "4K Istanbul Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": false
+      }
+    ],
+    "culture": {
+      "greeting": "Merhaba",
+      "currency": "Turkish Lira (₺)",
+      "bestSeason": "Spring (April–May) or Autumn (September–October)",
+      "mustEat": ["Simit", "Lahmacun", "Baklava", "Çay (tea)"],
+      "localTip": "Bargaining is expected in the Grand Bazaar. Always accept the tea offered by shopkeepers.",
+      "funFact": "Istanbul is the only city in the world that straddles two continents — Europe and Asia.",
+      "culturalDos": ["Dress modestly near mosques", "Remove shoes at mosque entrance", "Accept tea graciously"],
+      "culturalDonts": ["Rush a meal", "Photograph people without asking", "Ignore calls to prayer"]
+    }
+  },
+  {
+    "slug": "new-york",
+    "name": "New York",
+    "country": "USA",
+    "countryCode": "US",
+    "flagEmoji": "🇺🇸",
+    "continent": "Americas",
+    "coordinates": { "lat": 40.7128, "lng": -74.006 },
+    "timezone": "America/New_York",
+    "population": 8336817,
+    "tags": ["skyscrapers", "nightlife", "melting-pot", "transit"],
+    "videos": [
+      {
+        "youtubeId": "cC4bENl16sE",
+        "label": "4K NYC Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "cRBidaJ0RyQ",
+        "label": "4K NYC Little Italy Walk",
+        "timeOfDay": "day",
+        "isFeatured": false
+      }
+    ],
+    "culture": {
+      "greeting": "Hey / What's up",
+      "currency": "US Dollar ($)",
+      "bestSeason": "Fall (September–November) for foliage + mild weather",
+      "mustEat": ["NY-style pizza slice", "Bagel with lox", "Cheesecake", "Dirty water dog"],
+      "localTip": "Tip 18–20% at restaurants. Walk fast on sidewalks — stay right, pass left.",
+      "funFact": "New York City has 468 subway stations — more than any other city in the world.",
+      "culturalDos": ["Hail cabs by raising your arm", "Hold doors for people behind you"],
+      "culturalDonts": ["Stand still in the middle of the sidewalk", "Take photos of strangers without asking"]
+    }
+  },
+  {
+    "slug": "paris",
+    "name": "Paris",
+    "country": "France",
+    "countryCode": "FR",
+    "flagEmoji": "🇫🇷",
+    "continent": "Europe",
+    "coordinates": { "lat": 48.8566, "lng": 2.3522 },
+    "timezone": "Europe/Paris",
+    "population": 2161000,
+    "tags": ["romantic", "art", "fashion", "food"],
+    "videos": [
+      {
+        "youtubeId": "hLa9PRc9DFk",
+        "label": "4K Paris Montmartre Evening Walk",
+        "timeOfDay": "golden-hour",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "cxDvgdKErqY",
+        "label": "4K Paris Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": false
+      }
+    ],
+    "culture": {
+      "greeting": "Bonjour",
+      "currency": "Euro (€)",
+      "bestSeason": "Spring (April–June) or early Fall (September)",
+      "mustEat": ["Croissant", "Steak-frites", "Crêpes", "Crème brûlée"],
+      "localTip": "Always greet shopkeepers with 'Bonjour' when entering. The French value politeness above all.",
+      "funFact": "The Eiffel Tower grows about 15cm taller in summer due to thermal expansion of the iron.",
+      "culturalDos": ["Greet with 'Bonjour'", "Dress stylishly", "Linger over meals"],
+      "culturalDonts": ["Ask for ketchup on everything", "Speak loudly in restaurants", "Skip the bread course"]
+    }
+  },
+  {
+    "slug": "mumbai",
+    "name": "Mumbai",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 19.076, "lng": 72.8777 },
+    "timezone": "Asia/Kolkata",
+    "population": 20667656,
+    "tags": ["bollywood", "coastal", "street-food", "chaos"],
+    "videos": [
+      {
+        "youtubeId": "7W2nGtkmKdQ",
+        "label": "4K Mumbai Street Walk",
+        "timeOfDay": "day",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "Namaste",
+      "currency": "Indian Rupee (₹)",
+      "bestSeason": "Winter (November–February)",
+      "mustEat": ["Vada pav", "Pav bhaji", "Dabeli", "Chai from a tapri"],
+      "localTip": "Bargain at markets. The local train is the city's lifeblood — rush hour is not for the faint-hearted.",
+      "funFact": "Mumbai's Dharavi is one of the most productive slums in the world, generating over $1 billion annually.",
+      "culturalDos": ["Remove shoes at temples", "Use your right hand for giving/receiving"],
+      "culturalDonts": ["Waste food", "Photograph poverty without sensitivity", "Disrespect religious spaces"]
+    }
+  },
+  {
+    "slug": "rio-de-janeiro",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "countryCode": "BR",
+    "flagEmoji": "🇧🇷",
+    "continent": "Americas",
+    "coordinates": { "lat": -22.9068, "lng": -43.1729 },
+    "timezone": "America/Sao_Paulo",
+    "population": 6748000,
+    "tags": ["beaches", "carnival", "music", "nature"],
+    "videos": [
+      {
+        "youtubeId": "TfvheIZa5yg",
+        "label": "4K Rio Ipanema Beach Walk",
+        "timeOfDay": "golden-hour",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "Olá / Oi",
+      "currency": "Brazilian Real (R$)",
+      "bestSeason": "May–September (dry season) or Feb for Carnival",
+      "mustEat": ["Açaí bowl", "Churrasco", "Pão de queijo", "Caipirinhas"],
+      "localTip": "Cariocas (Rio residents) are warm and physical — hugs and cheek-kisses are normal greetings.",
+      "funFact": "Rio's Christ the Redeemer statue is struck by lightning an average of 6 times per year.",
+      "culturalDos": ["Embrace the beach culture", "Learn a few words of Portuguese", "Try the local cachaça"],
+      "culturalDonts": ["Wear expensive jewelry in public", "Skip sunscreen"]
+    }
+  },
+  {
+    "slug": "marrakech",
+    "name": "Marrakech",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "flagEmoji": "🇲🇦",
+    "continent": "Africa",
+    "coordinates": { "lat": 31.6295, "lng": -7.9811 },
+    "timezone": "Africa/Casablanca",
+    "population": 928850,
+    "tags": ["souks", "medina", "desert-gateway", "spices"],
+    "videos": [
+      {
+        "youtubeId": "OsnRSr7LxII",
+        "label": "4K Marrakech Medina Walk",
+        "timeOfDay": "golden-hour",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "As-salamu alaykum / Bonjour",
+      "currency": "Moroccan Dirham (MAD)",
+      "bestSeason": "Spring (March–May) or Autumn (September–November)",
+      "mustEat": ["Tagine", "Couscous", "Harira soup", "Msemen with honey"],
+      "localTip": "Bargaining in the souks is mandatory — start at 30% of asking price.",
+      "funFact": "The University of Al-Qarawiyyin in nearby Fez, founded 859 AD, is the world's oldest continuously operating university.",
+      "culturalDos": ["Dress modestly", "Accept mint tea invitations", "Greet in Arabic or French"],
+      "culturalDonts": ["Take photos without permission", "Enter a mosque if non-Muslim", "Eat in public during Ramadan"]
+    }
+  },
+  {
+    "slug": "sydney",
+    "name": "Sydney",
+    "country": "Australia",
+    "countryCode": "AU",
+    "flagEmoji": "🇦🇺",
+    "continent": "Oceania",
+    "coordinates": { "lat": -33.8688, "lng": 151.2093 },
+    "timezone": "Australia/Sydney",
+    "population": 5312000,
+    "tags": ["beaches", "harbour", "outdoors", "multicultural"],
+    "videos": [
+      {
+        "youtubeId": "vvMisvTuGYk",
+        "label": "4K Sydney Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "G'day / Hey",
+      "currency": "Australian Dollar (A$)",
+      "bestSeason": "Spring (September–November) or Autumn (March–May)",
+      "mustEat": ["Meat pie", "Tim Tams", "Pavlova", "Flat white coffee"],
+      "localTip": "Australians value informality — don't be too formal. Outdoor culture is huge; beaches are free and public.",
+      "funFact": "Sydney Opera House has over 1 million roof tiles and took 14 years to build, finishing in 1973.",
+      "culturalDos": ["Embrace outdoor activities", "Recycle and respect nature", "Be friendly and relaxed"],
+      "culturalDonts": ["Call it a 'shrimp on the barbie' (it's prawn)", "Underestimate distances", "Ignore sun safety"]
+    }
+  }
+]
