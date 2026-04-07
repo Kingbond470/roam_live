@@ -262,5 +262,282 @@
       "culturalDos": ["Embrace outdoor activities", "Recycle and respect nature", "Be friendly and relaxed"],
       "culturalDonts": ["Call it a 'shrimp on the barbie' (it's prawn)", "Underestimate distances", "Ignore sun safety"]
     }
+  },
+  {
+    "slug": "amsterdam",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "flagEmoji": "🇳🇱",
+    "continent": "Europe",
+    "coordinates": { "lat": 52.3676, "lng": 4.9041 },
+    "timezone": "Europe/Amsterdam",
+    "population": 921000,
+    "tags": ["canals", "cycling", "art", "nightlife"],
+    "videos": [
+      { "youtubeId": "q-LeONjSrPU", "label": "4K Amsterdam Night Walk", "timeOfDay": "night", "isFeatured": true },
+      { "youtubeId": "J3Be4gw4QXk", "label": "4K Amsterdam Evening Walk", "timeOfDay": "golden-hour", "isFeatured": false }
+    ],
+    "culture": {
+      "greeting": "Hallo / Goedendag",
+      "currency": "Euro (€)",
+      "bestSeason": "Spring (April–May) for tulips and mild weather",
+      "mustEat": ["Stroopwafel", "Bitterballen", "Raw herring", "Dutch cheese", "Poffertjes"],
+      "localTip": "Cycling is the dominant mode of transport — stay out of bike lanes. Almost everyone speaks English.",
+      "funFact": "Amsterdam has more bicycles than residents and over 1,500 bridges crossing its famous canals.",
+      "culturalDos": ["Rent a bike to explore like a local", "Pre-book museum tickets", "Respect the canal houses"],
+      "culturalDonts": ["Walk in bike lanes", "Photograph sex workers in the Red Light District", "Litter near canals"]
+    }
+  },
+  {
+    "slug": "barcelona",
+    "name": "Barcelona",
+    "country": "Spain",
+    "countryCode": "ES",
+    "flagEmoji": "🇪🇸",
+    "continent": "Europe",
+    "coordinates": { "lat": 41.3851, "lng": 2.1734 },
+    "timezone": "Europe/Madrid",
+    "population": 1620000,
+    "tags": ["beaches", "architecture", "food", "nightlife"],
+    "videos": [
+      { "youtubeId": "7zc386W0fcY", "label": "4K Barcelona Walk", "timeOfDay": "day", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "Hola / Bon dia (Catalan)",
+      "currency": "Euro (€)",
+      "bestSeason": "Spring (May–June) or Fall (September–October)",
+      "mustEat": ["Pa amb tomàquet", "Jamón ibérico", "Patatas bravas", "Seafood paella", "Crema catalana"],
+      "localTip": "Locals dine late — restaurants fill up after 9pm. Pickpockets are common on Las Ramblas.",
+      "funFact": "Gaudí's Sagrada Família has been under construction since 1882 and is still not finished.",
+      "culturalDos": ["Learn a few words of Catalan", "Shop at La Boqueria market", "Take a siesta"],
+      "culturalDonts": ["Wear swimwear outside the beach", "Be loud after midnight in residential areas", "Rush tapas"]
+    }
+  },
+  {
+    "slug": "seoul",
+    "name": "Seoul",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "flagEmoji": "🇰🇷",
+    "continent": "Asia",
+    "coordinates": { "lat": 37.5665, "lng": 126.978 },
+    "timezone": "Asia/Seoul",
+    "population": 9776000,
+    "tags": ["neon", "tech", "street-food", "k-culture"],
+    "videos": [
+      { "youtubeId": "EAbmlAIcuqY", "label": "4K Seoul Night Walk", "timeOfDay": "night", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "안녕하세요 (Annyeonghaseyo)",
+      "currency": "South Korean Won (₩)",
+      "bestSeason": "Spring (April–May) for cherry blossoms or Fall (October) for foliage",
+      "mustEat": ["Bibimbap", "Korean BBQ", "Tteokbokki", "Kimchi jjigae", "Bingsu"],
+      "localTip": "T-money cards work on all transit. Elders are given seats on public transport — always.",
+      "funFact": "Seoul has the world's fastest average internet speed and more Michelin-starred restaurants per capita than Paris.",
+      "culturalDos": ["Use two hands when giving/receiving items", "Remove shoes when entering homes", "Try everything"],
+      "culturalDonts": ["Write names in red ink (associated with death)", "Stick chopsticks upright in rice", "Refuse food from elders"]
+    }
+  },
+  {
+    "slug": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "flagEmoji": "🇸🇬",
+    "continent": "Asia",
+    "coordinates": { "lat": 1.3521, "lng": 103.8198 },
+    "timezone": "Asia/Singapore",
+    "population": 5920000,
+    "tags": ["tech", "food", "multicultural", "modern"],
+    "videos": [
+      { "youtubeId": "aUJl46bEWYo", "label": "4K Singapore Walk", "timeOfDay": "night", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "Hello / Halo (Singlish)",
+      "currency": "Singapore Dollar (S$)",
+      "bestSeason": "February–April (drier and slightly cooler)",
+      "mustEat": ["Chicken rice", "Laksa", "Chili crab", "Kaya toast", "Char kway teow"],
+      "localTip": "Fines are strictly enforced — no chewing gum, no eating on the MRT, no littering. Singlish is an art form.",
+      "funFact": "Singapore is the world's only island city-state and one of only three remaining city-states globally.",
+      "culturalDos": ["Use hawker centres for cheap amazing food", "Queue properly — it's sacred", "Respect all four official languages"],
+      "culturalDonts": ["Jaywalk", "Smoke in non-designated areas", "Disrespect food vendors"]
+    }
+  },
+  {
+    "slug": "dubai",
+    "name": "Dubai",
+    "country": "UAE",
+    "countryCode": "AE",
+    "flagEmoji": "🇦🇪",
+    "continent": "Asia",
+    "coordinates": { "lat": 25.2048, "lng": 55.2708 },
+    "timezone": "Asia/Dubai",
+    "population": 3600000,
+    "tags": ["modern", "luxury", "desert-gateway", "shopping"],
+    "videos": [
+      { "youtubeId": "JXe-1dIlCw4", "label": "4K Dubai Night Walk", "timeOfDay": "night", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "As-salamu alaykum / Hello",
+      "currency": "UAE Dirham (AED)",
+      "bestSeason": "November–March (cooler, comfortable)",
+      "mustEat": ["Shawarma", "Machboos", "Luqaimat", "Camel milk ice cream", "Al Harees"],
+      "localTip": "Dress modestly in public areas and malls. Public displays of affection can result in fines.",
+      "funFact": "The Burj Khalifa is so tall that you can watch the sunset from the base and then take the elevator to see it set again.",
+      "culturalDos": ["Dress modestly in public", "Accept Arabic coffee (qahwa) when offered", "Respect prayer times"],
+      "culturalDonts": ["Eat or drink in public during Ramadan", "Photograph people without permission", "Use left hand for eating"]
+    }
+  },
+  {
+    "slug": "london",
+    "name": "London",
+    "country": "UK",
+    "countryCode": "GB",
+    "flagEmoji": "🇬🇧",
+    "continent": "Europe",
+    "coordinates": { "lat": 51.5074, "lng": -0.1278 },
+    "timezone": "Europe/London",
+    "population": 9000000,
+    "tags": ["historic", "multicultural", "art", "transit"],
+    "videos": [
+      { "youtubeId": "CGslieDL-04", "label": "4K London Walk", "timeOfDay": "day", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "Hello / How do you do",
+      "currency": "British Pound (£)",
+      "bestSeason": "Summer (June–August) for warmth and long days",
+      "mustEat": ["Fish and chips", "Full English breakfast", "Chicken tikka masala", "Eton mess", "Cornish pasty"],
+      "localTip": "Stand on the right of escalators. Queuing is a national religion — never skip it.",
+      "funFact": "London's underground (the Tube) is the world's oldest metro system, opening in 1863.",
+      "culturalDos": ["Queue patiently", "Say 'sorry' liberally", "Tip 10–15% at restaurants"],
+      "culturalDonts": ["Talk loudly on the Tube", "Make eye contact with strangers on public transit", "Call it 'England' (it's Britain)"]
+    }
+  },
+  {
+    "slug": "kyoto",
+    "name": "Kyoto",
+    "country": "Japan",
+    "countryCode": "JP",
+    "flagEmoji": "🇯🇵",
+    "continent": "Asia",
+    "coordinates": { "lat": 35.0116, "lng": 135.7681 },
+    "timezone": "Asia/Tokyo",
+    "population": 1468000,
+    "tags": ["historic", "temples", "zen", "cherry-blossoms"],
+    "videos": [
+      { "youtubeId": "zuQ2KRZdCcM", "label": "4K Kyoto Higashiyama Walk", "timeOfDay": "day", "isFeatured": true },
+      { "youtubeId": "qrWsYMQLQXo", "label": "4K Kyoto Night Cherry Blossoms", "timeOfDay": "night", "isFeatured": false }
+    ],
+    "culture": {
+      "greeting": "こんにちは (Konnichiwa)",
+      "currency": "Japanese Yen (¥)",
+      "bestSeason": "Spring (late March–April) for sakura or Autumn (November) for maple foliage",
+      "mustEat": ["Kaiseki ryori", "Yudofu (tofu hot pot)", "Matcha everything", "Obanzai", "Yatsuhashi sweets"],
+      "localTip": "Geishas (Geiko) in Gion are working — not tourist photo ops. Respect their space.",
+      "funFact": "Kyoto has over 1,600 Buddhist temples and 400 Shinto shrines — more per square kilometer than any city on Earth.",
+      "culturalDos": ["Walk quietly through temple grounds", "Book popular shrines in advance", "Wear comfortable walking shoes"],
+      "culturalDonts": ["Touch the geiko or maiko", "Enter restricted shrine areas", "Talk on the phone at temples"]
+    }
+  },
+  {
+    "slug": "cape-town",
+    "name": "Cape Town",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "flagEmoji": "🇿🇦",
+    "continent": "Africa",
+    "coordinates": { "lat": -33.9249, "lng": 18.4241 },
+    "timezone": "Africa/Johannesburg",
+    "population": 4618000,
+    "tags": ["beaches", "nature", "mountains", "wine"],
+    "videos": [
+      { "youtubeId": "Kyqw3DpfJy8", "label": "4K Cape Town Walk", "timeOfDay": "day", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "Hello / Sawubona / Hallo",
+      "currency": "South African Rand (R)",
+      "bestSeason": "November–March (summer, warm and sunny)",
+      "mustEat": ["Braai (BBQ)", "Bobotie", "Bunny chow", "Malva pudding", "Biltong"],
+      "localTip": "Table Mountain is best visited early morning to avoid cloud cover. Always lock car doors.",
+      "funFact": "Cape Town is home to two oceans — the Atlantic and the Indian — meeting at Cape Point.",
+      "culturalDos": ["Learn a few Afrikaans words", "Embrace the braai culture", "Take the cable car up Table Mountain"],
+      "culturalDonts": ["Underestimate safety in certain areas", "Ignore load-shedding schedules", "Skip Robben Island"]
+    }
+  },
+  {
+    "slug": "bangkok",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "flagEmoji": "🇹🇭",
+    "continent": "Asia",
+    "coordinates": { "lat": 13.7563, "lng": 100.5018 },
+    "timezone": "Asia/Bangkok",
+    "population": 10723000,
+    "tags": ["temples", "street-food", "chaos", "nightlife"],
+    "videos": [
+      { "youtubeId": "Wy7JfB4HEtI", "label": "4K Bangkok Night Walk", "timeOfDay": "night", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "สวัสดี (Sawasdee)",
+      "currency": "Thai Baht (฿)",
+      "bestSeason": "November–February (cool and dry)",
+      "mustEat": ["Pad thai", "Tom yum goong", "Green curry", "Mango sticky rice", "Som tam"],
+      "localTip": "Never touch someone's head or point feet at people or sacred objects. The monarchy is deeply revered.",
+      "funFact": "Bangkok's full ceremonial name is 168 characters long — the world's longest city name.",
+      "culturalDos": ["Wai (bow with hands pressed together) as a greeting", "Remove shoes before entering temples", "Dress modestly at wats"],
+      "culturalDonts": ["Disrespect the royal family", "Touch a monk as a woman", "Raise your voice in public"]
+    }
+  },
+  {
+    "slug": "mexico-city",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "flagEmoji": "🇲🇽",
+    "continent": "Americas",
+    "coordinates": { "lat": 19.4326, "lng": -99.1332 },
+    "timezone": "America/Mexico_City",
+    "population": 9200000,
+    "tags": ["historic", "food", "art", "vibrant"],
+    "videos": [
+      { "youtubeId": "Z1SbLIKCrAo", "label": "4K Mexico City Walk", "timeOfDay": "day", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "Hola / Buenos días",
+      "currency": "Mexican Peso (MXN)",
+      "bestSeason": "March–May (dry season, warm before the rains)",
+      "mustEat": ["Tacos al pastor", "Tamales", "Chiles en nogada", "Elote", "Churros with chocolate"],
+      "localTip": "Mexico City is at 2,240m altitude — give yourself a day to adjust. Uber is safer than street taxis.",
+      "funFact": "Mexico City is sinking at about 50cm per year because it was built on a former lake bed.",
+      "culturalDos": ["Greet everyone individually in a group", "Try street food from busy stalls (safer than quiet ones)", "Explore the muralists"],
+      "culturalDonts": ["Dismiss the city as dangerous", "Skip the arqueological sites", "Ignore altitude sickness signs"]
+    }
+  },
+  {
+    "slug": "new-orleans",
+    "name": "New Orleans",
+    "country": "USA",
+    "countryCode": "US",
+    "flagEmoji": "🇺🇸",
+    "continent": "Americas",
+    "coordinates": { "lat": 29.9511, "lng": -90.0715 },
+    "timezone": "America/Chicago",
+    "population": 383997,
+    "tags": ["music", "food", "festivals", "historic"],
+    "videos": [
+      { "youtubeId": "fctunKraRJU", "label": "4K New Orleans French Quarter Walk", "timeOfDay": "night", "isFeatured": true }
+    ],
+    "culture": {
+      "greeting": "Hey! / How ya doin'?",
+      "currency": "US Dollar ($)",
+      "bestSeason": "Spring (March–May) — Mardi Gras season is February/March",
+      "mustEat": ["Beignets", "Gumbo", "Po'boy sandwich", "Jambalaya", "Crawfish étouffée"],
+      "localTip": "Tip your street musicians — they are the heartbeat of the city. Second lines happen spontaneously.",
+      "funFact": "New Orleans is below sea level — the city is protected by an 800-km network of levees and floodwalls.",
+      "culturalDos": ["Let the jazz wash over you", "Walk the French Quarter at night safely on main streets", "Eat everything"],
+      "culturalDonts": ["Call it 'New Or-LEENS' (locals say 'New OR-lins')", "Ignore the heat and humidity", "Miss a second line parade"]
+    }
   }
 ]

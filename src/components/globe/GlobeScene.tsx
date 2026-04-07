@@ -7,6 +7,7 @@ import { useAppStore } from "@/store/appStore";
 
 interface Props {
   cities: City[];
+  activeTag?: string | null;
 }
 
 type GlobePoint = {
@@ -18,7 +19,7 @@ type GlobePoint = {
   label: string;
 };
 
-export function GlobeScene({ cities }: Props) {
+export function GlobeScene({ cities, activeTag }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeInstance | null>(null);
   // BUG-01 FIX: use a ref instead of state so pointColor callback always reads latest value
@@ -35,14 +36,19 @@ export function GlobeScene({ cities }: Props) {
 
       const Globe = GlobeModule.default;
 
-      const points: GlobePoint[] = cities.map((city) => ({
-        lat: city.coordinates.lat,
-        lng: city.coordinates.lng,
-        size: 0.45,
-        color: "#f59e0b",
-        citySlug: city.slug,
-        label: city.name,
-      }));
+      // Sprint 2B: dim non-matching pins when a tag filter is active
+      const tagFilter = activeTag && activeTag !== "__favorites__" ? activeTag : null;
+      const points: GlobePoint[] = cities.map((city) => {
+        const matches = !tagFilter || city.tags.includes(tagFilter);
+        return {
+          lat: city.coordinates.lat,
+          lng: city.coordinates.lng,
+          size: matches ? 0.45 : 0.25,
+          color: matches ? "#f59e0b" : "#444444",
+          citySlug: city.slug,
+          label: city.name,
+        };
+      });
 
       const globe = new Globe(containerRef.current)
         .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")

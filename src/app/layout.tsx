@@ -14,13 +14,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://roam.live"),
   title: "Roam.Live — A Window to Every Place on Earth",
   description:
-    "Explore any city, town, or village on Earth — live or archival — with AI-powered cultural intelligence. No passport required.",
+    "Explore 20 cities across 5 continents with immersive 4K virtual walks and AI-powered cultural intelligence. No passport required.",
+  keywords: ["virtual travel", "city walk", "4K walking tour", "travel from home", "world cities"],
   openGraph: {
-    title: "Roam.Live",
-    description: "A window to every place on Earth.",
+    title: "Roam.Live — A Window to Every Place on Earth",
+    description: "Immersive 4K virtual walks across 20 cities. No passport required.",
     type: "website",
+    url: "https://roam.live",
+    siteName: "Roam.Live",
+    images: [{ url: "/api/og", width: 1200, height: 630, alt: "Roam.Live — Virtual City Walks" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@roamlive",
+    title: "Roam.Live — A Window to Every Place on Earth",
+    description: "Immersive 4K virtual walks across 20 cities. No passport required.",
+    images: ["/api/og"],
+  },
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 

@@ -27,8 +27,13 @@ export function CityVideoPlayer({ videoId, citySlug, onReady }: Props) {
   return (
     <div className="fixed inset-0 w-full h-full bg-black" style={{ zIndex: 30 }}>
       <div id={containerId} className="absolute inset-0 w-full h-full" />
+
+      {/* Transparent overlay — blocks YouTube's hover UI (title bar, watermark, progress bar)
+          from activating inside the iframe while our HUD (z-index 40) sits above this */}
+      <div className="absolute inset-0" style={{ zIndex: 1, pointerEvents: "auto" }} />
+
       {hasError && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#050508] text-white/60 gap-3">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#050508] text-white/60 gap-3" style={{ zIndex: 2 }}>
           <span className="text-4xl">🎬</span>
           <p className="text-sm tracking-wide">Video unavailable for this city</p>
         </div>

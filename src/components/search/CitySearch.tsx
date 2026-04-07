@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, MapPin } from "lucide-react";
+import { Search, X, MapPin, Heart } from "lucide-react";
 import Fuse from "fuse.js";
 import type { City } from "@/types/city";
 import { useAppStore } from "@/store/appStore";
@@ -25,7 +25,7 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<City[]>(cities.slice(0, 6));
   const inputRef = useRef<HTMLInputElement>(null);
-  const { selectCity } = useAppStore();
+  const { selectCity, favoriteSlugs } = useAppStore();
 
   const fuse = useRef(
     new Fuse(cities, {
@@ -118,6 +118,9 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
                         <p className="text-white/40 text-sm">{city.country}</p>
                       </div>
                       <div className="flex items-center gap-2">
+                        {favoriteSlugs.includes(city.slug) && (
+                          <Heart className="w-3.5 h-3.5 text-rose-400" fill="#f43f5e" />
+                        )}
                         <span
                           className={`text-xs px-2 py-0.5 rounded-full ${CONTINENT_COLORS[city.continent] ?? "bg-white/10 text-white/60"}`}
                         >

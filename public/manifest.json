@@ -1,0 +1,18 @@
+{
+  "name": "Roam.Live",
+  "short_name": "Roam",
+  "description": "Immersive 4K virtual walks across 20 cities. No passport required.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#050508",
+  "orientation": "landscape-primary",
+  "icons": [
+    {
+      "src": "/globe.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
