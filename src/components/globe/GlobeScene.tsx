@@ -8,6 +8,7 @@ import { useAppStore } from "@/store/appStore";
 interface Props {
   cities: City[];
   activeTag?: string | null;
+  cityOfTheDay?: City | null;
 }
 
 type GlobePoint = {
@@ -19,7 +20,7 @@ type GlobePoint = {
   label: string;
 };
 
-export function GlobeScene({ cities, activeTag }: Props) {
+export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeInstance | null>(null);
   // BUG-01 FIX: use a ref instead of state so pointColor callback always reads latest value
@@ -40,13 +41,14 @@ export function GlobeScene({ cities, activeTag }: Props) {
       const tagFilter = activeTag && activeTag !== "__favorites__" ? activeTag : null;
       const points: GlobePoint[] = cities.map((city) => {
         const matches = !tagFilter || city.tags.includes(tagFilter);
+        const isToday = city.slug === cityOfTheDay?.slug;
         return {
           lat: city.coordinates.lat,
           lng: city.coordinates.lng,
-          size: matches ? 0.45 : 0.25,
-          color: matches ? "#f59e0b" : "#444444",
+          size: isToday ? 0.6 : matches ? 0.45 : 0.25,
+          color: isToday ? "#f43f5e" : matches ? "#f59e0b" : "#444444",
           citySlug: city.slug,
-          label: city.name,
+          label: isToday ? `${city.name} ★ Today's Walk` : city.name,
         };
       });
 

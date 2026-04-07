@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Globe, Shuffle, Heart } from "lucide-react";
+import { Search, Globe, Shuffle, Heart, Play, Pause } from "lucide-react";
 import type { City } from "@/types/city";
 import { useAppStore } from "@/store/appStore";
 import { GlobeLoader } from "@/components/globe/GlobeLoader";
@@ -13,7 +13,9 @@ import { CultureCard } from "@/components/cards/CultureCard";
 import { SplitScreen } from "@/components/wow/SplitScreen";
 import { CitySearch } from "@/components/search/CitySearch";
 import { getFeaturedVideo } from "@/lib/utils";
+import { getCityOfTheDay } from "@/lib/cityOfTheDay";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { useSwipeGestures } from "@/hooks/useSwipeGestures";
 
 const GlobeScene = dynamic(
   () => import("@/components/globe/GlobeScene").then((m) => ({ default: m.GlobeScene })),
@@ -36,6 +38,7 @@ export function HomeClient({ cities, initialCity }: Props) {
     activeVideoId,
     activeTag,
     favoriteSlugs,
+    discoverMode,
     openCard,
     closeCard,
     openCompare,
@@ -46,10 +49,19 @@ export function HomeClient({ cities, initialCity }: Props) {
     setWatching,
     selectRandomCity,
     setTagFilter,
+    toggleDiscoverMode,
   } = useAppStore();
 
   // Sprint 1A: keyboard shortcuts
   useKeyboardShortcuts(cities);
+
+  // Mobile swipe gestures (watching phase only, not while compare/card is open)
+  const { navigateCity, returnToGlobe: returnToGlobeGesture } = useAppStore();
+  useSwipeGestures({
+    onSwipeDown:  () => { if (phase === "watching" && !compareOpen && !cardOpen) returnToGlobeGesture(); },
+    onSwipeLeft:  () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(cities, "next"); },
+    onSwipeRight: () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(cities, "prev"); },
+  });
 
   // Sprint 3A: deep-link — auto-select city from ?city= query param on first load
   const { selectCity } = useAppStore();
@@ -66,6 +78,16 @@ export function HomeClient({ cities, initialCity }: Props) {
     }
   }, [phase, completeReturn]);
 
+  // Discover mode: auto-cycle every 60s when watching (skip if compare/card is open)
+  useEffect(() => {
+    if (!discoverMode || phase !== "watching") return;
+    const t = setInterval(() => {
+      const { compareOpen: co, cardOpen: ca } = useAppStore.getState();
+      if (!co && !ca) navigateCity(cities, "next");
+    }, 60_000);
+    return () => clearInterval(t);
+  }, [discoverMode, phase, cities, navigateCity]);
+
   const isWatching = phase === "watching" || phase === "video-fadein";
   const showVideo = phase === "video-fadein" || phase === "watching" || phase === "video-fadeout";
   const showGlobe = phase === "idle" || phase === "zooming" || phase === "globe-return";
@@ -78,6 +100,9 @@ export function HomeClient({ cities, initialCity }: Props) {
     }
     return getFeaturedVideo(selectedCity);
   }, [selectedCity, activeVideoId]);
+
+  // City of the day
+  const cityOfTheDay = useMemo(() => getCityOfTheDay(cities), [cities]);
 
   // Sprint 2B: deduplicate all tags across cities for filter bar
   const allTags = useMemo(
@@ -108,7 +133,7 @@ export function HomeClient({ cities, initialCity }: Props) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <GlobeScene cities={globeCities} activeTag={activeTag} />
+            <GlobeScene cities={globeCities} activeTag={activeTag} cityOfTheDay={cityOfTheDay} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -222,14 +247,26 @@ export function HomeClient({ cities, initialCity }: Props) {
                 Roam<span className="text-amber-400">.Live</span>
               </span>
             </div>
-            <button
-              onClick={openSearch}
-              style={{ pointerEvents: "auto" }}
-              className="glass flex items-center gap-2.5 px-4 py-2.5 rounded-full text-white/70 hover:text-white transition-colors"
-            >
-              <Search className="w-4 h-4" />
-              <span className="text-sm hidden sm:block">Search cities...</span>
-            </button>
+
+            <div className="flex items-center gap-2" style={{ pointerEvents: "auto" }}>
+              {/* City of the day shortcut */}
+              <button
+                onClick={() => useAppStore.getState().selectCity(cityOfTheDay)}
+                className="glass flex items-center gap-2 px-3 py-2 rounded-full text-white/60 hover:text-white transition-colors"
+                title={`Today's walk: ${cityOfTheDay.name}`}
+              >
+                <span className="text-base">{cityOfTheDay.flagEmoji}</span>
+                <span className="text-xs hidden sm:block">Today's Walk</span>
+              </button>
+
+              <button
+                onClick={openSearch}
+                className="glass flex items-center gap-2.5 px-4 py-2.5 rounded-full text-white/70 hover:text-white transition-colors"
+              >
+                <Search className="w-4 h-4" />
+                <span className="text-sm hidden sm:block">Search cities...</span>
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -315,6 +352,17 @@ export function HomeClient({ cities, initialCity }: Props) {
                 title="Random city (R)"
               >
                 <Shuffle className="w-3.5 h-3.5" />
+              </button>
+
+              {/* Discover mode toggle */}
+              <button
+                onClick={toggleDiscoverMode}
+                className={`glass rounded-full p-2 transition-colors ${
+                  discoverMode ? "text-amber-400" : "text-white/40 hover:text-amber-400"
+                }`}
+                title={discoverMode ? "Stop discover mode" : "Discover mode (auto-cycle cities)"}
+              >
+                {discoverMode ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
               </button>
             </div>
           </motion.div>

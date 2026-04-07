@@ -5,11 +5,11 @@ import { formatViewerCount } from "@/lib/utils";
 import { Users } from "lucide-react";
 
 interface Props {
-  seed?: number;
+  citySlug: string;
 }
 
-export function ViewerCount({ seed = 847 }: Props) {
-  const count = useViewerCount(seed);
+export function ViewerCount({ citySlug }: Props) {
+  const count = useViewerCount(citySlug);
   return (
     <div className="flex items-center gap-1.5 text-white/70">
       <Users className="w-3.5 h-3.5" />

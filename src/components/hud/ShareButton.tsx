@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Share2, Link, Check } from "lucide-react";
 
@@ -12,6 +12,19 @@ interface Props {
 export function ShareButton({ citySlug, cityName }: Props) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Close on outside click
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
 
   const shareUrl =
     typeof window !== "undefined"
@@ -38,7 +51,7 @@ export function ShareButton({ citySlug, cityName }: Props) {
   };
 
   return (
-    <>
+    <div ref={wrapperRef} className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
         className="pointer-events-auto glass rounded-full p-2.5 text-white/70 hover:text-white transition-colors"
@@ -50,7 +63,7 @@ export function ShareButton({ citySlug, cityName }: Props) {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute top-16 right-4 md:right-6 glass rounded-2xl p-3 flex flex-col gap-2 min-w-[200px] pointer-events-auto"
+            className="absolute top-12 right-0 glass rounded-2xl p-3 flex flex-col gap-2 min-w-[200px] pointer-events-auto"
             initial={{ opacity: 0, y: -8, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.95 }}
@@ -84,6 +97,6 @@ export function ShareButton({ citySlug, cityName }: Props) {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

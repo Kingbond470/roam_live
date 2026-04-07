@@ -31,6 +31,13 @@ interface AppState {
   // Sprint 2C: favorites (persisted)
   favoriteSlugs: string[];
 
+  // City-to-city navigation
+  navigateCity: (cities: City[], direction: "next" | "prev") => void;
+
+  // Discover mode
+  discoverMode: boolean;
+  toggleDiscoverMode: () => void;
+
   selectCity: (city: City) => void;
   advanceToVideo: () => void;
   setWatching: () => void;
@@ -73,6 +80,7 @@ export const useAppStore = create<AppState>()(
       activeVideoId: null,
       activeTag: null,
       favoriteSlugs: [],
+      discoverMode: false,
 
       selectCity: (city) =>
         set({
@@ -134,6 +142,27 @@ export const useAppStore = create<AppState>()(
             ? s.favoriteSlugs.filter((x) => x !== slug)
             : [...s.favoriteSlugs, slug],
         })),
+
+      toggleDiscoverMode: () => set((s) => ({ discoverMode: !s.discoverMode })),
+
+      navigateCity: (cities, direction) => {
+        const { selectedCity } = get();
+        if (!selectedCity || !cities.length) return;
+        const idx = cities.findIndex((c) => c.slug === selectedCity.slug);
+        const next =
+          direction === "next"
+            ? cities[(idx + 1) % cities.length]
+            : cities[(idx - 1 + cities.length) % cities.length];
+        // Direct swap: skip globe, just swap video + reset video state
+        set({
+          selectedCity: next,
+          activeVideoId: null,
+          cardOpen: false,
+          compareOpen: false,
+          playerMuted: true,
+          phase: "video-fadein",
+        });
+      },
     }),
     {
       name: "roam-store",

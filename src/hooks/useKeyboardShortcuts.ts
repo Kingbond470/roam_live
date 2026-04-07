@@ -16,6 +16,8 @@ export function useKeyboardShortcuts(cities: City[]) {
       const { phase, selectedCity, returnToGlobe, toggleMute, selectRandomCity, toggleFavorite } =
         useAppStore.getState();
 
+      const { navigateCity } = useAppStore.getState();
+
       switch (e.key) {
         case "Escape":
           if (phase === "watching") returnToGlobe();
@@ -31,6 +33,12 @@ export function useKeyboardShortcuts(cities: City[]) {
         case "f":
         case "F":
           if (phase === "watching" && selectedCity) toggleFavorite(selectedCity.slug);
+          break;
+        case "ArrowRight":
+          if (phase === "watching") navigateCity(cities, "next");
+          break;
+        case "ArrowLeft":
+          if (phase === "watching") navigateCity(cities, "prev");
           break;
       }
     };

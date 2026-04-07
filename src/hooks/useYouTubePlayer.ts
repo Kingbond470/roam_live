@@ -36,6 +36,12 @@ export function useYouTubePlayer(
   const playerRef = useRef<YT.Player | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);   // true until first PLAYING event
+  const [isBuffering, setIsBuffering] = useState(false); // mid-playback network stall
+  const hasPlayedRef = useRef(false);
+  const bufferTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const loadTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const mountedRef = useRef(true);
 
   const destroyPlayer = useCallback(() => {
     if (playerRef.current) {
@@ -46,7 +52,14 @@ export function useYouTubePlayer(
   }, []);
 
   useEffect(() => {
+    mountedRef.current = true;
     let cancelled = false;
+
+    // Fallback: if video never fires PLAYING within 15s (geo-block, silent restriction),
+    // dismiss the loading screen so user isn't stuck forever
+    loadTimeoutRef.current = setTimeout(() => {
+      if (mountedRef.current && !hasPlayedRef.current) setIsLoading(false);
+    }, 15_000);
 
     waitForYTApi().then(() => {
       if (cancelled) return;
@@ -64,6 +77,7 @@ export function useYouTubePlayer(
           controls: 0,
           loop: 1,
           playlist: videoId,
+          start: 90,
           modestbranding: 1,
           rel: 0,
           iv_load_policy: 3,
@@ -79,13 +93,45 @@ export function useYouTubePlayer(
             setIsReady(true);
             onReady?.();
           },
-          onError: () => { setHasError(true); },
+          onStateChange: (event: YT.OnStateChangeEvent) => {
+            if (!mountedRef.current) return;
+            const state = event.data;
+            if (state === window.YT.PlayerState.PLAYING) {
+              if (!hasPlayedRef.current) {
+                hasPlayedRef.current = true;
+                if (loadTimeoutRef.current) clearTimeout(loadTimeoutRef.current);
+                setIsLoading(false);
+              }
+              // clear any pending buffer timer and hide overlay
+              if (bufferTimerRef.current) clearTimeout(bufferTimerRef.current);
+              setIsBuffering(false);
+            } else if (state === window.YT.PlayerState.BUFFERING) {
+              if (hasPlayedRef.current) {
+                // debounce 800ms — fast networks recover before this fires
+                bufferTimerRef.current = setTimeout(() => {
+                  if (mountedRef.current) setIsBuffering(true);
+                }, 800);
+              }
+            } else if (state === window.YT.PlayerState.PAUSED) {
+              if (bufferTimerRef.current) clearTimeout(bufferTimerRef.current);
+              setIsBuffering(false);
+            }
+          },
+          onError: () => {
+            if (!mountedRef.current) return;
+            setHasError(true);
+            setIsLoading(false);
+          },
         },
       });
     });
 
     return () => {
       cancelled = true;
+      mountedRef.current = false;
+      if (bufferTimerRef.current) clearTimeout(bufferTimerRef.current);
+      if (loadTimeoutRef.current) clearTimeout(loadTimeoutRef.current);
+      hasPlayedRef.current = false;
       destroyPlayer();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -100,5 +146,5 @@ export function useYouTubePlayer(
     }
   }, []);
 
-  return { player: playerRef, isReady, hasError, toggleMute };
+  return { player: playerRef, isReady, hasError, isLoading, isBuffering, toggleMute };
 }

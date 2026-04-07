@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Volume2, VolumeX, SplitSquareHorizontal, Heart } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart } from "lucide-react";
 import { ShareButton } from "./ShareButton";
 import type { City } from "@/types/city";
 import { LiveBadge } from "./LiveBadge";
@@ -29,6 +29,7 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
     setActiveVideo,
     favoriteSlugs,
     toggleFavorite,
+    navigateCity,
   } = useAppStore();
 
   const [hudRevealed, setHudRevealed] = useState(true);
@@ -156,15 +157,25 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.35, delay: 0.05, ease: "easeOut" }}
           >
+            <div className="flex items-end gap-4">
+              {/* Prev city */}
+              <button
+                onClick={() => navigateCity(allCities, "prev")}
+                className="pointer-events-auto glass rounded-full p-2.5 text-white/50 hover:text-white transition-colors mb-1 flex-shrink-0"
+                title="Previous city (←)"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+
             <div
-              className="pointer-events-auto cursor-pointer group"
+              className="pointer-events-auto cursor-pointer group flex-1 min-w-0"
               onClick={onOpenCard}
             >
               <div className="flex items-end justify-between gap-4">
                 <div className="flex flex-col gap-2 min-w-0">
                   <div className="flex items-center gap-2.5">
                     <LiveBadge />
-                    <ViewerCount seed={(city.population % 1000) + 200} />
+                    <ViewerCount citySlug={city.slug} />
                   </div>
 
                   <h1 className="text-4xl md:text-6xl font-bold text-white leading-none tracking-tight">
@@ -207,6 +218,16 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
                   <span className="w-1 h-1 rounded-full bg-amber-400 animate-pulse" />
                 </div>
               </div>
+            </div>
+
+              {/* Next city */}
+              <button
+                onClick={() => navigateCity(allCities, "next")}
+                className="pointer-events-auto glass rounded-full p-2.5 text-white/50 hover:text-white transition-colors mb-1 flex-shrink-0"
+                title="Next city (→)"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </motion.div>
         )}
