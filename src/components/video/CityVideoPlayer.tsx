@@ -35,12 +35,13 @@ export function CityVideoPlayer({ videoId, citySlug, onReady }: Props) {
   return (
     <div className="fixed inset-0 w-full h-full bg-[#050508]" style={{ zIndex: 30 }}>
 
-      {/* YouTube iframe — hidden behind loading screen until video plays */}
+      {/* Wrapper controls visibility — opacity here survives YouTube replacing the inner div with an iframe */}
       <div
-        id={containerId}
         className="absolute inset-0 w-full h-full transition-opacity duration-700"
         style={{ opacity: isLoading ? 0 : 1 }}
-      />
+      >
+        <div id={containerId} className="absolute inset-0 w-full h-full" />
+      </div>
 
       {/* Transparent overlay — blocks YouTube's hover UI */}
       <div className="absolute inset-0" style={{ zIndex: 31, pointerEvents: "auto" }} />
