@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
-// Tracks which tip to show next. Persists across sessions.
-// "globe" → "swipe" → "culture" → "done"
 type Step = "globe" | "swipe" | "culture" | "done";
 const KEY = "roam_onboarding_v1";
 
@@ -14,55 +12,54 @@ const write = (s: Step) => {
   try { localStorage.setItem(KEY, s); } catch { /* ignore */ }
 };
 
-export function useOnboarding(phase: string) {
-  const [step, setStep] = useState<Step>("done"); // safe SSR default
+const nextStep = (s: Step): Step =>
+  s === "globe" ? "swipe" : s === "swipe" ? "culture" : "done";
 
-  // Hydrate from localStorage after mount
+export function useOnboarding(phase: string) {
+  const [step, setStep] = useState<Step>("done"); // "done" = safe SSR/pre-hydration default
+
+  // Hydrate from localStorage once after mount
   useEffect(() => { setStep(read()); }, []);
 
-  // Auto-dismiss after 7s on any active tip
-  useEffect(() => {
-    if (step === "done") return;
-    const t = setTimeout(() => dismiss(step), 7_000);
-    return () => clearTimeout(t);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step]);
+  // Derived: is the current tip actually on screen?
+  const isVisible =
+    (step === "globe"   && (phase === "idle" || phase === "zooming")) ||
+    (step === "swipe"   && phase === "watching") ||
+    (step === "culture" && phase === "watching");
 
-  // Show swipe tip 2s after entering watching phase (if that's the pending step)
+  // Auto-dismiss ONLY when the tip is actually visible — prevents background chain-dismissal
   useEffect(() => {
-    if (phase !== "watching" || step !== "swipe") return;
-    // Already on swipe step, tip shows immediately
+    if (!isVisible) return;
+    const t = setTimeout(() => {
+      const next = nextStep(step);
+      write(next);
+      setStep(next);
+    }, 7_000);
+    return () => clearTimeout(t);
+  }, [isVisible, step]); // re-arms when tip becomes visible
+
+  // When city is selected and phase enters video, advance globe tip → swipe tip
+  // (user saw the globe, acted on it — no need to show globe tip again)
+  useEffect(() => {
+    if (step !== "globe") return;
+    if (phase === "video-fadein" || phase === "watching") {
+      write("swipe");
+      setStep("swipe");
+    }
   }, [phase, step]);
 
-  // When user first selects a city, advance globe → swipe
-  useEffect(() => {
-    if (phase === "video-fadein" || phase === "watching") {
-      setStep((cur) => {
-        if (cur === "globe") {
-          write("swipe");
-          return "swipe";
-        }
-        return cur;
-      });
-    }
-  }, [phase]);
-
-  const dismiss = useCallback((current: Step) => {
-    const next: Step =
-      current === "globe"   ? "swipe" :
-      current === "swipe"   ? "culture" :
-      current === "culture" ? "done" : "done";
+  const advance = () => {
+    const next = nextStep(step);
     write(next);
-    // If advancing to swipe/culture, only show if we're in the right phase
-    setStep(next === "done" ? "done" : next);
-  }, []);
+    setStep(next);
+  };
 
   return {
-    showGlobeTip:   step === "globe" && (phase === "idle" || phase === "zooming"),
-    showSwipeTip:   step === "swipe" && phase === "watching",
+    showGlobeTip:   step === "globe"   && (phase === "idle" || phase === "zooming"),
+    showSwipeTip:   step === "swipe"   && phase === "watching",
     showCultureTip: step === "culture" && phase === "watching",
-    dismissGlobe:   () => dismiss("globe"),
-    dismissSwipe:   () => dismiss("swipe"),
-    dismissCulture: () => dismiss("culture"),
+    dismissGlobe:   advance,
+    dismissSwipe:   advance,
+    dismissCulture: advance,
   };
 }

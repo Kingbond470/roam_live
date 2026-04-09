@@ -4,7 +4,6 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart } from "lucide-react";
 import { ShareButton } from "./ShareButton";
-import { ComparePicker } from "@/components/wow/ComparePicker";
 import type { City } from "@/types/city";
 import { LiveBadge } from "./LiveBadge";
 import { ViewerCount } from "./ViewerCount";
@@ -15,12 +14,13 @@ interface Props {
   city: City;
   isVisible: boolean;
   onOpenCard: () => void;
+  onOpenPicker: () => void;
   allCities: City[];
 }
 
 const HUD_HIDE_DELAY = 4000;
 
-export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
+export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, allCities }: Props) {
   const {
     returnToGlobe,
     openCompare,
@@ -34,7 +34,6 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
   } = useAppStore();
 
   const [hudRevealed, setHudRevealed] = useState(true);
-  const [pickerOpen, setPickerOpen] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const resetTimer = useCallback(() => {
@@ -133,7 +132,7 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
               </button>
 
               <button
-                onClick={() => setPickerOpen(true)}
+                onClick={onOpenPicker}
                 className="glass rounded-full p-2.5 text-white/70 hover:text-white transition-colors"
                 title="Compare with another city"
               >
@@ -233,13 +232,6 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
         )}
       </AnimatePresence>
 
-      {/* Compare city picker */}
-      <ComparePicker
-        isOpen={pickerOpen}
-        cities={otherCities}
-        onSelect={(picked) => openCompare(picked)}
-        onClose={() => setPickerOpen(false)}
-      />
     </div>
   );
 }

@@ -154,12 +154,12 @@ export const useAppStore = create<AppState>()(
             ? cities[(idx + 1) % cities.length]
             : cities[(idx - 1 + cities.length) % cities.length];
         // Direct swap: skip globe, just swap video + reset video state
+        // Preserve playerMuted so user's unmute preference survives navigation
         set({
           selectedCity: next,
           activeVideoId: null,
           cardOpen: false,
           compareOpen: false,
-          playerMuted: true,
           phase: "video-fadein",
         });
       },

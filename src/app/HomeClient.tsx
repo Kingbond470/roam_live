@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Globe, Shuffle, Heart, Play, Pause } from "lucide-react";
 import type { City } from "@/types/city";
@@ -11,6 +11,7 @@ import { CityVideoPlayer } from "@/components/video/CityVideoPlayer";
 import { CityHUD } from "@/components/hud/CityHUD";
 import { CultureCard } from "@/components/cards/CultureCard";
 import { SplitScreen } from "@/components/wow/SplitScreen";
+import { ComparePicker } from "@/components/wow/ComparePicker";
 import { CitySearch } from "@/components/search/CitySearch";
 import { getFeaturedVideo } from "@/lib/utils";
 import { getCityOfTheDay } from "@/lib/cityOfTheDay";
@@ -54,6 +55,9 @@ export function HomeClient({ cities, initialCity }: Props) {
     setTagFilter,
     toggleDiscoverMode,
   } = useAppStore();
+
+  // Compare picker — lifted here so it renders outside pointer-events-none HUD
+  const [pickerOpen, setPickerOpen] = useState(false);
 
   // Sprint 1A: keyboard shortcuts
   useKeyboardShortcuts(cities);
@@ -206,6 +210,7 @@ export function HomeClient({ cities, initialCity }: Props) {
           city={selectedCity}
           isVisible={isWatching}
           onOpenCard={openCard}
+          onOpenPicker={() => setPickerOpen(true)}
           allCities={cities}
         />
       )}
@@ -216,10 +221,17 @@ export function HomeClient({ cities, initialCity }: Props) {
           city={selectedCity}
           isOpen={cardOpen}
           onClose={closeCard}
-          onCompare={() => {
-            const others = cities.filter((c) => c.slug !== selectedCity.slug);
-            if (others.length) openCompare(others[Math.floor(Math.random() * others.length)]);
-          }}
+          onCompare={() => { closeCard(); setPickerOpen(true); }}
+        />
+      )}
+
+      {/* ── Compare city picker (top-level so pointer-events work correctly) ── */}
+      {selectedCity && (
+        <ComparePicker
+          isOpen={pickerOpen}
+          cities={cities.filter((c) => c.slug !== selectedCity.slug)}
+          onSelect={(city) => { openCompare(city); setPickerOpen(false); }}
+          onClose={() => setPickerOpen(false)}
         />
       )}
 
