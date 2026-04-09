@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart } from "lucide-react";
 import { ShareButton } from "./ShareButton";
+import { ComparePicker } from "@/components/wow/ComparePicker";
 import type { City } from "@/types/city";
 import { LiveBadge } from "./LiveBadge";
 import { ViewerCount } from "./ViewerCount";
@@ -33,6 +34,7 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
   } = useAppStore();
 
   const [hudRevealed, setHudRevealed] = useState(true);
+  const [pickerOpen, setPickerOpen] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const resetTimer = useCallback(() => {
@@ -53,10 +55,7 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
     };
   }, [isVisible, resetTimer]);
 
-  const handleCompare = () => {
-    const others = allCities.filter((c) => c.slug !== city.slug);
-    if (others.length) openCompare(others[Math.floor(Math.random() * others.length)]);
-  };
+  const otherCities = allCities.filter((c) => c.slug !== city.slug);
 
   const isFavorited = favoriteSlugs.includes(city.slug);
   const show = isVisible && hudRevealed;
@@ -105,9 +104,10 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
             <button
               onClick={returnToGlobe}
               className="pointer-events-auto flex items-center gap-2 glass rounded-full px-4 py-2 text-white/80 hover:text-white transition-colors"
+              title="Back to globe (Esc)"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span className="text-sm hidden sm:inline">Explore</span>
+              <span className="text-sm hidden sm:inline">Back</span>
             </button>
 
             <div className="pointer-events-auto flex items-center gap-2">
@@ -133,9 +133,9 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
               </button>
 
               <button
-                onClick={handleCompare}
+                onClick={() => setPickerOpen(true)}
                 className="glass rounded-full p-2.5 text-white/70 hover:text-white transition-colors"
-                title="Compare cities"
+                title="Compare with another city"
               >
                 <SplitSquareHorizontal className="w-4 h-4" />
               </button>
@@ -232,6 +232,14 @@ export function CityHUD({ city, isVisible, onOpenCard, allCities }: Props) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Compare city picker */}
+      <ComparePicker
+        isOpen={pickerOpen}
+        cities={otherCities}
+        onSelect={(picked) => openCompare(picked)}
+        onClose={() => setPickerOpen(false)}
+      />
     </div>
   );
 }

@@ -16,6 +16,9 @@ import { getFeaturedVideo } from "@/lib/utils";
 import { getCityOfTheDay } from "@/lib/cityOfTheDay";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useSwipeGestures } from "@/hooks/useSwipeGestures";
+import { useOnboarding } from "@/hooks/useOnboarding";
+import { CoachMark } from "@/components/onboarding/CoachMark";
+import { PWAInstallPrompt } from "@/components/onboarding/PWAInstallPrompt";
 
 const GlobeScene = dynamic(
   () => import("@/components/globe/GlobeScene").then((m) => ({ default: m.GlobeScene })),
@@ -91,6 +94,10 @@ export function HomeClient({ cities, initialCity }: Props) {
   const isWatching = phase === "watching" || phase === "video-fadein";
   const showVideo = phase === "video-fadein" || phase === "watching" || phase === "video-fadeout";
   const showGlobe = phase === "idle" || phase === "zooming" || phase === "globe-return";
+
+  // Onboarding coach marks
+  const { showGlobeTip, showSwipeTip, showCultureTip, dismissGlobe, dismissSwipe, dismissCulture } =
+    useOnboarding(phase);
 
   // Sprint 1C: resolve active video (switcher overrides featured)
   const currentVideo = useMemo(() => {
@@ -313,18 +320,23 @@ export function HomeClient({ cities, initialCity }: Props) {
                 Saved
               </button>
 
-              {/* Dynamic tags */}
+              {/* Dynamic tags — "new" tag gets special amber treatment */}
               {allTags.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setTagFilter(activeTag === tag ? null : tag)}
-                  className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium capitalize transition-colors ${
-                    activeTag === tag
-                      ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
-                      : "text-white/30 hover:text-white/60 border border-white/10"
+                  className={`shrink-0 flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium capitalize transition-colors ${
+                    tag === "new"
+                      ? activeTag === tag
+                        ? "bg-amber-500/30 text-amber-300 border border-amber-400/60"
+                        : "bg-amber-500/10 text-amber-400/80 border border-amber-500/30 hover:bg-amber-500/20"
+                      : activeTag === tag
+                        ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
+                        : "text-white/30 hover:text-white/60 border border-white/10"
                   }`}
                 >
-                  {tag}
+                  {tag === "new" && <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />}
+                  {tag === "new" ? "New" : tag}
                 </button>
               ))}
             </div>
@@ -338,10 +350,13 @@ export function HomeClient({ cities, initialCity }: Props) {
                 <button
                   key={city.slug}
                   onClick={() => useAppStore.getState().selectCity(city)}
-                  className="text-xl opacity-50 hover:opacity-100 hover:scale-125 transition-all duration-200"
+                  className="relative text-xl opacity-50 hover:opacity-100 hover:scale-125 transition-all duration-200"
                   title={city.name}
                 >
                   {city.flagEmoji}
+                  {city.tags.includes("new") && (
+                    <span className="absolute -top-0.5 -right-1 w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  )}
                 </button>
               ))}
 
@@ -368,6 +383,32 @@ export function HomeClient({ cities, initialCity }: Props) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* ── Onboarding coach marks ── */}
+      <CoachMark
+        visible={showGlobeTip}
+        message="Tap any city pin or flag to start your walk"
+        subtext="Explore 20 cities around the world, hands-free"
+        position="bottom"
+        onDismiss={dismissGlobe}
+      />
+      <CoachMark
+        visible={showSwipeTip}
+        message="Swipe left or right to explore cities"
+        subtext="Or use the ← → arrows to navigate"
+        position="bottom"
+        onDismiss={dismissSwipe}
+      />
+      <CoachMark
+        visible={showCultureTip}
+        message="Tap the city name to discover local culture"
+        subtext="Greetings, food, tips, dos & don'ts"
+        position="bottom"
+        onDismiss={dismissCulture}
+      />
+
+      {/* PWA install prompt — shown 20s after first visit, once ever */}
+      <PWAInstallPrompt />
     </div>
   );
 }

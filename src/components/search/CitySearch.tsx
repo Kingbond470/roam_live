@@ -118,6 +118,11 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
                         <p className="text-white/40 text-sm">{city.country}</p>
                       </div>
                       <div className="flex items-center gap-2">
+                        {city.tags.includes("new") && (
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 font-medium">
+                            New
+                          </span>
+                        )}
                         {favoriteSlugs.includes(city.slug) && (
                           <Heart className="w-3.5 h-3.5 text-rose-400" fill="#f43f5e" />
                         )}
