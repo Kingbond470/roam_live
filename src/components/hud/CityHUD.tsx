@@ -23,7 +23,6 @@ const HUD_HIDE_DELAY = 4000;
 export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, allCities }: Props) {
   const {
     returnToGlobe,
-    openCompare,
     toggleMute,
     playerMuted,
     activeVideoId,
@@ -53,8 +52,6 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, allCities }
       if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, [isVisible, resetTimer]);
-
-  const otherCities = allCities.filter((c) => c.slug !== city.slug);
 
   const isFavorited = favoriteSlugs.includes(city.slug);
   const show = isVisible && hudRevealed;
@@ -139,7 +136,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, allCities }
                 <SplitSquareHorizontal className="w-4 h-4" />
               </button>
 
-              <ShareButton citySlug={city.slug} cityName={city.name} />
+              <ShareButton citySlug={city.slug} cityName={city.name} flagEmoji={city.flagEmoji} />
             </div>
           </motion.div>
         )}
