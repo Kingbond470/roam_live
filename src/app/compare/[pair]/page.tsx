@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cities, getCityBySlug } from "@/lib/cities";
 import { getFeaturedVideo } from "@/lib/utils";
-import { Globe, ArrowLeft, Utensils, Clock, Lightbulb } from "lucide-react";
+import { Globe, ArrowLeft, Utensils, Lightbulb } from "lucide-react";
 
 interface Props {
   params: Promise<{ pair: string }>;
@@ -144,7 +144,7 @@ export default async function ComparePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="min-h-screen bg-[#050508] text-white">
+      <div className="h-full overflow-y-auto bg-[#050508] text-white">
         {/* Nav */}
         <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
@@ -291,22 +291,25 @@ export default async function ComparePage({ params }: Props) {
             </Link>
           </div>
 
-          {/* More comparisons */}
+          {/* More comparisons — alternates between cityA and cityB as base */}
           <div className="mt-12">
             <p className="text-xs tracking-widest uppercase text-white/30 mb-4">More Comparisons</p>
             <div className="flex flex-wrap gap-2">
               {cities
                 .filter((c) => c.slug !== cityA.slug && c.slug !== cityB.slug)
-                .slice(0, 8)
-                .map((c) => (
-                  <Link
-                    key={c.slug}
-                    href={`/compare/${cityA.slug}-vs-${c.slug}`}
-                    className="px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-white/20 text-sm text-white/50 hover:text-white transition-colors"
-                  >
-                    {cityA.flagEmoji} {cityA.name} vs {c.flagEmoji} {c.name}
-                  </Link>
-                ))}
+                .slice(0, 10)
+                .map((c, i) => {
+                  const base = i % 2 === 0 ? cityA : cityB;
+                  return (
+                    <Link
+                      key={c.slug}
+                      href={`/compare/${base.slug}-vs-${c.slug}`}
+                      className="px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-white/20 text-sm text-white/50 hover:text-white transition-colors"
+                    >
+                      {base.flagEmoji} {base.name} vs {c.flagEmoji} {c.name}
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         </div>

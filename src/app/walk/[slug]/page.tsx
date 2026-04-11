@@ -67,7 +67,6 @@ export default async function CityWalkPage({ params }: Props) {
   if (!city) notFound();
 
   const featuredVideo = getFeaturedVideo(city);
-  const localCityName = city.timezone.split("/").pop()?.replace(/_/g, " ") ?? city.name;
 
   // JSON-LD structured data
   const videoJsonLd = {
@@ -116,7 +115,7 @@ export default async function CityWalkPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(placeJsonLd) }}
       />
 
-      <div className="min-h-screen bg-[#050508] text-white">
+      <div className="h-full overflow-y-auto bg-[#050508] text-white">
         {/* Nav */}
         <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
@@ -136,8 +135,8 @@ export default async function CityWalkPage({ params }: Props) {
 
         {/* Hero */}
         <div className="relative pt-16">
-          {/* YouTube Embed */}
-          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+          {/* YouTube Embed — capped at 70vh so content stays above fold on wide screens */}
+          <div className="relative w-full" style={{ paddingBottom: "min(56.25%, 70vh)" }}>
             {featuredVideo ? (
               <iframe
                 className="absolute inset-0 w-full h-full"
