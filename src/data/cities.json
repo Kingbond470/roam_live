@@ -6,33 +6,56 @@
     "countryCode": "JP",
     "flagEmoji": "🇯🇵",
     "continent": "Asia",
-    "coordinates": { "lat": 35.6762, "lng": 139.6503 },
+    "coordinates": {
+      "lat": 35.6762,
+      "lng": 139.6503
+    },
     "timezone": "Asia/Tokyo",
     "population": 13960000,
-    "tags": ["neon", "tech", "street-food", "transit"],
+    "tags": [
+      "neon",
+      "tech",
+      "street-food",
+      "transit"
+    ],
     "videos": [
       {
         "youtubeId": "OeSHNuupmK8",
         "label": "4K Tokyo Night Walk",
         "timeOfDay": "night",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       },
       {
         "youtubeId": "3FUIYAwQ7Xs",
         "label": "4K Tokyo Day Walk",
         "timeOfDay": "day",
-        "isFeatured": false
+        "isFeatured": false,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "こんにちは (Konnichiwa)",
       "currency": "Japanese Yen (¥)",
       "bestSeason": "Spring (March–May) for cherry blossoms",
-      "mustEat": ["Ramen", "Sushi", "Takoyaki", "Matcha anything"],
+      "mustEat": [
+        "Ramen",
+        "Sushi",
+        "Takoyaki",
+        "Matcha anything"
+      ],
       "localTip": "Carry cash — many small shops are cash-only. Bow slightly when greeting.",
       "funFact": "Tokyo has more Michelin-starred restaurants than any other city on Earth.",
-      "culturalDos": ["Remove shoes indoors", "Queue in order", "Speak quietly in transit"],
-      "culturalDonts": ["Tip at restaurants", "Eat while walking", "Talk on phone on trains"]
+      "culturalDos": [
+        "Remove shoes indoors",
+        "Queue in order",
+        "Speak quietly in transit"
+      ],
+      "culturalDonts": [
+        "Tip at restaurants",
+        "Eat while walking",
+        "Talk on phone on trains"
+      ]
     }
   },
   {
@@ -42,33 +65,56 @@
     "countryCode": "TR",
     "flagEmoji": "🇹🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 41.0082, "lng": 28.9784 },
+    "coordinates": {
+      "lat": 41.0082,
+      "lng": 28.9784
+    },
     "timezone": "Europe/Istanbul",
     "population": 15460000,
-    "tags": ["historic", "coastal", "bazaar", "bridges"],
+    "tags": [
+      "historic",
+      "coastal",
+      "bazaar",
+      "bridges"
+    ],
     "videos": [
       {
         "youtubeId": "09yi1wNAntw",
         "label": "4K Istanbul Night Walk",
         "timeOfDay": "night",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       },
       {
         "youtubeId": "f64-pIZdqNU",
         "label": "4K Istanbul Day Walk",
         "timeOfDay": "day",
-        "isFeatured": false
+        "isFeatured": false,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "Merhaba",
       "currency": "Turkish Lira (₺)",
       "bestSeason": "Spring (April–May) or Autumn (September–October)",
-      "mustEat": ["Simit", "Lahmacun", "Baklava", "Çay (tea)"],
+      "mustEat": [
+        "Simit",
+        "Lahmacun",
+        "Baklava",
+        "Çay (tea)"
+      ],
       "localTip": "Bargaining is expected in the Grand Bazaar. Always accept the tea offered by shopkeepers.",
       "funFact": "Istanbul is the only city in the world that straddles two continents — Europe and Asia.",
-      "culturalDos": ["Dress modestly near mosques", "Remove shoes at mosque entrance", "Accept tea graciously"],
-      "culturalDonts": ["Rush a meal", "Photograph people without asking", "Ignore calls to prayer"]
+      "culturalDos": [
+        "Dress modestly near mosques",
+        "Remove shoes at mosque entrance",
+        "Accept tea graciously"
+      ],
+      "culturalDonts": [
+        "Rush a meal",
+        "Photograph people without asking",
+        "Ignore calls to prayer"
+      ]
     }
   },
   {
@@ -78,33 +124,54 @@
     "countryCode": "US",
     "flagEmoji": "🇺🇸",
     "continent": "Americas",
-    "coordinates": { "lat": 40.7128, "lng": -74.006 },
+    "coordinates": {
+      "lat": 40.7128,
+      "lng": -74.006
+    },
     "timezone": "America/New_York",
     "population": 8336817,
-    "tags": ["skyscrapers", "nightlife", "melting-pot", "transit"],
+    "tags": [
+      "skyscrapers",
+      "nightlife",
+      "melting-pot",
+      "transit"
+    ],
     "videos": [
       {
         "youtubeId": "cC4bENl16sE",
         "label": "4K NYC Night Walk",
         "timeOfDay": "night",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       },
       {
         "youtubeId": "cRBidaJ0RyQ",
         "label": "4K NYC Little Italy Walk",
         "timeOfDay": "day",
-        "isFeatured": false
+        "isFeatured": false,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "Hey / What's up",
       "currency": "US Dollar ($)",
       "bestSeason": "Fall (September–November) for foliage + mild weather",
-      "mustEat": ["NY-style pizza slice", "Bagel with lox", "Cheesecake", "Dirty water dog"],
+      "mustEat": [
+        "NY-style pizza slice",
+        "Bagel with lox",
+        "Cheesecake",
+        "Dirty water dog"
+      ],
       "localTip": "Tip 18–20% at restaurants. Walk fast on sidewalks — stay right, pass left.",
       "funFact": "New York City has 468 subway stations — more than any other city in the world.",
-      "culturalDos": ["Hail cabs by raising your arm", "Hold doors for people behind you"],
-      "culturalDonts": ["Stand still in the middle of the sidewalk", "Take photos of strangers without asking"]
+      "culturalDos": [
+        "Hail cabs by raising your arm",
+        "Hold doors for people behind you"
+      ],
+      "culturalDonts": [
+        "Stand still in the middle of the sidewalk",
+        "Take photos of strangers without asking"
+      ]
     }
   },
   {
@@ -114,33 +181,56 @@
     "countryCode": "FR",
     "flagEmoji": "🇫🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 48.8566, "lng": 2.3522 },
+    "coordinates": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
     "timezone": "Europe/Paris",
     "population": 2161000,
-    "tags": ["romantic", "art", "fashion", "food"],
+    "tags": [
+      "romantic",
+      "art",
+      "fashion",
+      "food"
+    ],
     "videos": [
       {
         "youtubeId": "hLa9PRc9DFk",
         "label": "4K Paris Montmartre Evening Walk",
         "timeOfDay": "golden-hour",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       },
       {
         "youtubeId": "cxDvgdKErqY",
         "label": "4K Paris Day Walk",
         "timeOfDay": "day",
-        "isFeatured": false
+        "isFeatured": false,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "Bonjour",
       "currency": "Euro (€)",
       "bestSeason": "Spring (April–June) or early Fall (September)",
-      "mustEat": ["Croissant", "Steak-frites", "Crêpes", "Crème brûlée"],
+      "mustEat": [
+        "Croissant",
+        "Steak-frites",
+        "Crêpes",
+        "Crème brûlée"
+      ],
       "localTip": "Always greet shopkeepers with 'Bonjour' when entering. The French value politeness above all.",
       "funFact": "The Eiffel Tower grows about 15cm taller in summer due to thermal expansion of the iron.",
-      "culturalDos": ["Greet with 'Bonjour'", "Dress stylishly", "Linger over meals"],
-      "culturalDonts": ["Ask for ketchup on everything", "Speak loudly in restaurants", "Skip the bread course"]
+      "culturalDos": [
+        "Greet with 'Bonjour'",
+        "Dress stylishly",
+        "Linger over meals"
+      ],
+      "culturalDonts": [
+        "Ask for ketchup on everything",
+        "Speak loudly in restaurants",
+        "Skip the bread course"
+      ]
     }
   },
   {
@@ -150,27 +240,48 @@
     "countryCode": "IN",
     "flagEmoji": "🇮🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 19.076, "lng": 72.8777 },
+    "coordinates": {
+      "lat": 19.076,
+      "lng": 72.8777
+    },
     "timezone": "Asia/Kolkata",
     "population": 20667656,
-    "tags": ["bollywood", "coastal", "street-food", "chaos"],
+    "tags": [
+      "bollywood",
+      "coastal",
+      "street-food",
+      "chaos"
+    ],
     "videos": [
       {
         "youtubeId": "7W2nGtkmKdQ",
         "label": "4K Mumbai Street Walk",
         "timeOfDay": "day",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "Namaste",
       "currency": "Indian Rupee (₹)",
       "bestSeason": "Winter (November–February)",
-      "mustEat": ["Vada pav", "Pav bhaji", "Dabeli", "Chai from a tapri"],
+      "mustEat": [
+        "Vada pav",
+        "Pav bhaji",
+        "Dabeli",
+        "Chai from a tapri"
+      ],
       "localTip": "Bargain at markets. The local train is the city's lifeblood — rush hour is not for the faint-hearted.",
       "funFact": "Mumbai's Dharavi is one of the most productive slums in the world, generating over $1 billion annually.",
-      "culturalDos": ["Remove shoes at temples", "Use your right hand for giving/receiving"],
-      "culturalDonts": ["Waste food", "Photograph poverty without sensitivity", "Disrespect religious spaces"]
+      "culturalDos": [
+        "Remove shoes at temples",
+        "Use your right hand for giving/receiving"
+      ],
+      "culturalDonts": [
+        "Waste food",
+        "Photograph poverty without sensitivity",
+        "Disrespect religious spaces"
+      ]
     }
   },
   {
@@ -180,27 +291,48 @@
     "countryCode": "BR",
     "flagEmoji": "🇧🇷",
     "continent": "Americas",
-    "coordinates": { "lat": -22.9068, "lng": -43.1729 },
+    "coordinates": {
+      "lat": -22.9068,
+      "lng": -43.1729
+    },
     "timezone": "America/Sao_Paulo",
     "population": 6748000,
-    "tags": ["beaches", "carnival", "music", "nature"],
+    "tags": [
+      "beaches",
+      "carnival",
+      "music",
+      "nature"
+    ],
     "videos": [
       {
         "youtubeId": "TfvheIZa5yg",
         "label": "4K Rio Ipanema Beach Walk",
         "timeOfDay": "golden-hour",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "Olá / Oi",
       "currency": "Brazilian Real (R$)",
       "bestSeason": "May–September (dry season) or Feb for Carnival",
-      "mustEat": ["Açaí bowl", "Churrasco", "Pão de queijo", "Caipirinhas"],
+      "mustEat": [
+        "Açaí bowl",
+        "Churrasco",
+        "Pão de queijo",
+        "Caipirinhas"
+      ],
       "localTip": "Cariocas (Rio residents) are warm and physical — hugs and cheek-kisses are normal greetings.",
       "funFact": "Rio's Christ the Redeemer statue is struck by lightning an average of 6 times per year.",
-      "culturalDos": ["Embrace the beach culture", "Learn a few words of Portuguese", "Try the local cachaça"],
-      "culturalDonts": ["Wear expensive jewelry in public", "Skip sunscreen"]
+      "culturalDos": [
+        "Embrace the beach culture",
+        "Learn a few words of Portuguese",
+        "Try the local cachaça"
+      ],
+      "culturalDonts": [
+        "Wear expensive jewelry in public",
+        "Skip sunscreen"
+      ]
     }
   },
   {
@@ -210,27 +342,49 @@
     "countryCode": "MA",
     "flagEmoji": "🇲🇦",
     "continent": "Africa",
-    "coordinates": { "lat": 31.6295, "lng": -7.9811 },
+    "coordinates": {
+      "lat": 31.6295,
+      "lng": -7.9811
+    },
     "timezone": "Africa/Casablanca",
     "population": 928850,
-    "tags": ["souks", "medina", "desert-gateway", "spices"],
+    "tags": [
+      "souks",
+      "medina",
+      "desert-gateway",
+      "spices"
+    ],
     "videos": [
       {
         "youtubeId": "OsnRSr7LxII",
         "label": "4K Marrakech Medina Walk",
         "timeOfDay": "golden-hour",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "As-salamu alaykum / Bonjour",
       "currency": "Moroccan Dirham (MAD)",
       "bestSeason": "Spring (March–May) or Autumn (September–November)",
-      "mustEat": ["Tagine", "Couscous", "Harira soup", "Msemen with honey"],
+      "mustEat": [
+        "Tagine",
+        "Couscous",
+        "Harira soup",
+        "Msemen with honey"
+      ],
       "localTip": "Bargaining in the souks is mandatory — start at 30% of asking price.",
       "funFact": "The University of Al-Qarawiyyin in nearby Fez, founded 859 AD, is the world's oldest continuously operating university.",
-      "culturalDos": ["Dress modestly", "Accept mint tea invitations", "Greet in Arabic or French"],
-      "culturalDonts": ["Take photos without permission", "Enter a mosque if non-Muslim", "Eat in public during Ramadan"]
+      "culturalDos": [
+        "Dress modestly",
+        "Accept mint tea invitations",
+        "Greet in Arabic or French"
+      ],
+      "culturalDonts": [
+        "Take photos without permission",
+        "Enter a mosque if non-Muslim",
+        "Eat in public during Ramadan"
+      ]
     }
   },
   {
@@ -240,27 +394,49 @@
     "countryCode": "AU",
     "flagEmoji": "🇦🇺",
     "continent": "Oceania",
-    "coordinates": { "lat": -33.8688, "lng": 151.2093 },
+    "coordinates": {
+      "lat": -33.8688,
+      "lng": 151.2093
+    },
     "timezone": "Australia/Sydney",
     "population": 5312000,
-    "tags": ["beaches", "harbour", "outdoors", "multicultural"],
+    "tags": [
+      "beaches",
+      "harbour",
+      "outdoors",
+      "multicultural"
+    ],
     "videos": [
       {
         "youtubeId": "vvMisvTuGYk",
         "label": "4K Sydney Night Walk",
         "timeOfDay": "night",
-        "isFeatured": true
+        "isFeatured": true,
+        "type": "walk"
       }
     ],
     "culture": {
       "greeting": "G'day / Hey",
       "currency": "Australian Dollar (A$)",
       "bestSeason": "Spring (September–November) or Autumn (March–May)",
-      "mustEat": ["Meat pie", "Tim Tams", "Pavlova", "Flat white coffee"],
+      "mustEat": [
+        "Meat pie",
+        "Tim Tams",
+        "Pavlova",
+        "Flat white coffee"
+      ],
       "localTip": "Australians value informality — don't be too formal. Outdoor culture is huge; beaches are free and public.",
       "funFact": "Sydney Opera House has over 1 million roof tiles and took 14 years to build, finishing in 1973.",
-      "culturalDos": ["Embrace outdoor activities", "Recycle and respect nature", "Be friendly and relaxed"],
-      "culturalDonts": ["Call it a 'shrimp on the barbie' (it's prawn)", "Underestimate distances", "Ignore sun safety"]
+      "culturalDos": [
+        "Embrace outdoor activities",
+        "Recycle and respect nature",
+        "Be friendly and relaxed"
+      ],
+      "culturalDonts": [
+        "Call it a 'shrimp on the barbie' (it's prawn)",
+        "Underestimate distances",
+        "Ignore sun safety"
+      ]
     }
   },
   {
@@ -270,23 +446,57 @@
     "countryCode": "NL",
     "flagEmoji": "🇳🇱",
     "continent": "Europe",
-    "coordinates": { "lat": 52.3676, "lng": 4.9041 },
+    "coordinates": {
+      "lat": 52.3676,
+      "lng": 4.9041
+    },
     "timezone": "Europe/Amsterdam",
     "population": 921000,
-    "tags": ["canals", "cycling", "art", "nightlife"],
+    "tags": [
+      "canals",
+      "cycling",
+      "art",
+      "nightlife"
+    ],
     "videos": [
-      { "youtubeId": "q-LeONjSrPU", "label": "4K Amsterdam Night Walk", "timeOfDay": "night", "isFeatured": true },
-      { "youtubeId": "J3Be4gw4QXk", "label": "4K Amsterdam Evening Walk", "timeOfDay": "golden-hour", "isFeatured": false }
+      {
+        "youtubeId": "q-LeONjSrPU",
+        "label": "4K Amsterdam Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "J3Be4gw4QXk",
+        "label": "4K Amsterdam Evening Walk",
+        "timeOfDay": "golden-hour",
+        "isFeatured": false,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "Hallo / Goedendag",
       "currency": "Euro (€)",
       "bestSeason": "Spring (April–May) for tulips and mild weather",
-      "mustEat": ["Stroopwafel", "Bitterballen", "Raw herring", "Dutch cheese", "Poffertjes"],
+      "mustEat": [
+        "Stroopwafel",
+        "Bitterballen",
+        "Raw herring",
+        "Dutch cheese",
+        "Poffertjes"
+      ],
       "localTip": "Cycling is the dominant mode of transport — stay out of bike lanes. Almost everyone speaks English.",
       "funFact": "Amsterdam has more bicycles than residents and over 1,500 bridges crossing its famous canals.",
-      "culturalDos": ["Rent a bike to explore like a local", "Pre-book museum tickets", "Respect the canal houses"],
-      "culturalDonts": ["Walk in bike lanes", "Photograph sex workers in the Red Light District", "Litter near canals"]
+      "culturalDos": [
+        "Rent a bike to explore like a local",
+        "Pre-book museum tickets",
+        "Respect the canal houses"
+      ],
+      "culturalDonts": [
+        "Walk in bike lanes",
+        "Photograph sex workers in the Red Light District",
+        "Litter near canals"
+      ]
     }
   },
   {
@@ -296,22 +506,50 @@
     "countryCode": "ES",
     "flagEmoji": "🇪🇸",
     "continent": "Europe",
-    "coordinates": { "lat": 41.3851, "lng": 2.1734 },
+    "coordinates": {
+      "lat": 41.3851,
+      "lng": 2.1734
+    },
     "timezone": "Europe/Madrid",
     "population": 1620000,
-    "tags": ["beaches", "architecture", "food", "nightlife"],
+    "tags": [
+      "beaches",
+      "architecture",
+      "food",
+      "nightlife"
+    ],
     "videos": [
-      { "youtubeId": "7zc386W0fcY", "label": "4K Barcelona Walk", "timeOfDay": "day", "isFeatured": true }
+      {
+        "youtubeId": "7zc386W0fcY",
+        "label": "4K Barcelona Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "Hola / Bon dia (Catalan)",
       "currency": "Euro (€)",
       "bestSeason": "Spring (May–June) or Fall (September–October)",
-      "mustEat": ["Pa amb tomàquet", "Jamón ibérico", "Patatas bravas", "Seafood paella", "Crema catalana"],
+      "mustEat": [
+        "Pa amb tomàquet",
+        "Jamón ibérico",
+        "Patatas bravas",
+        "Seafood paella",
+        "Crema catalana"
+      ],
       "localTip": "Locals dine late — restaurants fill up after 9pm. Pickpockets are common on Las Ramblas.",
       "funFact": "Gaudí's Sagrada Família has been under construction since 1882 and is still not finished.",
-      "culturalDos": ["Learn a few words of Catalan", "Shop at La Boqueria market", "Take a siesta"],
-      "culturalDonts": ["Wear swimwear outside the beach", "Be loud after midnight in residential areas", "Rush tapas"]
+      "culturalDos": [
+        "Learn a few words of Catalan",
+        "Shop at La Boqueria market",
+        "Take a siesta"
+      ],
+      "culturalDonts": [
+        "Wear swimwear outside the beach",
+        "Be loud after midnight in residential areas",
+        "Rush tapas"
+      ]
     }
   },
   {
@@ -321,22 +559,50 @@
     "countryCode": "KR",
     "flagEmoji": "🇰🇷",
     "continent": "Asia",
-    "coordinates": { "lat": 37.5665, "lng": 126.978 },
+    "coordinates": {
+      "lat": 37.5665,
+      "lng": 126.978
+    },
     "timezone": "Asia/Seoul",
     "population": 9776000,
-    "tags": ["neon", "tech", "street-food", "k-culture"],
+    "tags": [
+      "neon",
+      "tech",
+      "street-food",
+      "k-culture"
+    ],
     "videos": [
-      { "youtubeId": "EAbmlAIcuqY", "label": "4K Seoul Night Walk", "timeOfDay": "night", "isFeatured": true }
+      {
+        "youtubeId": "EAbmlAIcuqY",
+        "label": "4K Seoul Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "안녕하세요 (Annyeonghaseyo)",
       "currency": "South Korean Won (₩)",
       "bestSeason": "Spring (April–May) for cherry blossoms or Fall (October) for foliage",
-      "mustEat": ["Bibimbap", "Korean BBQ", "Tteokbokki", "Kimchi jjigae", "Bingsu"],
+      "mustEat": [
+        "Bibimbap",
+        "Korean BBQ",
+        "Tteokbokki",
+        "Kimchi jjigae",
+        "Bingsu"
+      ],
       "localTip": "T-money cards work on all transit. Elders are given seats on public transport — always.",
       "funFact": "Seoul has the world's fastest average internet speed and more Michelin-starred restaurants per capita than Paris.",
-      "culturalDos": ["Use two hands when giving/receiving items", "Remove shoes when entering homes", "Try everything"],
-      "culturalDonts": ["Write names in red ink (associated with death)", "Stick chopsticks upright in rice", "Refuse food from elders"]
+      "culturalDos": [
+        "Use two hands when giving/receiving items",
+        "Remove shoes when entering homes",
+        "Try everything"
+      ],
+      "culturalDonts": [
+        "Write names in red ink (associated with death)",
+        "Stick chopsticks upright in rice",
+        "Refuse food from elders"
+      ]
     }
   },
   {
@@ -346,22 +612,50 @@
     "countryCode": "SG",
     "flagEmoji": "🇸🇬",
     "continent": "Asia",
-    "coordinates": { "lat": 1.3521, "lng": 103.8198 },
+    "coordinates": {
+      "lat": 1.3521,
+      "lng": 103.8198
+    },
     "timezone": "Asia/Singapore",
     "population": 5920000,
-    "tags": ["tech", "food", "multicultural", "modern"],
+    "tags": [
+      "tech",
+      "food",
+      "multicultural",
+      "modern"
+    ],
     "videos": [
-      { "youtubeId": "aUJl46bEWYo", "label": "4K Singapore Walk", "timeOfDay": "night", "isFeatured": true }
+      {
+        "youtubeId": "aUJl46bEWYo",
+        "label": "4K Singapore Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "Hello / Halo (Singlish)",
       "currency": "Singapore Dollar (S$)",
       "bestSeason": "February–April (drier and slightly cooler)",
-      "mustEat": ["Chicken rice", "Laksa", "Chili crab", "Kaya toast", "Char kway teow"],
+      "mustEat": [
+        "Chicken rice",
+        "Laksa",
+        "Chili crab",
+        "Kaya toast",
+        "Char kway teow"
+      ],
       "localTip": "Fines are strictly enforced — no chewing gum, no eating on the MRT, no littering. Singlish is an art form.",
       "funFact": "Singapore is the world's only island city-state and one of only three remaining city-states globally.",
-      "culturalDos": ["Use hawker centres for cheap amazing food", "Queue properly — it's sacred", "Respect all four official languages"],
-      "culturalDonts": ["Jaywalk", "Smoke in non-designated areas", "Disrespect food vendors"]
+      "culturalDos": [
+        "Use hawker centres for cheap amazing food",
+        "Queue properly — it's sacred",
+        "Respect all four official languages"
+      ],
+      "culturalDonts": [
+        "Jaywalk",
+        "Smoke in non-designated areas",
+        "Disrespect food vendors"
+      ]
     }
   },
   {
@@ -371,22 +665,50 @@
     "countryCode": "AE",
     "flagEmoji": "🇦🇪",
     "continent": "Asia",
-    "coordinates": { "lat": 25.2048, "lng": 55.2708 },
+    "coordinates": {
+      "lat": 25.2048,
+      "lng": 55.2708
+    },
     "timezone": "Asia/Dubai",
     "population": 3600000,
-    "tags": ["modern", "luxury", "desert-gateway", "shopping"],
+    "tags": [
+      "modern",
+      "luxury",
+      "desert-gateway",
+      "shopping"
+    ],
     "videos": [
-      { "youtubeId": "JXe-1dIlCw4", "label": "4K Dubai Night Walk", "timeOfDay": "night", "isFeatured": true }
+      {
+        "youtubeId": "JXe-1dIlCw4",
+        "label": "4K Dubai Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "As-salamu alaykum / Hello",
       "currency": "UAE Dirham (AED)",
       "bestSeason": "November–March (cooler, comfortable)",
-      "mustEat": ["Shawarma", "Machboos", "Luqaimat", "Camel milk ice cream", "Al Harees"],
+      "mustEat": [
+        "Shawarma",
+        "Machboos",
+        "Luqaimat",
+        "Camel milk ice cream",
+        "Al Harees"
+      ],
       "localTip": "Dress modestly in public areas and malls. Public displays of affection can result in fines.",
       "funFact": "The Burj Khalifa is so tall that you can watch the sunset from the base and then take the elevator to see it set again.",
-      "culturalDos": ["Dress modestly in public", "Accept Arabic coffee (qahwa) when offered", "Respect prayer times"],
-      "culturalDonts": ["Eat or drink in public during Ramadan", "Photograph people without permission", "Use left hand for eating"]
+      "culturalDos": [
+        "Dress modestly in public",
+        "Accept Arabic coffee (qahwa) when offered",
+        "Respect prayer times"
+      ],
+      "culturalDonts": [
+        "Eat or drink in public during Ramadan",
+        "Photograph people without permission",
+        "Use left hand for eating"
+      ]
     }
   },
   {
@@ -396,22 +718,50 @@
     "countryCode": "GB",
     "flagEmoji": "🇬🇧",
     "continent": "Europe",
-    "coordinates": { "lat": 51.5074, "lng": -0.1278 },
+    "coordinates": {
+      "lat": 51.5074,
+      "lng": -0.1278
+    },
     "timezone": "Europe/London",
     "population": 9000000,
-    "tags": ["historic", "multicultural", "art", "transit"],
+    "tags": [
+      "historic",
+      "multicultural",
+      "art",
+      "transit"
+    ],
     "videos": [
-      { "youtubeId": "CGslieDL-04", "label": "4K London Walk", "timeOfDay": "day", "isFeatured": true }
+      {
+        "youtubeId": "CGslieDL-04",
+        "label": "4K London Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "Hello / How do you do",
       "currency": "British Pound (£)",
       "bestSeason": "Summer (June–August) for warmth and long days",
-      "mustEat": ["Fish and chips", "Full English breakfast", "Chicken tikka masala", "Eton mess", "Cornish pasty"],
+      "mustEat": [
+        "Fish and chips",
+        "Full English breakfast",
+        "Chicken tikka masala",
+        "Eton mess",
+        "Cornish pasty"
+      ],
       "localTip": "Stand on the right of escalators. Queuing is a national religion — never skip it.",
       "funFact": "London's underground (the Tube) is the world's oldest metro system, opening in 1863.",
-      "culturalDos": ["Queue patiently", "Say 'sorry' liberally", "Tip 10–15% at restaurants"],
-      "culturalDonts": ["Talk loudly on the Tube", "Make eye contact with strangers on public transit", "Call it 'England' (it's Britain)"]
+      "culturalDos": [
+        "Queue patiently",
+        "Say 'sorry' liberally",
+        "Tip 10–15% at restaurants"
+      ],
+      "culturalDonts": [
+        "Talk loudly on the Tube",
+        "Make eye contact with strangers on public transit",
+        "Call it 'England' (it's Britain)"
+      ]
     }
   },
   {
@@ -421,23 +771,57 @@
     "countryCode": "JP",
     "flagEmoji": "🇯🇵",
     "continent": "Asia",
-    "coordinates": { "lat": 35.0116, "lng": 135.7681 },
+    "coordinates": {
+      "lat": 35.0116,
+      "lng": 135.7681
+    },
     "timezone": "Asia/Tokyo",
     "population": 1468000,
-    "tags": ["historic", "temples", "zen", "cherry-blossoms"],
+    "tags": [
+      "historic",
+      "temples",
+      "zen",
+      "cherry-blossoms"
+    ],
     "videos": [
-      { "youtubeId": "zuQ2KRZdCcM", "label": "4K Kyoto Higashiyama Walk", "timeOfDay": "day", "isFeatured": true },
-      { "youtubeId": "qrWsYMQLQXo", "label": "4K Kyoto Night Cherry Blossoms", "timeOfDay": "night", "isFeatured": false }
+      {
+        "youtubeId": "zuQ2KRZdCcM",
+        "label": "4K Kyoto Higashiyama Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "qrWsYMQLQXo",
+        "label": "4K Kyoto Night Cherry Blossoms",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "こんにちは (Konnichiwa)",
       "currency": "Japanese Yen (¥)",
       "bestSeason": "Spring (late March–April) for sakura or Autumn (November) for maple foliage",
-      "mustEat": ["Kaiseki ryori", "Yudofu (tofu hot pot)", "Matcha everything", "Obanzai", "Yatsuhashi sweets"],
+      "mustEat": [
+        "Kaiseki ryori",
+        "Yudofu (tofu hot pot)",
+        "Matcha everything",
+        "Obanzai",
+        "Yatsuhashi sweets"
+      ],
       "localTip": "Geishas (Geiko) in Gion are working — not tourist photo ops. Respect their space.",
       "funFact": "Kyoto has over 1,600 Buddhist temples and 400 Shinto shrines — more per square kilometer than any city on Earth.",
-      "culturalDos": ["Walk quietly through temple grounds", "Book popular shrines in advance", "Wear comfortable walking shoes"],
-      "culturalDonts": ["Touch the geiko or maiko", "Enter restricted shrine areas", "Talk on the phone at temples"]
+      "culturalDos": [
+        "Walk quietly through temple grounds",
+        "Book popular shrines in advance",
+        "Wear comfortable walking shoes"
+      ],
+      "culturalDonts": [
+        "Touch the geiko or maiko",
+        "Enter restricted shrine areas",
+        "Talk on the phone at temples"
+      ]
     }
   },
   {
@@ -447,22 +831,50 @@
     "countryCode": "ZA",
     "flagEmoji": "🇿🇦",
     "continent": "Africa",
-    "coordinates": { "lat": -33.9249, "lng": 18.4241 },
+    "coordinates": {
+      "lat": -33.9249,
+      "lng": 18.4241
+    },
     "timezone": "Africa/Johannesburg",
     "population": 4618000,
-    "tags": ["beaches", "nature", "mountains", "wine"],
+    "tags": [
+      "beaches",
+      "nature",
+      "mountains",
+      "wine"
+    ],
     "videos": [
-      { "youtubeId": "Kyqw3DpfJy8", "label": "4K Cape Town Walk", "timeOfDay": "day", "isFeatured": true }
+      {
+        "youtubeId": "Kyqw3DpfJy8",
+        "label": "4K Cape Town Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "Hello / Sawubona / Hallo",
       "currency": "South African Rand (R)",
       "bestSeason": "November–March (summer, warm and sunny)",
-      "mustEat": ["Braai (BBQ)", "Bobotie", "Bunny chow", "Malva pudding", "Biltong"],
+      "mustEat": [
+        "Braai (BBQ)",
+        "Bobotie",
+        "Bunny chow",
+        "Malva pudding",
+        "Biltong"
+      ],
       "localTip": "Table Mountain is best visited early morning to avoid cloud cover. Always lock car doors.",
       "funFact": "Cape Town is home to two oceans — the Atlantic and the Indian — meeting at Cape Point.",
-      "culturalDos": ["Learn a few Afrikaans words", "Embrace the braai culture", "Take the cable car up Table Mountain"],
-      "culturalDonts": ["Underestimate safety in certain areas", "Ignore load-shedding schedules", "Skip Robben Island"]
+      "culturalDos": [
+        "Learn a few Afrikaans words",
+        "Embrace the braai culture",
+        "Take the cable car up Table Mountain"
+      ],
+      "culturalDonts": [
+        "Underestimate safety in certain areas",
+        "Ignore load-shedding schedules",
+        "Skip Robben Island"
+      ]
     }
   },
   {
@@ -472,22 +884,50 @@
     "countryCode": "TH",
     "flagEmoji": "🇹🇭",
     "continent": "Asia",
-    "coordinates": { "lat": 13.7563, "lng": 100.5018 },
+    "coordinates": {
+      "lat": 13.7563,
+      "lng": 100.5018
+    },
     "timezone": "Asia/Bangkok",
     "population": 10723000,
-    "tags": ["temples", "street-food", "chaos", "nightlife"],
+    "tags": [
+      "temples",
+      "street-food",
+      "chaos",
+      "nightlife"
+    ],
     "videos": [
-      { "youtubeId": "Wy7JfB4HEtI", "label": "4K Bangkok Night Walk", "timeOfDay": "night", "isFeatured": true }
+      {
+        "youtubeId": "Wy7JfB4HEtI",
+        "label": "4K Bangkok Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "สวัสดี (Sawasdee)",
       "currency": "Thai Baht (฿)",
       "bestSeason": "November–February (cool and dry)",
-      "mustEat": ["Pad thai", "Tom yum goong", "Green curry", "Mango sticky rice", "Som tam"],
+      "mustEat": [
+        "Pad thai",
+        "Tom yum goong",
+        "Green curry",
+        "Mango sticky rice",
+        "Som tam"
+      ],
       "localTip": "Never touch someone's head or point feet at people or sacred objects. The monarchy is deeply revered.",
       "funFact": "Bangkok's full ceremonial name is 168 characters long — the world's longest city name.",
-      "culturalDos": ["Wai (bow with hands pressed together) as a greeting", "Remove shoes before entering temples", "Dress modestly at wats"],
-      "culturalDonts": ["Disrespect the royal family", "Touch a monk as a woman", "Raise your voice in public"]
+      "culturalDos": [
+        "Wai (bow with hands pressed together) as a greeting",
+        "Remove shoes before entering temples",
+        "Dress modestly at wats"
+      ],
+      "culturalDonts": [
+        "Disrespect the royal family",
+        "Touch a monk as a woman",
+        "Raise your voice in public"
+      ]
     }
   },
   {
@@ -497,22 +937,50 @@
     "countryCode": "MX",
     "flagEmoji": "🇲🇽",
     "continent": "Americas",
-    "coordinates": { "lat": 19.4326, "lng": -99.1332 },
+    "coordinates": {
+      "lat": 19.4326,
+      "lng": -99.1332
+    },
     "timezone": "America/Mexico_City",
     "population": 9200000,
-    "tags": ["historic", "food", "art", "vibrant"],
+    "tags": [
+      "historic",
+      "food",
+      "art",
+      "vibrant"
+    ],
     "videos": [
-      { "youtubeId": "Z1SbLIKCrAo", "label": "4K Mexico City Walk", "timeOfDay": "day", "isFeatured": true }
+      {
+        "youtubeId": "Z1SbLIKCrAo",
+        "label": "4K Mexico City Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "Hola / Buenos días",
       "currency": "Mexican Peso (MXN)",
       "bestSeason": "March–May (dry season, warm before the rains)",
-      "mustEat": ["Tacos al pastor", "Tamales", "Chiles en nogada", "Elote", "Churros with chocolate"],
+      "mustEat": [
+        "Tacos al pastor",
+        "Tamales",
+        "Chiles en nogada",
+        "Elote",
+        "Churros with chocolate"
+      ],
       "localTip": "Mexico City is at 2,240m altitude — give yourself a day to adjust. Uber is safer than street taxis.",
       "funFact": "Mexico City is sinking at about 50cm per year because it was built on a former lake bed.",
-      "culturalDos": ["Greet everyone individually in a group", "Try street food from busy stalls (safer than quiet ones)", "Explore the muralists"],
-      "culturalDonts": ["Dismiss the city as dangerous", "Skip the arqueological sites", "Ignore altitude sickness signs"]
+      "culturalDos": [
+        "Greet everyone individually in a group",
+        "Try street food from busy stalls (safer than quiet ones)",
+        "Explore the muralists"
+      ],
+      "culturalDonts": [
+        "Dismiss the city as dangerous",
+        "Skip the arqueological sites",
+        "Ignore altitude sickness signs"
+      ]
     }
   },
   {
@@ -522,22 +990,50 @@
     "countryCode": "US",
     "flagEmoji": "🇺🇸",
     "continent": "Americas",
-    "coordinates": { "lat": 29.9511, "lng": -90.0715 },
+    "coordinates": {
+      "lat": 29.9511,
+      "lng": -90.0715
+    },
     "timezone": "America/Chicago",
     "population": 383997,
-    "tags": ["music", "food", "festivals", "historic"],
+    "tags": [
+      "music",
+      "food",
+      "festivals",
+      "historic"
+    ],
     "videos": [
-      { "youtubeId": "fctunKraRJU", "label": "4K New Orleans French Quarter Walk", "timeOfDay": "night", "isFeatured": true }
+      {
+        "youtubeId": "fctunKraRJU",
+        "label": "4K New Orleans French Quarter Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
     ],
     "culture": {
       "greeting": "Hey! / How ya doin'?",
       "currency": "US Dollar ($)",
       "bestSeason": "Spring (March–May) — Mardi Gras season is February/March",
-      "mustEat": ["Beignets", "Gumbo", "Po'boy sandwich", "Jambalaya", "Crawfish étouffée"],
+      "mustEat": [
+        "Beignets",
+        "Gumbo",
+        "Po'boy sandwich",
+        "Jambalaya",
+        "Crawfish étouffée"
+      ],
       "localTip": "Tip your street musicians — they are the heartbeat of the city. Second lines happen spontaneously.",
       "funFact": "New Orleans is below sea level — the city is protected by an 800-km network of levees and floodwalls.",
-      "culturalDos": ["Let the jazz wash over you", "Walk the French Quarter at night safely on main streets", "Eat everything"],
-      "culturalDonts": ["Call it 'New Or-LEENS' (locals say 'New OR-lins')", "Ignore the heat and humidity", "Miss a second line parade"]
+      "culturalDos": [
+        "Let the jazz wash over you",
+        "Walk the French Quarter at night safely on main streets",
+        "Eat everything"
+      ],
+      "culturalDonts": [
+        "Call it 'New Or-LEENS' (locals say 'New OR-lins')",
+        "Ignore the heat and humidity",
+        "Miss a second line parade"
+      ]
     }
   },
   {
@@ -547,20 +1043,281 @@
     "countryCode": "IT",
     "flagEmoji": "🇮🇹",
     "continent": "Europe",
-    "coordinates": { "lat": 41.9028, "lng": 12.4964 },
+    "coordinates": {
+      "lat": 41.9028,
+      "lng": 12.4964
+    },
     "timezone": "Europe/Rome",
     "population": 2873000,
-    "tags": ["historic", "architecture", "food", "new"],
-    "videos": [{ "youtubeId": "h4KSH1h7fI4", "label": "4K Rome Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "historic",
+      "architecture",
+      "food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "uOJkVLwnCNI",
+        "label": "Rome Historic Walk 4K",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "--v8TDp92Q0",
+        "label": "7-Hour Rome Walk with Captions",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "NvjtzKUaq-s",
+        "label": "St. Peter's Basilica Tour",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "ew3skC_9FZI",
+        "label": "Evening: Spanish Steps to Colosseum",
+        "timeOfDay": "golden-hour",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "eJeF7hDB0UA",
+        "label": "Colosseum Walking Tour",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "SkCV7czZq6U",
+        "label": "Roman Forum & Palatine Hill",
+        "timeOfDay": "day",
+        "type": "guided",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "ZIiOwKETKA8",
+        "label": "Trastevere Evening Walk",
+        "timeOfDay": "golden-hour",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "PrkU8ECRxZ8",
+        "label": "Evening: Trevi to Trastevere to Colosseum",
+        "timeOfDay": "golden-hour",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "ZEFUaNTUa6g",
+        "label": "Rome at Night 4K UHD",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "l7vuIzECnak",
+        "label": "Ostia Antica — Ancient Roman Ruins",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "0B54PR2kvWE",
+        "label": "St. Peter's Basilica 4K",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "x-Cgkgj5KR0",
+        "label": "Rome at 8am — No Crowds",
+        "timeOfDay": "morning",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "k4P5W1DKTBI",
+        "label": "Roman Forum — Official Guide Narrated",
+        "timeOfDay": "day",
+        "type": "guided",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "hWHr-RlJqWU",
+        "label": "Roman Forum Walking Tour",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "JeApHXIiLbo",
+        "label": "Palatine Hill Walking Tour",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "8VoZDct2OwI",
+        "label": "Piazza Navona Befana Market",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "vK928kqYUPI",
+        "label": "Eternal City — Best of Rome Walk",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "q_Qv2y_CZk8",
+        "label": "Pantheon at Night",
+        "timeOfDay": "night",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "QF4oUSToWKw",
+        "label": "Trevi Fountain at Night",
+        "timeOfDay": "night",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "62bQ8idpEPw",
+        "label": "Piazza Navona Morning — No Crowds",
+        "timeOfDay": "morning",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "hF6H5B-uCiQ",
+        "label": "Pantheon at 6:30am — No Crowds",
+        "timeOfDay": "morning",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "ijlCQwlvPpw",
+        "label": "Trevi Fountain at Dawn",
+        "timeOfDay": "morning",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "95F8FE9pWr0",
+        "label": "Spanish Steps in the Morning",
+        "timeOfDay": "morning",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "idVpTd_QWpQ",
+        "label": "Castel Sant'Angelo Tour",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "juymjYFvrHE",
+        "label": "Mouth of Truth",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "GXTW_mIC2po",
+        "label": "Biking the Tiber River",
+        "timeOfDay": "day",
+        "type": "bike",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "bdjUv2ctBQ4",
+        "label": "Ultimate Rome Bike Tour",
+        "timeOfDay": "day",
+        "type": "bike",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "Gy6fDx9L-zk",
+        "label": "Rome Night Walk with Captions",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "b-1GGWLJMNM",
+        "label": "Rome 15-Mile Walking Tour",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "Qi6IjV1EyUM",
+        "label": "Walk Pt.1 — Piazza del Popolo to Spanish Steps",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "8JwhEk8RqMA",
+        "label": "Walk Pt.2 — Spanish Steps to Trevi Fountain",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "YpnSAhs4hUY",
+        "label": "Walk Pt.3 — Trevi Fountain to Pantheon",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "f8gCtF5J6RA",
+        "label": "Walk Pt.4 — Pantheon to Piazza Navona",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "xmC4B69Wh74",
+        "label": "Walk Pt.5 — Piazza Navona to St. Peter's",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      }
+    ],
     "culture": {
       "greeting": "Ciao / Salve",
       "currency": "Euro (€)",
       "bestSeason": "Spring (April–June) or Autumn (Sept–Oct)",
-      "mustEat": ["Cacio e pepe", "Supplì", "Carbonara", "Gelato", "Artichokes alla romana"],
+      "mustEat": [
+        "Cacio e pepe",
+        "Supplì",
+        "Carbonara",
+        "Gelato",
+        "Artichokes alla romana"
+      ],
       "localTip": "Book the Colosseum online — queues can be 3 hours. Afternoon light is magical for photos.",
       "funFact": "Rome has more obelisks than Egypt — 13 vs Egypt's 9 remaining ones.",
-      "culturalDos": ["Greet shopkeepers when entering", "Dress modestly at churches", "Eat lunch late (1–3pm)"],
-      "culturalDonts": ["Sit on the Spanish Steps with food", "Order cappuccino after 11am", "Rush through a meal"]
+      "culturalDos": [
+        "Greet shopkeepers when entering",
+        "Dress modestly at churches",
+        "Eat lunch late (1–3pm)"
+      ],
+      "culturalDonts": [
+        "Sit on the Spanish Steps with food",
+        "Order cappuccino after 11am",
+        "Rush through a meal"
+      ]
     }
   },
   {
@@ -570,20 +1327,50 @@
     "countryCode": "AT",
     "flagEmoji": "🇦🇹",
     "continent": "Europe",
-    "coordinates": { "lat": 48.2082, "lng": 16.3738 },
+    "coordinates": {
+      "lat": 48.2082,
+      "lng": 16.3738
+    },
     "timezone": "Europe/Vienna",
     "population": 1897000,
-    "tags": ["music", "architecture", "coffee", "new"],
-    "videos": [{ "youtubeId": "YtgXQi2gF78", "label": "4K Vienna Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "music",
+      "architecture",
+      "coffee",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "YtgXQi2gF78",
+        "label": "4K Vienna Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Grüß Gott / Hallo",
       "currency": "Euro (€)",
       "bestSeason": "Spring (April–May) or Christmas season (December)",
-      "mustEat": ["Wiener Schnitzel", "Sachertorte", "Apfelstrudel", "Tafelspitz", "Melange coffee"],
+      "mustEat": [
+        "Wiener Schnitzel",
+        "Sachertorte",
+        "Apfelstrudel",
+        "Tafelspitz",
+        "Melange coffee"
+      ],
       "localTip": "Vienna's Kaffeehäuser (coffee houses) are UNESCO-listed culture. Sit for hours — no one will rush you.",
       "funFact": "Vienna was once the center of the Habsburg Empire — the city influenced all of European classical music.",
-      "culturalDos": ["Visit the Naschmarkt on Saturdays", "Attend a concert at the Musikverein", "Queue politely"],
-      "culturalDonts": ["Confuse Austria with Australia", "Eat at tourist traps near the Opera", "Skip the coffee houses"]
+      "culturalDos": [
+        "Visit the Naschmarkt on Saturdays",
+        "Attend a concert at the Musikverein",
+        "Queue politely"
+      ],
+      "culturalDonts": [
+        "Confuse Austria with Australia",
+        "Eat at tourist traps near the Opera",
+        "Skip the coffee houses"
+      ]
     }
   },
   {
@@ -593,20 +1380,50 @@
     "countryCode": "CZ",
     "flagEmoji": "🇨🇿",
     "continent": "Europe",
-    "coordinates": { "lat": 50.0755, "lng": 14.4378 },
+    "coordinates": {
+      "lat": 50.0755,
+      "lng": 14.4378
+    },
     "timezone": "Europe/Prague",
     "population": 1309000,
-    "tags": ["historic", "architecture", "nightlife", "new"],
-    "videos": [{ "youtubeId": "CuEMm2FcxIg", "label": "4K Prague Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "historic",
+      "architecture",
+      "nightlife",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "CuEMm2FcxIg",
+        "label": "4K Prague Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Dobrý den / Ahoj",
       "currency": "Czech Koruna (Kč)",
       "bestSeason": "Spring (April–May) or early Autumn",
-      "mustEat": ["Svíčková", "Trdelník", "Svíčková na smetaně", "Czech pilsner", "Bramboráky"],
+      "mustEat": [
+        "Svíčková",
+        "Trdelník",
+        "Svíčková na smetaně",
+        "Czech pilsner",
+        "Bramboráky"
+      ],
       "localTip": "Czech Republic has some of the best beer in the world and it's cheaper than water in most pubs.",
       "funFact": "Prague's Old Town was never bombed in WWII — it survived virtually intact, making it a living medieval museum.",
-      "culturalDos": ["Learn 'Děkuji' (thank you)", "Pay in Czech Koruna not Euros", "Walk across Charles Bridge at dawn"],
-      "culturalDonts": ["Assume everyone speaks English", "Take taxis from the street (use apps)", "Miss the astronomical clock at noon"]
+      "culturalDos": [
+        "Learn 'Děkuji' (thank you)",
+        "Pay in Czech Koruna not Euros",
+        "Walk across Charles Bridge at dawn"
+      ],
+      "culturalDonts": [
+        "Assume everyone speaks English",
+        "Take taxis from the street (use apps)",
+        "Miss the astronomical clock at noon"
+      ]
     }
   },
   {
@@ -616,20 +1433,50 @@
     "countryCode": "HU",
     "flagEmoji": "🇭🇺",
     "continent": "Europe",
-    "coordinates": { "lat": 47.4979, "lng": 19.0402 },
+    "coordinates": {
+      "lat": 47.4979,
+      "lng": 19.0402
+    },
     "timezone": "Europe/Budapest",
     "population": 1752000,
-    "tags": ["thermal-baths", "architecture", "nightlife", "new"],
-    "videos": [{ "youtubeId": "4xH_XSfMSm8", "label": "4K Budapest Night Walk", "timeOfDay": "night", "isFeatured": true }],
+    "tags": [
+      "thermal-baths",
+      "architecture",
+      "nightlife",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "4xH_XSfMSm8",
+        "label": "4K Budapest Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Jó napot / Szia",
       "currency": "Hungarian Forint (Ft)",
       "bestSeason": "Spring (April–May) or Summer",
-      "mustEat": ["Lángos", "Gulyás (goulash)", "Kürtőskalács", "Halászlé", "Palinka"],
+      "mustEat": [
+        "Lángos",
+        "Gulyás (goulash)",
+        "Kürtőskalács",
+        "Halászlé",
+        "Palinka"
+      ],
       "localTip": "Soak in a thermal bath — Budapest has 118 natural hot springs under the city. Széchenyi is the most famous.",
       "funFact": "Budapest was two separate cities — Buda and Pest — until 1873 when they merged with Óbuda.",
-      "culturalDos": ["Try a ruin bar in the Jewish quarter", "Take the funicular up to Buda Castle", "Soak in Széchenyi baths"],
-      "culturalDonts": ["Ignore the Hungarian toasting ritual (eyes contact when clinking)", "Skip the Parliament building at night", "Overpay at tourist restaurants"]
+      "culturalDos": [
+        "Try a ruin bar in the Jewish quarter",
+        "Take the funicular up to Buda Castle",
+        "Soak in Széchenyi baths"
+      ],
+      "culturalDonts": [
+        "Ignore the Hungarian toasting ritual (eyes contact when clinking)",
+        "Skip the Parliament building at night",
+        "Overpay at tourist restaurants"
+      ]
     }
   },
   {
@@ -639,20 +1486,50 @@
     "countryCode": "PT",
     "flagEmoji": "🇵🇹",
     "continent": "Europe",
-    "coordinates": { "lat": 38.7223, "lng": -9.1393 },
+    "coordinates": {
+      "lat": 38.7223,
+      "lng": -9.1393
+    },
     "timezone": "Europe/Lisbon",
     "population": 545000,
-    "tags": ["coastal", "historic", "fado", "new"],
-    "videos": [{ "youtubeId": "q5zq0piAWtI", "label": "4K Lisbon Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "coastal",
+      "historic",
+      "fado",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "q5zq0piAWtI",
+        "label": "4K Lisbon Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Olá / Bom dia",
       "currency": "Euro (€)",
       "bestSeason": "Spring (March–May) or early Autumn",
-      "mustEat": ["Pastel de nata", "Bacalhau à Brás", "Piri piri chicken", "Bifanas", "Ginjinha"],
+      "mustEat": [
+        "Pastel de nata",
+        "Bacalhau à Brás",
+        "Piri piri chicken",
+        "Bifanas",
+        "Ginjinha"
+      ],
       "localTip": "Take Tram 28 through Alfama for the most scenic route in Lisbon — go early to avoid crowds.",
       "funFact": "Lisbon is built on seven hills and is the westernmost capital city in continental Europe.",
-      "culturalDos": ["Listen to Fado in Alfama", "Eat late (dinner after 8pm)", "Tip in restaurants (5–10%)"],
-      "culturalDonts": ["Confuse Portuguese with Spanish", "Miss the sunset at Miradouro da Graça", "Rush the pastéis"]
+      "culturalDos": [
+        "Listen to Fado in Alfama",
+        "Eat late (dinner after 8pm)",
+        "Tip in restaurants (5–10%)"
+      ],
+      "culturalDonts": [
+        "Confuse Portuguese with Spanish",
+        "Miss the sunset at Miradouro da Graça",
+        "Rush the pastéis"
+      ]
     }
   },
   {
@@ -662,20 +1539,50 @@
     "countryCode": "DE",
     "flagEmoji": "🇩🇪",
     "continent": "Europe",
-    "coordinates": { "lat": 52.52, "lng": 13.405 },
+    "coordinates": {
+      "lat": 52.52,
+      "lng": 13.405
+    },
     "timezone": "Europe/Berlin",
     "population": 3645000,
-    "tags": ["history", "nightlife", "art", "new"],
-    "videos": [{ "youtubeId": "TQ-6HVSgL50", "label": "4K Berlin Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "history",
+      "nightlife",
+      "art",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "TQ-6HVSgL50",
+        "label": "4K Berlin Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hallo / Guten Tag",
       "currency": "Euro (€)",
       "bestSeason": "Summer (June–August)",
-      "mustEat": ["Currywurst", "Döner kebab", "Berliner Pfannkuchen", "Pretzels", "Schnitzel"],
+      "mustEat": [
+        "Currywurst",
+        "Döner kebab",
+        "Berliner Pfannkuchen",
+        "Pretzels",
+        "Schnitzel"
+      ],
       "localTip": "Berlin's club scene runs Thursday to Monday. Berghain has a notoriously selective door — dress down, not up.",
       "funFact": "Berlin has more museums than rainy days per year — over 170 in total.",
-      "culturalDos": ["Respect bike lanes (never walk in them)", "Recycle into the correct bins", "Be direct in conversation"],
-      "culturalDonts": ["Assume Berlin is like the rest of Germany", "Be loud in quiet carriages", "Jaywalk (it's seriously frowned upon)"]
+      "culturalDos": [
+        "Respect bike lanes (never walk in them)",
+        "Recycle into the correct bins",
+        "Be direct in conversation"
+      ],
+      "culturalDonts": [
+        "Assume Berlin is like the rest of Germany",
+        "Be loud in quiet carriages",
+        "Jaywalk (it's seriously frowned upon)"
+      ]
     }
   },
   {
@@ -685,20 +1592,50 @@
     "countryCode": "GR",
     "flagEmoji": "🇬🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 37.9838, "lng": 23.7275 },
+    "coordinates": {
+      "lat": 37.9838,
+      "lng": 23.7275
+    },
     "timezone": "Europe/Athens",
     "population": 664000,
-    "tags": ["historic", "ruins", "food", "new"],
-    "videos": [{ "youtubeId": "uh5YUqZHjkY", "label": "4K Athens Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "historic",
+      "ruins",
+      "food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "uh5YUqZHjkY",
+        "label": "4K Athens Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Γεια σου (Ya sou) / Γεια σας (Ya sas — formal)",
       "currency": "Euro (€)",
       "bestSeason": "Spring (April–May) or Autumn (Sept–Oct)",
-      "mustEat": ["Souvlaki", "Spanakopita", "Moussaka", "Loukoumades", "Greek salad"],
+      "mustEat": [
+        "Souvlaki",
+        "Spanakopita",
+        "Moussaka",
+        "Loukoumades",
+        "Greek salad"
+      ],
       "localTip": "The Acropolis is best visited at opening (8am) or 2 hours before closing. Evening light is spectacular from Filopappou Hill.",
       "funFact": "Athens has been continuously inhabited for over 3,400 years — making it one of the world's oldest cities.",
-      "culturalDos": ["Greet with a cheek kiss between friends", "Eat very late (dinner at 9–10pm)", "Explore Monastiraki flea market on Sundays"],
-      "culturalDonts": ["Visit the Parthenon at midday in summer", "Assume all ancient sites are free", "Rush Greeks in conversation"]
+      "culturalDos": [
+        "Greet with a cheek kiss between friends",
+        "Eat very late (dinner at 9–10pm)",
+        "Explore Monastiraki flea market on Sundays"
+      ],
+      "culturalDonts": [
+        "Visit the Parthenon at midday in summer",
+        "Assume all ancient sites are free",
+        "Rush Greeks in conversation"
+      ]
     }
   },
   {
@@ -708,20 +1645,50 @@
     "countryCode": "HK",
     "flagEmoji": "🇭🇰",
     "continent": "Asia",
-    "coordinates": { "lat": 22.3193, "lng": 114.1694 },
+    "coordinates": {
+      "lat": 22.3193,
+      "lng": 114.1694
+    },
     "timezone": "Asia/Hong_Kong",
     "population": 7413000,
-    "tags": ["skyscrapers", "neon", "street-food", "new"],
-    "videos": [{ "youtubeId": "mh85CXhJm4w", "label": "4K Hong Kong Night Walk", "timeOfDay": "night", "isFeatured": true }],
+    "tags": [
+      "skyscrapers",
+      "neon",
+      "street-food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "mh85CXhJm4w",
+        "label": "4K Hong Kong Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "你好 (Nei hou) in Cantonese",
       "currency": "Hong Kong Dollar (HK$)",
       "bestSeason": "Autumn (Oct–December) — cool and dry",
-      "mustEat": ["Dim sum", "Egg tarts", "Wonton noodle soup", "Char siu bao", "Milk tea"],
+      "mustEat": [
+        "Dim sum",
+        "Egg tarts",
+        "Wonton noodle soup",
+        "Char siu bao",
+        "Milk tea"
+      ],
       "localTip": "Use an Octopus card for all transit. The Star Ferry across Victoria Harbour is one of the world's great commutes for HK$3.",
       "funFact": "Hong Kong has one of the world's highest concentrations of skyscrapers — over 550 buildings taller than 150m.",
-      "culturalDos": ["Learn 'M̀h gōi' (excuse me / thank you) in Cantonese", "Tap your Octopus card", "Try dai pai dong street stalls"],
-      "culturalDonts": ["Call it part of mainland China casually", "Tip in most local restaurants", "Bring up politics"]
+      "culturalDos": [
+        "Learn 'M̀h gōi' (excuse me / thank you) in Cantonese",
+        "Tap your Octopus card",
+        "Try dai pai dong street stalls"
+      ],
+      "culturalDonts": [
+        "Call it part of mainland China casually",
+        "Tip in most local restaurants",
+        "Bring up politics"
+      ]
     }
   },
   {
@@ -731,20 +1698,50 @@
     "countryCode": "TW",
     "flagEmoji": "🇹🇼",
     "continent": "Asia",
-    "coordinates": { "lat": 25.033, "lng": 121.5654 },
+    "coordinates": {
+      "lat": 25.033,
+      "lng": 121.5654
+    },
     "timezone": "Asia/Taipei",
     "population": 2646000,
-    "tags": ["night-markets", "tech", "street-food", "new"],
-    "videos": [{ "youtubeId": "ADHXkLGGjKE", "label": "4K Taipei Night Walk", "timeOfDay": "night", "isFeatured": true }],
+    "tags": [
+      "night-markets",
+      "tech",
+      "street-food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "ADHXkLGGjKE",
+        "label": "4K Taipei Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "你好 (Nǐ hǎo)",
       "currency": "New Taiwan Dollar (NT$)",
       "bestSeason": "Autumn (Oct–Dec) — mild and less rainy",
-      "mustEat": ["Beef noodle soup", "Scallion pancakes", "Stinky tofu", "Bubble tea", "Pineapple cakes"],
+      "mustEat": [
+        "Beef noodle soup",
+        "Scallion pancakes",
+        "Stinky tofu",
+        "Bubble tea",
+        "Pineapple cakes"
+      ],
       "localTip": "The Shilin Night Market is touristy — try Raohe Night Market for a more local experience.",
       "funFact": "Taipei 101 was the world's tallest building from 2004 to 2010. Its tuned mass damper is visible to tourists.",
-      "culturalDos": ["Give up your seat on the MRT (it's strictly observed)", "Accept business cards with two hands", "Try everything at night markets"],
-      "culturalDonts": ["Tip in restaurants (it's not customary)", "Eat on the MRT", "Mistake Taiwan for China"]
+      "culturalDos": [
+        "Give up your seat on the MRT (it's strictly observed)",
+        "Accept business cards with two hands",
+        "Try everything at night markets"
+      ],
+      "culturalDonts": [
+        "Tip in restaurants (it's not customary)",
+        "Eat on the MRT",
+        "Mistake Taiwan for China"
+      ]
     }
   },
   {
@@ -754,20 +1751,50 @@
     "countryCode": "JP",
     "flagEmoji": "🇯🇵",
     "continent": "Asia",
-    "coordinates": { "lat": 34.6937, "lng": 135.5022 },
+    "coordinates": {
+      "lat": 34.6937,
+      "lng": 135.5022
+    },
     "timezone": "Asia/Tokyo",
     "population": 2690000,
-    "tags": ["street-food", "nightlife", "comedy", "new"],
-    "videos": [{ "youtubeId": "Kwk8JGKkwkM", "label": "4K Osaka Night Walk", "timeOfDay": "night", "isFeatured": true }],
+    "tags": [
+      "street-food",
+      "nightlife",
+      "comedy",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "Kwk8JGKkwkM",
+        "label": "4K Osaka Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "毎度 (Maido) — the Osaka merchant greeting",
       "currency": "Japanese Yen (¥)",
       "bestSeason": "Spring (March–April) for cherry blossoms, Autumn (Oct–Nov)",
-      "mustEat": ["Takoyaki", "Okonomiyaki", "Kushikatsu", "Kitsune udon", "Yakiniku"],
+      "mustEat": [
+        "Takoyaki",
+        "Okonomiyaki",
+        "Kushikatsu",
+        "Kitsune udon",
+        "Yakiniku"
+      ],
       "localTip": "Dotonbori at night is iconic. Osaka is significantly cheaper than Tokyo for food — eat everything.",
       "funFact": "Osaka is known as Japan's kitchen (天下の台所) — the city's motto is literally 'eat till you drop' (kuidaore).",
-      "culturalDos": ["Stand on the left on Osaka escalators (opposite to Tokyo)", "Eat while walking (Osaka is relaxed)", "Be loud and funny — Osakans love it"],
-      "culturalDonts": ["Be too formal (Osakans are very casual)", "Skip Kuromon market", "Miss the robot restaurant area"]
+      "culturalDos": [
+        "Stand on the left on Osaka escalators (opposite to Tokyo)",
+        "Eat while walking (Osaka is relaxed)",
+        "Be loud and funny — Osakans love it"
+      ],
+      "culturalDonts": [
+        "Be too formal (Osakans are very casual)",
+        "Skip Kuromon market",
+        "Miss the robot restaurant area"
+      ]
     }
   },
   {
@@ -777,20 +1804,50 @@
     "countryCode": "VN",
     "flagEmoji": "🇻🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 10.8231, "lng": 106.6297 },
+    "coordinates": {
+      "lat": 10.8231,
+      "lng": 106.6297
+    },
     "timezone": "Asia/Ho_Chi_Minh",
     "population": 9000000,
-    "tags": ["street-food", "historic", "motorbikes", "new"],
-    "videos": [{ "youtubeId": "5dN1bHzqGLA", "label": "4K Ho Chi Minh City Night Walk", "timeOfDay": "night", "isFeatured": true }],
+    "tags": [
+      "street-food",
+      "historic",
+      "motorbikes",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "5dN1bHzqGLA",
+        "label": "4K Ho Chi Minh City Night Walk",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Xin chào",
       "currency": "Vietnamese Dong (₫)",
       "bestSeason": "Dry season (December–April)",
-      "mustEat": ["Phở", "Bánh mì", "Bún bò Huế", "Cơm tấm", "Fresh spring rolls"],
+      "mustEat": [
+        "Phở",
+        "Bánh mì",
+        "Bún bò Huế",
+        "Cơm tấm",
+        "Fresh spring rolls"
+      ],
       "localTip": "To cross the street, walk slowly and steadily — the motorbikes will flow around you. Never stop suddenly.",
       "funFact": "Ho Chi Minh City has over 8 million registered motorbikes — roughly one per person.",
-      "culturalDos": ["Bargain at markets (politely)", "Remove shoes at temples", "Try street-side plastic stool dining"],
-      "culturalDonts": ["Refer to it as Saigon to locals who prefer the official name", "Leave tips at casual eateries", "Rush the coffee ritual"]
+      "culturalDos": [
+        "Bargain at markets (politely)",
+        "Remove shoes at temples",
+        "Try street-side plastic stool dining"
+      ],
+      "culturalDonts": [
+        "Refer to it as Saigon to locals who prefer the official name",
+        "Leave tips at casual eateries",
+        "Rush the coffee ritual"
+      ]
     }
   },
   {
@@ -800,20 +1857,50 @@
     "countryCode": "AR",
     "flagEmoji": "🇦🇷",
     "continent": "Americas",
-    "coordinates": { "lat": -34.6037, "lng": -58.3816 },
+    "coordinates": {
+      "lat": -34.6037,
+      "lng": -58.3816
+    },
     "timezone": "America/Argentina/Buenos_Aires",
     "population": 2891000,
-    "tags": ["tango", "food", "architecture", "new"],
-    "videos": [{ "youtubeId": "3NQ_BMEQVK8", "label": "4K Buenos Aires Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "tango",
+      "food",
+      "architecture",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "3NQ_BMEQVK8",
+        "label": "4K Buenos Aires Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hola / Buen día",
       "currency": "Argentine Peso ($)",
       "bestSeason": "Spring (Oct–Nov) or Autumn (March–April)",
-      "mustEat": ["Asado", "Empanadas", "Medialunas", "Dulce de leche everything", "Choripán"],
+      "mustEat": [
+        "Asado",
+        "Empanadas",
+        "Medialunas",
+        "Dulce de leche everything",
+        "Choripán"
+      ],
       "localTip": "Porteños (locals) eat dinner at 10pm and socialise until 3am. Don't be surprised if restaurants are empty at 8pm.",
       "funFact": "Buenos Aires has more psychiatrists per capita than any other city on Earth — more than New York or Vienna.",
-      "culturalDos": ["Greet with a single kiss on the cheek", "Learn a few tango moves in San Telmo", "Explore Palermo Soho on weekends"],
-      "culturalDonts": ["Bring up the Falkland Islands", "Eat a rushed asado", "Skip the bookshop El Ateneo Grand Splendid"]
+      "culturalDos": [
+        "Greet with a single kiss on the cheek",
+        "Learn a few tango moves in San Telmo",
+        "Explore Palermo Soho on weekends"
+      ],
+      "culturalDonts": [
+        "Bring up the Falkland Islands",
+        "Eat a rushed asado",
+        "Skip the bookshop El Ateneo Grand Splendid"
+      ]
     }
   },
   {
@@ -823,20 +1910,50 @@
     "countryCode": "CA",
     "flagEmoji": "🇨🇦",
     "continent": "Americas",
-    "coordinates": { "lat": 43.6532, "lng": -79.3832 },
+    "coordinates": {
+      "lat": 43.6532,
+      "lng": -79.3832
+    },
     "timezone": "America/Toronto",
     "population": 2930000,
-    "tags": ["multicultural", "modern", "food", "new"],
-    "videos": [{ "youtubeId": "_JjvJpBjp8E", "label": "4K Toronto Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "multicultural",
+      "modern",
+      "food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "_JjvJpBjp8E",
+        "label": "4K Toronto Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hi / Hello",
       "currency": "Canadian Dollar (CAD)",
       "bestSeason": "Summer (June–August) or Autumn foliage (October)",
-      "mustEat": ["Peameal bacon sandwich", "Butter tarts", "BeaverTails", "Poutine", "Jerk chicken from Kensington"],
+      "mustEat": [
+        "Peameal bacon sandwich",
+        "Butter tarts",
+        "BeaverTails",
+        "Poutine",
+        "Jerk chicken from Kensington"
+      ],
       "localTip": "Toronto is one of the world's most multicultural cities — every neighbourhood has a distinct flavour. Spend time in Kensington, Chinatown, Little Italy and Greektown.",
       "funFact": "Toronto's PATH underground walkway is the world's largest underground shopping complex — 30km of tunnels.",
-      "culturalDos": ["Say sorry (it's genuine, not a cliché)", "Use the TTC (subway)", "Explore the Distillery District"],
-      "culturalDonts": ["Call Canadians Americans", "Expect American pricing", "Visit the CN Tower without booking ahead in summer"]
+      "culturalDos": [
+        "Say sorry (it's genuine, not a cliché)",
+        "Use the TTC (subway)",
+        "Explore the Distillery District"
+      ],
+      "culturalDonts": [
+        "Call Canadians Americans",
+        "Expect American pricing",
+        "Visit the CN Tower without booking ahead in summer"
+      ]
     }
   },
   {
@@ -846,20 +1963,50 @@
     "countryCode": "US",
     "flagEmoji": "🇺🇸",
     "continent": "Americas",
-    "coordinates": { "lat": 41.8781, "lng": -87.6298 },
+    "coordinates": {
+      "lat": 41.8781,
+      "lng": -87.6298
+    },
     "timezone": "America/Chicago",
     "population": 2696000,
-    "tags": ["architecture", "music", "food", "new"],
-    "videos": [{ "youtubeId": "rRiqV5ZqMIc", "label": "4K Chicago Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "architecture",
+      "music",
+      "food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "rRiqV5ZqMIc",
+        "label": "4K Chicago Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hey / What's up",
       "currency": "US Dollar ($)",
       "bestSeason": "Summer (June–August) — spring and fall are beautiful too",
-      "mustEat": ["Deep dish pizza", "Chicago-style hot dog", "Italian beef sandwich", "Chicago-style popcorn", "Garrett Mix"],
+      "mustEat": [
+        "Deep dish pizza",
+        "Chicago-style hot dog",
+        "Italian beef sandwich",
+        "Chicago-style popcorn",
+        "Garrett Mix"
+      ],
       "localTip": "Chicago's 'L' train (the elevated rail) is the best way to see the city skyline for the price of a transit ticket.",
       "funFact": "Chicago was rebuilt almost entirely after the Great Fire of 1871 — the result is one of the world's greatest collections of modern architecture.",
-      "culturalDos": ["Walk the Riverwalk along the Chicago River", "Take an architecture boat tour", "Try Giordano's deep dish — call it a casserole if you want"],
-      "culturalDonts": ["Call it 'The Chi' unless you're a local", "Diss the Cubs OR the White Sox around fans", "Skip the Art Institute"]
+      "culturalDos": [
+        "Walk the Riverwalk along the Chicago River",
+        "Take an architecture boat tour",
+        "Try Giordano's deep dish — call it a casserole if you want"
+      ],
+      "culturalDonts": [
+        "Call it 'The Chi' unless you're a local",
+        "Diss the Cubs OR the White Sox around fans",
+        "Skip the Art Institute"
+      ]
     }
   },
   {
@@ -869,20 +2016,50 @@
     "countryCode": "US",
     "flagEmoji": "🇺🇸",
     "continent": "Americas",
-    "coordinates": { "lat": 25.7617, "lng": -80.1918 },
+    "coordinates": {
+      "lat": 25.7617,
+      "lng": -80.1918
+    },
     "timezone": "America/New_York",
     "population": 454000,
-    "tags": ["beaches", "nightlife", "art", "new"],
-    "videos": [{ "youtubeId": "pz0gfPmIoG4", "label": "4K Miami Beach Walk", "timeOfDay": "golden-hour", "isFeatured": true }],
+    "tags": [
+      "beaches",
+      "nightlife",
+      "art",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "pz0gfPmIoG4",
+        "label": "4K Miami Beach Walk",
+        "timeOfDay": "golden-hour",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hey / Hola (Spanish widely spoken)",
       "currency": "US Dollar ($)",
       "bestSeason": "Winter (Dec–April) — avoid hurricane season (June–Nov)",
-      "mustEat": ["Cuban sandwich", "Ceviche", "Stone crab claws", "Arroz con pollo", "Cafecito (Cuban espresso)"],
+      "mustEat": [
+        "Cuban sandwich",
+        "Ceviche",
+        "Stone crab claws",
+        "Arroz con pollo",
+        "Cafecito (Cuban espresso)"
+      ],
       "localTip": "Miami is actually two cities — Miami Beach (the island) and Miami proper (the mainland). Most visitors want Miami Beach.",
       "funFact": "Over 70% of Miami residents speak Spanish as their primary language — it's the only major US city where English is not the dominant language.",
-      "culturalDos": ["Learn basic Spanish greetings", "Visit Wynwood Walls for street art", "Eat Cuban food in Little Havana"],
-      "culturalDonts": ["Drive during rush hour (it's brutal)", "Underestimate the heat and humidity", "Skip the Art Deco Historic District"]
+      "culturalDos": [
+        "Learn basic Spanish greetings",
+        "Visit Wynwood Walls for street art",
+        "Eat Cuban food in Little Havana"
+      ],
+      "culturalDonts": [
+        "Drive during rush hour (it's brutal)",
+        "Underestimate the heat and humidity",
+        "Skip the Art Deco Historic District"
+      ]
     }
   },
   {
@@ -892,20 +2069,50 @@
     "countryCode": "US",
     "flagEmoji": "🇺🇸",
     "continent": "Americas",
-    "coordinates": { "lat": 34.0522, "lng": -118.2437 },
+    "coordinates": {
+      "lat": 34.0522,
+      "lng": -118.2437
+    },
     "timezone": "America/Los_Angeles",
     "population": 3898000,
-    "tags": ["beaches", "film", "celebrity", "new"],
-    "videos": [{ "youtubeId": "SuFpRtpV76w", "label": "4K Los Angeles Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "beaches",
+      "film",
+      "celebrity",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "SuFpRtpV76w",
+        "label": "4K Los Angeles Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hey / What's good",
       "currency": "US Dollar ($)",
       "bestSeason": "Year-round — spring and fall are ideal (72°F / 22°C)",
-      "mustEat": ["In-N-Out Burger", "Fish tacos", "Korean BBQ", "Açaí bowls", "Avocado toast (it started here)"],
+      "mustEat": [
+        "In-N-Out Burger",
+        "Fish tacos",
+        "Korean BBQ",
+        "Açaí bowls",
+        "Avocado toast (it started here)"
+      ],
       "localTip": "LA runs on cars. Use Waze not Google Maps. Traffic is a genuine lifestyle — podcast your commutes.",
       "funFact": "LA is the entertainment capital of the world — it produces more content than any other city, with over 90,000 production sets per year.",
-      "culturalDos": ["Hike Runyon Canyon for city views", "Explore beyond Hollywood (Silver Lake, Venice, Koreatown)", "Eat at food trucks"],
-      "culturalDonts": ["Ask someone if they're an actor (everyone is)", "Walk in places designed for cars", "Expect things to be close — LA is enormous"]
+      "culturalDos": [
+        "Hike Runyon Canyon for city views",
+        "Explore beyond Hollywood (Silver Lake, Venice, Koreatown)",
+        "Eat at food trucks"
+      ],
+      "culturalDonts": [
+        "Ask someone if they're an actor (everyone is)",
+        "Walk in places designed for cars",
+        "Expect things to be close — LA is enormous"
+      ]
     }
   },
   {
@@ -915,20 +2122,50 @@
     "countryCode": "EG",
     "flagEmoji": "🇪🇬",
     "continent": "Africa",
-    "coordinates": { "lat": 30.0444, "lng": 31.2357 },
+    "coordinates": {
+      "lat": 30.0444,
+      "lng": 31.2357
+    },
     "timezone": "Africa/Cairo",
     "population": 10100000,
-    "tags": ["historic", "pyramids", "bazaar", "new"],
-    "videos": [{ "youtubeId": "M8vwOPRilZk", "label": "4K Cairo Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "historic",
+      "pyramids",
+      "bazaar",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "M8vwOPRilZk",
+        "label": "4K Cairo Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "As-salamu alaykum / Ahlan",
       "currency": "Egyptian Pound (EGP)",
       "bestSeason": "Winter (Oct–April) — summers are brutally hot",
-      "mustEat": ["Koshari", "Ful medames", "Ta'meya (Egyptian falafel)", "Molokhia", "Basbousa"],
+      "mustEat": [
+        "Koshari",
+        "Ful medames",
+        "Ta'meya (Egyptian falafel)",
+        "Molokhia",
+        "Basbousa"
+      ],
       "localTip": "Bargaining is essential in Khan el-Khalili bazaar. Start at 30% of the asking price. Drink the offered tea — it's hospitality.",
       "funFact": "The Great Pyramid of Giza is the only ancient Wonder of the World still standing — and it was the world's tallest structure for 3,800 years.",
-      "culturalDos": ["Dress conservatively especially women", "Accept tea when offered", "Visit the Egyptian Museum"],
-      "culturalDonts": ["Photograph military sites", "Show affection publicly", "Drink tap water"]
+      "culturalDos": [
+        "Dress conservatively especially women",
+        "Accept tea when offered",
+        "Visit the Egyptian Museum"
+      ],
+      "culturalDonts": [
+        "Photograph military sites",
+        "Show affection publicly",
+        "Drink tap water"
+      ]
     }
   },
   {
@@ -938,20 +2175,50 @@
     "countryCode": "KE",
     "flagEmoji": "🇰🇪",
     "continent": "Africa",
-    "coordinates": { "lat": -1.2921, "lng": 36.8219 },
+    "coordinates": {
+      "lat": -1.2921,
+      "lng": 36.8219
+    },
     "timezone": "Africa/Nairobi",
     "population": 4397000,
-    "tags": ["wildlife", "tech", "food", "new"],
-    "videos": [{ "youtubeId": "0_Ul2hqBq9w", "label": "4K Nairobi Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "wildlife",
+      "tech",
+      "food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "0_Ul2hqBq9w",
+        "label": "4K Nairobi Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Jambo / Habari (Swahili) or Hello",
       "currency": "Kenyan Shilling (KES)",
       "bestSeason": "Dry season (July–October) for safaris",
-      "mustEat": ["Nyama choma (roast meat)", "Ugali", "Sukuma wiki", "Mandazi", "Kenyan chai"],
+      "mustEat": [
+        "Nyama choma (roast meat)",
+        "Ugali",
+        "Sukuma wiki",
+        "Mandazi",
+        "Kenyan chai"
+      ],
       "localTip": "Nairobi has the world's only national park within a city — you can see lions with the skyline behind them.",
       "funFact": "Nairobi is Africa's Silicon Savannah — it's the tech startup capital of the continent, home to M-Pesa (mobile money used by 96% of Kenyans).",
-      "culturalDos": ["Use M-Pesa for transactions", "Greet elders respectfully", "Try a matatu (minibus) ride for the full experience"],
-      "culturalDonts": ["Walk alone at night in unfamiliar areas", "Photograph people without asking", "Assume African cities are all the same"]
+      "culturalDos": [
+        "Use M-Pesa for transactions",
+        "Greet elders respectfully",
+        "Try a matatu (minibus) ride for the full experience"
+      ],
+      "culturalDonts": [
+        "Walk alone at night in unfamiliar areas",
+        "Photograph people without asking",
+        "Assume African cities are all the same"
+      ]
     }
   },
   {
@@ -961,20 +2228,50 @@
     "countryCode": "GB",
     "flagEmoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
     "continent": "Europe",
-    "coordinates": { "lat": 55.9533, "lng": -3.1883 },
+    "coordinates": {
+      "lat": 55.9533,
+      "lng": -3.1883
+    },
     "timezone": "Europe/London",
     "population": 524000,
-    "tags": ["historic", "festivals", "whisky", "new"],
-    "videos": [{ "youtubeId": "rY5UKSBuPDU", "label": "4K Edinburgh Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "historic",
+      "festivals",
+      "whisky",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "rY5UKSBuPDU",
+        "label": "4K Edinburgh Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hiya / Alright",
       "currency": "British Pound (£)",
       "bestSeason": "August (Fringe Festival) or winter (atmospheric and uncrowded)",
-      "mustEat": ["Haggis, neeps and tatties", "Scotch pie", "Deep-fried Mars bar", "Scottish salmon", "Tablet (Scottish fudge)"],
+      "mustEat": [
+        "Haggis, neeps and tatties",
+        "Scotch pie",
+        "Deep-fried Mars bar",
+        "Scottish salmon",
+        "Tablet (Scottish fudge)"
+      ],
       "localTip": "The Edinburgh Festival Fringe in August is the world's largest arts festival — the city transforms completely. Book accommodation a year ahead.",
       "funFact": "Edinburgh Castle sits on an extinct volcano called Castle Rock that erupted 350 million years ago.",
-      "culturalDos": ["Climb Arthur's Seat for panoramic views", "Do the Royal Mile on foot", "Try a whisky tasting in the Old Town"],
-      "culturalDonts": ["Call Scottish people English", "Assume all Scots eat haggis daily", "Visit without rain gear (ever)"]
+      "culturalDos": [
+        "Climb Arthur's Seat for panoramic views",
+        "Do the Royal Mile on foot",
+        "Try a whisky tasting in the Old Town"
+      ],
+      "culturalDonts": [
+        "Call Scottish people English",
+        "Assume all Scots eat haggis daily",
+        "Visit without rain gear (ever)"
+      ]
     }
   },
   {
@@ -984,20 +2281,50 @@
     "countryCode": "CU",
     "flagEmoji": "🇨🇺",
     "continent": "Americas",
-    "coordinates": { "lat": 23.1136, "lng": -82.3666 },
+    "coordinates": {
+      "lat": 23.1136,
+      "lng": -82.3666
+    },
     "timezone": "America/Havana",
     "population": 2132000,
-    "tags": ["music", "vintage-cars", "colonial", "new"],
-    "videos": [{ "youtubeId": "DzYbNUhc0hE", "label": "4K Havana Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "music",
+      "vintage-cars",
+      "colonial",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "DzYbNUhc0hE",
+        "label": "4K Havana Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hola / ¿Qué bola? (informal)",
       "currency": "Cuban Peso (CUP) — tourists often use USD/EUR informally",
       "bestSeason": "Dry season (Nov–April)",
-      "mustEat": ["Ropa vieja", "Moros y Cristianos (rice and beans)", "Cuban sandwich", "Tostones", "Guarapo (sugar cane juice)"],
+      "mustEat": [
+        "Ropa vieja",
+        "Moros y Cristianos (rice and beans)",
+        "Cuban sandwich",
+        "Tostones",
+        "Guarapo (sugar cane juice)"
+      ],
       "localTip": "Cuba has two types of restaurants — state-run (mediocre) and paladares (private, family-run, excellent). Always find a paladar.",
       "funFact": "Havana has the world's largest collection of classic American cars — 1940s and 50s Chevrolets and Buicks still used as taxis.",
-      "culturalDos": ["Bring cash (cards often don't work)", "Learn salsa — even badly", "Respect the extraordinary resilience of the people"],
-      "culturalDonts": ["Discuss politics openly", "Photograph military installations", "Assume everything works like home"]
+      "culturalDos": [
+        "Bring cash (cards often don't work)",
+        "Learn salsa — even badly",
+        "Respect the extraordinary resilience of the people"
+      ],
+      "culturalDonts": [
+        "Discuss politics openly",
+        "Photograph military installations",
+        "Assume everything works like home"
+      ]
     }
   },
   {
@@ -1007,20 +2334,50 @@
     "countryCode": "DK",
     "flagEmoji": "🇩🇰",
     "continent": "Europe",
-    "coordinates": { "lat": 55.6761, "lng": 12.5683 },
+    "coordinates": {
+      "lat": 55.6761,
+      "lng": 12.5683
+    },
     "timezone": "Europe/Copenhagen",
     "population": 794000,
-    "tags": ["design", "cycling", "food", "new"],
-    "videos": [{ "youtubeId": "ZOy8c-TYGGI", "label": "4K Copenhagen Day Walk", "timeOfDay": "day", "isFeatured": true }],
+    "tags": [
+      "design",
+      "cycling",
+      "food",
+      "new"
+    ],
+    "videos": [
+      {
+        "youtubeId": "ZOy8c-TYGGI",
+        "label": "4K Copenhagen Day Walk",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
     "culture": {
       "greeting": "Hej / God dag",
       "currency": "Danish Krone (DKK)",
       "bestSeason": "Summer (June–August) for long daylight hours",
-      "mustEat": ["Smørrebrød (open sandwiches)", "Danish pastry (wienerbrød)", "Hot dog from a pølsevogn", "New Nordic cuisine", "Rugbrød"],
+      "mustEat": [
+        "Smørrebrød (open sandwiches)",
+        "Danish pastry (wienerbrød)",
+        "Hot dog from a pølsevogn",
+        "New Nordic cuisine",
+        "Rugbrød"
+      ],
       "localTip": "Copenhagen is the cycling capital of the world — 62% of residents cycle to work daily. Rent a bike on day one.",
       "funFact": "Copenhagen's Noma restaurant has been rated the world's best restaurant four times — the city pioneered New Nordic cuisine.",
-      "culturalDos": ["Cycle on the correct side of bike lanes", "Embrace hygge (cosy contentment)", "Visit Tivoli Gardens in the evening"],
-      "culturalDonts": ["Jaywalk (Danes are serious about it)", "Be loud in public", "Miss Nyhavn for sunset drinks"]
+      "culturalDos": [
+        "Cycle on the correct side of bike lanes",
+        "Embrace hygge (cosy contentment)",
+        "Visit Tivoli Gardens in the evening"
+      ],
+      "culturalDonts": [
+        "Jaywalk (Danes are serious about it)",
+        "Be loud in public",
+        "Miss Nyhavn for sunset drinks"
+      ]
     }
   }
 ]

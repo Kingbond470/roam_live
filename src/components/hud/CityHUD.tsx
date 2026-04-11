@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart, Film } from "lucide-react";
 import { ShareButton } from "./ShareButton";
 import type { City } from "@/types/city";
 import { LiveBadge } from "./LiveBadge";
@@ -15,18 +15,17 @@ interface Props {
   isVisible: boolean;
   onOpenCard: () => void;
   onOpenPicker: () => void;
+  onOpenSwitcher: () => void;
   allCities: City[];
 }
 
 const HUD_HIDE_DELAY = 4000;
 
-export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, allCities }: Props) {
+export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitcher, allCities }: Props) {
   const {
     returnToGlobe,
     toggleMute,
     playerMuted,
-    activeVideoId,
-    setActiveVideo,
     favoriteSlugs,
     toggleFavorite,
     navigateCity,
@@ -56,14 +55,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, allCities }
   const isFavorited = favoriteSlugs.includes(city.slug);
   const show = isVisible && hudRevealed;
 
-  // Sprint 1C: videos with distinct timeOfDay labels for switcher
-  const switchableVideos = city.videos.length > 1 ? city.videos : [];
-  const currentVideoId = activeVideoId ?? city.videos.find((v) => v.isFeatured)?.youtubeId;
 
-  const timeLabel = (t: string) => {
-    if (t === "golden-hour") return "Golden";
-    return t.charAt(0).toUpperCase() + t.slice(1);
-  };
 
   return (
     <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 40 }}>
@@ -178,26 +170,15 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, allCities }
                     {city.name}
                   </h1>
 
-                  {/* Sprint 1C: Video time-of-day switcher pills */}
-                  {switchableVideos.length > 0 && (
-                    <div
-                      className="flex items-center gap-1.5"
-                      onClick={(e) => e.stopPropagation()}
+                  {/* Video switcher pill — only shown when city has multiple videos */}
+                  {city.videos.length > 1 && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); onOpenSwitcher(); }}
+                      className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white/50 hover:text-white/80 transition-colors text-xs"
                     >
-                      {switchableVideos.map((v) => (
-                        <button
-                          key={v.youtubeId}
-                          onClick={() => setActiveVideo(v.youtubeId)}
-                          className={`px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide transition-colors ${
-                            currentVideoId === v.youtubeId
-                              ? "bg-amber-500/30 text-amber-300 border border-amber-500/50"
-                              : "text-white/30 border border-white/10 hover:text-white/60"
-                          }`}
-                        >
-                          {timeLabel(v.timeOfDay)}
-                        </button>
-                      ))}
-                    </div>
+                      <Film className="w-3 h-3" />
+                      {city.videos.length} videos
+                    </button>
                   )}
 
                   <div className="flex items-center gap-2 text-white/50 text-sm">

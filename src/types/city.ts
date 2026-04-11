@@ -9,11 +9,15 @@ export interface CultureCardData {
   culturalDonts: string[];
 }
 
+export type VideoTimeOfDay = "morning" | "day" | "golden-hour" | "night" | "any";
+export type VideoType = "walk" | "landmark" | "guided" | "bike";
+
 export interface CityVideo {
   youtubeId: string;
   label: string;
   duration?: string;
-  timeOfDay: "day" | "night" | "golden-hour" | "any";
+  timeOfDay: VideoTimeOfDay;
+  type: VideoType;
   isFeatured: boolean;
 }
 

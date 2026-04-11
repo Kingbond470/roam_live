@@ -13,7 +13,8 @@ import { CultureCard } from "@/components/cards/CultureCard";
 import { SplitScreen } from "@/components/wow/SplitScreen";
 import { ComparePicker } from "@/components/wow/ComparePicker";
 import { CitySearch } from "@/components/search/CitySearch";
-import { getFeaturedVideo } from "@/lib/utils";
+import { getTimeAwareVideo } from "@/lib/utils";
+import { VideoSwitcher } from "@/components/video/VideoSwitcher";
 import { getCityOfTheDay } from "@/lib/cityOfTheDay";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useSwipeGestures } from "@/hooks/useSwipeGestures";
@@ -58,6 +59,8 @@ export function HomeClient({ cities, initialCity }: Props) {
 
   // Compare picker — lifted here so it renders outside pointer-events-none HUD
   const [pickerOpen, setPickerOpen] = useState(false);
+  // Video switcher panel
+  const [switcherOpen, setSwitcherOpen] = useState(false);
 
   // Sprint 1A: keyboard shortcuts
   useKeyboardShortcuts(cities);
@@ -103,13 +106,14 @@ export function HomeClient({ cities, initialCity }: Props) {
   const { showGlobeTip, showSwipeTip, showCultureTip, dismissGlobe, dismissSwipe, dismissCulture } =
     useOnboarding(phase);
 
-  // Sprint 1C: resolve active video (switcher overrides featured)
+  // Time-aware default: picks morning/day/golden-hour/night video based on user's local hour.
+  // If user explicitly switched via switcher (activeVideoId set), that overrides.
   const currentVideo = useMemo(() => {
     if (!selectedCity) return null;
     if (activeVideoId) {
-      return selectedCity.videos.find((v) => v.youtubeId === activeVideoId) ?? getFeaturedVideo(selectedCity);
+      return selectedCity.videos.find((v) => v.youtubeId === activeVideoId) ?? getTimeAwareVideo(selectedCity);
     }
-    return getFeaturedVideo(selectedCity);
+    return getTimeAwareVideo(selectedCity);
   }, [selectedCity, activeVideoId]);
 
   // City of the day
@@ -211,7 +215,21 @@ export function HomeClient({ cities, initialCity }: Props) {
           isVisible={isWatching}
           onOpenCard={openCard}
           onOpenPicker={() => setPickerOpen(true)}
+          onOpenSwitcher={() => setSwitcherOpen(true)}
           allCities={cities}
+        />
+      )}
+
+      {/* ── Video Switcher panel (top-level so pointer-events work) ── */}
+      {selectedCity && (
+        <VideoSwitcher
+          city={selectedCity}
+          activeVideoId={currentVideo?.youtubeId ?? ""}
+          isOpen={switcherOpen}
+          onClose={() => setSwitcherOpen(false)}
+          onSelect={(video) => {
+            useAppStore.getState().setActiveVideo(video.youtubeId);
+          }}
         />
       )}
 
