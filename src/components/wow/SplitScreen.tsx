@@ -87,12 +87,23 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
             onTouchEnd={() => { dragging.current = false; }}
           >
             {/* ── City A — full viewport, clipped to reveal correct portion ── */}
-            <div className="absolute inset-0" style={{ clipPath: clipA }}>
+            {/* overflow:hidden + iframe extended -60px top/bottom crops YouTube title bar,
+                controls bar, logo, and end-screen chrome entirely out of view.
+                pointer-events:none on the iframe blocks any remaining YouTube UI interaction. */}
+            <div className="absolute inset-0 overflow-hidden" style={{ clipPath: clipA }}>
               <iframe
                 src={`https://www.youtube.com/embed/${videoA.youtubeId}?${embedParams(videoA.youtubeId)}`}
-                className="absolute inset-0 w-full h-full"
+                style={{
+                  position: "absolute",
+                  top: "-60px",
+                  left: 0,
+                  right: 0,
+                  bottom: "-60px",
+                  width: "100%",
+                  height: "calc(100% + 120px)",
+                  pointerEvents: "none",
+                }}
                 allow="autoplay; encrypted-media"
-                allowFullScreen
               />
               {/* City A label — top-left on landscape, top-center on portrait */}
               <div
@@ -108,12 +119,20 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
             </div>
 
             {/* ── City B — full viewport, clipped to reveal correct portion ── */}
-            <div className="absolute inset-0" style={{ clipPath: clipB }}>
+            <div className="absolute inset-0 overflow-hidden" style={{ clipPath: clipB }}>
               <iframe
                 src={`https://www.youtube.com/embed/${videoB.youtubeId}?${embedParams(videoB.youtubeId)}`}
-                className="absolute inset-0 w-full h-full"
+                style={{
+                  position: "absolute",
+                  top: "-60px",
+                  left: 0,
+                  right: 0,
+                  bottom: "-60px",
+                  width: "100%",
+                  height: "calc(100% + 120px)",
+                  pointerEvents: "none",
+                }}
                 allow="autoplay; encrypted-media"
-                allowFullScreen
               />
               {/* City B label — bottom-right on landscape, bottom-center on portrait */}
               <div
