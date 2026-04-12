@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Globe, Shuffle, Heart, Play, Pause } from "lucide-react";
@@ -33,6 +34,7 @@ interface Props {
 }
 
 export function HomeClient({ cities, initialCity }: Props) {
+  const router = useRouter();
   const {
     phase,
     selectedCity,
@@ -288,7 +290,10 @@ export function HomeClient({ cities, initialCity }: Props) {
             <div className="flex items-center gap-2" style={{ pointerEvents: "auto" }}>
               {/* City of the day shortcut */}
               <button
-                onClick={() => useAppStore.getState().selectCity(cityOfTheDay)}
+                onClick={() => {
+                  useAppStore.getState().selectCity(cityOfTheDay);
+                  router.replace("/?today=1", { scroll: false });
+                }}
                 className="glass flex items-center gap-2 px-3 py-2 rounded-full text-white/60 hover:text-white transition-colors"
                 title={`Today's walk: ${cityOfTheDay.name}`}
               >
