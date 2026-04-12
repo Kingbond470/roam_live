@@ -2470,5 +2470,57 @@
         "Miss Nyhavn for sunset drinks"
       ]
     }
+  },
+  {
+    "slug": "nagano",
+    "name": "Nagano",
+    "country": "Japan",
+    "countryCode": "JP",
+    "flagEmoji": "🇯🇵",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 36.6485,
+      "lng": 138.1954
+    },
+    "timezone": "Asia/Tokyo",
+    "population": 370000,
+    "tags": [
+      "nature",
+      "mountains",
+      "onsen",
+      "wildlife"
+    ],
+    "videos": [
+      {
+        "youtubeId": "VXzo2MdAfLc",
+        "label": "Snow Monkey Park — Jigokudani",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "こんにちは (Konnichiwa)",
+      "currency": "Japanese Yen (¥)",
+      "bestSeason": "Winter (Jan–Feb) for snow monkeys in hot springs; Spring for cherry blossoms",
+      "mustEat": [
+        "Soba noodles (Nagano buckwheat soba is legendary)",
+        "Oyaki (stuffed steamed dumplings)",
+        "Nozawana pickles",
+        "Shinshu miso"
+      ],
+      "localTip": "Nagano hosted the 1998 Winter Olympics. The Snow Monkey Park requires a 30-min forest walk — wear sturdy shoes and keep a respectful distance from the monkeys.",
+      "funFact": "Jigokudani (Hell Valley) Snow Monkey Park is the only place on Earth where wild Japanese macaques bathe in natural hot springs — a behaviour that began in 1963 when a young monkey first entered the waters.",
+      "culturalDos": [
+        "Be silent and calm around the snow monkeys",
+        "Follow the one-way path through the park",
+        "Remove shoes before entering ryokan (traditional inn)"
+      ],
+      "culturalDonts": [
+        "Feed or touch the monkeys",
+        "Make sudden loud noises near wildlife",
+        "Skip the onsen (hot spring) experience — it is central to the culture here"
+      ]
+    }
   }
 ]
