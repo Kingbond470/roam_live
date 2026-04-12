@@ -1040,6 +1040,34 @@
         "timeOfDay": "day",
         "isFeatured": true,
         "type": "walk"
+      },
+      {
+        "youtubeId": "L50QfXIItZM",
+        "label": "Mexico City Night Ambience",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "h-_FmmmBKZI",
+        "label": "Gentle Rainfall Walk Binaural",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "OXRn9c_4oGs",
+        "label": "Mexico City Rain Walk",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "vlx4-bRnPSY",
+        "label": "Mexico City Night 8K HDR",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
       }
     ],
     "culture": {
@@ -2520,6 +2548,169 @@
         "Feed or touch the monkeys",
         "Make sudden loud noises near wildlife",
         "Skip the onsen (hot spring) experience — it is central to the culture here"
+      ]
+    }
+  },
+  {
+    "slug": "monterrey",
+    "name": "Monterrey",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "flagEmoji": "🇲🇽",
+    "continent": "Americas",
+    "coordinates": {
+      "lat": 25.6866,
+      "lng": -100.3161
+    },
+    "timezone": "America/Monterrey",
+    "population": 1135550,
+    "tags": [
+      "industrial",
+      "mountains",
+      "nightlife",
+      "modern"
+    ],
+    "videos": [
+      {
+        "youtubeId": "83I2LjxPepo",
+        "label": "Monterrey Night City and Traffic Sounds",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "Wym4G2yYgcU",
+        "label": "Monterrey Night Cityscape Ambience",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      }
+    ],
+    "culture": {
+      "greeting": "Hola / Que onda (local slang)",
+      "currency": "Mexican Peso (MX$)",
+      "bestSeason": "October to April (avoid July and August heat)",
+      "mustEat": [
+        "Cabrito (roasted baby goat)",
+        "Carne asada",
+        "Machaca con huevo",
+        "Molcajete"
+      ],
+      "localTip": "Monterrey is Mexico's industrial capital. The iconic Cerro de la Silla mountain frames every skyline view. Barrio Antiguo is the best neighbourhood for nightlife and culture.",
+      "funFact": "Monterrey is home to some of Latin America's largest multinationals and has one of the highest standards of living in Mexico, earning the nickname \"The Sultan of the North.\"",
+      "culturalDos": [
+        "Greet with a handshake or cheek kiss",
+        "Embrace late-night dinner culture (9pm+)",
+        "Visit Barrio Antiguo for arts and nightlife"
+      ],
+      "culturalDonts": [
+        "Confuse it with a beach city — it is a business metropolis",
+        "Skip the free museums along Macroplaza",
+        "Underestimate the summer heat (40C+)"
+      ]
+    }
+  },
+  {
+    "slug": "los-cabos",
+    "name": "Los Cabos",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "flagEmoji": "🇲🇽",
+    "continent": "Americas",
+    "coordinates": {
+      "lat": 22.8905,
+      "lng": -109.9167
+    },
+    "timezone": "America/Mazatlan",
+    "population": 351111,
+    "tags": [
+      "coastal",
+      "beaches",
+      "luxury",
+      "desert"
+    ],
+    "videos": [
+      {
+        "youtubeId": "tVrpJq3pFtY",
+        "label": "Sunrise Ocean Waves at Los Cabos",
+        "timeOfDay": "morning",
+        "type": "walk",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "Hola / Bienvenido",
+      "currency": "Mexican Peso (MX$) — USD widely accepted at resorts",
+      "bestSeason": "November to May (whale watching Nov to Apr)",
+      "mustEat": [
+        "Fish tacos",
+        "Lobster Puerto Nuevo style",
+        "Aguachile",
+        "Fresh ceviche"
+      ],
+      "localTip": "El Arco at Land's End is where the Pacific meets the Sea of Cortez. See it by boat at sunrise when the light turns the rock arch gold.",
+      "funFact": "Los Cabos sits at the tip of the Baja California Peninsula — one of the longest on Earth at over 1,200 km. It gets more than 300 sunny days per year.",
+      "culturalDos": [
+        "Hire a local fisherman for a sunrise boat tour",
+        "Visit Todos Santos art town (1hr north)",
+        "Snorkel at Chileno Bay"
+      ],
+      "culturalDonts": [
+        "Swim without checking the beach flag system — currents can be dangerous",
+        "Miss whale watching if visiting December to March",
+        "Skip local taco stands for hotel restaurants"
+      ]
+    }
+  },
+  {
+    "slug": "mazunte",
+    "name": "Mazunte",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "flagEmoji": "🇲🇽",
+    "continent": "Americas",
+    "coordinates": {
+      "lat": 15.6614,
+      "lng": -96.5738
+    },
+    "timezone": "America/Mexico_City",
+    "population": 1200,
+    "tags": [
+      "coastal",
+      "eco-tourism",
+      "nature",
+      "off-the-beaten-path"
+    ],
+    "videos": [
+      {
+        "youtubeId": "45Tf-rGYIJg",
+        "label": "Ocean Walk — Mazunte, Oaxaca",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "Hola / Buenas",
+      "currency": "Mexican Peso (MX$) — cash only in most places",
+      "bestSeason": "November to April (dry season); July to September for sea turtle nesting",
+      "mustEat": [
+        "Tlayudas (Oaxacan flatbread)",
+        "Fresh octopus ceviche",
+        "Mezcal (Oaxaca is its birthplace)",
+        "Memelas with black beans"
+      ],
+      "localTip": "Mazunte runs as a cooperative community. Buy cosmetics from the COSMETICOS NATURALES cooperative — the original source that inspired natural cosmetics movements globally.",
+      "funFact": "Until 1990, Mazunte was the centre of Mexico's sea turtle industry. After a government ban, the entire village reinvented itself as a model eco-tourism community — one of the most remarkable environmental turnarounds in Latin America.",
+      "culturalDos": [
+        "Travel slowly — Mazunte rewards those who stay 3+ days",
+        "Watch the sunset from Punta Cometa (Mexico's southernmost point)",
+        "Support the cooperatives directly"
+      ],
+      "culturalDonts": [
+        "Disturb sea turtles nesting on the beach at night",
+        "Bring single-use plastic — the village is near zero-waste",
+        "Expect ATMs — carry cash from Pochutla"
       ]
     }
   }
