@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Globe, Shuffle, Heart, Play, Pause } from "lucide-react";
+import { Search, Globe, Shuffle, Heart, Play, Pause, Compass } from "lucide-react";
 import type { City } from "@/types/city";
 import { useAppStore } from "@/store/appStore";
 import { GlobeLoader } from "@/components/globe/GlobeLoader";
@@ -22,6 +22,7 @@ import { useSwipeGestures } from "@/hooks/useSwipeGestures";
 import { useOnboarding } from "@/hooks/useOnboarding";
 import { CoachMark } from "@/components/onboarding/CoachMark";
 import { PWAInstallPrompt } from "@/components/onboarding/PWAInstallPrompt";
+import { JourneyPanel } from "@/components/journey/JourneyPanel";
 
 const GlobeScene = dynamic(
   () => import("@/components/globe/GlobeScene").then((m) => ({ default: m.GlobeScene })),
@@ -44,6 +45,7 @@ export function HomeClient({ cities, initialCity }: Props) {
     searchOpen,
     activeVideoId,
     activeTag,
+    activePath,
     favoriteSlugs,
     discoverMode,
     openCard,
@@ -63,6 +65,8 @@ export function HomeClient({ cities, initialCity }: Props) {
   const [pickerOpen, setPickerOpen] = useState(false);
   // Video switcher panel
   const [switcherOpen, setSwitcherOpen] = useState(false);
+  // Journey paths panel
+  const [journeyOpen, setJourneyOpen] = useState(false);
 
   // Sprint 1A: keyboard shortcuts
   useKeyboardShortcuts(cities);
@@ -150,7 +154,7 @@ export function HomeClient({ cities, initialCity }: Props) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <GlobeScene cities={globeCities} activeTag={activeTag} cityOfTheDay={cityOfTheDay} />
+            <GlobeScene cities={globeCities} activeTag={activeTag} cityOfTheDay={cityOfTheDay} activePath={activePath} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -414,6 +418,17 @@ export function HomeClient({ cities, initialCity }: Props) {
               >
                 {discoverMode ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
               </button>
+
+              {/* Journey paths button */}
+              <button
+                onClick={() => setJourneyOpen(true)}
+                className={`glass rounded-full p-2 transition-colors ${
+                  activePath ? "text-amber-400" : "text-white/40 hover:text-amber-400"
+                }`}
+                title="Thematic Journeys"
+              >
+                <Compass className="w-3.5 h-3.5" />
+              </button>
             </div>
           </motion.div>
         )}
@@ -444,6 +459,13 @@ export function HomeClient({ cities, initialCity }: Props) {
 
       {/* PWA install prompt — shown 20s after first visit, once ever */}
       <PWAInstallPrompt />
+
+      {/* Journey paths panel */}
+      <JourneyPanel
+        cities={cities}
+        isOpen={journeyOpen}
+        onClose={() => setJourneyOpen(false)}
+      />
     </div>
   );
 }

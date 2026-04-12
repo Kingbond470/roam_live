@@ -3,6 +3,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { City } from "@/types/city";
+import type { Journey } from "@/data/journeys";
 
 export type TransitionPhase =
   | "idle"
@@ -30,6 +31,10 @@ interface AppState {
 
   // Sprint 2C: favorites (persisted)
   favoriteSlugs: string[];
+
+  // Thematic journey paths
+  activePath: Journey | null;
+  setActivePath: (path: Journey | null) => void;
 
   // City-to-city navigation
   navigateCity: (cities: City[], direction: "next" | "prev") => void;
@@ -81,6 +86,7 @@ export const useAppStore = create<AppState>()(
       activeTag: null,
       favoriteSlugs: [],
       discoverMode: false,
+      activePath: null,
 
       selectCity: (city) =>
         set({
@@ -145,6 +151,8 @@ export const useAppStore = create<AppState>()(
 
       toggleDiscoverMode: () => set((s) => ({ discoverMode: !s.discoverMode })),
 
+      setActivePath: (path) => set({ activePath: path }),
+
       navigateCity: (cities, direction) => {
         const { selectedCity } = get();
         if (!selectedCity || !cities.length) return;
@@ -153,8 +161,6 @@ export const useAppStore = create<AppState>()(
           direction === "next"
             ? cities[(idx + 1) % cities.length]
             : cities[(idx - 1 + cities.length) % cities.length];
-        // Direct swap: skip globe, just swap video + reset video state
-        // Preserve playerMuted so user's unmute preference survives navigation
         set({
           selectedCity: next,
           activeVideoId: null,

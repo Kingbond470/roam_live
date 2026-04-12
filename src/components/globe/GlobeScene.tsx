@@ -3,12 +3,22 @@
 import { useEffect, useRef } from "react";
 import type { GlobeInstance } from "globe.gl";
 import type { City } from "@/types/city";
+import type { Journey } from "@/data/journeys";
 import { useAppStore } from "@/store/appStore";
+
+type GlobeArc = {
+  startLat: number;
+  startLng: number;
+  endLat: number;
+  endLng: number;
+  color: string;
+};
 
 interface Props {
   cities: City[];
   activeTag?: string | null;
   cityOfTheDay?: City | null;
+  activePath?: Journey | null;
 }
 
 type GlobePoint = {
@@ -35,12 +45,14 @@ function videoTier(count: number): { size: number; color: string } {
   return              { size: 0.30, color: "#c77c0b" };      // dim — 1 video
 }
 
-export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
+export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeInstance | null>(null);
   // BUG-01 FIX: use a ref instead of state so pointColor callback always reads latest value
   const hoveredSlugRef = useRef<string | null>(null);
   const roRef = useRef<ResizeObserver | null>(null);
+  // Track current points so hover re-eval always uses latest path-filtered set
+  const pointsRef = useRef<GlobePoint[]>([]);
   const { selectCity, phase } = useAppStore();
 
   useEffect(() => {
@@ -54,20 +66,23 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
 
       // Sprint 2B: dim non-matching pins when a tag filter is active
       const tagFilter = activeTag && activeTag !== "__favorites__" ? activeTag : null;
+      const pathSlugs = activePath ? new Set(activePath.citySlugOrder) : null;
       const points: GlobePoint[] = cities.map((city) => {
         const matches = !tagFilter || city.tags.includes(tagFilter);
         const isToday = city.slug === cityOfTheDay?.slug;
+        const isOnPath = !pathSlugs || pathSlugs.has(city.slug);
         const tier = videoTier(city.videos.length);
         return {
           lat: city.coordinates.lat,
           lng: city.coordinates.lng,
-          size: isToday ? 0.68 : matches ? tier.size : 0.22,
-          color: isToday ? "#f43f5e" : matches ? tier.color : "#444444",
+          size: isToday ? 0.68 : isOnPath ? (matches ? tier.size : 0.22) : 0.18,
+          color: isToday ? "#f43f5e" : isOnPath ? (matches ? tier.color : "#444444") : "#222222",
           citySlug: city.slug,
           label: isToday ? `${city.name} ★ Today's Walk` : city.name,
           videoCount: city.videos.length,
         };
       });
+      pointsRef.current = points;
 
       const globe = new Globe(containerRef.current)
         .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
@@ -125,11 +140,23 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
           const p = point as GlobePoint | null;
           // BUG-01 FIX: update ref, then refresh pointsData to re-evaluate color
           hoveredSlugRef.current = p ? p.citySlug : null;
-          globe.pointsData(points); // force color re-evaluation
+          globe.pointsData([...pointsRef.current]); // force color re-evaluation using latest points
           if (containerRef.current) {
             containerRef.current.style.cursor = p ? "pointer" : "grab";
           }
-        });
+        })
+        // Animated arcs for journey paths
+        .arcsData([])
+        .arcStartLat((d: object) => (d as GlobeArc).startLat)
+        .arcStartLng((d: object) => (d as GlobeArc).startLng)
+        .arcEndLat((d: object) => (d as GlobeArc).endLat)
+        .arcEndLng((d: object) => (d as GlobeArc).endLng)
+        .arcColor((d: object) => (d as GlobeArc).color)
+        .arcDashLength(0.4)
+        .arcDashGap(0.15)
+        .arcDashAnimateTime(2500)
+        .arcAltitudeAutoScale(0.4)
+        .arcStroke(() => 0.5);
 
       globe.pointOfView({ lat: 20, lng: 15, altitude: 2.2 });
       globe.controls().autoRotate = true;
@@ -188,6 +215,53 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
       globeRef.current.pointOfView({ lat: 20, lng: 15, altitude: 2.2 }, 1000);
     }
   }, [phase]);
+
+  // Update arcs + pin dimming whenever the active journey path changes
+  useEffect(() => {
+    if (!globeRef.current) return;
+
+    const pathSlugs = activePath ? new Set(activePath.citySlugOrder) : null;
+    const tagFilter = activeTag && activeTag !== "__favorites__" ? activeTag : null;
+
+    const newPoints: GlobePoint[] = cities.map((city) => {
+      const matches = !tagFilter || city.tags.includes(tagFilter);
+      const isToday = city.slug === cityOfTheDay?.slug;
+      const isOnPath = !pathSlugs || pathSlugs.has(city.slug);
+      const tier = videoTier(city.videos.length);
+      return {
+        lat: city.coordinates.lat,
+        lng: city.coordinates.lng,
+        size: isToday ? 0.68 : isOnPath ? (matches ? tier.size : 0.22) : 0.18,
+        color: isToday ? "#f43f5e" : isOnPath ? (matches ? tier.color : "#444444") : "#222222",
+        citySlug: city.slug,
+        label: isToday ? `${city.name} ★ Today's Walk` : city.name,
+        videoCount: city.videos.length,
+      };
+    });
+
+    pointsRef.current = newPoints;
+    globeRef.current.pointsData([...newPoints]);
+
+    // Build arc pairs between consecutive path cities
+    const arcs: GlobeArc[] = [];
+    if (activePath) {
+      for (let i = 0; i < activePath.citySlugOrder.length - 1; i++) {
+        const from = cities.find((c) => c.slug === activePath.citySlugOrder[i]);
+        const to   = cities.find((c) => c.slug === activePath.citySlugOrder[i + 1]);
+        if (from && to) {
+          arcs.push({
+            startLat: from.coordinates.lat,
+            startLng: from.coordinates.lng,
+            endLat:   to.coordinates.lat,
+            endLng:   to.coordinates.lng,
+            color: activePath.accentColor,
+          });
+        }
+      }
+    }
+    globeRef.current.arcsData(arcs);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activePath]);
 
   return (
     <div ref={containerRef} className="w-full h-full" style={{ cursor: "grab" }} />

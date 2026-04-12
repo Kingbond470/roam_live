@@ -29,6 +29,8 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
     favoriteSlugs,
     toggleFavorite,
     navigateCity,
+    activePath,
+    setActivePath,
   } = useAppStore();
 
   const [hudRevealed, setHudRevealed] = useState(true);
@@ -54,6 +56,15 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
 
   const isFavorited = favoriteSlugs.includes(city.slug);
   const show = isVisible && hudRevealed;
+
+  // Path-aware navigation: when a journey is active, navigate within path cities only
+  const pathCities = activePath
+    ? activePath.citySlugOrder
+        .map((slug) => allCities.find((c) => c.slug === slug))
+        .filter(Boolean) as typeof allCities
+    : null;
+  const navCities = pathCities ?? allCities;
+  const pathPosition = pathCities ? pathCities.findIndex((c) => c.slug === city.slug) + 1 : 0;
 
 
 
@@ -148,7 +159,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
             <div className="flex items-end gap-4">
               {/* Prev city */}
               <button
-                onClick={() => navigateCity(allCities, "prev")}
+                onClick={() => navigateCity(navCities, "prev")}
                 className="pointer-events-auto glass rounded-full p-2.5 text-white/50 hover:text-white transition-colors mb-1 flex-shrink-0"
                 title="Previous city (←)"
               >
@@ -161,6 +172,33 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
             >
               <div className="flex items-end justify-between gap-4">
                 <div className="flex flex-col gap-2 min-w-0">
+                  {/* Active journey banner */}
+                  {activePath && (
+                    <div className="flex items-center gap-2 pointer-events-auto">
+                      <span
+                        className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full"
+                        style={{
+                          background: activePath.accentColor + "20",
+                          color: activePath.accentColor,
+                          border: `1px solid ${activePath.accentColor}40`,
+                        }}
+                      >
+                        <span>{activePath.emoji}</span>
+                        <span>{activePath.name}</span>
+                        {pathPosition > 0 && (
+                          <span style={{ opacity: 0.6 }}>· {pathPosition} of {pathCities!.length}</span>
+                        )}
+                      </span>
+                      <button
+                        onClick={(e) => { e.stopPropagation(); setActivePath(null); }}
+                        className="text-white/30 hover:text-white/70 transition-colors text-xs leading-none"
+                        title="Exit journey"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  )}
+
                   <div className="flex items-center gap-2.5">
                     <LiveBadge />
                     <ViewerCount citySlug={city.slug} />
@@ -199,7 +237,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
 
               {/* Next city */}
               <button
-                onClick={() => navigateCity(allCities, "next")}
+                onClick={() => navigateCity(navCities, "next")}
                 className="pointer-events-auto glass rounded-full p-2.5 text-white/50 hover:text-white transition-colors mb-1 flex-shrink-0"
                 title="Next city (→)"
               >
