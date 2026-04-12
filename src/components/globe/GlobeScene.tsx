@@ -18,7 +18,22 @@ type GlobePoint = {
   color: string;
   citySlug: string;
   label: string;
+  videoCount: number;
 };
+
+/** Pin size + colour tier based on how many videos a city has.
+ *  Thresholds tuned to current catalogue (48 cities):
+ *  Gold  (10+): Tokyo 16, Rome 34
+ *  Bright (3-9): Mumbai 7, Kyoto 4, Mexico City 5, New Delhi 4, Varanasi 3
+ *  Amber   (2) : Istanbul, New York, Paris, Amsterdam, Osaka, Monterrey…
+ *  Dim     (1) : all single-video cities
+ */
+function videoTier(count: number): { size: number; color: string } {
+  if (count >= 10) return { size: 0.62, color: "#fcd34d" }; // gold
+  if (count >= 3)  return { size: 0.50, color: "#fbbf24" }; // bright amber
+  if (count >= 2)  return { size: 0.40, color: "#f59e0b" }; // amber
+  return              { size: 0.30, color: "#c77c0b" };      // dim — 1 video
+}
 
 export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -42,13 +57,15 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
       const points: GlobePoint[] = cities.map((city) => {
         const matches = !tagFilter || city.tags.includes(tagFilter);
         const isToday = city.slug === cityOfTheDay?.slug;
+        const tier = videoTier(city.videos.length);
         return {
           lat: city.coordinates.lat,
           lng: city.coordinates.lng,
-          size: isToday ? 0.6 : matches ? 0.45 : 0.25,
-          color: isToday ? "#f43f5e" : matches ? "#f59e0b" : "#444444",
+          size: isToday ? 0.68 : matches ? tier.size : 0.22,
+          color: isToday ? "#f43f5e" : matches ? tier.color : "#444444",
           citySlug: city.slug,
           label: isToday ? `${city.name} ★ Today's Walk` : city.name,
+          videoCount: city.videos.length,
         };
       });
 
@@ -73,10 +90,21 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
         .pointsMerge(false)
         .pointLabel((d: object) => {
           const p = d as GlobePoint;
+          const videoPill = `<span style="
+            margin-left:7px;
+            padding:1px 7px;
+            border-radius:999px;
+            background:rgba(245,158,11,0.18);
+            border:1px solid rgba(245,158,11,0.35);
+            color:#fbbf24;
+            font-size:11px;
+            font-weight:500;
+            vertical-align:middle;
+          ">${p.videoCount} video${p.videoCount === 1 ? "" : "s"}</span>`;
           return `<div style="
-            background:rgba(5,5,8,0.9);
-            border:1px solid rgba(245,158,11,0.6);
-            border-radius:8px;
+            background:rgba(5,5,8,0.92);
+            border:1px solid rgba(245,158,11,0.5);
+            border-radius:9px;
             padding:5px 12px;
             color:#fff;
             font-family:system-ui,sans-serif;
@@ -84,7 +112,9 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay }: Props) {
             font-weight:600;
             letter-spacing:0.04em;
             white-space:nowrap;
-          ">${p.label}</div>`;
+            display:flex;
+            align-items:center;
+          ">${p.label}${videoPill}</div>`;
         })
         .onPointClick((point: object) => {
           const p = point as GlobePoint;
