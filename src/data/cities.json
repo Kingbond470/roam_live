@@ -32,6 +32,76 @@
         "timeOfDay": "day",
         "isFeatured": false,
         "type": "walk"
+      },
+      {
+        "youtubeId": "Et7O5-CzJZg",
+        "label": "Tokyo Rain Walk 4K",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "_dWyKj7I9JM",
+        "label": "Shibuya Crossing at Night",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "wa12902YOnc",
+        "label": "Shinjuku Rain — Omoide Yokocho",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "RzklsxGT438",
+        "label": "Shibuya Yoyogi Park Rainy Day",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "NvLnipgyBn4",
+        "label": "Asakusa Cherry Blossoms Rain",
+        "timeOfDay": "morning",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "BkN-394ngVY",
+        "label": "Ginza Rain Walk",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "-k2MCZzth_g",
+        "label": "Ginza Rainy Night Walk",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "BCyVV6I7soA",
+        "label": "Asakusa Rain Walk",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "h-R2LV_d2No",
+        "label": "Tokyo Back Streets — Rainy Night",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "xpVMp1WRwI0",
+        "label": "Asakusa Evening Walk",
+        "timeOfDay": "golden-hour",
+        "type": "walk",
+        "isFeatured": false
       }
     ],
     "culture": {
@@ -797,6 +867,20 @@
         "timeOfDay": "night",
         "isFeatured": false,
         "type": "walk"
+      },
+      {
+        "youtubeId": "F399teRPBaY",
+        "label": "Yasaka Pagoda Night Walk",
+        "timeOfDay": "night",
+        "type": "landmark",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "PwpxZXp8z5Y",
+        "label": "Kyoto Rain Walk — Binaural",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
       }
     ],
     "culture": {
@@ -1770,6 +1854,13 @@
         "timeOfDay": "night",
         "isFeatured": true,
         "type": "walk"
+      },
+      {
+        "youtubeId": "XZwNVLGUIDM",
+        "label": "Nara Park — Feeding the Deer",
+        "timeOfDay": "day",
+        "type": "landmark",
+        "isFeatured": false
       }
     ],
     "culture": {
