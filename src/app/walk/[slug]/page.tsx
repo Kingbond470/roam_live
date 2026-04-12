@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cities, getCityBySlug } from "@/lib/cities";
 import { getFeaturedVideo } from "@/lib/utils";
-import { Globe, ArrowLeft, MapPin, Clock, Utensils, Lightbulb, Star } from "lucide-react";
+import { Globe, ArrowLeft, MapPin, Clock, Utensils, Lightbulb, Star, Landmark } from "lucide-react";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -242,6 +242,29 @@ export default async function CityWalkPage({ params }: Props) {
               <p className="text-white/80 text-sm leading-relaxed">{city.culture.localTip}</p>
             </div>
           </div>
+
+          {/* Origin Story */}
+          {city.origin && (
+            <div className="rounded-2xl border border-amber-500/20 overflow-hidden mb-8">
+              <div className="flex items-center gap-2.5 px-5 py-3 bg-amber-500/8 border-b border-amber-500/15">
+                <Landmark className="w-4 h-4 text-amber-400/80" />
+                <h2 className="text-xs tracking-widest uppercase text-amber-400/90 font-semibold">Origin Story</h2>
+                <span className="ml-auto text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400/70 border border-amber-500/20 font-medium">
+                  {city.origin.era}
+                </span>
+              </div>
+              <div className="px-5 py-4 bg-amber-500/4">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/40 mb-3">
+                  <span>📅 Founded {city.origin.founded}</span>
+                  {city.origin.originalName && (
+                    <span>Originally <span className="text-white/60 font-medium">{city.origin.originalName}</span></span>
+                  )}
+                  <span>By {city.origin.founders}</span>
+                </div>
+                <p className="text-white/80 leading-relaxed">{city.origin.story}</p>
+              </div>
+            </div>
+          )}
 
           {/* Fun Fact */}
           <div className="rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20 p-5 mb-8">

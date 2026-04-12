@@ -21,6 +21,16 @@ export interface CityVideo {
   isFeatured: boolean;
 }
 
+export type CityEra = "Ancient" | "Medieval" | "Colonial" | "Modern" | "Contemporary";
+
+export interface CityOrigin {
+  founded: string;         // e.g. "circa 753 BCE" or "1626"
+  originalName?: string;   // original/ancient name if different from current
+  founders: string;        // who built it
+  story: string;           // 2–3 sentence narrative
+  era: CityEra;
+}
+
 export interface City {
   slug: string;
   name: string;
@@ -36,6 +46,7 @@ export interface City {
   population: number;
   videos: CityVideo[];
   culture: CultureCardData;
+  origin?: CityOrigin;
   tags: string[];
   thumbnailUrl?: string;
 }

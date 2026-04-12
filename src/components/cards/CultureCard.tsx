@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Utensils, Lightbulb, Sparkles, CheckCircle, XCircle } from "lucide-react";
+import { X, Utensils, Lightbulb, Sparkles, CheckCircle, XCircle, Landmark } from "lucide-react";
 import type { City } from "@/types/city";
 
 interface Props {
@@ -60,6 +60,29 @@ export function CultureCard({ city, isOpen, onClose, onCompare }: Props) {
 
             {/* Scrollable content */}
             <div className="scrollable overflow-y-auto px-4 sm:px-5 py-4 flex flex-col gap-4 sm:gap-5" style={{ maxHeight: "calc(85dvh - 100px)" }}>
+              {/* Origin Story */}
+              {city.origin && (
+                <div className="rounded-xl border border-amber-500/20 overflow-hidden">
+                  <div className="flex items-center gap-2 px-4 py-2.5 bg-amber-500/8 border-b border-amber-500/15">
+                    <Landmark className="w-3.5 h-3.5 text-amber-400/80 flex-shrink-0" />
+                    <span className="text-amber-400/90 text-xs font-semibold uppercase tracking-wider">Origin Story</span>
+                    <span className="ml-auto text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400/70 border border-amber-500/20 font-medium">
+                      {city.origin.era}
+                    </span>
+                  </div>
+                  <div className="px-4 py-3 flex flex-col gap-2.5">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-white/45">
+                      <span>📅 Founded {city.origin.founded}</span>
+                      {city.origin.originalName && (
+                        <span>· Originally <em className="text-white/60 not-italic font-medium">{city.origin.originalName}</em></span>
+                      )}
+                      <span>· {city.origin.founders}</span>
+                    </div>
+                    <p className="text-white/75 text-sm leading-relaxed">{city.origin.story}</p>
+                  </div>
+                </div>
+              )}
+
               {/* Greeting + Currency row */}
               <div className="grid grid-cols-2 gap-3">
                 <InfoTile label="Local greeting" value={culture.greeting} />
