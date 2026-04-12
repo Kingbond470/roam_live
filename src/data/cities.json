@@ -357,6 +357,48 @@
         "timeOfDay": "day",
         "isFeatured": true,
         "type": "walk"
+      },
+      {
+        "youtubeId": "SfnPe6nEv-o",
+        "label": "Hiranandani Gardens, Powai — Luxurious Mumbai (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "vp4MTBUOl50",
+        "label": "Colaba Market — Posh South Mumbai (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "WNp_Ul7G6uQ",
+        "label": "Marine Drive Saturday Evening Walk (4K)",
+        "timeOfDay": "golden-hour",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "m6_8OZxYtAA",
+        "label": "Mumbai Skyscrapers City Walk (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "Iu2H23nlrf0",
+        "label": "Night Walk — Marine Drive, Gateway of India & Colaba (4K HDR)",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "g_biyU7Tdg0",
+        "label": "Jio World Drive — Luxurious Mall near Dharavi (4K HDR)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
       }
     ],
     "culture": {
@@ -2389,7 +2431,7 @@
     ],
     "videos": [
       {
-        "youtubeId": "rY5UKSBuPDU",
+        "youtubeId": "Jdinti6N1FM",
         "label": "4K Edinburgh Day Walk",
         "timeOfDay": "day",
         "isFeatured": true,
@@ -2739,6 +2781,202 @@
         "Disturb sea turtles nesting on the beach at night",
         "Bring single-use plastic — the village is near zero-waste",
         "Expect ATMs — carry cash from Pochutla"
+      ]
+    }
+  },
+  {
+    "slug": "new-delhi",
+    "name": "New Delhi",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 28.6139,
+      "lng": 77.209
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 32941000,
+    "tags": [
+      "historic",
+      "street-food",
+      "monuments",
+      "markets"
+    ],
+    "videos": [
+      {
+        "youtubeId": "wxn8-ySyeqQ",
+        "label": "Connaught Place & India Gate — Delhi's Modern Heart (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "cw8-nl3LN54",
+        "label": "Aerocity — Modern Luxurious Delhi (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "9RQu6y3JpI4",
+        "label": "Connaught Place 2023 — Modern Delhi Walk (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "jJo93TSvEz4",
+        "label": "Chandni Chowk vs Khan Market — Delhi's Biggest Contrast (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      }
+    ],
+    "culture": {
+      "greeting": "Namaste / Sat Sri Akal",
+      "currency": "Indian Rupee (₹)",
+      "bestSeason": "Winter (October–March) — summers are brutal above 45°C",
+      "mustEat": [
+        "Butter chicken (invented in Delhi)",
+        "Chole bhature",
+        "Paranthe Wali Gali (Old Delhi flatbreads)",
+        "Dahi bhalla chaat",
+        "Daulat ki chaat (winter only)"
+      ],
+      "localTip": "Use the Delhi Metro — it's cheap, clean, AC, and covers every major sight. Auto-rickshaws should use meters but usually won't; agree on a price first.",
+      "funFact": "Delhi has been continuously inhabited for over 5,000 years and has served as the capital of at least seven consecutive empires, giving it more historical layers than almost any city on Earth.",
+      "culturalDos": [
+        "Cover your head when entering Sikh gurdwaras",
+        "Remove shoes at all religious sites",
+        "Haggle politely at Chandni Chowk and Sarojini Nagar",
+        "Try the street food in Old Delhi — it's legendary"
+      ],
+      "culturalDonts": [
+        "Visit India Gate at peak summer midday — it's an open field with zero shade",
+        "Carry large denomination notes — change is often scarce",
+        "Ignore the pollution forecast — AQI spikes in November–January"
+      ]
+    }
+  },
+  {
+    "slug": "varanasi",
+    "name": "Varanasi",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 25.3176,
+      "lng": 82.9739
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 1201696,
+    "tags": [
+      "spiritual",
+      "historic",
+      "ghats",
+      "street-food"
+    ],
+    "videos": [
+      {
+        "youtubeId": "_Zzmwpp2z4k",
+        "label": "Varanasi Modern Expensive Area Walk (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": true
+      },
+      {
+        "youtubeId": "lw0PftiSrpg",
+        "label": "Varanasi Modern Designer Shops Walk (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "1yG2G6hXcoo",
+        "label": "Varanasi Designer Street Walk — Part 2 (4K)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      }
+    ],
+    "culture": {
+      "greeting": "Namaste / Jai Shri Ram",
+      "currency": "Indian Rupee (₹)",
+      "bestSeason": "Winter (November–February) — avoid monsoon for ghat walks",
+      "mustEat": [
+        "Banarasi paan (betel leaf)",
+        "Kachori sabzi (breakfast classic)",
+        "Lassi from Blue Lassi shop (since 1925)",
+        "Malaiyyo (winter-only frothy saffron dessert)",
+        "Tamatar chaat"
+      ],
+      "localTip": "Hire a boat at dawn to witness the Ganga Aarti from the water — watching from the ghats is crowded. Negotiate the price before boarding.",
+      "funFact": "Varanasi is one of the oldest continuously inhabited cities in the world — over 3,000 years old. Mark Twain wrote: 'Benares is older than history, older than tradition, older even than legend.'",
+      "culturalDos": [
+        "Attend the evening Ganga Aarti at Dashashwamedh Ghat",
+        "Walk the Ghats at sunrise — the light is extraordinary",
+        "Dress modestly — this is one of Hinduism's holiest cities",
+        "Buy genuine Banarasi silk directly from weaver families in Madanpura"
+      ],
+      "culturalDonts": [
+        "Photograph cremation ceremonies at Manikarnika Ghat without permission — it's sacred, not a spectacle",
+        "Accept unsolicited 'free' temple guides — they lead to high-pressure silk shops",
+        "Eat meat near the ghats — many areas are strictly vegetarian"
+      ]
+    }
+  },
+  {
+    "slug": "ahmedabad",
+    "name": "Ahmedabad",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 23.0225,
+      "lng": 72.5714
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 8253226,
+    "tags": [
+      "tech",
+      "historic",
+      "street-food",
+      "family"
+    ],
+    "videos": [
+      {
+        "youtubeId": "C19RM1o9VLw",
+        "label": "Science City Ahmedabad — Modern India (4K HDR)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "Kem cho? (How are you? — Gujarati)",
+      "currency": "Indian Rupee (₹)",
+      "bestSeason": "Winter (November–February)",
+      "mustEat": [
+        "Dhokla",
+        "Fafda-jalebi (breakfast combo)",
+        "Undhiyu (winter vegetable dish)",
+        "Gujarati thali (unlimited refills)",
+        "Manek Chowk night food market"
+      ],
+      "localTip": "Ahmedabad is almost entirely vegetarian — don't expect beef or pork. The old city's Pols (historic residential clusters) are a UNESCO World Heritage Site and best explored on foot.",
+      "funFact": "Ahmedabad was India's first UNESCO World Heritage City (2017). Mahatma Gandhi launched the Dandi Salt March from Sabarmati Ashram here in 1930 — you can visit the ashram today.",
+      "culturalDos": [
+        "Visit Manek Chowk at night — it transforms from a jewellery market to a massive open-air food court",
+        "Explore the old city Pols early morning before crowds",
+        "Take the Science City aquarium and IMAX dome — genuinely world-class"
+      ],
+      "culturalDonts": [
+        "Expect alcohol — Gujarat is a dry state (no alcohol legally sold)",
+        "Visit during May–June — heat regularly exceeds 45°C",
+        "Skip the kite festival in January (Uttarayan) if you're visiting in winter"
       ]
     }
   },
