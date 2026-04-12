@@ -102,6 +102,34 @@
         "timeOfDay": "golden-hour",
         "type": "walk",
         "isFeatured": false
+      },
+      {
+        "youtubeId": "iBtVwKE-hVo",
+        "label": "Mukojima Night Walk — Sakura & SkyTree",
+        "timeOfDay": "night",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "LSB2_LKQi7Y",
+        "label": "Showa-kinen Park — Cherry Blossoms (5.7K HDR)",
+        "timeOfDay": "morning",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "DppENuARxNk",
+        "label": "Shibuya Day Walk (Lumix GH6 5.7K HDR)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
+      },
+      {
+        "youtubeId": "0BFK6w8EoMQ",
+        "label": "Kameido Wisteria Trellis & SkyTree (5.7K HDR)",
+        "timeOfDay": "day",
+        "type": "walk",
+        "isFeatured": false
       }
     ],
     "culture": {
@@ -2711,6 +2739,57 @@
         "Disturb sea turtles nesting on the beach at night",
         "Bring single-use plastic — the village is near zero-waste",
         "Expect ATMs — carry cash from Pochutla"
+      ]
+    }
+  },
+  {
+    "slug": "saitama",
+    "name": "Saitama",
+    "country": "Japan",
+    "countryCode": "JP",
+    "flagEmoji": "🇯🇵",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 35.8617,
+      "lng": 139.6455
+    },
+    "timezone": "Asia/Tokyo",
+    "population": 1320000,
+    "tags": [
+      "nature",
+      "historic",
+      "cherry-blossoms"
+    ],
+    "videos": [
+      {
+        "youtubeId": "tAwc4dQuoGE",
+        "label": "Satte — Sakura Cherry Blossom Walk (5.7K HDR Remastered)",
+        "timeOfDay": "morning",
+        "type": "walk",
+        "isFeatured": true
+      }
+    ],
+    "culture": {
+      "greeting": "こんにちは (Konnichiwa)",
+      "currency": "Japanese Yen (¥)",
+      "bestSeason": "Spring (late March – early April) for cherry blossoms",
+      "mustEat": [
+        "Ten-don (tempura rice bowl)",
+        "Musashi-wild boar hotpot (inoshishi nabe)",
+        "Kumagaya udon",
+        "Soka senbei (rice crackers)"
+      ],
+      "localTip": "Satte's Gongendo Park lines the Edo River with 1,000 cherry trees — arrive before 9am to avoid crowds. The park is free to enter.",
+      "funFact": "Saitama Prefecture is home to the world's only dedicated manga museum, the Kawagoe Manga Museum, and the Saitama Super Arena — one of Asia's largest indoor arenas.",
+      "culturalDos": [
+        "Walk or rent a bicycle to reach Gongendo Park along the river path",
+        "Visit the retro Kurazukuri street in Kawagoe (Little Edo) for Edo-period warehouses",
+        "Try the local specialty — sweet potato snacks from Kawagoe"
+      ],
+      "culturalDonts": [
+        "Assume everything in Tokyo's shadow is less interesting — Saitama has unique historic towns",
+        "Miss the cherry blossom season (it's brief, usually one week)",
+        "Bring a car — trains from Tokyo take under 30 minutes and parking is scarce"
       ]
     }
   }
