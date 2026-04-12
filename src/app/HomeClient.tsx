@@ -313,7 +313,7 @@ export function HomeClient({ cities, initialCity }: Props) {
         {phase === "idle" && (
           <motion.div
             key="globe-bottombar"
-            className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-6"
+            className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-safe"
             style={{ zIndex: 15, pointerEvents: "none" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -380,7 +380,7 @@ export function HomeClient({ cities, initialCity }: Props) {
                 <button
                   key={city.slug}
                   onClick={() => useAppStore.getState().selectCity(city)}
-                  className="relative text-xl opacity-50 hover:opacity-100 hover:scale-125 transition-all duration-200"
+                  className="relative text-xl opacity-50 hover:opacity-100 hover:scale-125 transition-all duration-200 p-1 min-w-[36px] min-h-[36px] flex items-center justify-center"
                   title={city.name}
                 >
                   {city.flagEmoji}

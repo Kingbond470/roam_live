@@ -117,7 +117,7 @@ export default async function CityWalkPage({ params }: Props) {
 
       <div className="h-full overflow-y-auto bg-[#050508] text-white">
         {/* Nav */}
-        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
+        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
@@ -158,11 +158,11 @@ export default async function CityWalkPage({ params }: Props) {
         </div>
 
         {/* City Header */}
-        <div className="max-w-4xl mx-auto px-6 py-8">
-          <div className="flex items-start gap-5 mb-6">
-            <span className="text-6xl">{city.flagEmoji}</span>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+          <div className="flex items-start gap-3 sm:gap-5 mb-6">
+            <span className="text-4xl sm:text-6xl leading-none mt-1">{city.flagEmoji}</span>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name}</h1>
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name}</h1>
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{city.country}</span>

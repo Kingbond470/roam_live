@@ -146,7 +146,7 @@ export default async function ComparePage({ params }: Props) {
 
       <div className="h-full overflow-y-auto bg-[#050508] text-white">
         {/* Nav */}
-        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
+        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
@@ -162,13 +162,13 @@ export default async function ComparePage({ params }: Props) {
           </Link>
         </nav>
 
-        <div className="max-w-5xl mx-auto px-6 pt-24 pb-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-16">
           {/* Header */}
           <div className="text-center mb-12">
             <p className="text-white/30 text-xs tracking-widest uppercase mb-3">City Comparison</p>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
               <span>{cityA.flagEmoji} {cityA.name}</span>
-              <span className="text-white/20 mx-4">vs</span>
+              <span className="text-white/20 text-xl sm:text-3xl md:text-4xl">vs</span>
               <span>{cityB.flagEmoji} {cityB.name}</span>
             </h1>
             <p className="text-white/50 max-w-xl mx-auto">
@@ -208,7 +208,8 @@ export default async function ComparePage({ params }: Props) {
 
           {/* Comparison table */}
           <div className="rounded-2xl bg-white/4 border border-white/8 overflow-hidden mb-10">
-            <div className="grid grid-cols-3 bg-white/4 border-b border-white/8 px-5 py-3">
+            {/* Desktop header — hidden on mobile */}
+            <div className="hidden sm:grid grid-cols-3 bg-white/4 border-b border-white/8 px-5 py-3">
               <span className="text-xs tracking-widest uppercase text-white/30">Category</span>
               <span className="text-sm font-semibold">{cityA.flagEmoji} {cityA.name}</span>
               <span className="text-sm font-semibold">{cityB.flagEmoji} {cityB.name}</span>
@@ -216,11 +217,26 @@ export default async function ComparePage({ params }: Props) {
             {comparisonRows.map((row, i) => (
               <div
                 key={row.label}
-                className={`grid grid-cols-3 px-5 py-4 ${i < comparisonRows.length - 1 ? "border-b border-white/5" : ""}`}
+                className={`px-4 sm:px-5 py-3 sm:py-4 ${i < comparisonRows.length - 1 ? "border-b border-white/5" : ""}`}
               >
-                <span className="text-xs text-white/40 uppercase tracking-wide self-center">{row.label}</span>
-                <span className="text-sm text-white/80 pr-4">{row.a}</span>
-                <span className="text-sm text-white/80">{row.b}</span>
+                {/* Mobile: label above, cities side by side */}
+                <p className="text-xs text-white/40 uppercase tracking-wide mb-1.5 sm:hidden">{row.label}</p>
+                <div className="grid grid-cols-2 gap-3 sm:hidden">
+                  <div>
+                    <p className="text-xs text-white/30 mb-0.5">{cityA.flagEmoji} {cityA.name}</p>
+                    <p className="text-sm text-white/80">{row.a}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-white/30 mb-0.5">{cityB.flagEmoji} {cityB.name}</p>
+                    <p className="text-sm text-white/80">{row.b}</p>
+                  </div>
+                </div>
+                {/* Desktop: 3-col grid */}
+                <div className="hidden sm:grid grid-cols-3">
+                  <span className="text-xs text-white/40 uppercase tracking-wide self-center">{row.label}</span>
+                  <span className="text-sm text-white/80 pr-4">{row.a}</span>
+                  <span className="text-sm text-white/80">{row.b}</span>
+                </div>
               </div>
             ))}
           </div>

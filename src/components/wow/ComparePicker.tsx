@@ -67,7 +67,7 @@ export function ComparePicker({ isOpen, cities, onSelect, onClose }: Props) {
               <div className="flex items-center gap-3 mb-3">
                 <SplitSquareHorizontal className="w-4 h-4 text-amber-400" />
                 <p className="text-white/60 text-sm tracking-wide">Compare with…</p>
-                <button onClick={onClose} className="ml-auto text-white/40 hover:text-white transition-colors">
+                <button onClick={onClose} className="ml-auto p-2 -mr-2 text-white/40 hover:text-white transition-colors">
                   <X className="w-4 h-4" />
                 </button>
               </div>
@@ -92,7 +92,7 @@ export function ComparePicker({ isOpen, cities, onSelect, onClose }: Props) {
                   results.map((city, i) => (
                     <motion.button
                       key={city.slug}
-                      className="w-full flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0 text-left"
+                      className="w-full flex items-center gap-3 px-4 py-4 sm:py-3 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0 text-left min-h-[52px]"
                       onClick={() => { onSelect(city); onClose(); }}
                       initial={{ opacity: 0, x: -8 }}
                       animate={{ opacity: 1, x: 0 }}

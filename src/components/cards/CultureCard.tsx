@@ -43,23 +43,23 @@ export function CultureCard({ city, isOpen, onClose, onCompare }: Props) {
             </div>
 
             {/* Header */}
-            <div className="flex items-start justify-between px-5 py-3 border-b border-white/8">
+            <div className="flex items-start justify-between px-4 sm:px-5 py-3 border-b border-white/8">
               <div>
-                <h2 className="text-xl font-bold text-white" style={{ fontFamily: "Georgia, serif" }}>
+                <h2 className="text-lg sm:text-xl font-bold text-white" style={{ fontFamily: "Georgia, serif" }}>
                   {city.flagEmoji} {city.name}
                 </h2>
                 <p className="text-white/40 text-sm mt-0.5">{city.country} · {city.continent}</p>
               </div>
               <button
                 onClick={onClose}
-                className="p-2 rounded-full bg-white/8 hover:bg-white/12 transition-colors text-white/60 hover:text-white"
+                className="p-2.5 -mr-1 rounded-full bg-white/8 hover:bg-white/12 transition-colors text-white/60 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
             {/* Scrollable content */}
-            <div className="scrollable overflow-y-auto px-5 py-4 flex flex-col gap-5" style={{ maxHeight: "calc(85dvh - 100px)" }}>
+            <div className="scrollable overflow-y-auto px-4 sm:px-5 py-4 flex flex-col gap-4 sm:gap-5" style={{ maxHeight: "calc(85dvh - 100px)" }}>
               {/* Greeting + Currency row */}
               <div className="grid grid-cols-2 gap-3">
                 <InfoTile label="Local greeting" value={culture.greeting} />

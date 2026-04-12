@@ -65,7 +65,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
         {isVisible && (
           <motion.div
             key="vignette"
-            className="absolute bottom-0 left-0 right-0 h-72 pointer-events-none"
+            className="absolute bottom-0 left-0 right-0 h-48 md:h-72 pointer-events-none"
             style={{
               background:
                 "linear-gradient(to top, rgba(5,5,8,0.92) 0%, rgba(5,5,8,0.55) 45%, transparent 100%)",
@@ -139,7 +139,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
         {show && (
           <motion.div
             key="hud-bottom"
-            className="absolute bottom-0 left-0 right-0 px-4 md:px-6 pb-6 md:pb-8"
+            className="absolute bottom-0 left-0 right-0 px-4 md:px-6 pb-safe"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -166,7 +166,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
                     <ViewerCount citySlug={city.slug} />
                   </div>
 
-                  <h1 className="text-4xl md:text-6xl font-bold text-white leading-none tracking-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-none tracking-tight">
                     {city.name}
                   </h1>
 

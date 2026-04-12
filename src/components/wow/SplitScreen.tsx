@@ -107,14 +107,14 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
               />
               {/* City A label — top-left on landscape, top-center on portrait */}
               <div
-                className={`absolute glass rounded-xl px-3 py-2 pointer-events-none ${
-                  isPortrait ? "top-4 left-1/2 -translate-x-1/2" : "top-6 left-5"
+                className={`absolute glass rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 pointer-events-none ${
+                  isPortrait ? "top-3 sm:top-4 left-1/2 -translate-x-1/2" : "top-4 sm:top-6 left-3 sm:left-5"
                 }`}
               >
-                <p className="text-white font-bold text-sm sm:text-lg" style={{ fontFamily: "Georgia, serif" }}>
+                <p className="text-white font-bold text-xs sm:text-base" style={{ fontFamily: "Georgia, serif" }}>
                   {cityA.flagEmoji} {cityA.name}
                 </p>
-                <p className="text-white/50 text-xs">{cityA.country}</p>
+                <p className="text-white/50 text-[10px] sm:text-xs">{cityA.country}</p>
               </div>
             </div>
 
@@ -136,16 +136,16 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
               />
               {/* City B label — bottom-right on landscape, bottom-center on portrait */}
               <div
-                className={`absolute glass rounded-xl px-3 py-2 pointer-events-none ${
+                className={`absolute glass rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 pointer-events-none ${
                   isPortrait
-                    ? "bottom-20 left-1/2 -translate-x-1/2 text-center"
-                    : "top-6 right-5 text-right"
+                    ? "bottom-20 sm:bottom-20 left-1/2 -translate-x-1/2 text-center"
+                    : "top-4 sm:top-6 right-3 sm:right-5 text-right"
                 }`}
               >
-                <p className="text-white font-bold text-sm sm:text-lg" style={{ fontFamily: "Georgia, serif" }}>
+                <p className="text-white font-bold text-xs sm:text-base" style={{ fontFamily: "Georgia, serif" }}>
                   {cityB.flagEmoji} {cityB.name}
                 </p>
-                <p className="text-white/50 text-xs">{cityB.country}</p>
+                <p className="text-white/50 text-[10px] sm:text-xs">{cityB.country}</p>
               </div>
             </div>
 

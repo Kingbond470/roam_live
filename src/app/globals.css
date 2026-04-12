@@ -76,6 +76,12 @@ iframe {
   border: none;
 }
 
+/* iPhone safe-area utilities (viewport-fit: cover) */
+.pb-safe { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+.pb-safe-sm { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+.pt-safe { padding-top: env(safe-area-inset-top); }
+.mb-safe { margin-bottom: env(safe-area-inset-bottom); }
+
 /* Glass panel utility */
 .glass {
   background: rgba(10, 10, 15, 0.7);
