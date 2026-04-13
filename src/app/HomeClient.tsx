@@ -102,15 +102,24 @@ export function HomeClient({ cities, initialCity }: Props) {
     }
   }, [phase, completeReturn]);
 
-  // Discover mode: auto-cycle every 60s when watching (skip if compare/card is open)
+  // Discover mode: auto-cycle every 30s when watching (skip if compare/card is open)
   useEffect(() => {
     if (!discoverMode || phase !== "watching") return;
     const t = setInterval(() => {
       const { compareOpen: co, cardOpen: ca } = useAppStore.getState();
       if (!co && !ca) navigateCity(cities, "next");
-    }, 60_000);
+    }, 30_000);
     return () => clearInterval(t);
   }, [discoverMode, phase, cities, navigateCity]);
+
+  // When Discover is turned on from the globe, immediately pick a city and start
+  const handleToggleDiscover = () => {
+    const isOn = !discoverMode; // what it's about to become
+    toggleDiscoverMode();
+    if (isOn && phase === "idle") {
+      selectRandomCity(cities);
+    }
+  };
 
   const isWatching = phase === "watching" || phase === "video-fadein";
   const showVideo = phase === "video-fadein" || phase === "watching" || phase === "video-fadeout";
@@ -349,11 +358,11 @@ export function HomeClient({ cities, initialCity }: Props) {
               </button>
 
               <button
-                onClick={toggleDiscoverMode}
+                onClick={handleToggleDiscover}
                 className={`glass flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-xs ${
                   discoverMode ? "text-amber-400" : "text-white/50 hover:text-white"
                 }`}
-                title={discoverMode ? "Stop auto-cycling" : "Auto-cycle cities every 60s"}
+                title={discoverMode ? "Stop auto-cycling" : "Auto-cycle cities every 30s"}
               >
                 {discoverMode ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
                 {discoverMode ? "Stop" : "Discover"}
