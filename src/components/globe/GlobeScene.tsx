@@ -166,7 +166,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         .arcAltitudeAutoScale(0.4)
         .arcStroke(() => 0.5);
 
-      globe.pointOfView({ lat: 20, lng: 15, altitude: 2.2 });
+      globe.pointOfView({ lat: 20, lng: 0, altitude: 2.5 });
       globe.controls().autoRotate = true;
       globe.controls().autoRotateSpeed = 0.22;
       globe.controls().enableZoom = false;
@@ -220,7 +220,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
 
     if ((phase === "idle" || phase === "globe-return") && globeRef.current) {
       globeRef.current.controls().autoRotate = true;
-      globeRef.current.pointOfView({ lat: 20, lng: 15, altitude: 2.2 }, 1000);
+      globeRef.current.pointOfView({ lat: 20, lng: 0, altitude: 2.5 }, 1000);
     }
   }, [phase]);
 
