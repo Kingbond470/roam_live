@@ -25,25 +25,30 @@ type GlobePoint = {
   lat: number;
   lng: number;
   size: number;
+  altitude: number;
   color: string;
   citySlug: string;
   label: string;
   videoCount: number;
 };
 
-/** Pin size + colour tier based on how many videos a city has.
- *  Thresholds tuned to current catalogue (48 cities):
- *  Gold  (10+): Tokyo 16, Rome 34
- *  Bright (3-9): Mumbai 7, Kyoto 4, Mexico City 5, New Delhi 4, Varanasi 3
- *  Amber   (2) : Istanbul, New York, Paris, Amsterdam, Osaka, Monterrey…
- *  Dim     (1) : all single-video cities
- */
+/** Pin size + colour tier based on how many videos a city has. */
 function videoTier(count: number): { size: number; color: string } {
   if (count >= 10) return { size: 0.62, color: "#fcd34d" }; // gold
   if (count >= 3)  return { size: 0.50, color: "#fbbf24" }; // bright amber
-  if (count >= 2)  return { size: 0.40, color: "#f59e0b" }; // amber
-  return              { size: 0.30, color: "#c77c0b" };      // dim — 1 video
+  if (count >= 2)  return { size: 0.42, color: "#f59e0b" }; // amber
+  return              { size: 0.40, color: "#e09010" };      // base — 1 video (raised from 0.30 so single-video cities read clearly)
 }
+
+// Altitude values: active pins lift off the globe surface; dimmed pins lie nearly flat.
+// The compound signal (colour + size + depth) makes the filter immediately readable.
+const ALTITUDE_ACTIVE  = 0.04;   // pops visually above the surface
+const ALTITUDE_DIMMED  = 0.002;  // almost flush — near-invisible in 3D
+const ALTITUDE_TODAY   = 0.06;   // extra lift for city-of-the-day
+
+// Dimmed appearance — near-invisible on the night-earth texture
+const DIMMED_COLOR = "#111827";  // near-black with faint blue tint
+const DIMMED_SIZE  = 0.08;       // dust-speck, not a dot
 
 export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -72,12 +77,14 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         const matches = !tagFilter || (CONTINENTS.has(tagFilter) ? city.continent === tagFilter : city.tags.includes(tagFilter));
         const isToday = city.slug === cityOfTheDay?.slug;
         const isOnPath = !pathSlugs || pathSlugs.has(city.slug);
+        const active = isOnPath && matches;
         const tier = videoTier(city.videos.length);
         return {
           lat: city.coordinates.lat,
           lng: city.coordinates.lng,
-          size: isToday ? 0.68 : isOnPath ? (matches ? tier.size : 0.22) : 0.18,
-          color: isToday ? "#f43f5e" : isOnPath ? (matches ? tier.color : "#444444") : "#222222",
+          size:     isToday ? 0.68 : active ? tier.size : DIMMED_SIZE,
+          altitude: isToday ? ALTITUDE_TODAY : active ? ALTITUDE_ACTIVE : ALTITUDE_DIMMED,
+          color:    isToday ? "#f43f5e" : active ? tier.color : DIMMED_COLOR,
           citySlug: city.slug,
           label: isToday ? `${city.name} ★ Today's Walk` : city.name,
           videoCount: city.videos.length,
@@ -95,7 +102,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         .pointsData(points)
         .pointLat("lat")
         .pointLng("lng")
-        .pointAltitude(0.01)
+        .pointAltitude((d: object) => (d as GlobePoint).altitude)
         .pointRadius((d: object) => (d as GlobePoint).size)
         // BUG-01 FIX: reads hoveredSlugRef.current at call time — never stale
         .pointColor((d: object) =>
@@ -236,12 +243,14 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
       const matches = !tagFilter || (CONTINENTS.has(tagFilter) ? city.continent === tagFilter : city.tags.includes(tagFilter));
       const isToday = city.slug === cityOfTheDay?.slug;
       const isOnPath = !pathSlugs || pathSlugs.has(city.slug);
+      const active = isOnPath && matches;
       const tier = videoTier(city.videos.length);
       return {
         lat: city.coordinates.lat,
         lng: city.coordinates.lng,
-        size: isToday ? 0.68 : isOnPath ? (matches ? tier.size : 0.22) : 0.18,
-        color: isToday ? "#f43f5e" : isOnPath ? (matches ? tier.color : "#444444") : "#222222",
+        size:     isToday ? 0.68 : active ? tier.size : DIMMED_SIZE,
+        altitude: isToday ? ALTITUDE_TODAY : active ? ALTITUDE_ACTIVE : ALTITUDE_DIMMED,
+        color:    isToday ? "#f43f5e" : active ? tier.color : DIMMED_COLOR,
         citySlug: city.slug,
         label: isToday ? `${city.name} ★ Today's Walk` : city.name,
         videoCount: city.videos.length,
