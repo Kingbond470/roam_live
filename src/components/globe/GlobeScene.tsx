@@ -270,7 +270,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
     }
     globeRef.current.arcsData(arcs);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activePath]);
+  }, [activePath, activeTag, cities]);
 
   return (
     <div ref={containerRef} className="w-full h-full" style={{ cursor: "grab" }} />
