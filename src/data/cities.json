@@ -1106,6 +1106,20 @@
         "timeOfDay": "day",
         "isFeatured": true,
         "type": "walk"
+      },
+      {
+        "youtubeId": "BSxV9nUfDAU",
+        "label": "Cape Town Jewel of South Africa Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "dZGz9PFLYQo",
+        "label": "Beach Walk in Cape Town 4K 60fps",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
       }
     ],
     "culture": {
@@ -3352,6 +3366,203 @@
       "founders": "Current city formed by merger of Urawa, Omiya, and Yono cities on May 1, 2001",
       "story": "The Saitama region formed part of ancient Musashino Province, one of the heartland territories of early Japan — human habitation here stretches back over 20,000 years. Omiya, one of its component towns, grew around Hikawa Shrine, one of Japan's oldest and most revered Shinto sites. The modern city was created on May 1, 2001, when three neighbouring cities merged by administrative consolidation. It is best known for its spectacular cherry blossoms along the Edo River in Satte, drawing visitors from across greater Tokyo.",
       "era": "Contemporary"
+    }
+  },
+  {
+    "slug": "geneva",
+    "name": "Geneva",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "flagEmoji": "🇨🇭",
+    "continent": "Europe",
+    "coordinates": { "lat": 46.2044, "lng": 6.1432 },
+    "timezone": "Europe/Zurich",
+    "population": 203856,
+    "tags": ["elegant", "lakeside", "diplomacy", "luxury"],
+    "videos": [
+      {
+        "youtubeId": "-75nCcpU5u8",
+        "label": "Elegant Geneva, Switzerland Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Bonjour (French) / Grüezi (German)",
+      "currency": "Swiss Franc (CHF)",
+      "bestSeason": "May–September (warm summers, lake views)",
+      "mustEat": ["Fondue", "Raclette", "Rösti", "Chocolate", "Swiss cheese"],
+      "localTip": "Geneva runs on punctuality — buses and trains leave on the dot. Tap water is exceptionally pure and free to drink from public fountains.",
+      "funFact": "Geneva hosts more international organisations per capita than any other city on Earth, including the UN, Red Cross, and WHO.",
+      "culturalDos": ["Greet shopkeepers when entering", "Speak quietly in public spaces", "Respect recycling rules strictly"],
+      "culturalDonts": ["Flush the toilet late at night in apartments", "Mow the lawn on Sunday", "Expect shops open on Sunday"]
+    },
+    "origin": {
+      "founded": "58 BC",
+      "originalName": "Genava",
+      "founders": "Celtic Allobroges tribe; later Roman",
+      "story": "Julius Caesar mentioned Genava in 58 BC when he ordered the bridge over the Rhône destroyed to stop the Helvetii migration. The city sat at the crossroads of Rome, Gaul, and the Alpine passes, making it a prized possession through Burgundian, Frankish, and Savoyard rule. In 1536, John Calvin arrived and transformed Geneva into the 'Protestant Rome' — a city of strict moral codes and revolutionary theology that shaped modern Europe. The Reformation's legacy of internationalism persists today in the city's identity as the world's humanitarian capital.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "lugano",
+    "name": "Lugano",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "flagEmoji": "🇨🇭",
+    "continent": "Europe",
+    "coordinates": { "lat": 46.0037, "lng": 8.9511 },
+    "timezone": "Europe/Zurich",
+    "population": 62000,
+    "tags": ["lakeside", "mediterranean", "luxury", "mountains"],
+    "videos": [
+      {
+        "youtubeId": "GkhMz52zMG0",
+        "label": "Majestic Views of Lugano, Switzerland Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Buongiorno (Italian) / Ciao",
+      "currency": "Swiss Franc (CHF)",
+      "bestSeason": "April–October (Mediterranean microclimate, warm and sunny)",
+      "mustEat": ["Risotto", "Polenta", "Luganighetta sausage", "Ticinese wine", "Panettone"],
+      "localTip": "Take the funicular up Monte San Salvatore for a 360° view of three lakes and the Alps. Italian is the primary language — a rare Swiss canton where it rules.",
+      "funFact": "Lugano sits in the Italian-speaking canton of Ticino and enjoys a Mediterranean microclimate unusual for Switzerland — palm trees line its lakefront promenade.",
+      "culturalDos": ["Speak Italian or English", "Linger over long lunches", "Take the boat across the lake"],
+      "culturalDonts": ["Rush through meals", "Assume everyone speaks German", "Skip the smaller lakeside villages"]
+    },
+    "origin": {
+      "founded": "circa 4th century AD",
+      "originalName": "Luanico / Locarno region",
+      "founders": "Lombard settlers",
+      "story": "Lugano's sheltered bay on Lake Ceresio made it a natural settlement for Lombard tribes after the fall of Rome. Under the Visconti of Milan and later the Swiss Confederation (which took control in 1512), the town grew into a prosperous silk and banking centre. Its Italian character remained intact even as Swiss governance shaped its institutions. Today it is the financial capital of Italian-speaking Switzerland — a city that feels like a piece of northern Italy dressed in Swiss precision.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "basel",
+    "name": "Basel",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "flagEmoji": "🇨🇭",
+    "continent": "Europe",
+    "coordinates": { "lat": 47.5596, "lng": 7.5886 },
+    "timezone": "Europe/Zurich",
+    "population": 178000,
+    "tags": ["art", "architecture", "rhine", "culture"],
+    "videos": [
+      {
+        "youtubeId": "UpOSdA2burI",
+        "label": "Bright Winter Day in Basel, Switzerland Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Grüezi / Hallo",
+      "currency": "Swiss Franc (CHF)",
+      "bestSeason": "June (Art Basel) and December (Christmas market)",
+      "mustEat": ["Läckerli (spiced biscuit)", "Mehlsuppe (flour soup)", "Basler Rüeblitorte (carrot cake)", "Wiener Schnitzel", "Rhine fish"],
+      "localTip": "Basel sits at the border of France, Germany, and Switzerland — you can walk between three countries in an afternoon. The free Rhine swimming culture in summer is unmissable.",
+      "funFact": "Basel hosts Art Basel, the world's most prestigious contemporary art fair, every June — transforming the city into the global art capital for one week.",
+      "culturalDos": ["Visit a museum on Sundays (many are free)", "Swim in the Rhine with locals in summer", "Attend Fasnacht carnival in February"],
+      "culturalDonts": ["Miss the Old Town's medieval streets", "Confuse Swiss German with High German", "Skip the Kunstmuseum"]
+    },
+    "origin": {
+      "founded": "44 BC (Roman fort)",
+      "originalName": "Basilia / Augusta Raurica",
+      "founders": "Romans, later Alemanni",
+      "story": "The Romans established a fort called Basilia on the Rhine bend around 44 BC, guarding a strategic river crossing. In 1431, the Council of Basel — one of the great reforming councils of the Catholic Church — met here, briefly making it the centre of Christendom. The University of Basel, founded in 1460, became one of Europe's foremost humanist institutions: Erasmus lived, taught, and died here. The city's tradition of intellectual and artistic openness persists in its extraordinary density of world-class museums.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "bern",
+    "name": "Bern",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "flagEmoji": "🇨🇭",
+    "continent": "Europe",
+    "coordinates": { "lat": 46.9480, "lng": 7.4474 },
+    "timezone": "Europe/Zurich",
+    "population": 134591,
+    "tags": ["capital", "medieval", "arcades", "bears"],
+    "videos": [
+      {
+        "youtubeId": "gbWQWTwPRW0",
+        "label": "Cozy Winter Walk in Bern, Switzerland 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Grüezi / Guete Tag (Bernese German)",
+      "currency": "Swiss Franc (CHF)",
+      "bestSeason": "May–September (mild summers, long arcaded walks in any weather)",
+      "mustEat": ["Bernese Platte (meat and sauerkraut)", "Läckerli", "Berner Rösti", "Meringue with cream", "Toblerone chocolate"],
+      "localTip": "Bern's 6km of covered arcades (Lauben) mean you can walk the entire old city without an umbrella in any weather. The city's bear symbol is everywhere — don't miss the Bear Park by the river.",
+      "funFact": "Albert Einstein developed his Special Theory of Relativity while working as a patent clerk in Bern in 1905. His apartment at Kramgasse 49 is now a museum.",
+      "culturalDos": ["Walk the arcaded old town", "Visit the Zytglogge clock tower", "Explore the Rose Garden for panoramic views"],
+      "culturalDonts": ["Rush — Bern moves at a gentle pace", "Miss the Einstein Museum", "Confuse Bern with Berlin"]
+    },
+    "origin": {
+      "founded": "1191",
+      "originalName": "Bern (from Bär — bear)",
+      "founders": "Duke Berthold V of Zähringen",
+      "story": "Duke Berthold V founded Bern in 1191 on a peninsula in a sharp bend of the Aare river — a naturally defensible position that still defines the city's shape today. Legend holds the city was named after the first animal hunted there: a bear. Bern joined the Swiss Confederation in 1353 and grew into its de facto capital by the 19th century, though Switzerland's federal structure means it holds the title 'federal city' rather than official capital. Its remarkably preserved medieval old town, with sandstone arcades and fountains unchanged since the 16th century, earned it UNESCO World Heritage status in 1983.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "zurich",
+    "name": "Zurich",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "flagEmoji": "🇨🇭",
+    "continent": "Europe",
+    "coordinates": { "lat": 47.3769, "lng": 8.5417 },
+    "timezone": "Europe/Zurich",
+    "population": 421878,
+    "tags": ["finance", "luxury", "lakeside", "nightlife"],
+    "videos": [
+      {
+        "youtubeId": "VFt1vGi5D0c",
+        "label": "Festive Lights in Zurich, Switzerland Walking Tour 4K",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "y0WSFxVZLJU",
+        "label": "Winter Festivity in Zurich, Switzerland Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Grüezi / Hoi (informal)",
+      "currency": "Swiss Franc (CHF)",
+      "bestSeason": "June–August (lake swimming, festivals) and December (Christmas markets)",
+      "mustEat": ["Zürcher Geschnetzeltes (veal in cream sauce)", "Birchermüesli", "Fondue", "Swiss chocolate", "Raclette"],
+      "localTip": "The Zürichsee (lake) is clean enough to swim in summer — locals do it daily. The Langstrasse district transforms at night into Zurich's best bar and restaurant scene.",
+      "funFact": "Zurich consistently ranks as one of the world's most liveable cities, yet it also hosts one of Europe's wildest street parties — the Street Parade techno festival, drawing 1 million visitors each August.",
+      "culturalDos": ["Buy a day pass for trams and buses", "Swim in the lake or Limmat river in summer", "Explore the Altstadt's narrow medieval lanes"],
+      "culturalDonts": ["Jaywalk — it's taken seriously", "Be loud on public transport", "Forget that almost everything closes Sunday"]
+    },
+    "origin": {
+      "founded": "15 BC (Roman)",
+      "originalName": "Turicum",
+      "founders": "Romans",
+      "story": "The Romans built a customs post called Turicum on the Lindenhügel hill around 15 BC, controlling the trade route along the Limmat river. The name Zurich appears in documents from 929 AD. The city's defining moment came during the Reformation: Ulrich Zwingli preached here from 1519, making Zurich the birthplace of the Reformed Church — a theological revolution that split from Luther's German Reformation. Banking came naturally to a city already fluent in precision and discretion, and by the 20th century Zurich had become Europe's financial engine, a reputation it holds fiercely today.",
+      "era": "Ancient"
     }
   }
 ]
