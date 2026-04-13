@@ -25,7 +25,6 @@ type GlobePoint = {
   lat: number;
   lng: number;
   size: number;
-  altitude: number;
   color: string;
   citySlug: string;
   label: string;
@@ -34,21 +33,16 @@ type GlobePoint = {
 
 /** Pin size + colour tier based on how many videos a city has. */
 function videoTier(count: number): { size: number; color: string } {
-  if (count >= 10) return { size: 0.62, color: "#fcd34d" }; // gold
-  if (count >= 3)  return { size: 0.50, color: "#fbbf24" }; // bright amber
-  if (count >= 2)  return { size: 0.42, color: "#f59e0b" }; // amber
-  return              { size: 0.40, color: "#e09010" };      // base — 1 video (raised from 0.30 so single-video cities read clearly)
+  if (count >= 10) return { size: 0.60, color: "#fcd34d" }; // gold
+  if (count >= 3)  return { size: 0.48, color: "#fbbf24" }; // bright amber
+  if (count >= 2)  return { size: 0.38, color: "#f59e0b" }; // amber
+  return              { size: 0.30, color: "#f59e0b" };      // base — 1 video
 }
 
-// Altitude values: active pins lift off the globe surface; dimmed pins lie nearly flat.
-// The compound signal (colour + size + depth) makes the filter immediately readable.
-const ALTITUDE_ACTIVE  = 0.04;   // pops visually above the surface
-const ALTITUDE_DIMMED  = 0.002;  // almost flush — near-invisible in 3D
-const ALTITUDE_TODAY   = 0.06;   // extra lift for city-of-the-day
-
 // Dimmed appearance — near-invisible on the night-earth texture
+// Contrast comes from colour + size only. No altitude extrusion (looks like bar chart spikes).
 const DIMMED_COLOR = "#111827";  // near-black with faint blue tint
-const DIMMED_SIZE  = 0.08;       // dust-speck, not a dot
+const DIMMED_SIZE  = 0.07;       // dust-speck, not a dot
 
 export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -82,9 +76,8 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         return {
           lat: city.coordinates.lat,
           lng: city.coordinates.lng,
-          size:     isToday ? 0.68 : active ? tier.size : DIMMED_SIZE,
-          altitude: isToday ? ALTITUDE_TODAY : active ? ALTITUDE_ACTIVE : ALTITUDE_DIMMED,
-          color:    isToday ? "#f43f5e" : active ? tier.color : DIMMED_COLOR,
+          size:  isToday ? 0.68 : active ? tier.size : DIMMED_SIZE,
+          color: isToday ? "#f43f5e" : active ? tier.color : DIMMED_COLOR,
           citySlug: city.slug,
           label: isToday ? `${city.name} ★ Today's Walk` : city.name,
           videoCount: city.videos.length,
@@ -97,12 +90,12 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         .backgroundImageUrl(null)
         .backgroundColor("rgba(0,0,0,0)")
         .showAtmosphere(true)
-        .atmosphereColor("#1a4a8a")
-        .atmosphereAltitude(0.18)
+        .atmosphereColor("#60a5fa")
+        .atmosphereAltitude(0.14)
         .pointsData(points)
         .pointLat("lat")
         .pointLng("lng")
-        .pointAltitude((d: object) => (d as GlobePoint).altitude)
+        .pointAltitude(0.01)
         .pointRadius((d: object) => (d as GlobePoint).size)
         // BUG-01 FIX: reads hoveredSlugRef.current at call time — never stale
         .pointColor((d: object) =>
@@ -175,7 +168,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
 
       globe.pointOfView({ lat: 20, lng: 15, altitude: 2.2 });
       globe.controls().autoRotate = true;
-      globe.controls().autoRotateSpeed = 0.35;
+      globe.controls().autoRotateSpeed = 0.22;
       globe.controls().enableZoom = false;
       globe.controls().enablePan = false;
       globe.controls().minPolarAngle = Math.PI * 0.2;
@@ -248,9 +241,8 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
       return {
         lat: city.coordinates.lat,
         lng: city.coordinates.lng,
-        size:     isToday ? 0.68 : active ? tier.size : DIMMED_SIZE,
-        altitude: isToday ? ALTITUDE_TODAY : active ? ALTITUDE_ACTIVE : ALTITUDE_DIMMED,
-        color:    isToday ? "#f43f5e" : active ? tier.color : DIMMED_COLOR,
+        size:  isToday ? 0.68 : active ? tier.size : DIMMED_SIZE,
+        color: isToday ? "#f43f5e" : active ? tier.color : DIMMED_COLOR,
         citySlug: city.slug,
         label: isToday ? `${city.name} ★ Today's Walk` : city.name,
         videoCount: city.videos.length,
