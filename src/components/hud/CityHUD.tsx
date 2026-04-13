@@ -150,11 +150,15 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
         <div className="absolute bottom-0 left-0 right-0 px-4 md:px-6 pb-safe">
           <div className="flex items-end gap-4">
 
-            {/* Prev arrow — always faintly visible, fully visible when HUD revealed */}
+            {/* Prev arrow — faint hint when hidden (not clickable), full when HUD revealed */}
             <button
               onClick={() => navigateCity(navCities, "prev")}
-              className="pointer-events-auto glass rounded-full p-2.5 transition-all duration-500 mb-1 flex-shrink-0"
-              style={{ opacity: show ? 0.6 : 0.15, color: "white" }}
+              className="glass rounded-full p-2.5 transition-all duration-500 mb-1 flex-shrink-0"
+              style={{
+                opacity: show ? 0.6 : 0.12,
+                color: "white",
+                pointerEvents: show ? "auto" : "none",
+              }}
               title="Previous city (←)"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -239,11 +243,15 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
               )}
             </AnimatePresence>
 
-            {/* Next arrow — always faintly visible, fully visible when HUD revealed */}
+            {/* Next arrow — faint hint when hidden (not clickable), full when HUD revealed */}
             <button
               onClick={() => navigateCity(navCities, "next")}
-              className="pointer-events-auto glass rounded-full p-2.5 transition-all duration-500 mb-1 flex-shrink-0"
-              style={{ opacity: show ? 0.6 : 0.15, color: "white" }}
+              className="glass rounded-full p-2.5 transition-all duration-500 mb-1 flex-shrink-0"
+              style={{
+                opacity: show ? 0.6 : 0.12,
+                color: "white",
+                pointerEvents: show ? "auto" : "none",
+              }}
               title="Next city (→)"
             >
               <ChevronRight className="w-4 h-4" />
