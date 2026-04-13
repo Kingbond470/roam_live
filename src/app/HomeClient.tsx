@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -309,6 +310,14 @@ export function HomeClient({ cities, initialCity }: Props) {
             </div>
 
             <div className="flex items-center gap-2" style={{ pointerEvents: "auto" }}>
+              {/* About link */}
+              <Link
+                href="/about"
+                className="glass px-3 py-2 rounded-full text-white/40 hover:text-white/80 transition-colors text-xs hidden sm:block"
+              >
+                About
+              </Link>
+
               {/* City of the day shortcut */}
               <button
                 onClick={() => {
