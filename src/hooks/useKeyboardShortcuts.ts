@@ -18,6 +18,15 @@ export function useKeyboardShortcuts(cities: City[]) {
 
       const { navigateCity } = useAppStore.getState();
 
+      // BUG-02 FIX: respect active journey path for arrow navigation
+      const getNavCities = () => {
+        const { activePath: ap } = useAppStore.getState();
+        if (!ap) return cities;
+        return ap.citySlugOrder
+          .map((s) => cities.find((c) => c.slug === s))
+          .filter(Boolean) as City[];
+      };
+
       switch (e.key) {
         case "Escape":
           if (phase === "watching") returnToGlobe();
@@ -35,10 +44,10 @@ export function useKeyboardShortcuts(cities: City[]) {
           if (phase === "watching" && selectedCity) toggleFavorite(selectedCity.slug);
           break;
         case "ArrowRight":
-          if (phase === "watching") navigateCity(cities, "next");
+          if (phase === "watching") navigateCity(getNavCities(), "next");
           break;
         case "ArrowLeft":
-          if (phase === "watching") navigateCity(cities, "prev");
+          if (phase === "watching") navigateCity(getNavCities(), "prev");
           break;
       }
     };

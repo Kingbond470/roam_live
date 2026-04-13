@@ -134,7 +134,14 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         .onPointClick((point: object) => {
           const p = point as GlobePoint;
           const city = cities.find((c) => c.slug === p.citySlug);
-          if (city) selectCity(city);
+          if (city) {
+            // BUG-04 FIX: exit journey when user explicitly clicks a city outside the active path
+            const { activePath: ap, setActivePath } = useAppStore.getState();
+            if (ap && !ap.citySlugOrder.includes(p.citySlug)) {
+              setActivePath(null);
+            }
+            selectCity(city);
+          }
         })
         .onPointHover((point: object | null) => {
           const p = point as GlobePoint | null;
@@ -254,7 +261,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
             startLng: from.coordinates.lng,
             endLat:   to.coordinates.lat,
             endLng:   to.coordinates.lng,
-            color: activePath.accentColor,
+            color: activePath.accentColor + "cc", // BUG-05 FIX: 80% opacity so arcs don't overwhelm dimmed pins
           });
         }
       }

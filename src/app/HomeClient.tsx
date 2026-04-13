@@ -73,10 +73,18 @@ export function HomeClient({ cities, initialCity }: Props) {
 
   // Mobile swipe gestures (watching phase only, not while compare/card is open)
   const { navigateCity, returnToGlobe: returnToGlobeGesture } = useAppStore();
+  // BUG-01 FIX: read activePath at call time so swipes respect the active journey path
+  const getSwipeNavCities = () => {
+    const ap = useAppStore.getState().activePath;
+    if (!ap) return cities;
+    return ap.citySlugOrder
+      .map((s) => cities.find((c) => c.slug === s))
+      .filter(Boolean) as City[];
+  };
   useSwipeGestures({
     onSwipeDown:  () => { if (phase === "watching" && !compareOpen && !cardOpen) returnToGlobeGesture(); },
-    onSwipeLeft:  () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(cities, "next"); },
-    onSwipeRight: () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(cities, "prev"); },
+    onSwipeLeft:  () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(getSwipeNavCities(), "next"); },
+    onSwipeRight: () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(getSwipeNavCities(), "prev"); },
   });
 
   // Sprint 3A: deep-link — auto-select city from ?city= query param on first load

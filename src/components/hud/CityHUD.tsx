@@ -174,7 +174,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
                 <div className="flex flex-col gap-2 min-w-0">
                   {/* Active journey banner */}
                   {activePath && (
-                    <div className="flex items-center gap-2 pointer-events-auto">
+                    <div className="flex items-center gap-2 pointer-events-auto" onClick={(e) => e.stopPropagation()}>
                       <span
                         className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full"
                         style={{
