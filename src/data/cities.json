@@ -3564,5 +3564,368 @@
       "story": "The Romans built a customs post called Turicum on the Lindenhügel hill around 15 BC, controlling the trade route along the Limmat river. The name Zurich appears in documents from 929 AD. The city's defining moment came during the Reformation: Ulrich Zwingli preached here from 1519, making Zurich the birthplace of the Reformed Church — a theological revolution that split from Luther's German Reformation. Banking came naturally to a city already fluent in precision and discretion, and by the 20th century Zurich had become Europe's financial engine, a reputation it holds fiercely today.",
       "era": "Ancient"
     }
+  },
+  {
+    "slug": "doha",
+    "name": "Doha",
+    "country": "Qatar",
+    "countryCode": "QA",
+    "flagEmoji": "🇶🇦",
+    "continent": "Asia",
+    "coordinates": { "lat": 25.2854, "lng": 51.5310 },
+    "timezone": "Asia/Qatar",
+    "population": 2382000,
+    "tags": ["modern", "luxury", "desert", "skyline"],
+    "videos": [
+      {
+        "youtubeId": "MWvrDzIzfhQ",
+        "label": "A Day in Doha, Qatar Walking Tour 4K 60fps",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "As-salamu alaykum (السلام عليكم)",
+      "currency": "Qatari Riyal (QAR)",
+      "bestSeason": "November–March (cool and dry, 20–28°C)",
+      "mustEat": ["Machboos (spiced rice with meat)", "Harees (wheat and meat porridge)", "Balaleet (sweet vermicelli)", "Saloona (vegetable stew)", "Luqaimat (fried dumplings with honey)"],
+      "localTip": "Dress modestly in public, especially near mosques and the souq. The Corniche waterfront is best walked at sunset when the skyline turns golden. Taxis and ride-hailing are the easiest way around.",
+      "funFact": "Qatar has the world's highest GDP per capita and built a skyline from near-zero in just 30 years — most of Doha visible today didn't exist before 1990.",
+      "culturalDos": ["Accept hospitality warmly — refusing tea or coffee is impolite", "Dress modestly in public areas", "Bargain respectfully in the Souq Waqif"],
+      "culturalDonts": ["Display affection in public", "Photograph people without permission", "Eat or drink in public during Ramadan"]
+    },
+    "origin": {
+      "founded": "circa 1820",
+      "originalName": "Al Bidda",
+      "founders": "Al Thani tribe",
+      "story": "Doha grew from a small fishing and pearl-diving village called Al Bidda on the eastern coast of the Qatar peninsula. The Al Thani tribe settled the area in the early 19th century, and the town became notable enough to be attacked by the British Navy in 1821 for alleged piracy. Pearl diving was the economic lifeblood until the 1930s collapse of the natural pearl market devastated the region. The discovery of oil and then the world's largest natural gas field transformed Qatar beyond recognition — Doha went from a modest Gulf town to a global city of gleaming towers, world-class museums, and international ambition within a single generation.",
+      "era": "Modern"
+    }
+  },
+  {
+    "slug": "warsaw",
+    "name": "Warsaw",
+    "country": "Poland",
+    "countryCode": "PL",
+    "flagEmoji": "🇵🇱",
+    "continent": "Europe",
+    "coordinates": { "lat": 52.2297, "lng": 21.0122 },
+    "timezone": "Europe/Warsaw",
+    "population": 1860000,
+    "tags": ["historical", "resilient", "culture", "modern"],
+    "videos": [
+      {
+        "youtubeId": "RInBAatA11Q",
+        "label": "Vibrant Streets of Warsaw, Poland 4K Walking Tour",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Dzień dobry (good day) / Cześć (hi, informal)",
+      "currency": "Polish Złoty (PLN)",
+      "bestSeason": "May–September (warm summers, outdoor cafés, festivals)",
+      "mustEat": ["Pierogi (dumplings)", "Żurek (sour rye soup)", "Bigos (hunter's stew)", "Oscypek (smoked cheese)", "Pączki (fried doughnuts)"],
+      "localTip": "Warsaw's Old Town is entirely a postwar reconstruction — every cobblestone was rebuilt after 85% of the city was deliberately destroyed in 1944. The rebuilt city won UNESCO status for the extraordinary act of collective memory. Praga district across the river is the edgy, authentic side most visitors miss.",
+      "funFact": "Warsaw was almost completely erased from the map in 1944 — the Nazis systematically dynamited 85% of the city building by building after the Warsaw Uprising. Citizens rebuilt it block by block using 18th-century paintings as blueprints.",
+      "culturalDos": ["Learn a few Polish words — locals deeply appreciate the effort", "Visit the POLIN Jewish history museum", "Try vodka the Polish way — neat and cold"],
+      "culturalDonts": ["Confuse Poland with Russia politically", "Skip the Uprising Museum", "Assume Warsaw is dull — it's one of Europe's fastest-changing cities"]
+    },
+    "origin": {
+      "founded": "circa 13th century",
+      "originalName": "Warszawa",
+      "founders": "Mazovian dukes",
+      "story": "Warsaw's origins lie in a fishing settlement on the Vistula River in the 13th century, growing under the Mazovian Piast dynasty. It became Poland's capital in 1596 when King Sigismund III moved the royal court from Kraków — a decision that shaped the next 400 years. The city endured the horrors of the 20th century more than almost any other: the Holocaust claimed 350,000 of its Jewish residents, and the 1944 Warsaw Uprising ended with the Nazis methodically destroying the entire city in revenge. The postwar Polish nation rebuilt Warsaw from rubble and old paintings — an act of cultural defiance that defines the city's identity to this day.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "dubrovnik",
+    "name": "Dubrovnik",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "flagEmoji": "🇭🇷",
+    "continent": "Europe",
+    "coordinates": { "lat": 42.6507, "lng": 18.0944 },
+    "timezone": "Europe/Zagreb",
+    "population": 41562,
+    "tags": ["coastal", "historical", "walled-city", "adriatic"],
+    "videos": [
+      {
+        "youtubeId": "kCmNLkDmODA",
+        "label": "Perfect Summer Day in Dubrovnik, Croatia Walking Tour 4K 60FPS",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Dobar dan (good day) / Bok (informal hi)",
+      "currency": "Euro (EUR)",
+      "bestSeason": "May–June or September–October (warm, fewer crowds than July–August)",
+      "mustEat": ["Black risotto (crni rižot)", "Peka (slow-cooked lamb or octopus)", "Burek", "Fresh grilled fish", "Rozata (caramel custard)"],
+      "localTip": "Walk the city walls at opening time (8 AM) to beat the cruise ship crowds. The Old Town is pedestrian-only — wear comfortable shoes on the marble Stradun which gets slippery when wet.",
+      "funFact": "Dubrovnik was the first state in the world to officially abolish the slave trade — in 1416, over 400 years before the British Empire. The city-republic of Ragusa prided itself on freedom ('Libertas') above all.",
+      "culturalDos": ["Walk the entire 2km city wall circuit", "Eat at a konoba (traditional tavern) away from the main drag", "Take the cable car for a view of the red rooftops and sea"],
+      "culturalDonts": ["Visit in peak July–August without booking months ahead", "Wear swimwear away from the beach", "Drag wheeled luggage on the marble streets — it's prohibited"]
+    },
+    "origin": {
+      "founded": "614 AD",
+      "originalName": "Ragusium / Ragusa",
+      "founders": "Roman refugees from Epidaurum",
+      "story": "Dubrovnik was founded as Ragusa by refugees fleeing the destruction of the Roman city of Epidaurum (modern Cavtat) by Avar and Slav raids in 614 AD. They settled on a rocky island separated from the mainland by a shallow channel — that channel was later filled to become the Stradun, the main street of today's Old Town. For centuries the Republic of Ragusa was a formidable maritime power, rival to Venice, and masterly diplomatic tactician — maintaining independence by playing Ottoman, Habsburg, and Spanish powers against each other. Its motto 'Libertas' (Freedom) still appears on the city flag.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "hvar",
+    "name": "Hvar",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "flagEmoji": "🇭🇷",
+    "continent": "Europe",
+    "coordinates": { "lat": 43.1727, "lng": 16.4414 },
+    "timezone": "Europe/Zagreb",
+    "population": 4250,
+    "tags": ["coastal", "adriatic", "islands", "lavender"],
+    "videos": [
+      {
+        "youtubeId": "Ut7AADJYTYg",
+        "label": "Hvar, MUST-SEE city in Croatia Walking Tour 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Dobar dan / Bok",
+      "currency": "Euro (EUR)",
+      "bestSeason": "June or September (warm sea, lavender in bloom, manageable crowds)",
+      "mustEat": ["Grilled fish with blitva (Swiss chard)", "Peka (lamb under the bell)", "Local olive oil", "Prosek (sweet dessert wine)", "Lavender honey"],
+      "localTip": "Hvar town is car-free. Take a water taxi to the Pakleni islands for secluded swimming spots the tour groups miss. The fortress above the town offers the best views at golden hour.",
+      "funFact": "Hvar is one of the sunniest spots in Europe with over 2,700 hours of sunshine per year — and has been cultivating lavender since the 14th century. The island's lavender fields bloom purple every June.",
+      "culturalDos": ["Rent a boat or kayak to explore hidden coves", "Buy local lavender products", "Watch the sunset from the fortress hilltop"],
+      "culturalDonts": ["Come in August without accommodation pre-booked", "Expect nightlife everywhere — the town is the party hub, the rest is quiet", "Skip the Venetian loggia in the main square"]
+    },
+    "origin": {
+      "founded": "385 BC (Greek colony)",
+      "originalName": "Pharos",
+      "founders": "Greek colonists from Paros",
+      "story": "Greek colonists from the Aegean island of Paros founded a settlement called Pharos on Hvar in 385 BC — one of the best-preserved Greek town plans in the Adriatic world. The Romans called it Pharia, the Byzantines held it, and the Venetians captured it in 1278, beginning 500 years of Venetian rule that left the architecture, the loggia, and the piazza that define the town today. The Renaissance theatre built in 1612 is one of the oldest public theatres in Europe. Despite its glamour as a modern celebrity destination, Hvar wears three millennia of layered Mediterranean history beneath its sunburned surface.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "opatija",
+    "name": "Opatija",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "flagEmoji": "🇭🇷",
+    "continent": "Europe",
+    "coordinates": { "lat": 45.3380, "lng": 14.3055 },
+    "timezone": "Europe/Zagreb",
+    "population": 11659,
+    "tags": ["coastal", "elegant", "belle-epoque", "riviera"],
+    "videos": [
+      {
+        "youtubeId": "t3zpoZZB2cE",
+        "label": "Elegance of Opatija, Croatia Walking Tour 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Dobar dan / Bok",
+      "currency": "Euro (EUR)",
+      "bestSeason": "May–October (mild Adriatic climate, mild even in winter)",
+      "mustEat": ["Šurlice pasta with truffles", "Grilled sea bream", "Scampi na buzaru", "Kvarner bay scallops", "Fritule (fried doughnuts)"],
+      "localTip": "Walk the Lungomare — a 12km seafront promenade built in 1885 that connects Opatija to Lovran. The morning mist over Kvarner Bay is extraordinary. Visit the Villa Angiolina gardens for free.",
+      "funFact": "Opatija was the Austro-Hungarian Empire's most fashionable resort — Emperor Franz Joseph, Gustav Mahler, and Anton Chekhov all strolled its promenade. The Habsburgs essentially invented beach tourism here.",
+      "culturalDos": ["Walk the full Lungomare promenade", "Try the spa culture at the grand hotels", "Visit in spring when the camellias bloom"],
+      "culturalDonts": ["Overlook the Belle Époque villas hidden behind the main road", "Expect a party scene — Opatija is refined and quiet", "Skip Lovran at the end of the Lungomare"]
+    },
+    "origin": {
+      "founded": "1844 (as a resort)",
+      "originalName": "Abbazia",
+      "founders": "Iginio Scarpa (built Villa Angiolina); Habsburg promotion",
+      "story": "A small Benedictine monastery gave Opatija its name — opatija means 'abbey' in Croatian. The town's transformation began in 1844 when Rijeka merchant Iginio Scarpa built Villa Angiolina and planted an exotic garden on the bay. When Austrian industrialist Friedrich Julius Schüller connected the villa to the Vienna railway network in 1873, the Austro-Hungarian elite discovered it overnight. By 1889 it was an official imperial health resort, drawing the empire's crowned heads, composers, writers, and aristocrats to its mild air and therapeutic sea. That Belle Époque grandeur — the white villas, the palm-lined promenade, the sense of leisured elegance — defines Opatija today.",
+      "era": "Modern"
+    }
+  },
+  {
+    "slug": "split",
+    "name": "Split",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "flagEmoji": "🇭🇷",
+    "continent": "Europe",
+    "coordinates": { "lat": 43.5081, "lng": 16.4402 },
+    "timezone": "Europe/Zagreb",
+    "population": 178192,
+    "tags": ["coastal", "historical", "roman", "adriatic"],
+    "videos": [
+      {
+        "youtubeId": "yuGlwzC3Dms",
+        "label": "Summer in Croatia, Split Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Dobar dan / Bok / Čao",
+      "currency": "Euro (EUR)",
+      "bestSeason": "May–June or September (hot Adriatic summer, lively but not overcrowded)",
+      "mustEat": ["Pašticada (slow-braised beef)", "Soparnik (Swiss chard pie)", "Grilled fish on the Riva", "Peka", "Arancini (candied orange peel)"],
+      "localTip": "People actually live inside Diocletian's Palace — apartments, cafés, and bars occupy the Roman emperor's retirement home. Walk through the golden gate at dawn before the crowds arrive. The Riva promenade is the evening social scene.",
+      "funFact": "Split's old town is literally a Roman emperor's retirement palace. Diocletian built his palace in 305 AD to retire into, and citizens simply moved in after his death — making it one of the best-preserved Roman monuments with people still living inside.",
+      "culturalDos": ["Get lost in the labyrinthine palace lanes at night", "Watch locals play picigin (a ball game) in the shallow sea at Bačvice beach", "Climb the cathedral bell tower for panoramic views"],
+      "culturalDonts": ["Come only for the Diocletian selfie and leave — the city rewards slow exploration", "Ignore the Mestrovic Gallery", "Visit in August without heat-readiness — temperatures regularly hit 35°C+"]
+    },
+    "origin": {
+      "founded": "305 AD (palace built)",
+      "originalName": "Spalatum / Aspalathos",
+      "founders": "Emperor Diocletian",
+      "story": "The Roman Emperor Diocletian — the only Roman emperor to voluntarily abdicate — built his retirement palace on the Dalmatian coast between 295 and 305 AD. After his death, the palace was abandoned as a residence. When the nearby Roman city of Salona was destroyed by Avar and Slav raids in 614 AD, the survivors took refuge inside the palace walls and never left. The palace became a city, its Roman halls subdivided into apartments, its temples converted to churches. Today 3,000 people live inside a UNESCO-listed Roman palace, making Split one of the most extraordinary examples of continuous urban habitation on Earth.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "zadar",
+    "name": "Zadar",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "flagEmoji": "🇭🇷",
+    "continent": "Europe",
+    "coordinates": { "lat": 44.1194, "lng": 15.2314 },
+    "timezone": "Europe/Zagreb",
+    "population": 75082,
+    "tags": ["coastal", "historical", "roman", "sunsets"],
+    "videos": [
+      {
+        "youtubeId": "4xJf5PfuMjg",
+        "label": "Historic Zadar, Croatia Walking Tour 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Dobar dan / Bok",
+      "currency": "Euro (EUR)",
+      "bestSeason": "May–June or September (warm, fewer tourists than peak summer)",
+      "mustEat": ["Maraschino liqueur (invented here)", "Pag cheese (Paški sir)", "Dried figs with almonds", "Grilled squid", "Lamb from the island of Pag"],
+      "localTip": "Alfred Hitchcock called Zadar's sunset 'the most beautiful in the world.' The Sea Organ on the waterfront uses wave energy to play music through stone pipes — sit beside it at dusk. The nearby Greeting to the Sun installation lights up at night.",
+      "funFact": "Zadar has been bombed, besieged, and devastated more times than almost any city in Europe — Byzantines, Venetians, Crusaders, Austrians, and NATO aircraft in 1944 all left their mark. Yet its Roman forum still stands in the city centre.",
+      "culturalDos": ["Sit by the Sea Organ at sunset — take your time", "Visit the Roman forum in the old town centre", "Try Maraschino in its city of origin"],
+      "culturalDonts": ["Rush through — Zadar rewards those who wander slowly", "Skip the Museum of Ancient Glass", "Miss the Greeting to the Sun light display after dark"]
+    },
+    "origin": {
+      "founded": "circa 9th century BC (Liburnian)",
+      "originalName": "Iader / Jadera",
+      "founders": "Liburnian tribe; later Roman colony",
+      "story": "The Liburnians, an Illyrian seafaring people, settled the peninsula at least 2,900 years ago — Zadar is one of the oldest continuously inhabited cities on the Adriatic. The Romans took it in the 1st century BC, renamed it Iader, and built a forum whose columns still stand in the city centre today. Venice controlled the city for much of the medieval period, leaving Gothic churches and a Venetian loggia. In the 20th century, Zadar was an Italian enclave and was bombed 72 times by the Allies in World War II. Remarkably, the Roman grid, the forum, and the ancient street plan survived — the city was rebuilt around them.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "oslo",
+    "name": "Oslo",
+    "country": "Norway",
+    "countryCode": "NO",
+    "flagEmoji": "🇳🇴",
+    "continent": "Europe",
+    "coordinates": { "lat": 59.9139, "lng": 10.7522 },
+    "timezone": "Europe/Oslo",
+    "population": 717710,
+    "tags": ["nordic", "fjords", "museums", "modern"],
+    "videos": [
+      {
+        "youtubeId": "wBrrg_fGSkU",
+        "label": "Vigeland Park Walking Tour: Norway's Sculpture Paradise 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "nziensbDbK4",
+        "label": "Modern Oslo Walking Tour, Opera House, Munch Museum 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "rFfWAwsdZWI",
+        "label": "Old Town of Oslo, Norway Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "AXGYanF6q8M",
+        "label": "Hippest Neighbourhood of Oslo, Aker Brygge Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Hei (hi) / God dag (good day)",
+      "currency": "Norwegian Krone (NOK)",
+      "bestSeason": "May–August (long daylight hours, midnight sun, outdoor life) or December (Christmas markets, northern lights nearby)",
+      "mustEat": ["Rakfisk (fermented trout)", "Fårikål (lamb and cabbage stew)", "Brunost (brown cheese)", "Kjøttkaker (Norwegian meatballs)", "Smørbrød (open sandwiches)"],
+      "localTip": "Vigeland Park is free and open 24/7 — 212 bronze and granite sculptures by Gustav Vigeland covering the full range of human emotion. The T-bane (metro) goes almost everywhere and doubles as a museum on wheels through the city's modernist station art.",
+      "funFact": "Oslo is consistently ranked one of the world's most expensive cities, yet Vigeland Park — one of the world's most visited sculpture parks — is completely free. The city also has more electric vehicles per capita than anywhere else on Earth.",
+      "culturalDos": ["Embrace outdoor life in all weather — Norwegians say 'there's no bad weather, only bad clothing'", "Respect queuing and personal space", "Take the ferry to the Bygdøy peninsula museums"],
+      "culturalDonts": ["Talk loudly in public spaces", "Assume you can drink alcohol bought outside a Vinmonopolet store freely", "Miss the Munch Museum's original The Scream"]
+    },
+    "origin": {
+      "founded": "circa 1000 AD",
+      "originalName": "Ánslo / Christiania / Kristiania",
+      "founders": "Viking King Harald Hardrada",
+      "story": "Oslo was founded around 1000 AD — traditionally attributed to Harald Hardrada — near the medieval fortress of Akershus at the head of the Oslofjord. The city suffered a catastrophic fire in 1624, after which King Christian IV rebuilt it closer to Akershus and renamed it Christiania. It was renamed Kristiania in 1877 and finally reverted to the original Oslo in 1925. The city boomed as Norway industrialised in the 19th century and today reflects both Viking heritage and a Scandinavian obsession with contemporary design, sustainability, and quality of life — routinely topping global liveability indices.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "tromso",
+    "name": "Tromsø",
+    "country": "Norway",
+    "countryCode": "NO",
+    "flagEmoji": "🇳🇴",
+    "continent": "Europe",
+    "coordinates": { "lat": 69.6489, "lng": 18.9551 },
+    "timezone": "Europe/Oslo",
+    "population": 77878,
+    "tags": ["arctic", "northern-lights", "midnight-sun", "nature"],
+    "videos": [
+      {
+        "youtubeId": "3T0IIEUfDGA",
+        "label": "Cozy Winter in Tromsø, Norway Walking Tour 4K 60fps",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Hei / Moi (informal)",
+      "currency": "Norwegian Krone (NOK)",
+      "bestSeason": "November–February (northern lights) or June–July (midnight sun)",
+      "mustEat": ["Reindeer steak", "King crab", "Stockfish (tørrfisk)", "Whale steak (traditional, controversial)", "Cloudberry jam (multekrem)"],
+      "localTip": "For the northern lights, get away from city lights — even a 20-minute drive makes a huge difference. Download a KP index app to track solar activity. The Arctic Cathedral (Ishavskatedralen) is illuminated beautifully at night.",
+      "funFact": "Tromsø sits 350km north of the Arctic Circle, making it the northernmost city of its size in the world. In winter, the sun doesn't rise for two months (polar night); in summer, it doesn't set for two months (midnight sun).",
+      "culturalDos": ["Dress in proper Arctic layers — wind chill is the real danger", "Book northern lights tours in advance for November–February", "Visit the Polaria aquarium for Arctic wildlife"],
+      "culturalDonts": ["Underestimate Norwegian winter darkness — bring a sun lamp if staying long", "Expect the northern lights every night — it depends on solar activity and cloud cover", "Skip Tromsø's surprisingly vibrant café and bar scene"]
+    },
+    "origin": {
+      "founded": "1794 (town charter)",
+      "originalName": "Tromsø",
+      "founders": "Norwegian settlement; church established 1252",
+      "story": "A church was established on the island of Tromsøya in 1252, making it one of the northernmost Christian outposts in the medieval world. The town was granted its charter in 1794, growing as a hub for Arctic hunting, fishing, and — critically — as the gateway for polar expeditions. Roald Amundsen launched his race to the South Pole from Tromsø's harbour in 1910. The city became an important trading post with northern Sami communities and served as a significant Allied supply point in World War II. Today it is the world's premier destination for chasing the northern lights and experiencing the phenomenon of the midnight sun.",
+      "era": "Medieval"
+    }
   }
 ]

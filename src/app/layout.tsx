@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://roam.live"),
   title: "Roam.Live — A Window to Every Place on Earth",
   description:
-    "Explore 53 cities across 5 continents with immersive 4K virtual walks and cultural intelligence. No passport required.",
+    "Explore 62 cities across 5 continents with immersive 4K virtual walks and cultural intelligence. No passport required.",
   keywords: ["virtual travel", "city walk", "4K walking tour", "travel from home", "world cities"],
   openGraph: {
     title: "Roam.Live — A Window to Every Place on Earth",
-    description: "Immersive 4K virtual walks across 53 cities. No passport required.",
+    description: "Immersive 4K virtual walks across 62 cities. No passport required.",
     type: "website",
     url: "https://roam.live",
     siteName: "Roam.Live",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@roamlive",
     title: "Roam.Live — A Window to Every Place on Earth",
-    description: "Immersive 4K virtual walks across 53 cities. No passport required.",
+    description: "Immersive 4K virtual walks across 62 cities. No passport required.",
     images: ["/api/og"],
   },
   manifest: "/manifest.json",
