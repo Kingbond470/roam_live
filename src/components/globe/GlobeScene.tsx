@@ -64,11 +64,12 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
 
       const Globe = GlobeModule.default;
 
-      // Sprint 2B: dim non-matching pins when a tag filter is active
+      // Dim non-matching pins when a filter is active (continent or favorites)
+      const CONTINENTS = new Set(["Asia", "Europe", "Americas", "Africa", "Oceania"]);
       const tagFilter = activeTag && activeTag !== "__favorites__" ? activeTag : null;
       const pathSlugs = activePath ? new Set(activePath.citySlugOrder) : null;
       const points: GlobePoint[] = cities.map((city) => {
-        const matches = !tagFilter || city.tags.includes(tagFilter);
+        const matches = !tagFilter || (CONTINENTS.has(tagFilter) ? city.continent === tagFilter : city.tags.includes(tagFilter));
         const isToday = city.slug === cityOfTheDay?.slug;
         const isOnPath = !pathSlugs || pathSlugs.has(city.slug);
         const tier = videoTier(city.videos.length);
@@ -227,11 +228,12 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
   useEffect(() => {
     if (!globeRef.current) return;
 
+    const CONTINENTS = new Set(["Asia", "Europe", "Americas", "Africa", "Oceania"]);
     const pathSlugs = activePath ? new Set(activePath.citySlugOrder) : null;
     const tagFilter = activeTag && activeTag !== "__favorites__" ? activeTag : null;
 
     const newPoints: GlobePoint[] = cities.map((city) => {
-      const matches = !tagFilter || city.tags.includes(tagFilter);
+      const matches = !tagFilter || (CONTINENTS.has(tagFilter) ? city.continent === tagFilter : city.tags.includes(tagFilter));
       const isToday = city.slug === cityOfTheDay?.slug;
       const isOnPath = !pathSlugs || pathSlugs.has(city.slug);
       const tier = videoTier(city.videos.length);

@@ -145,108 +145,113 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
         )}
       </AnimatePresence>
 
-      {/* ── Bottom info (auto-hides) ── */}
-      <AnimatePresence>
-        {show && (
-          <motion.div
-            key="hud-bottom"
-            className="absolute bottom-0 left-0 right-0 px-4 md:px-6 pb-safe"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.35, delay: 0.05, ease: "easeOut" }}
-          >
-            <div className="flex items-end gap-4">
-              {/* Prev city */}
-              <button
-                onClick={() => navigateCity(navCities, "prev")}
-                className="pointer-events-auto glass rounded-full p-2.5 text-white/50 hover:text-white transition-colors mb-1 flex-shrink-0"
-                title="Previous city (←)"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
+      {/* ── Bottom info (auto-hides) + persistent nav arrows ── */}
+      {isVisible && (
+        <div className="absolute bottom-0 left-0 right-0 px-4 md:px-6 pb-safe">
+          <div className="flex items-end gap-4">
 
-            <div
-              className="pointer-events-auto cursor-pointer group flex-1 min-w-0"
-              onClick={onOpenCard}
+            {/* Prev arrow — always faintly visible, fully visible when HUD revealed */}
+            <button
+              onClick={() => navigateCity(navCities, "prev")}
+              className="pointer-events-auto glass rounded-full p-2.5 transition-all duration-500 mb-1 flex-shrink-0"
+              style={{ opacity: show ? 0.6 : 0.15, color: "white" }}
+              title="Previous city (←)"
             >
-              <div className="flex items-end justify-between gap-4">
-                <div className="flex flex-col gap-2 min-w-0">
-                  {/* Active journey banner */}
-                  {activePath && (
-                    <div className="flex items-center gap-2 pointer-events-auto" onClick={(e) => e.stopPropagation()}>
-                      <span
-                        className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full"
-                        style={{
-                          background: activePath.accentColor + "20",
-                          color: activePath.accentColor,
-                          border: `1px solid ${activePath.accentColor}40`,
-                        }}
-                      >
-                        <span>{activePath.emoji}</span>
-                        <span>{activePath.name}</span>
-                        {pathPosition > 0 && (
-                          <span style={{ opacity: 0.6 }}>· {pathPosition} of {pathCities!.length}</span>
-                        )}
-                      </span>
-                      <button
-                        onClick={(e) => { e.stopPropagation(); setActivePath(null); }}
-                        className="text-white/30 hover:text-white/70 transition-colors text-xs leading-none"
-                        title="Exit journey"
-                      >
-                        ✕
-                      </button>
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+
+            {/* City info — animates in/out */}
+            <AnimatePresence>
+              {show && (
+                <motion.div
+                  key="hud-city-info"
+                  className="pointer-events-auto cursor-pointer group flex-1 min-w-0"
+                  onClick={onOpenCard}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.35, delay: 0.05, ease: "easeOut" }}
+                >
+                  <div className="flex items-end justify-between gap-4">
+                    <div className="flex flex-col gap-2 min-w-0">
+                      {/* Active journey banner */}
+                      {activePath && (
+                        <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
+                          <span
+                            className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full"
+                            style={{
+                              background: activePath.accentColor + "20",
+                              color: activePath.accentColor,
+                              border: `1px solid ${activePath.accentColor}40`,
+                            }}
+                          >
+                            <span>{activePath.emoji}</span>
+                            <span>{activePath.name}</span>
+                            {pathPosition > 0 && (
+                              <span style={{ opacity: 0.6 }}>· {pathPosition} of {pathCities!.length}</span>
+                            )}
+                          </span>
+                          <button
+                            onClick={(e) => { e.stopPropagation(); setActivePath(null); }}
+                            className="text-white/30 hover:text-white/70 transition-colors text-xs leading-none"
+                            title="Exit journey"
+                          >
+                            ✕
+                          </button>
+                        </div>
+                      )}
+
+                      <div className="flex items-center gap-2.5">
+                        <LiveBadge />
+                        <ViewerCount citySlug={city.slug} />
+                      </div>
+
+                      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-none tracking-tight">
+                        {city.name}
+                      </h1>
+
+                      {/* Video switcher pill */}
+                      {city.videos.length > 1 && (
+                        <button
+                          onClick={(e) => { e.stopPropagation(); onOpenSwitcher(); }}
+                          className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white/50 hover:text-white/80 transition-colors text-xs"
+                        >
+                          <Film className="w-3 h-3" />
+                          {city.videos.length} videos
+                        </button>
+                      )}
+
+                      <div className="flex items-center gap-2 text-white/50 text-sm">
+                        <span>{city.flagEmoji}</span>
+                        <span>{city.country}</span>
+                        <span className="w-px h-3 bg-white/20" />
+                        <LocalClock timezone={city.timezone} />
+                      </div>
                     </div>
-                  )}
 
-                  <div className="flex items-center gap-2.5">
-                    <LiveBadge />
-                    <ViewerCount citySlug={city.slug} />
+                    {/* Culture affordance — always visible, brightens on hover */}
+                    <div className="flex-shrink-0 flex flex-col items-center gap-1.5 pb-1 opacity-40 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-white text-[10px] tracking-widest uppercase">culture</span>
+                      <span className="w-1 h-1 rounded-full bg-amber-400 animate-pulse" />
+                    </div>
                   </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-                  <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-none tracking-tight">
-                    {city.name}
-                  </h1>
+            {/* Next arrow — always faintly visible, fully visible when HUD revealed */}
+            <button
+              onClick={() => navigateCity(navCities, "next")}
+              className="pointer-events-auto glass rounded-full p-2.5 transition-all duration-500 mb-1 flex-shrink-0"
+              style={{ opacity: show ? 0.6 : 0.15, color: "white" }}
+              title="Next city (→)"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
 
-                  {/* Video switcher pill — only shown when city has multiple videos */}
-                  {city.videos.length > 1 && (
-                    <button
-                      onClick={(e) => { e.stopPropagation(); onOpenSwitcher(); }}
-                      className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white/50 hover:text-white/80 transition-colors text-xs"
-                    >
-                      <Film className="w-3 h-3" />
-                      {city.videos.length} videos
-                    </button>
-                  )}
-
-                  <div className="flex items-center gap-2 text-white/50 text-sm">
-                    <span>{city.flagEmoji}</span>
-                    <span>{city.country}</span>
-                    <span className="w-px h-3 bg-white/20" />
-                    <LocalClock timezone={city.timezone} />
-                  </div>
-                </div>
-
-                {/* Pulsing culture affordance */}
-                <div className="flex-shrink-0 flex flex-col items-center gap-1.5 pb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white/40 text-xs tracking-widest uppercase">culture</span>
-                  <span className="w-1 h-1 rounded-full bg-amber-400 animate-pulse" />
-                </div>
-              </div>
-            </div>
-
-              {/* Next city */}
-              <button
-                onClick={() => navigateCity(navCities, "next")}
-                className="pointer-events-auto glass rounded-full p-2.5 text-white/50 hover:text-white transition-colors mb-1 flex-shrink-0"
-                title="Next city (→)"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
 
     </div>
   );

@@ -133,9 +133,9 @@ export function HomeClient({ cities, initialCity }: Props) {
   // City of the day
   const cityOfTheDay = useMemo(() => getCityOfTheDay(cities), [cities]);
 
-  // Sprint 2B: deduplicate all tags across cities for filter bar
-  const allTags = useMemo(
-    () => Array.from(new Set(cities.flatMap((c) => c.tags))).sort(),
+  // Continent filter list — derived from city data, ordered for display
+  const allContinents = useMemo(
+    () => Array.from(new Set(cities.map((c) => c.continent))).sort(),
     [cities]
   );
 
@@ -310,7 +310,7 @@ export function HomeClient({ cities, initialCity }: Props) {
                 title={`Today's walk: ${cityOfTheDay.name}`}
               >
                 <span className="text-base">{cityOfTheDay.flagEmoji}</span>
-                <span className="text-xs hidden sm:block">Today's Walk</span>
+                <span className="text-xs">{cityOfTheDay.name}</span>
               </button>
 
               <button
@@ -325,7 +325,7 @@ export function HomeClient({ cities, initialCity }: Props) {
         )}
       </AnimatePresence>
 
-      {/* ── Globe bottom bar: tag filters + city flags + random button ── */}
+      {/* ── Globe bottom bar: action row + continent filters ── */}
       <AnimatePresence>
         {phase === "idle" && (
           <motion.div
@@ -337,12 +337,45 @@ export function HomeClient({ cities, initialCity }: Props) {
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            {/* Sprint 2B: Tag filter pills */}
+            {/* Action row: Shuffle · Discover · Journeys */}
+            <div className="flex items-center gap-2 mb-3" style={{ pointerEvents: "auto" }}>
+              <button
+                onClick={() => selectRandomCity(cities)}
+                className="glass flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white/50 hover:text-white transition-colors text-xs"
+                title="Random city (R)"
+              >
+                <Shuffle className="w-3 h-3" />
+                Shuffle
+              </button>
+
+              <button
+                onClick={toggleDiscoverMode}
+                className={`glass flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-xs ${
+                  discoverMode ? "text-amber-400" : "text-white/50 hover:text-white"
+                }`}
+                title={discoverMode ? "Stop auto-cycling" : "Auto-cycle cities every 60s"}
+              >
+                {discoverMode ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                {discoverMode ? "Stop" : "Discover"}
+              </button>
+
+              <button
+                onClick={() => setJourneyOpen(true)}
+                className={`glass flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-xs ${
+                  activePath ? "text-amber-400" : "text-white/50 hover:text-white"
+                }`}
+                title="Thematic Journeys"
+              >
+                <Compass className="w-3 h-3" />
+                {activePath ? activePath.name : "Journeys"}
+              </button>
+            </div>
+
+            {/* Continent + saved filter pills */}
             <div
-              className="flex items-center gap-1.5 mb-3 px-4 overflow-x-auto"
+              className="flex items-center gap-1.5 mb-4 px-4 overflow-x-auto"
               style={{ pointerEvents: "auto", scrollbarWidth: "none" }}
             >
-              {/* All */}
               <button
                 onClick={() => setTagFilter(null)}
                 className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
@@ -354,7 +387,6 @@ export function HomeClient({ cities, initialCity }: Props) {
                 All
               </button>
 
-              {/* Favorites tab */}
               <button
                 onClick={() => setTagFilter(activeTag === "__favorites__" ? null : "__favorites__")}
                 className={`shrink-0 flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
@@ -367,76 +399,19 @@ export function HomeClient({ cities, initialCity }: Props) {
                 Saved
               </button>
 
-              {/* Dynamic tags — "new" tag gets special amber treatment */}
-              {allTags.map((tag) => (
+              {allContinents.map((continent) => (
                 <button
-                  key={tag}
-                  onClick={() => setTagFilter(activeTag === tag ? null : tag)}
-                  className={`shrink-0 flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium capitalize transition-colors ${
-                    tag === "new"
-                      ? activeTag === tag
-                        ? "bg-amber-500/30 text-amber-300 border border-amber-400/60"
-                        : "bg-amber-500/10 text-amber-400/80 border border-amber-500/30 hover:bg-amber-500/20"
-                      : activeTag === tag
-                        ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
-                        : "text-white/30 hover:text-white/60 border border-white/10"
+                  key={continent}
+                  onClick={() => setTagFilter(activeTag === continent ? null : continent)}
+                  className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                    activeTag === continent
+                      ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
+                      : "text-white/30 hover:text-white/60 border border-white/10"
                   }`}
                 >
-                  {tag === "new" && <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />}
-                  {tag === "new" ? "New" : tag}
+                  {continent}
                 </button>
               ))}
-            </div>
-
-            {/* City flags + random button */}
-            <p className="text-white/30 text-xs tracking-widest uppercase mb-2" style={{ pointerEvents: "none" }}>
-              Tap any city to explore
-            </p>
-            <div className="flex items-center gap-2 flex-wrap justify-center px-4" style={{ pointerEvents: "auto" }}>
-              {cities.map((city) => (
-                <button
-                  key={city.slug}
-                  onClick={() => useAppStore.getState().selectCity(city)}
-                  className="relative text-xl opacity-50 hover:opacity-100 hover:scale-125 transition-all duration-200 p-1 min-w-[36px] min-h-[36px] flex items-center justify-center"
-                  title={city.name}
-                >
-                  {city.flagEmoji}
-                  {city.tags.includes("new") && (
-                    <span className="absolute -top-0.5 -right-1 w-1.5 h-1.5 rounded-full bg-amber-400" />
-                  )}
-                </button>
-              ))}
-
-              {/* Sprint 1B: Random city button */}
-              <button
-                onClick={() => selectRandomCity(cities)}
-                className="glass rounded-full p-2 text-white/40 hover:text-amber-400 transition-colors ml-1"
-                title="Random city (R)"
-              >
-                <Shuffle className="w-3.5 h-3.5" />
-              </button>
-
-              {/* Discover mode toggle */}
-              <button
-                onClick={toggleDiscoverMode}
-                className={`glass rounded-full p-2 transition-colors ${
-                  discoverMode ? "text-amber-400" : "text-white/40 hover:text-amber-400"
-                }`}
-                title={discoverMode ? "Stop discover mode" : "Discover mode (auto-cycle cities)"}
-              >
-                {discoverMode ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-              </button>
-
-              {/* Journey paths button */}
-              <button
-                onClick={() => setJourneyOpen(true)}
-                className={`glass rounded-full p-2 transition-colors ${
-                  activePath ? "text-amber-400" : "text-white/40 hover:text-amber-400"
-                }`}
-                title="Thematic Journeys"
-              >
-                <Compass className="w-3.5 h-3.5" />
-              </button>
             </div>
           </motion.div>
         )}

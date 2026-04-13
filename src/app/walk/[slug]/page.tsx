@@ -168,21 +168,6 @@ export default async function CityWalkPage({ params }: Props) {
                 <span>{city.country}</span>
                 <span className="w-px h-3 bg-white/20" />
                 <span>{city.continent}</span>
-                {city.tags.length > 0 && (
-                  <>
-                    <span className="w-px h-3 bg-white/20" />
-                    <div className="flex gap-1">
-                      {city.tags.filter(t => t !== "new").slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-xs capitalize"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </>
-                )}
               </div>
             </div>
           </div>
