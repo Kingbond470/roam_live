@@ -4,7 +4,7 @@ import { Globe, ArrowLeft, MapPin, Film, Compass, SplitSquareHorizontal, BookOpe
 import { cities } from "@/lib/cities";
 
 export const metadata: Metadata = {
-  title: "About — Roam.Live",
+  title: "About Roam.Live — Free 4K Virtual City Walks, No Passport",
   description:
     "Roam.Live brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 62 cities, 5 continents, no passport required.",
   openGraph: {
@@ -23,36 +23,42 @@ const FEATURES = [
     title: "Interactive Globe",
     description:
       "Spin a live 3D globe and tap any city pin to instantly drop into its streets. Every pin reflects how many walks that city has.",
+    href: "/",
   },
   {
     icon: Film,
     title: "Time-Aware Videos",
     description:
       "Morning light, golden hour, or neon-lit nights — the walk you see matches the time of day in that city when you arrive.",
+    href: null,
   },
   {
     icon: BookOpen,
     title: "Culture Cards",
     description:
       "Every city comes with local greetings, must-eat dishes, dos and don'ts, and an origin story. Travel prep that fits on a screen.",
+    href: null,
   },
   {
     icon: Compass,
     title: "Thematic Journeys",
     description:
       "Curated routes like 'Ancient Wonders' or 'Neon Megacities' guide you through hand-picked city sequences, one walk at a time.",
+    href: "/journeys",
   },
   {
     icon: SplitSquareHorizontal,
     title: "Side-by-Side Compare",
     description:
       "Can't decide between Tokyo and Seoul? Watch both simultaneously in split-screen and compare culture, food, and climate.",
+    href: "/compare/tokyo-vs-seoul",
   },
   {
     icon: Heart,
     title: "Save Your Walks",
     description:
       "Heart any city to save it. Filter the globe to just your saved cities and build your personal travel wishlist.",
+    href: null,
   },
 ];
 
@@ -136,6 +142,16 @@ export default function AboutPage() {
           <Globe className="w-4 h-4" />
           Open the Globe
         </Link>
+
+        {/* Objection handler — most important trust signal */}
+        <div className="flex items-center justify-center gap-3 mt-5 flex-wrap">
+          {["No account", "No download", "No passport"].map((item, i, arr) => (
+            <span key={item} className="flex items-center gap-3">
+              <span className="text-white/35 text-sm">{item}</span>
+              {i < arr.length - 1 && <span className="w-1 h-1 rounded-full bg-white/20" />}
+            </span>
+          ))}
+        </div>
       </section>
 
       {/* ── Stats bar ── */}
@@ -210,20 +226,38 @@ export default function AboutPage() {
           What's inside
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {FEATURES.map((f) => (
-            <div
-              key={f.title}
-              className="rounded-2xl bg-white/[0.03] border border-white/8 p-5 hover:border-white/16 transition-colors"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
-                  <f.icon className="w-4 h-4 text-amber-400" />
+          {FEATURES.map((f) => {
+            const inner = (
+              <>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
+                    <f.icon className="w-4 h-4 text-amber-400" />
+                  </div>
+                  <h3 className="font-semibold text-sm">{f.title}</h3>
+                  {f.href && (
+                    <span className="ml-auto text-amber-400/50 text-xs">Try it →</span>
+                  )}
                 </div>
-                <h3 className="font-semibold text-sm">{f.title}</h3>
+                <p className="text-white/45 text-sm leading-relaxed">{f.description}</p>
+              </>
+            );
+            return f.href ? (
+              <Link
+                key={f.title}
+                href={f.href}
+                className="rounded-2xl bg-white/[0.03] border border-white/8 p-5 hover:border-amber-500/30 hover:bg-amber-500/5 transition-colors block"
+              >
+                {inner}
+              </Link>
+            ) : (
+              <div
+                key={f.title}
+                className="rounded-2xl bg-white/[0.03] border border-white/8 p-5 hover:border-white/16 transition-colors"
+              >
+                {inner}
               </div>
-              <p className="text-white/45 text-sm leading-relaxed">{f.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

@@ -288,7 +288,15 @@ export default async function CityWalkPage({ params }: Props) {
 
           {/* More cities */}
           <div className="border-t border-white/8 pt-8">
-            <h2 className="text-xs tracking-widest uppercase text-white/30 mb-4">Explore More Cities</h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xs tracking-widest uppercase text-white/30">Explore More Cities</h2>
+              <Link
+                href={`/continent/${city.continent.toLowerCase()}`}
+                className="text-xs text-amber-400/60 hover:text-amber-400 transition-colors"
+              >
+                All {city.continent} cities →
+              </Link>
+            </div>
             <div className="flex flex-wrap gap-2">
               {[
                 ...cities.filter((c) => c.slug !== city.slug && c.continent === city.continent),

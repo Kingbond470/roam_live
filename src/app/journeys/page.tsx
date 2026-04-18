@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 export default function JourneysPage() {
-  const totalCities = cities.length;
+  const citiesInJourneys = new Set(journeys.flatMap((j) => j.citySlugOrder)).size;
 
   const journeysWithCities = journeys.map((journey) => ({
     ...journey,
@@ -116,8 +116,8 @@ export default function JourneysPage() {
             </div>
             <div className="w-px h-8 bg-white/10" />
             <div className="text-center">
-              <p className="text-2xl font-bold text-amber-400">{totalCities}</p>
-              <p className="text-white/40 text-xs mt-0.5">Cities total</p>
+              <p className="text-2xl font-bold text-amber-400">{citiesInJourneys}</p>
+              <p className="text-white/40 text-xs mt-0.5">Cities featured</p>
             </div>
           </div>
         </section>
