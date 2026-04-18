@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { cities, getUniqueCountries } from "@/lib/cities";
+import { journeys } from "@/data/journeys";
 
 const CONTINENTS = ["asia", "europe", "americas", "africa", "oceania"];
 
@@ -13,6 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/journeys`, lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
   ];
+
+  // Individual journey pages (5)
+  const journeyRoutes: MetadataRoute.Sitemap = journeys.map((j) => ({
+    url: `${base}/journeys/${j.id}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.75,
+  }));
 
   // Continent pages (5)
   const continentRoutes: MetadataRoute.Sitemap = CONTINENTS.map((c) => ({
@@ -79,6 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes,
+    ...journeyRoutes,
     ...continentRoutes,
     ...countryRoutes,
     ...cityRoutes,

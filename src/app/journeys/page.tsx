@@ -136,7 +136,7 @@ export default function JourneysPage() {
                 className="px-6 py-5 flex items-start justify-between gap-4"
                 style={{ background: journey.accentColor + "10" }}
               >
-                <div className="flex items-center gap-4">
+                <Link href={`/journeys/${journey.id}`} className="flex items-center gap-4 flex-1 hover:opacity-80 transition-opacity">
                   <span className="text-4xl">{journey.emoji}</span>
                   <div>
                     <h2 className="text-xl font-bold text-white">{journey.name}</h2>
@@ -144,7 +144,7 @@ export default function JourneysPage() {
                       {journey.tagline}
                     </p>
                   </div>
-                </div>
+                </Link>
                 <div
                   className="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border"
                   style={{

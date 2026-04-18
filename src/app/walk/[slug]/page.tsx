@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { cities, getCityBySlug } from "@/lib/cities";
 import { getFeaturedVideo } from "@/lib/utils";
 import { Globe, ArrowLeft, MapPin, Clock, Utensils, Lightbulb, Star, Landmark } from "lucide-react";
+import { ShareButton } from "@/components/hud/ShareButton";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -255,7 +256,8 @@ export default async function CityWalkPage({ params }: Props) {
           <div className="rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20 p-5 mb-8">
             <div className="flex items-center gap-2 mb-2">
               <Star className="w-3.5 h-3.5 text-amber-400" />
-              <h2 className="text-xs tracking-widest uppercase text-amber-400">Fun Fact</h2>
+              <h2 className="text-xs tracking-widest uppercase text-amber-400 flex-1">Fun Fact</h2>
+              <ShareButton citySlug={city.slug} cityName={city.name} flagEmoji={city.flagEmoji} />
             </div>
             <p className="text-white/90 leading-relaxed">{city.culture.funFact}</p>
           </div>

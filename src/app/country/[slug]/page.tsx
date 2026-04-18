@@ -8,6 +8,54 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+const COUNTRY_TAGLINES: Record<string, string> = {
+  Japan: "Ancient temples, neon cities, and a culture that rewards every curious eye.",
+  "South Korea": "K-pop, kimchi, and coastlines — Seoul is just the beginning.",
+  China: "Five thousand years of history, still being written every day.",
+  Thailand: "Golden temples, midnight markets, and the world's most generous smiles.",
+  Singapore: "Where every culture on Earth decided to eat together.",
+  India: "Chaos, colour, and civilisation at its most alive.",
+  Vietnam: "Lantern-lit towns, karst mountains, and pho at dawn.",
+  Taiwan: "Night markets, mountain trails, and bubble tea that started it all.",
+  Indonesia: "17,000 islands, one extraordinary spirit.",
+  Turkey: "The place where Europe ends and Asia begins — and both are beautiful.",
+  Greece: "Democracy was born here. So was the philosophy of sitting by the sea.",
+  Italy: "Where every piazza is a stage and every meal is an event.",
+  France: "Art, bread, wine, and the audacity to make it all look effortless.",
+  Spain: "Late nights, long lunches, and a coast that never apologises.",
+  Germany: "Forests, festivals, and a precision that somehow still makes time for beer.",
+  Netherlands: "Canals, cycling, and a country that built itself out of the sea.",
+  UK: "Castles, queues, and the city that reinvented itself every decade.",
+  Scotland: "Highlands, whisky, and a history written in stone.",
+  "Czech Republic": "Gothic spires, velvet revolutions, and the best beer in Europe.",
+  Portugal: "Fado, tiles, and the feeling that the world's greatest adventures started here.",
+  Norway: "Fjords that make you forget language exists.",
+  Poland: "Royal capitals, resilient spirit, and pierogi that are honestly perfect.",
+  Croatia: "Dalmatian coastline — the Mediterranean's best-kept secret.",
+  Qatar: "Ancient hospitality, a futuristic skyline, and the desert just beyond.",
+  Denmark: "Hygge, harbour, and design that makes ordinary life beautiful.",
+  Austria: "Mozart, mountains, and coffee houses where time slows down.",
+  Hungary: "Thermal baths, ruin bars, and Budapest's unforgettable skyline.",
+  Switzerland: "Alps, precision, and chocolate that might genuinely change you.",
+  USA: "Fifty states, infinite characters — every city its own country.",
+  Mexico: "Aztec pyramids, Pacific sunsets, and tacos worth crossing a continent for.",
+  Brazil: "Carnival, caipirinha, and a zest for life that is frankly contagious.",
+  Cuba: "Classic cars, revolution, and music in every crumbling courtyard.",
+  Colombia: "Coffee, colour, and a warmth that's impossible to forget.",
+  Peru: "Machu Picchu is just the opening act.",
+  Chile: "From Atacama to Patagonia — Earth's most dramatic road trip.",
+  Argentina: "Tango, steak, and a passion that bleeds into everything.",
+  "South Africa": "Eleven languages, one rainbow nation, and landscapes that rewrite the rulebook.",
+  Morocco: "Labyrinthine medinas, Sahara sunsets, and the scent of spice in every alley.",
+  Egypt: "The pyramids are 4,500 years old and still the most impressive thing you'll see.",
+  Kenya: "The Great Migration, Nairobi's energy, and skies too big to photograph.",
+  Nigeria: "Afrobeats, Jollof rice, and the most entrepreneurial city on the continent.",
+  Australia: "Harbours, reef, and a continent-sized backyard with no rules.",
+  "New Zealand": "Middle-Earth was here. The scenery didn't need CGI.",
+  Canada: "Mountains, maple syrup, and a politeness that is somehow completely sincere.",
+  UAE: "Desert dunes in the morning, the world's tallest towers by night.",
+};
+
 export async function generateStaticParams() {
   return getUniqueCountries().map(({ slug }) => ({ slug }));
 }
@@ -127,6 +175,11 @@ export default async function CountryPage({ params }: Props) {
           </p>
           <div className="text-6xl sm:text-8xl mb-4">{flagEmoji}</div>
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-3">{country}</h1>
+          {COUNTRY_TAGLINES[country] && (
+            <p className="text-white/50 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-4 italic">
+              {COUNTRY_TAGLINES[country]}
+            </p>
+          )}
           <div className="flex items-center justify-center gap-2 text-white/40 text-sm mb-8">
             <MapPin className="w-3.5 h-3.5" />
             <Link

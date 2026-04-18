@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Globe, ArrowLeft, MapPin, Film } from "lucide-react";
+import { Globe, ArrowLeft, MapPin, Film, Compass } from "lucide-react";
 import { cities, getCitiesByContinent, countryToSlug } from "@/lib/cities";
+import { journeys } from "@/data/journeys";
 
 interface Props {
   params: Promise<{ continent: string }>;
@@ -98,6 +99,11 @@ export default async function ContinentPage({ params }: Props) {
 
   const totalVideos = continentCities.reduce((s, c) => s + c.videos.length, 0);
   const countries = [...new Set(continentCities.map((c) => c.country))].sort();
+
+  const continentSlugs = new Set(continentCities.map((c) => c.slug));
+  const continentJourneys = journeys.filter((j) =>
+    j.citySlugOrder.some((s) => continentSlugs.has(s))
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -211,6 +217,47 @@ export default async function ContinentPage({ params }: Props) {
             ))}
           </div>
         </section>
+
+        {/* Journeys through this continent */}
+        {continentJourneys.length > 0 && (
+          <section className="bg-white/[0.02] border-y border-white/6 py-14 px-4 sm:px-6">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex items-center gap-2 mb-6">
+                <Compass className="w-3.5 h-3.5 text-amber-400/60" />
+                <p className="text-xs tracking-widest uppercase text-white/30">
+                  Journeys through {meta.display}
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                {continentJourneys.map((journey) => {
+                  const journeyCitiesHere = journey.citySlugOrder
+                    .map((s) => continentCities.find((c) => c.slug === s))
+                    .filter(Boolean) as typeof continentCities;
+                  return (
+                    <Link
+                      key={journey.id}
+                      href={`/journeys/${journey.id}`}
+                      className="group flex items-center gap-4 rounded-2xl bg-white/[0.03] border border-white/8 p-4 hover:border-white/20 transition-colors"
+                    >
+                      <span className="text-3xl leading-none">{journey.emoji}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-white group-hover:text-amber-300 transition-colors">
+                          {journey.name}
+                        </p>
+                        <p className="text-white/40 text-sm">{journey.tagline}</p>
+                      </div>
+                      <div className="text-right flex-shrink-0">
+                        <p className="text-xs text-white/30">
+                          {journeyCitiesHere.map((c) => c.name).join(", ")}
+                        </p>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Countries */}
         <section className="bg-white/[0.02] border-y border-white/6 py-14 px-4 sm:px-6">

@@ -150,6 +150,29 @@ export default async function ComparePage({ params }: Props) {
     { label: "Greeting", a: cityA.culture.greeting, b: cityB.culture.greeting },
   ];
 
+  const TAG_MAP: Record<string, string> = {
+    "beaches": "🌊 Beaches", "coastal": "🌊 Coastal", "harbour": "🌊 Harbour",
+    "street-food": "🍜 Street Food", "food": "🍴 Food Scene", "spices": "🍴 Food Scene",
+    "souks": "🛍️ Markets", "bazaar": "🛍️ Markets",
+    "historic": "🏛️ History", "ancient": "🏛️ History", "medina": "🏛️ History",
+    "nightlife": "🌙 Nightlife", "neon": "🌙 Nightlife",
+    "art": "🎨 Art", "architecture": "🏗️ Architecture",
+    "nature": "🌿 Nature", "outdoors": "🌿 Outdoors", "desert-gateway": "🏜️ Desert",
+    "music": "🎵 Music", "carnival": "🎶 Carnival",
+    "romantic": "💕 Romance", "fashion": "👗 Fashion",
+    "tech": "💻 Tech", "skyscrapers": "🏙️ Skyline",
+    "canals": "🚤 Canals", "cycling": "🚲 Cycling",
+    "melting-pot": "🌍 Multicultural", "multicultural": "🌍 Multicultural",
+    "bollywood": "🎬 Film", "transit": "🚆 Transit",
+  };
+
+  function getBestForTags(city: NonNullable<typeof cityA>): string[] {
+    return city.tags
+      .map((t) => TAG_MAP[t])
+      .filter(Boolean)
+      .slice(0, 3);
+  }
+
   return (
     <>
       <script
@@ -252,6 +275,31 @@ export default async function ComparePage({ params }: Props) {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Best For */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+            {[cityA, cityB].map((city) => {
+              const tags = getBestForTags(city);
+              if (tags.length === 0) return null;
+              return (
+                <div key={city.slug} className="rounded-2xl bg-white/4 border border-white/8 p-5">
+                  <h2 className="text-xs tracking-widest uppercase text-white/30 mb-3">
+                    {city.flagEmoji} {city.name} — Best For
+                  </h2>
+                  <div className="flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Must Eat comparison */}

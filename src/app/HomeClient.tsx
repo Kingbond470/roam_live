@@ -3,9 +3,9 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Globe, Shuffle, Heart, Play, Pause, Compass } from "lucide-react";
+import { Search, Globe, Shuffle, Heart, Play, Pause, Compass, Flame, MapPin } from "lucide-react";
 import type { City } from "@/types/city";
 import { useAppStore } from "@/store/appStore";
 import { GlobeLoader } from "@/components/globe/GlobeLoader";
@@ -24,6 +24,17 @@ import { useOnboarding } from "@/hooks/useOnboarding";
 import { CoachMark } from "@/components/onboarding/CoachMark";
 import { PWAInstallPrompt } from "@/components/onboarding/PWAInstallPrompt";
 import { JourneyPanel } from "@/components/journey/JourneyPanel";
+import { MilestoneToast } from "@/components/onboarding/MilestoneToast";
+import { useWalkStats } from "@/hooks/useWalkStats";
+
+// Vibe filter pills — map display label → city tag value
+const VIBE_PILLS = [
+  { label: "🌙 Nightlife", tag: "nightlife" },
+  { label: "🍜 Food",      tag: "street-food" },
+  { label: "🏛️ History",  tag: "historic" },
+  { label: "🌊 Coastal",   tag: "beaches" },
+  { label: "🎨 Art",       tag: "art" },
+] as const;
 
 const GlobeScene = dynamic(
   () => import("@/components/globe/GlobeScene").then((m) => ({ default: m.GlobeScene })),
@@ -71,6 +82,13 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
   // Journey paths panel
   const [journeyOpen, setJourneyOpen] = useState(false);
 
+  // Walk stats: streak, visited cities, milestones
+  const { visitedSlugs, streak, markVisited, newlyCompletedJourney, clearCompletedJourney } = useWalkStats();
+
+  // Post-walk suggestions
+  const lastWatchedRef = useRef<City | null>(null);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
   // Sprint 1A: keyboard shortcuts
   useKeyboardShortcuts(cities);
 
@@ -106,6 +124,23 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
       return () => clearTimeout(t);
     }
   }, [phase, completeReturn]);
+
+  // Track visited city when watching begins
+  useEffect(() => {
+    if (phase === "watching" && selectedCity) {
+      lastWatchedRef.current = selectedCity;
+      markVisited(selectedCity.slug);
+    }
+  }, [phase, selectedCity, markVisited]);
+
+  // Show post-walk suggestions when returning to globe
+  useEffect(() => {
+    if (phase === "idle" && lastWatchedRef.current) {
+      setShowSuggestions(true);
+      const t = setTimeout(() => setShowSuggestions(false), 9000);
+      return () => clearTimeout(t);
+    }
+  }, [phase]);
 
   // Discover mode: auto-cycle every 30s when watching (skip if compare/card is open)
   useEffect(() => {
@@ -153,6 +188,21 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
     [cities]
   );
 
+  // Post-walk suggestions: same journey first, then same continent, then same tags
+  const suggestedCities = useMemo(() => {
+    const src = lastWatchedRef.current;
+    if (!src) return [];
+    const pool = cities.filter((c) => c.slug !== src.slug);
+    const journeyCities = activePath
+      ? pool.filter((c) => activePath.citySlugOrder.includes(c.slug))
+      : [];
+    const continentCities = pool.filter((c) => c.continent === src.continent && !journeyCities.find((j) => j.slug === c.slug));
+    const tagCities = pool.filter(
+      (c) => src.tags.some((t) => c.tags.includes(t)) && !journeyCities.find((j) => j.slug === c.slug) && !continentCities.find((cc) => cc.slug === c.slug)
+    );
+    return [...journeyCities, ...continentCities, ...tagCities].slice(0, 3);
+  }, [cities, activePath]);
+
   // Sprint 2C: cities visible on globe when favorites filter active
   const globeCities = useMemo(() => {
     if (activeTag === "__favorites__") {
@@ -177,6 +227,36 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
             transition={{ duration: 0.8 }}
           >
             <GlobeScene cities={globeCities} activeTag={activeTag} cityOfTheDay={cityOfTheDay} activePath={activePath} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Empty Saved state ── */}
+      <AnimatePresence>
+        {phase === "idle" && activeTag === "__favorites__" && favoriteSlugs.length === 0 && (
+          <motion.div
+            key="empty-saved"
+            className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-6"
+            style={{ zIndex: 16, pointerEvents: "none" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="w-14 h-14 rounded-full bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-1">
+              <Heart className="w-6 h-6 text-rose-400/60" />
+            </div>
+            <p className="text-white/80 font-semibold text-lg">No saved cities yet</p>
+            <p className="text-white/35 text-sm max-w-xs leading-relaxed">
+              Tap the heart icon while watching any city walk to save it here.
+            </p>
+            <button
+              onClick={() => setTagFilter(null)}
+              className="mt-2 glass px-4 py-2 rounded-full text-sm text-white/60 hover:text-white transition-colors"
+              style={{ pointerEvents: "auto" }}
+            >
+              Browse all cities
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -365,7 +445,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            {/* Action row: Shuffle · Discover · Journeys */}
+            {/* Action row: Shuffle · Discover · Journeys · Stats */}
             <div className="flex items-center gap-2 mb-3" style={{ pointerEvents: "auto" }}>
               <button
                 onClick={() => selectRandomCity(cities)}
@@ -397,12 +477,32 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
                 <Compass className="w-3 h-3" />
                 {activePath ? activePath.name : "Journeys"}
               </button>
+
+              {/* Streak + explored counter (shown once user has walked at least 1 city) */}
+              {visitedSlugs.length > 0 && (
+                <div className="glass flex items-center gap-2.5 px-3 py-1.5 rounded-full text-xs">
+                  {streak >= 2 && (
+                    <span className="flex items-center gap-1 text-orange-400 font-semibold">
+                      <Flame className="w-3 h-3" />
+                      {streak}
+                    </span>
+                  )}
+                  {streak >= 2 && <span className="w-px h-3 bg-white/15" />}
+                  <span className="flex items-center gap-1 text-white/50">
+                    <MapPin className="w-3 h-3" />
+                    {visitedSlugs.length}/{cities.length}
+                  </span>
+                </div>
+              )}
             </div>
 
             {/* Continent + saved filter pills */}
+            <div className="relative mb-4" style={{ pointerEvents: "auto" }}>
+              {/* Right-edge fade hint */}
+              <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-[#050508] to-transparent z-10" />
             <div
-              className="flex items-center gap-1.5 mb-4 px-4 overflow-x-auto"
-              style={{ pointerEvents: "auto", scrollbarWidth: "none" }}
+              className="flex items-center gap-1.5 px-4 overflow-x-auto"
+              style={{ scrollbarWidth: "none" }}
             >
               <button
                 onClick={() => setTagFilter(null)}
@@ -440,6 +540,25 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
                   {continent}
                 </button>
               ))}
+
+              {/* Divider */}
+              <span className="shrink-0 w-px h-4 bg-white/10 mx-0.5" />
+
+              {/* Vibe filter pills */}
+              {VIBE_PILLS.map(({ label, tag }) => (
+                <button
+                  key={tag}
+                  onClick={() => setTagFilter(activeTag === tag ? null : tag)}
+                  className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                    activeTag === tag
+                      ? "bg-violet-500/20 text-violet-300 border border-violet-500/40"
+                      : "text-white/30 hover:text-white/60 border border-white/10"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
             </div>
           </motion.div>
         )}
@@ -476,6 +595,77 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
         cities={cities}
         isOpen={journeyOpen}
         onClose={() => setJourneyOpen(false)}
+      />
+
+      {/* ── Post-walk suggestions ── */}
+      <AnimatePresence>
+        {showSuggestions && suggestedCities.length > 0 && lastWatchedRef.current && (
+          <motion.div
+            key="post-walk-suggestions"
+            className="absolute inset-x-0 bottom-32 flex justify-center px-4"
+            style={{ zIndex: 16, pointerEvents: "none" }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="glass rounded-2xl px-4 py-3 flex items-center gap-3 flex-wrap" style={{ pointerEvents: "auto" }}>
+              <span className="text-white/35 text-xs whitespace-nowrap">You might also like</span>
+              {suggestedCities.map((city) => (
+                <button
+                  key={city.slug}
+                  onClick={() => { setShowSuggestions(false); useAppStore.getState().selectCity(city); }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/8 hover:bg-white/15 border border-white/10 hover:border-amber-500/40 transition-colors text-sm text-white/70 hover:text-white"
+                >
+                  <span>{city.flagEmoji}</span>
+                  <span>{city.name}</span>
+                </button>
+              ))}
+              <button
+                onClick={() => setShowSuggestions(false)}
+                className="text-white/20 hover:text-white/50 transition-colors text-xs ml-1"
+              >
+                ✕
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Journey milestone toast ── */}
+      <MilestoneToast
+        visible={!!newlyCompletedJourney}
+        emoji={newlyCompletedJourney?.emoji ?? "🏆"}
+        title={`${newlyCompletedJourney?.name ?? ""} — Complete!`}
+        subtitle={`You've walked all ${newlyCompletedJourney?.citySlugOrder.length ?? 0} cities in this journey.`}
+        accentColor={newlyCompletedJourney?.accentColor ?? "#f59e0b"}
+        onDismiss={clearCompletedJourney}
+      />
+
+      {/* ── Cities explored milestone toasts ── */}
+      <MilestoneToast
+        visible={visitedSlugs.length === 1}
+        emoji="🌍"
+        title="First walk complete!"
+        subtitle="You've started your virtual adventure. Keep exploring."
+        onDismiss={() => {}}
+        autoDismissMs={5000}
+      />
+      <MilestoneToast
+        visible={visitedSlugs.length === 10}
+        emoji="🔥"
+        title="10 cities explored!"
+        subtitle="You're a seasoned virtual traveller. The globe awaits."
+        onDismiss={() => {}}
+        autoDismissMs={5000}
+      />
+      <MilestoneToast
+        visible={visitedSlugs.length === 25}
+        emoji="✈️"
+        title="25 cities — world explorer!"
+        subtitle="Nearly halfway around Roam.Live. Impressive."
+        onDismiss={() => {}}
+        autoDismissMs={5000}
       />
     </div>
   );

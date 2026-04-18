@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, MapPin, Heart } from "lucide-react";
+import { Search, X, Heart, Play } from "lucide-react";
 import Fuse from "fuse.js";
 import type { City } from "@/types/city";
 import { useAppStore } from "@/store/appStore";
@@ -13,17 +13,14 @@ interface Props {
   onClose: () => void;
 }
 
-const CONTINENT_COLORS: Record<string, string> = {
-  Asia: "bg-orange-500/20 text-orange-300",
-  Europe: "bg-blue-500/20 text-blue-300",
-  Americas: "bg-green-500/20 text-green-300",
-  Africa: "bg-yellow-500/20 text-yellow-300",
-  Oceania: "bg-purple-500/20 text-purple-300",
-};
+function thumbUrl(city: City): string | null {
+  const id = city.videos[0]?.youtubeId;
+  return id ? `https://img.youtube.com/vi/${id}/mqdefault.jpg` : null;
+}
 
 export function CitySearch({ cities, isOpen, onClose }: Props) {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<City[]>(cities.slice(0, 6));
+  const [results, setResults] = useState<City[]>(cities.slice(0, 8));
   const inputRef = useRef<HTMLInputElement>(null);
   const { selectCity, favoriteSlugs } = useAppStore();
 
@@ -39,17 +36,17 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
     if (isOpen) {
       setTimeout(() => inputRef.current?.focus(), 100);
       setQuery("");
-      setResults(cities.slice(0, 6));
+      setResults(cities.slice(0, 8));
     }
   }, [isOpen, cities]);
 
   useEffect(() => {
     if (!query.trim()) {
-      setResults(cities.slice(0, 6));
+      setResults(cities.slice(0, 8));
       return;
     }
     const r = fuse.current.search(query).map((r) => r.item);
-    setResults(r.slice(0, 6));
+    setResults(r.slice(0, 8));
   }, [query, cities]);
 
   const handleSelect = (city: City) => {
@@ -63,7 +60,7 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
         <>
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-black/60 backdrop-blur-md"
+            className="fixed inset-0 bg-black/70 backdrop-blur-md"
             style={{ zIndex: 58 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -80,7 +77,7 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
             exit={{ opacity: 0, y: -30 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
-            <div className="max-w-xl mx-auto">
+            <div className="max-w-2xl mx-auto">
               {/* Input */}
               <div className="flex items-center gap-3 glass rounded-2xl px-5 py-4 mb-3">
                 <Search className="w-5 h-5 text-white/50 flex-shrink-0" />
@@ -88,7 +85,7 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
                   ref={inputRef}
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search any city in the world..."
+                  placeholder="Search any city, country, or vibe…"
                   className="flex-1 bg-transparent text-white placeholder-white/30 outline-none text-lg"
                 />
                 <button onClick={onClose} className="text-white/50 hover:text-white transition-colors">
@@ -96,45 +93,77 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
                 </button>
               </div>
 
-              {/* Results */}
+              {/* Results — thumbnail cards */}
               <div className="glass rounded-2xl overflow-hidden">
                 {results.length === 0 ? (
                   <div className="px-5 py-8 text-center text-white/30 text-sm">
                     No cities found. Try a different search.
                   </div>
                 ) : (
-                  results.map((city, i) => (
-                    <motion.button
-                      key={city.slug}
-                      className="w-full flex items-center gap-4 px-5 py-3.5 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
-                      onClick={() => handleSelect(city)}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.04 }}
-                    >
-                      <span className="text-2xl">{city.flagEmoji}</span>
-                      <div className="flex-1 text-left">
-                        <p className="text-white font-medium">{city.name}</p>
-                        <p className="text-white/40 text-sm">{city.country}</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        {city.tags.includes("new") && (
-                          <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 font-medium">
-                            New
-                          </span>
-                        )}
-                        {favoriteSlugs.includes(city.slug) && (
-                          <Heart className="w-3.5 h-3.5 text-rose-400" fill="#f43f5e" />
-                        )}
-                        <span
-                          className={`text-xs px-2 py-0.5 rounded-full ${CONTINENT_COLORS[city.continent] ?? "bg-white/10 text-white/60"}`}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5">
+                    {results.map((city, i) => {
+                      const thumb = thumbUrl(city);
+                      const isFav = favoriteSlugs.includes(city.slug);
+                      return (
+                        <motion.button
+                          key={city.slug}
+                          className="relative group aspect-video overflow-hidden bg-black/60 hover:z-10"
+                          onClick={() => handleSelect(city)}
+                          initial={{ opacity: 0, scale: 0.96 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: i * 0.03 }}
                         >
-                          {city.continent}
-                        </span>
-                        <MapPin className="w-3.5 h-3.5 text-white/20" />
-                      </div>
-                    </motion.button>
-                  ))
+                          {/* Thumbnail */}
+                          {thumb ? (
+                            <img
+                              src={thumb}
+                              alt={city.name}
+                              className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-300"
+                            />
+                          ) : (
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/2" />
+                          )}
+
+                          {/* Gradient overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                          {/* Play icon on hover */}
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                              <Play className="w-4 h-4 text-white fill-white ml-0.5" />
+                            </div>
+                          </div>
+
+                          {/* City info */}
+                          <div className="absolute bottom-0 left-0 right-0 p-2.5">
+                            <div className="flex items-end justify-between gap-1">
+                              <div className="min-w-0">
+                                <p className="text-white font-semibold text-sm leading-tight truncate">
+                                  {city.flagEmoji} {city.name}
+                                </p>
+                                <p className="text-white/50 text-xs truncate">{city.country}</p>
+                              </div>
+                              <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                                {isFav && <Heart className="w-3 h-3 text-rose-400" fill="#f43f5e" />}
+                                {city.tags.includes("new") && (
+                                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-amber-500/30 text-amber-300 border border-amber-500/40 font-medium leading-none">
+                                    New
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </motion.button>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Hint */}
+                {!query && (
+                  <div className="px-4 py-2.5 border-t border-white/5 flex items-center gap-4 text-white/20 text-xs">
+                    <span>Try: &ldquo;Tokyo&rdquo; · &ldquo;beaches&rdquo; · &ldquo;historic&rdquo; · &ldquo;Europe&rdquo;</span>
+                  </div>
                 )}
               </div>
             </div>
