@@ -75,7 +75,7 @@ export default async function CityWalkPage({ params }: Props) {
     name: `${city.name} 4K Virtual Walking Tour`,
     description: `An immersive 4K virtual walking tour through ${city.name}, ${city.country}. Explore the streets, culture, and atmosphere of ${city.name} from anywhere in the world.`,
     thumbnailUrl: `https://img.youtube.com/vi/${featuredVideo?.youtubeId}/maxresdefault.jpg`,
-    uploadDate: "2024-01-01",
+    uploadDate: `${new Date().getFullYear()}-01-01`,
     embedUrl: `https://www.youtube.com/embed/${featuredVideo?.youtubeId}`,
     publisher: {
       "@type": "Organization",

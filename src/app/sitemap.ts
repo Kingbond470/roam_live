@@ -38,26 +38,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Top comparison pairs
-  const topPairs = [
-    ["tokyo", "new-york"],
-    ["paris", "rome"],
-    ["tokyo", "seoul"],
-    ["dubai", "singapore"],
-    ["london", "paris"],
-    ["new-york", "chicago"],
-    ["tokyo", "osaka"],
-    ["istanbul", "athens"],
-    ["barcelona", "lisbon"],
-    ["berlin", "prague"],
-    ["amsterdam", "copenhagen"],
-    ["miami", "los-angeles"],
-  ].filter(([a, b]) =>
-    cities.some((c) => c.slug === a) && cities.some((c) => c.slug === b)
-  );
+  // All compare pairs: same-country pairs + top curated cross-country pairs
+  // Mirrors generateStaticParams in compare/[pair]/page.tsx exactly
+  const comparePairs = new Set<string>();
 
-  const compareRoutes: MetadataRoute.Sitemap = topPairs.map(([a, b]) => ({
-    url: `${base}/compare/${a}-vs-${b}`,
+  const byCountry: Record<string, string[]> = {};
+  for (const city of cities) {
+    if (!byCountry[city.country]) byCountry[city.country] = [];
+    byCountry[city.country].push(city.slug);
+  }
+  for (const slugs of Object.values(byCountry)) {
+    for (let i = 0; i < slugs.length; i++) {
+      for (let j = i + 1; j < slugs.length; j++) {
+        comparePairs.add(`${slugs[i]}-vs-${slugs[j]}`);
+      }
+    }
+  }
+
+  const slugSet = new Set(cities.map((c) => c.slug));
+  const curatedPairs = [
+    ["tokyo", "new-york"], ["paris", "rome"], ["tokyo", "seoul"],
+    ["dubai", "singapore"], ["london", "paris"], ["new-york", "chicago"],
+    ["istanbul", "athens"], ["barcelona", "lisbon"], ["berlin", "prague"],
+    ["amsterdam", "copenhagen"], ["miami", "los-angeles"], ["tokyo", "hong-kong"],
+    ["new-york", "london"], ["paris", "amsterdam"], ["rome", "athens"],
+    ["dubai", "cairo"], ["tokyo", "bangkok"], ["berlin", "vienna"],
+    ["istanbul", "cairo"], ["seoul", "singapore"], ["sydney", "tokyo"],
+    ["barcelona", "rome"], ["london", "amsterdam"], ["miami", "new-york"],
+  ];
+  for (const [a, b] of curatedPairs) {
+    if (slugSet.has(a) && slugSet.has(b)) comparePairs.add(`${a}-vs-${b}`);
+  }
+
+  const compareRoutes: MetadataRoute.Sitemap = [...comparePairs].map((pair) => ({
+    url: `${base}/compare/${pair}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.6,

@@ -3,8 +3,10 @@ import { getCityOfTheDay } from "@/lib/cityOfTheDay";
 import { journeys } from "@/data/journeys";
 import { HomeClient } from "./HomeClient";
 
+const VALID_CONTINENTS = new Set(["Asia", "Europe", "Americas", "Africa", "Oceania"]);
+
 interface Props {
-  searchParams: Promise<{ city?: string; today?: string; journey?: string }>;
+  searchParams: Promise<{ city?: string; today?: string; journey?: string; continent?: string }>;
 }
 
 /** Resolve whichever param is present → City | null */
@@ -44,5 +46,15 @@ export default async function HomePage({ searchParams }: Props) {
   const initialJourney = params.journey
     ? (journeys.find((j) => j.id === params.journey) ?? null)
     : null;
-  return <HomeClient cities={cities} initialCity={initialCity} initialJourney={initialJourney} />;
+  const initialContinent = params.continent && VALID_CONTINENTS.has(params.continent)
+    ? params.continent
+    : null;
+  return (
+    <HomeClient
+      cities={cities}
+      initialCity={initialCity}
+      initialJourney={initialJourney}
+      initialContinent={initialContinent}
+    />
+  );
 }

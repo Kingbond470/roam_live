@@ -34,9 +34,10 @@ interface Props {
   cities: City[];
   initialCity?: City | null;
   initialJourney?: import("@/data/journeys").Journey | null;
+  initialContinent?: string | null;
 }
 
-export function HomeClient({ cities, initialCity, initialJourney }: Props) {
+export function HomeClient({ cities, initialCity, initialJourney, initialContinent }: Props) {
   const router = useRouter();
   const {
     phase,
@@ -89,9 +90,10 @@ export function HomeClient({ cities, initialCity, initialJourney }: Props) {
     onSwipeRight: () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(getSwipeNavCities(), "prev"); },
   });
 
-  // Deep-link: auto-select city from ?city= and activate journey from ?journey=
+  // Deep-link: auto-select city, activate journey, or pre-filter continent on load
   const { selectCity, setActivePath } = useAppStore();
   useEffect(() => {
+    if (initialContinent) setTagFilter(initialContinent);
     if (initialJourney) setActivePath(initialJourney);
     if (initialCity) selectCity(initialCity);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -447,7 +449,7 @@ export function HomeClient({ cities, initialCity, initialJourney }: Props) {
       <CoachMark
         visible={showGlobeTip}
         message="Tap any city pin or flag to start your walk"
-        subtext="Explore 20 cities around the world, hands-free"
+        subtext="Explore 62 cities around the world, hands-free"
         position="bottom"
         onDismiss={dismissGlobe}
       />
