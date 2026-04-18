@@ -312,7 +312,13 @@ export function HomeClient({ cities, initialCity, initialJourney }: Props) {
             </div>
 
             <div className="flex items-center gap-2" style={{ pointerEvents: "auto" }}>
-              {/* About link */}
+              {/* About + Journeys links */}
+              <Link
+                href="/journeys"
+                className="glass px-3 py-2 rounded-full text-white/40 hover:text-white/80 transition-colors text-xs hidden sm:block"
+              >
+                Journeys
+              </Link>
               <Link
                 href="/about"
                 className="glass px-3 py-2 rounded-full text-white/40 hover:text-white/80 transition-colors text-xs hidden sm:block"

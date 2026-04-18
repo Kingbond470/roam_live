@@ -306,6 +306,8 @@ export default function AboutPage() {
           <Link href="/" className="hover:text-white transition-colors">Globe</Link>
           <span>·</span>
           <Link href="/about" className="hover:text-white transition-colors text-white/50">About</Link>
+          <span>·</span>
+          <Link href="/journeys" className="hover:text-white transition-colors">Journeys</Link>
         </div>
       </footer>
     </div>

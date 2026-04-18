@@ -9,42 +9,43 @@ interface Props {
   params: Promise<{ pair: string }>;
 }
 
-// Generate top city comparison pairs for static generation
+// Any pair not in generateStaticParams is server-rendered on demand (not a 404)
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const pairs: { pair: string }[] = [];
-  const slugs = cities.map((c) => c.slug);
+  const pairs = new Set<string>();
 
-  // Generate meaningful pairs (not all permutations — just curated ones)
-  const curated = [
-    ["tokyo", "new-york"],
-    ["paris", "rome"],
-    ["tokyo", "seoul"],
-    ["dubai", "singapore"],
-    ["london", "paris"],
-    ["new-york", "chicago"],
-    ["tokyo", "osaka"],
-    ["istanbul", "athens"],
-    ["barcelona", "lisbon"],
-    ["berlin", "prague"],
-    ["amsterdam", "copenhagen"],
-    ["miami", "los-angeles"],
-    ["tokyo", "hong-kong"],
-    ["new-york", "london"],
-    ["paris", "amsterdam"],
-    ["rome", "athens"],
-    ["dubai", "cairo"],
-    ["tokyo", "bangkok"],
-    ["berlin", "vienna"],
-    ["istanbul", "cairo"],
-  ];
-
-  for (const [a, b] of curated) {
-    if (slugs.includes(a) && slugs.includes(b)) {
-      pairs.push({ pair: `${a}-vs-${b}` });
+  // All same-country pairs — highest search intent ("best cities in Japan")
+  const byCountry: Record<string, string[]> = {};
+  for (const city of cities) {
+    if (!byCountry[city.country]) byCountry[city.country] = [];
+    byCountry[city.country].push(city.slug);
+  }
+  for (const slugs of Object.values(byCountry)) {
+    for (let i = 0; i < slugs.length; i++) {
+      for (let j = i + 1; j < slugs.length; j++) {
+        pairs.add(`${slugs[i]}-vs-${slugs[j]}`);
+      }
     }
   }
 
-  return pairs;
+  // Top cross-country curated pairs
+  const curated = [
+    ["tokyo", "new-york"], ["paris", "rome"], ["tokyo", "seoul"],
+    ["dubai", "singapore"], ["london", "paris"], ["new-york", "chicago"],
+    ["istanbul", "athens"], ["barcelona", "lisbon"], ["berlin", "prague"],
+    ["amsterdam", "copenhagen"], ["miami", "los-angeles"], ["tokyo", "hong-kong"],
+    ["new-york", "london"], ["paris", "amsterdam"], ["rome", "athens"],
+    ["dubai", "cairo"], ["tokyo", "bangkok"], ["berlin", "vienna"],
+    ["istanbul", "cairo"], ["seoul", "singapore"], ["sydney", "tokyo"],
+    ["barcelona", "rome"], ["london", "amsterdam"], ["miami", "new-york"],
+  ];
+  const slugSet = new Set(cities.map((c) => c.slug));
+  for (const [a, b] of curated) {
+    if (slugSet.has(a) && slugSet.has(b)) pairs.add(`${a}-vs-${b}`);
+  }
+
+  return [...pairs].map((pair) => ({ pair }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -339,6 +340,15 @@ export default async function ComparePage({ params }: Props) {
                   );
                 })}
             </div>
+          </div>
+
+          {/* Footer links */}
+          <div className="mt-10 pt-8 border-t border-white/5 flex items-center justify-center gap-4 text-white/25 text-sm">
+            <Link href="/" className="hover:text-white transition-colors">Globe</Link>
+            <span>·</span>
+            <Link href="/journeys" className="hover:text-white transition-colors">Journeys</Link>
+            <span>·</span>
+            <Link href="/about" className="hover:text-white transition-colors">About</Link>
           </div>
         </div>
       </div>

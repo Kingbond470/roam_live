@@ -313,13 +313,20 @@ export default async function CityWalkPage({ params }: Props) {
             <p className="text-white/30 text-sm mb-4">
               Roam.Live — A window to every place on Earth
             </p>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 text-sm font-medium transition-colors"
-            >
-              <Globe className="w-4 h-4" />
-              Open the Globe
-            </Link>
+            <div className="flex items-center justify-center gap-5 text-sm">
+              <Link href="/" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-medium transition-colors">
+                <Globe className="w-4 h-4" />
+                Open the Globe
+              </Link>
+              <span className="text-white/20">·</span>
+              <Link href="/journeys" className="text-white/40 hover:text-white transition-colors">
+                Journeys
+              </Link>
+              <span className="text-white/20">·</span>
+              <Link href="/about" className="text-white/40 hover:text-white transition-colors">
+                About
+              </Link>
+            </div>
           </div>
         </div>
       </div>

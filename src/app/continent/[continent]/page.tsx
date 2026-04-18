@@ -285,6 +285,8 @@ export default async function ContinentPage({ params }: Props) {
           <div className="flex items-center justify-center gap-4 text-white/30 text-sm flex-wrap">
             <Link href="/" className="hover:text-white transition-colors">Globe</Link>
             <span>·</span>
+            <Link href="/journeys" className="hover:text-white transition-colors">Journeys</Link>
+            <span>·</span>
             <Link href="/about" className="hover:text-white transition-colors">About</Link>
             <span>·</span>
             {Object.entries(CONTINENT_META).map(([key, m], i, arr) => (
