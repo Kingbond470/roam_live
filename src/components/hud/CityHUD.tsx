@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart, Film } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart, Film, BookOpen } from "lucide-react";
 import { ShareButton } from "./ShareButton";
 import type { City } from "@/types/city";
 import { LiveBadge } from "./LiveBadge";
@@ -234,9 +234,9 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
                     </div>
 
                     {/* Culture affordance — always visible, brightens on hover */}
-                    <div className="flex-shrink-0 flex flex-col items-center gap-1.5 pb-1 opacity-40 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-white text-[10px] tracking-widest uppercase">culture</span>
-                      <span className="w-1 h-1 rounded-full bg-amber-400 animate-pulse" />
+                    <div className="flex-shrink-0 flex flex-col items-center gap-1.5 pb-1 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                      <BookOpen className="w-4 h-4 text-amber-400" />
+                      <span className="text-white/70 text-[10px] tracking-widest uppercase">culture</span>
                     </div>
                   </div>
                 </motion.div>

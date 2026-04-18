@@ -92,9 +92,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 function parsePair(pair: string): [string, string] | [null, null] {
-  const match = pair.match(/^(.+)-vs-(.+)$/);
-  if (!match) return [null, null];
-  return [match[1], match[2]];
+  // Find all occurrences of "-vs-" and try each as the split point,
+  // validating both halves against known city slugs.
+  // This handles hyphenated slugs like "rio-de-janeiro-vs-ho-chi-minh".
+  const slugs = new Set(cities.map((c) => c.slug));
+  const separator = "-vs-";
+  let start = 0;
+  while (true) {
+    const idx = pair.indexOf(separator, start);
+    if (idx === -1) break;
+    const a = pair.slice(0, idx);
+    const b = pair.slice(idx + separator.length);
+    if (slugs.has(a) && slugs.has(b)) return [a, b];
+    start = idx + 1;
+  }
+  return [null, null];
 }
 
 export default async function ComparePage({ params }: Props) {

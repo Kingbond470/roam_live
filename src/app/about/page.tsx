@@ -6,10 +6,10 @@ import { cities } from "@/lib/cities";
 export const metadata: Metadata = {
   title: "About — Roam.Live",
   description:
-    "Roam.Live brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 48 cities, 5 continents, no passport required.",
+    "Roam.Live brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 62 cities, 5 continents, no passport required.",
   openGraph: {
     title: "About Roam.Live — A Window to Every Place on Earth",
-    description: "Explore 48 cities across 5 continents with 4K walks and deep cultural insight.",
+    description: "Explore 62 cities across 5 continents with 4K walks and deep cultural insight.",
     url: "https://roam.live/about",
     siteName: "Roam.Live",
   },

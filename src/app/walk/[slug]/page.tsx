@@ -290,8 +290,10 @@ export default async function CityWalkPage({ params }: Props) {
           <div className="border-t border-white/8 pt-8">
             <h2 className="text-xs tracking-widest uppercase text-white/30 mb-4">Explore More Cities</h2>
             <div className="flex flex-wrap gap-2">
-              {cities
-                .filter((c) => c.slug !== city.slug)
+              {[
+                ...cities.filter((c) => c.slug !== city.slug && c.continent === city.continent),
+                ...cities.filter((c) => c.slug !== city.slug && c.continent !== city.continent),
+              ]
                 .slice(0, 12)
                 .map((c) => (
                   <Link

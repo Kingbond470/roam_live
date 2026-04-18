@@ -45,7 +45,7 @@ export function CultureCard({ city, isOpen, onClose, onCompare }: Props) {
             {/* Header */}
             <div className="flex items-start justify-between px-4 sm:px-5 py-3 border-b border-white/8">
               <div>
-                <h2 className="text-lg sm:text-xl font-bold text-white" style={{ fontFamily: "Georgia, serif" }}>
+                <h2 className="text-lg sm:text-xl font-bold text-white">
                   {city.flagEmoji} {city.name}
                 </h2>
                 <p className="text-white/40 text-sm mt-0.5">{city.country} · {city.continent}</p>

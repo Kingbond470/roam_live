@@ -57,11 +57,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="h-full bg-[#050508] text-white overflow-hidden">
+      <body className="h-full bg-[#050508] text-white overflow-hidden" suppressHydrationWarning>
         {children}
         {/* YouTube IFrame API — loaded once globally */}
         <Script
           src="https://www.youtube.com/iframe_api"
+          strategy="afterInteractive"
+        />
+        {/* Plausible Analytics — privacy-first, no cookie banner needed */}
+        <Script
+          defer
+          data-domain="roam.live"
+          src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />
       </body>

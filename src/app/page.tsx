@@ -1,9 +1,10 @@
 import { cities } from "@/lib/cities";
 import { getCityOfTheDay } from "@/lib/cityOfTheDay";
+import { journeys } from "@/data/journeys";
 import { HomeClient } from "./HomeClient";
 
 interface Props {
-  searchParams: Promise<{ city?: string; today?: string }>;
+  searchParams: Promise<{ city?: string; today?: string; journey?: string }>;
 }
 
 /** Resolve whichever param is present → City | null */
@@ -40,5 +41,8 @@ export async function generateMetadata({ searchParams }: Props) {
 export default async function HomePage({ searchParams }: Props) {
   const params = await searchParams;
   const initialCity = resolveInitialCity(params.city, params.today);
-  return <HomeClient cities={cities} initialCity={initialCity} />;
+  const initialJourney = params.journey
+    ? (journeys.find((j) => j.id === params.journey) ?? null)
+    : null;
+  return <HomeClient cities={cities} initialCity={initialCity} initialJourney={initialJourney} />;
 }

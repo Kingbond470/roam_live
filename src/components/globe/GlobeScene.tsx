@@ -86,7 +86,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
       pointsRef.current = points;
 
       const globe = new Globe(containerRef.current)
-        .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
+        .globeImageUrl("/earth-night.jpg")
         .backgroundImageUrl(null)
         .backgroundColor("rgba(0,0,0,0)")
         .showAtmosphere(true)

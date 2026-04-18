@@ -33,9 +33,10 @@ const GlobeScene = dynamic(
 interface Props {
   cities: City[];
   initialCity?: City | null;
+  initialJourney?: import("@/data/journeys").Journey | null;
 }
 
-export function HomeClient({ cities, initialCity }: Props) {
+export function HomeClient({ cities, initialCity, initialJourney }: Props) {
   const router = useRouter();
   const {
     phase,
@@ -88,9 +89,10 @@ export function HomeClient({ cities, initialCity }: Props) {
     onSwipeRight: () => { if (phase === "watching" && !compareOpen && !cardOpen) navigateCity(getSwipeNavCities(), "prev"); },
   });
 
-  // Sprint 3A: deep-link — auto-select city from ?city= query param on first load
-  const { selectCity } = useAppStore();
+  // Deep-link: auto-select city from ?city= and activate journey from ?journey=
+  const { selectCity, setActivePath } = useAppStore();
   useEffect(() => {
+    if (initialJourney) setActivePath(initialJourney);
     if (initialCity) selectCity(initialCity);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
