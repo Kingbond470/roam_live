@@ -110,7 +110,7 @@ export default function JourneysPage() {
             Follow the route one city at a time, or jump anywhere on the map.
           </p>
 
-          <div className="inline-flex items-center gap-8 bg-white/4 border border-white/8 rounded-2xl px-8 py-4">
+          <div className="inline-flex items-center gap-5 sm:gap-8 bg-white/4 border border-white/8 rounded-2xl px-5 sm:px-8 py-3 sm:py-4">
             <div className="text-center">
               <p className="text-2xl font-bold text-amber-400">{journeys.length}</p>
               <p className="text-white/40 text-xs mt-0.5">Journeys</p>

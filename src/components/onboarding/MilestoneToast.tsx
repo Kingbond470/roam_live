@@ -27,14 +27,14 @@ export function MilestoneToast({
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed bottom-40 left-1/2 -translate-x-1/2 z-[70] pointer-events-auto"
+          className="fixed bottom-40 left-1/2 -translate-x-1/2 z-[70] pointer-events-auto w-[calc(100vw-2rem)] max-w-[340px]"
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 10, scale: 0.95 }}
           transition={{ type: "spring", damping: 20, stiffness: 300 }}
         >
           <div
-            className="flex items-center gap-4 rounded-2xl px-5 py-4 shadow-2xl border min-w-[280px] max-w-[340px]"
+            className="flex items-center gap-4 rounded-2xl px-5 py-4 shadow-2xl border w-full"
             style={{
               background: `linear-gradient(135deg, ${accentColor}20, ${accentColor}0a)`,
               borderColor: accentColor + "50",

@@ -189,7 +189,12 @@ export default async function CountryPage({ params }: Props) {
             Virtual Walks
           </p>
           <div className="mb-4 flex justify-center">
-            <Flag countryCode={countryCities[0].countryCode} flagEmoji={flagEmoji} size={96} className="rounded-md shadow-lg" />
+            <span className="block sm:hidden">
+              <Flag countryCode={countryCities[0].countryCode} flagEmoji={flagEmoji} size={64} className="rounded-md shadow-lg" />
+            </span>
+            <span className="hidden sm:block">
+              <Flag countryCode={countryCities[0].countryCode} flagEmoji={flagEmoji} size={96} className="rounded-md shadow-lg" />
+            </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-3">{country}</h1>
           {COUNTRY_TAGLINES[country] && (
@@ -207,7 +212,7 @@ export default async function CountryPage({ params }: Props) {
             </Link>
           </div>
 
-          <div className="inline-flex items-center gap-8 bg-white/4 border border-white/8 rounded-2xl px-8 py-4 mb-8">
+          <div className="inline-flex items-center gap-5 sm:gap-8 bg-white/4 border border-white/8 rounded-2xl px-5 sm:px-8 py-3 sm:py-4 mb-8">
             <div className="text-center">
               <p className="text-2xl font-bold text-amber-400">{countryCities.length}</p>
               <p className="text-white/40 text-xs mt-0.5">{countryCities.length === 1 ? "City" : "Cities"}</p>

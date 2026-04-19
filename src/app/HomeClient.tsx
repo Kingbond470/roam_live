@@ -417,11 +417,11 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
                   useAppStore.getState().selectCity(cityOfTheDay);
                   router.replace("/?today=1", { scroll: false });
                 }}
-                className="glass flex items-center gap-2 px-3 py-2 rounded-full text-white/60 hover:text-white transition-colors"
+                className="glass flex items-center gap-2 px-3 py-2 rounded-full text-white/60 hover:text-white transition-colors max-w-[130px] sm:max-w-none"
                 title={`Today's walk: ${cityOfTheDay.name}`}
               >
                 <Flag countryCode={cityOfTheDay.countryCode} flagEmoji={cityOfTheDay.flagEmoji} size={16} />
-                <span className="text-xs">{cityOfTheDay.name}</span>
+                <span className="text-xs truncate">{cityOfTheDay.name}</span>
               </button>
 
               <button
@@ -613,8 +613,9 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
             exit={{ opacity: 0, y: 8 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="glass rounded-2xl px-4 py-3 flex items-center gap-3 flex-wrap" style={{ pointerEvents: "auto" }}>
+            <div className="glass rounded-2xl px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 w-full sm:w-auto" style={{ pointerEvents: "auto" }}>
               <span className="text-white/35 text-xs whitespace-nowrap">You might also like</span>
+              <div className="flex items-center gap-2 flex-wrap">
               {suggestedCities.map((city) => (
                 <button
                   key={city.slug}
@@ -625,9 +626,10 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
                   <span>{city.name}</span>
                 </button>
               ))}
+              </div>
               <button
                 onClick={() => setShowSuggestions(false)}
-                className="text-white/20 hover:text-white/50 transition-colors text-xs ml-1"
+                className="text-white/20 hover:text-white/50 transition-colors text-xs self-end sm:self-auto"
               >
                 ✕
               </button>

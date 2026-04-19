@@ -140,7 +140,7 @@ export default async function JourneyDetailPage({ params }: Props) {
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-3">{journey.name}</h1>
           <p className="text-white/50 text-lg max-w-xl mx-auto mb-8">{journey.tagline}</p>
 
-          <div className="inline-flex items-center gap-8 bg-white/4 border border-white/8 rounded-2xl px-8 py-4 mb-8">
+          <div className="inline-flex items-center gap-5 sm:gap-8 bg-white/4 border border-white/8 rounded-2xl px-5 sm:px-8 py-3 sm:py-4 mb-8">
             <div className="text-center">
               <p className="text-2xl font-bold" style={{ color: journey.accentColor }}>{journeyCities.length}</p>
               <p className="text-white/40 text-xs mt-0.5">Cities</p>

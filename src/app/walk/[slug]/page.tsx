@@ -215,7 +215,14 @@ export default async function CityWalkPage({ params }: Props) {
         {/* City Header */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div className="flex items-start gap-3 sm:gap-5 mb-6">
-            <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={64} className="mt-1 rounded-md" />
+            <div className="flex-shrink-0 mt-1">
+              <span className="block sm:hidden">
+                <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={40} className="rounded-md" />
+              </span>
+              <span className="hidden sm:block">
+                <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={64} className="rounded-md" />
+              </span>
+            </div>
             <div>
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name}</h1>
               <div className="flex items-center gap-2 text-white/50 text-sm">

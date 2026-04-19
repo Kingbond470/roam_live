@@ -176,7 +176,7 @@ export default async function ContinentPage({ params }: Props) {
             {meta.hero}
           </p>
 
-          <div className="inline-flex items-center gap-8 bg-white/4 border border-white/8 rounded-2xl px-8 py-4 mb-10">
+          <div className="inline-flex items-center gap-5 sm:gap-8 bg-white/4 border border-white/8 rounded-2xl px-5 sm:px-8 py-3 sm:py-4 mb-10">
             <div className="text-center">
               <p className="text-2xl font-bold text-amber-400">{continentCities.length}</p>
               <p className="text-white/40 text-xs mt-0.5">Cities</p>
@@ -260,8 +260,8 @@ export default async function ContinentPage({ params }: Props) {
                         </p>
                         <p className="text-white/40 text-sm">{journey.tagline}</p>
                       </div>
-                      <div className="text-right flex-shrink-0">
-                        <p className="text-xs text-white/30">
+                      <div className="text-right flex-shrink-0 hidden sm:block">
+                        <p className="text-xs text-white/30 max-w-[160px] truncate">
                           {journeyCitiesHere.map((c) => c.name).join(", ")}
                         </p>
                       </div>
