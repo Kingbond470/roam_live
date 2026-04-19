@@ -20,23 +20,23 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://roam.live"),
-  title: "Roam.Live — A Window to Every Place on Earth",
+  metadataBase: new URL("https://nearaway.in"),
+  title: "Nearaway.in — A Window to Every Place on Earth",
   description:
     "Explore 62 cities across 5 continents with immersive 4K virtual walks and cultural intelligence. No passport required.",
   keywords: ["virtual travel", "city walk", "4K walking tour", "travel from home", "world cities"],
   openGraph: {
-    title: "Roam.Live — A Window to Every Place on Earth",
+    title: "Nearaway.in — A Window to Every Place on Earth",
     description: "Immersive 4K virtual walks across 62 cities. No passport required.",
     type: "website",
-    url: "https://roam.live",
-    siteName: "Roam.Live",
-    images: [{ url: "/api/og", width: 1200, height: 630, alt: "Roam.Live — Virtual City Walks" }],
+    url: "https://nearaway.in",
+    siteName: "Nearaway.in",
+    images: [{ url: "/api/og", width: 1200, height: 630, alt: "Nearaway.in — Virtual City Walks" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@roamlive",
-    title: "Roam.Live — A Window to Every Place on Earth",
+    site: "@nearawayin",
+    title: "Nearaway.in — A Window to Every Place on Earth",
     description: "Immersive 4K virtual walks across 62 cities. No passport required.",
     images: ["/api/og"],
   },
@@ -67,7 +67,7 @@ export default function RootLayout({
         {/* Plausible Analytics — privacy-first, no cookie banner needed */}
         <Script
           defer
-          data-domain="roam.live"
+          data-domain="nearaway.in"
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />

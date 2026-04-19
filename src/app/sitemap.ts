@@ -5,7 +5,7 @@ import { journeys } from "@/data/journeys";
 const CONTINENTS = ["asia", "europe", "americas", "africa", "oceania"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://roam.live";
+  const base = "https://nearaway.in";
   const now = new Date();
 
   // Static pages

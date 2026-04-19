@@ -68,7 +68,7 @@ export function PWAInstallPrompt() {
 
               {/* Text */}
               <div className="flex-1 min-w-0">
-                <p className="text-white text-sm font-semibold">Add Roam.Live to home screen</p>
+                <p className="text-white text-sm font-semibold">Add Nearaway.in to home screen</p>
                 <p className="text-white/40 text-xs mt-0.5">Walk any city, anytime — no browser needed</p>
               </div>
 

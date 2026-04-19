@@ -4,14 +4,14 @@ import { Globe, ArrowLeft, MapPin, Film, Compass, SplitSquareHorizontal, BookOpe
 import { cities } from "@/lib/cities";
 
 export const metadata: Metadata = {
-  title: "About Roam.Live — Free 4K Virtual City Walks, No Passport",
+  title: "About Nearaway.in — Free 4K Virtual City Walks, No Passport",
   description:
-    "Roam.Live brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 62 cities, 5 continents, no passport required.",
+    "Nearaway.in brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 62 cities, 5 continents, no passport required.",
   openGraph: {
-    title: "About Roam.Live — A Window to Every Place on Earth",
+    title: "About Nearaway.in — A Window to Every Place on Earth",
     description: "Explore 62 cities across 5 continents with 4K walks and deep cultural insight.",
-    url: "https://roam.live/about",
-    siteName: "Roam.Live",
+    url: "https://nearaway.in/about",
+    siteName: "Nearaway.in",
   },
 };
 
@@ -97,7 +97,7 @@ export default function AboutPage() {
         <Link href="/" className="flex items-center gap-2">
           <Globe className="w-5 h-5 text-amber-400" />
           <span className="font-bold text-lg tracking-tight">
-            Roam<span className="text-amber-400">.Live</span>
+            Nearaway<span className="text-amber-400">.in</span>
           </span>
         </Link>
         <Link
@@ -130,7 +130,7 @@ export default function AboutPage() {
           Step inside.
         </h1>
         <p className="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-          Roam.Live turns any device into a window onto the world's streets —
+          Nearaway.in turns any device into a window onto the world's streets —
           immersive 4K city walks, real local culture, and the freedom to explore
           without a flight.
         </p>
@@ -178,7 +178,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Why Roam.Live ── */}
+      {/* ── Why Nearaway.in ── */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
         <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold mb-5">
           Why we built this
@@ -192,7 +192,7 @@ export default function AboutPage() {
           Marrakech at dusk, or cross Shibuya at midnight, or wander along the Seine on a grey morning — that stays.
         </p>
         <p className="text-white/55 text-base sm:text-lg leading-relaxed">
-          Roam.Live was built for that curiosity. Not as a replacement for travel, but as a
+          Nearaway.in was built for that curiosity. Not as a replacement for travel, but as a
           companion to it — a place to preview, revisit, or simply wander without a reason.
         </p>
       </section>
@@ -307,7 +307,7 @@ export default function AboutPage() {
           something shifts. You stop seeing distant places as abstract.
           They become real."
         </p>
-        <p className="text-white/25 text-sm mt-6">— The Roam.Live team</p>
+        <p className="text-white/25 text-sm mt-6">— The Nearaway.in team</p>
       </section>
 
       {/* ── CTA ── */}
@@ -333,7 +333,7 @@ export default function AboutPage() {
         <div className="flex items-center justify-center gap-2 mb-4">
           <Globe className="w-4 h-4 text-amber-400" />
           <span className="font-bold tracking-tight">
-            Roam<span className="text-amber-400">.Live</span>
+            Nearaway<span className="text-amber-400">.in</span>
           </span>
         </div>
         <div className="flex items-center justify-center gap-4 text-white/30 text-sm">

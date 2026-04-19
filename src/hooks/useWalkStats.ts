@@ -18,7 +18,7 @@ export interface WalkStats {
   clearCompletedJourney: () => void;
 }
 
-const KEY = "roam-walk-stats";
+const KEY = "nearaway-walk-stats";
 
 function todayStr() {
   return new Date().toISOString().slice(0, 10);

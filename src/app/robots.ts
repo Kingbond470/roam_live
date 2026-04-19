@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://roam.live/sitemap.xml",
+    sitemap: "https://nearaway.in/sitemap.xml",
   };
 }

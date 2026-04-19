@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .filter(Boolean) as typeof cities;
 
   const cityNames = journeyCities.map((c) => c.name).join(", ");
-  const title = `${journey.name} — ${journey.tagline} | Roam.Live Journeys`;
+  const title = `${journey.name} — ${journey.tagline} | Nearaway.in Journeys`;
   const description = `Follow the ${journey.name} virtual journey through ${cityNames}. ${journey.tagline}. Immersive 4K walks, no passport required.`;
 
   return {
@@ -37,18 +37,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "curated city journey",
       "4K virtual walk",
     ],
-    alternates: { canonical: `https://roam.live/journeys/${id}` },
+    alternates: { canonical: `https://nearaway.in/journeys/${id}` },
     openGraph: {
       title,
       description,
       type: "website",
-      url: `https://roam.live/journeys/${id}`,
-      siteName: "Roam.Live",
+      url: `https://nearaway.in/journeys/${id}`,
+      siteName: "Nearaway.in",
       images: [{ url: `/api/og?type=journeys`, width: 1200, height: 630, alt: journey.name }],
     },
     twitter: {
       card: "summary_large_image",
-      site: "@roamlive",
+      site: "@nearawayin",
       title: `${journey.emoji} ${journey.name} — ${journey.tagline}`,
       description,
       images: [`/api/og?type=journeys`],
@@ -73,13 +73,13 @@ export default async function JourneyDetailPage({ params }: Props) {
     "@type": "ItemList",
     name: journey.name,
     description: `${journey.tagline}. A curated virtual journey through ${journeyCities.map((c) => c.name).join(", ")}.`,
-    url: `https://roam.live/journeys/${id}`,
+    url: `https://nearaway.in/journeys/${id}`,
     numberOfItems: journeyCities.length,
     itemListElement: journeyCities.map((city, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: city.name,
-      url: `https://roam.live/walk/${city.slug}`,
+      url: `https://nearaway.in/walk/${city.slug}`,
     })),
   };
 
@@ -96,7 +96,7 @@ export default async function JourneyDetailPage({ params }: Props) {
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </Link>
           <Link
@@ -316,7 +316,7 @@ export default async function JourneyDetailPage({ params }: Props) {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Globe className="w-4 h-4 text-amber-400" />
             <span className="font-bold tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </div>
           <div className="flex items-center justify-center gap-4 text-white/30 text-sm">

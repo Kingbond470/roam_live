@@ -389,7 +389,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
             <div className="flex items-center gap-2">
               <Globe className="w-5 h-5 text-amber-400" />
               <span className="text-white font-bold text-lg tracking-tight">
-                Roam<span className="text-amber-400">.Live</span>
+                Nearaway<span className="text-amber-400">.in</span>
               </span>
             </div>
 
@@ -663,7 +663,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
         visible={visitedSlugs.length === 25}
         emoji="✈️"
         title="25 cities — world explorer!"
-        subtitle="Nearly halfway around Roam.Live. Impressive."
+        subtitle="Nearly halfway around Nearaway.in. Impressive."
         onDismiss={() => {}}
         autoDismissMs={5000}
       />

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `Walk ${city.name}, ${city.country} — 4K Virtual Walking Tour | Roam.Live`;
+  const title = `Walk ${city.name}, ${city.country} — 4K Virtual Walking Tour | Nearaway.in`;
   const description = `Take a free virtual 4K walking tour through ${city.name}, ${city.country}. Explore ${city.culture.mustEat.slice(0, 2).join(", ")}, local culture, and more. No passport required.`;
 
   return {
@@ -35,14 +35,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "4K city walk",
     ],
     alternates: {
-      canonical: `https://roam.live/walk/${city.slug}`,
+      canonical: `https://nearaway.in/walk/${city.slug}`,
     },
     openGraph: {
-      title: `Walk ${city.name} — Free 4K Virtual Tour | Roam.Live`,
+      title: `Walk ${city.name} — Free 4K Virtual Tour | Nearaway.in`,
       description,
       type: "video.other",
-      url: `https://roam.live/walk/${city.slug}`,
-      siteName: "Roam.Live",
+      url: `https://nearaway.in/walk/${city.slug}`,
+      siteName: "Nearaway.in",
       images: [
         {
           url: `/api/og?city=${city.slug}`,
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      site: "@roamlive",
+      site: "@nearawayin",
       title: `${city.flagEmoji} Walk ${city.name} — Free 4K Virtual Tour`,
       description: `Explore ${city.name} from your couch. Immersive 4K walking tour with cultural insights. #VirtualTravel #${city.name.replace(/\s+/g, "")}`,
       images: [`/api/og?city=${city.slug}`],
@@ -80,8 +80,8 @@ export default async function CityWalkPage({ params }: Props) {
     embedUrl: `https://www.youtube.com/embed/${featuredVideo?.youtubeId}`,
     publisher: {
       "@type": "Organization",
-      name: "Roam.Live",
-      url: "https://roam.live",
+      name: "Nearaway.in",
+      url: "https://nearaway.in",
     },
   };
 
@@ -90,7 +90,7 @@ export default async function CityWalkPage({ params }: Props) {
     "@type": "TouristAttraction",
     name: city.name,
     description: `Explore ${city.name} virtually with immersive 4K walking tours. ${city.culture.funFact}`,
-    url: `https://roam.live/walk/${city.slug}`,
+    url: `https://nearaway.in/walk/${city.slug}`,
     image: `https://img.youtube.com/vi/${featuredVideo?.youtubeId}/maxresdefault.jpg`,
     address: {
       "@type": "PostalAddress",
@@ -122,7 +122,7 @@ export default async function CityWalkPage({ params }: Props) {
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </Link>
           <Link
@@ -179,7 +179,7 @@ export default async function CityWalkPage({ params }: Props) {
             className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors mb-10"
           >
             <Globe className="w-4 h-4" />
-            Explore {city.name} in Roam.Live
+            Explore {city.name} in Nearaway.in
           </Link>
 
           {/* Culture Grid */}
@@ -321,7 +321,7 @@ export default async function CityWalkPage({ params }: Props) {
           {/* Footer CTA */}
           <div className="mt-12 text-center pb-12">
             <p className="text-white/30 text-sm mb-4">
-              Roam.Live — A window to every place on Earth
+              Nearaway.in — A window to every place on Earth
             </p>
             <div className="flex items-center justify-center gap-5 text-sm">
               <Link href="/" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-medium transition-colors">

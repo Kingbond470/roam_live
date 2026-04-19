@@ -171,7 +171,7 @@ export const useAppStore = create<AppState>()(
       },
     }),
     {
-      name: "roam-store",
+      name: "nearaway-store",
       // Only persist user preferences — not ephemeral UI state
       partialize: (s) => ({
         favoriteSlugs: s.favoriteSlugs,

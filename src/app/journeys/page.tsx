@@ -5,7 +5,7 @@ import { cities } from "@/lib/cities";
 import { journeys } from "@/data/journeys";
 
 export const metadata: Metadata = {
-  title: "Curated City Journeys — Themed Virtual Walking Tours | Roam.Live",
+  title: "Curated City Journeys — Themed Virtual Walking Tours | Nearaway.in",
   description:
     "Follow hand-picked routes across the world's greatest cities. Ancient Empires, Neon After Dark, Street Food Trail — thematic 4K virtual journeys, no passport required.",
   keywords: [
@@ -17,20 +17,20 @@ export const metadata: Metadata = {
     "street food cities tour",
     "4K city journey",
   ],
-  alternates: { canonical: "https://roam.live/journeys" },
+  alternates: { canonical: "https://nearaway.in/journeys" },
   openGraph: {
-    title: "Curated City Journeys | Roam.Live",
+    title: "Curated City Journeys | Nearaway.in",
     description:
       "Follow themed routes across the world's greatest cities — Ancient Empires, Neon After Dark, Street Food Trail, and more.",
     type: "website",
-    url: "https://roam.live/journeys",
-    siteName: "Roam.Live",
-    images: [{ url: "/api/og?type=journeys", width: 1200, height: 630, alt: "Roam.Live City Journeys" }],
+    url: "https://nearaway.in/journeys",
+    siteName: "Nearaway.in",
+    images: [{ url: "/api/og?type=journeys", width: 1200, height: 630, alt: "Nearaway.in City Journeys" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@roamlive",
-    title: "Curated City Journeys | Roam.Live",
+    site: "@nearawayin",
+    title: "Curated City Journeys | Nearaway.in",
     description:
       "Follow themed routes across the world's greatest cities — Ancient Empires, Neon After Dark, Street Food Trail, and more.",
     images: ["/api/og?type=journeys"],
@@ -50,16 +50,16 @@ export default function JourneysPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Roam.Live Curated City Journeys",
+    name: "Nearaway.in Curated City Journeys",
     description: "Themed virtual walking tour routes across the world's greatest cities.",
-    url: "https://roam.live/journeys",
+    url: "https://nearaway.in/journeys",
     numberOfItems: journeys.length,
     itemListElement: journeysWithCities.map((j, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: j.name,
       description: j.tagline,
-      url: `https://roam.live/journeys#${j.id}`,
+      url: `https://nearaway.in/journeys#${j.id}`,
     })),
   };
 
@@ -76,7 +76,7 @@ export default function JourneysPage() {
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </Link>
           <Link
@@ -239,7 +239,7 @@ export default function JourneysPage() {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Globe className="w-4 h-4 text-amber-400" />
             <span className="font-bold tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </div>
           <div className="flex items-center justify-center gap-4 text-white/30 text-sm">

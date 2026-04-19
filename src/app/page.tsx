@@ -25,16 +25,16 @@ export async function generateMetadata({ searchParams }: Props) {
   const titlePrefix = isToday ? `Today's Walk: ${city.name}` : `Walk ${city.name}, ${city.country}`;
 
   return {
-    title: `${titlePrefix} — Roam.Live`,
+    title: `${titlePrefix} — Nearaway.in`,
     description: `Take a virtual 4K walk through ${city.name}. No passport required.`,
     openGraph: {
-      title: `${titlePrefix} on Roam.Live`,
+      title: `${titlePrefix} on Nearaway.in`,
       description: `Virtual 4K walk through ${city.name}, ${city.country}.`,
       images: [`/api/og?city=${city.slug}`],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${titlePrefix} on Roam.Live`,
+      title: `${titlePrefix} on Nearaway.in`,
       images: [`/api/og?city=${city.slug}`],
     },
   };

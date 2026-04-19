@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
   // ── City OG card ──
   if (type === "city" || !type || slug) {
     const city = cities.find((c) => c.slug === slug) ?? {
-      name: "Roam.Live",
+      name: "Nearaway.in",
       country: "A Window to Every Place on Earth",
       flagEmoji: "🌍",
       videos: [],
@@ -60,7 +60,7 @@ export async function GET(req: NextRequest) {
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span style={{ color: "rgba(255,255,255,0.5)", fontSize: 24 }}>{city.country}</span>
-              <span style={{ color: "#f59e0b", fontSize: 20, fontWeight: 700, letterSpacing: "0.04em" }}>Roam.Live</span>
+              <span style={{ color: "#f59e0b", fontSize: 20, fontWeight: 700, letterSpacing: "0.04em" }}>Nearaway.in</span>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ export async function GET(req: NextRequest) {
             {subtitle && (
               <span style={{ fontSize: 20, color: "rgba(255,255,255,0.35)", letterSpacing: "0.02em" }}>{subtitle}</span>
             )}
-            <span style={{ fontSize: 18, color: "#f59e0b", fontWeight: 700, letterSpacing: "0.06em", marginTop: "8px" }}>Roam.Live</span>
+            <span style={{ fontSize: 18, color: "#f59e0b", fontWeight: 700, letterSpacing: "0.06em", marginTop: "8px" }}>Nearaway.in</span>
           </div>
         </div>
       ),
@@ -121,7 +121,7 @@ export async function GET(req: NextRequest) {
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span style={{ color: "rgba(245,158,11,0.8)", fontSize: 22 }}>{countryCities.length} {countryCities.length === 1 ? "city" : "cities"} · {totalVideos} walks</span>
-              <span style={{ color: "#f59e0b", fontSize: 20, fontWeight: 700, letterSpacing: "0.04em" }}>Roam.Live</span>
+              <span style={{ color: "#f59e0b", fontSize: 20, fontWeight: 700, letterSpacing: "0.04em" }}>Nearaway.in</span>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export async function GET(req: NextRequest) {
             <span style={{ fontSize: 68, fontWeight: 700, color: "#ffffff", letterSpacing: "-0.02em", lineHeight: 1 }}>Curated Journeys</span>
             <span style={{ fontSize: 26, color: "rgba(255,255,255,0.45)" }}>5 themed routes · 62 cities · No passport</span>
           </div>
-          <span style={{ fontSize: 18, color: "#f59e0b", fontWeight: 700, letterSpacing: "0.06em", marginTop: "8px" }}>Roam.Live</span>
+          <span style={{ fontSize: 18, color: "#f59e0b", fontWeight: 700, letterSpacing: "0.06em", marginTop: "8px" }}>Nearaway.in</span>
         </div>
       </div>
     ),

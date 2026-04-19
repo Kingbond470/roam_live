@@ -30,12 +30,12 @@ export function ShareButton({ citySlug, cityName, flagEmoji = "" }: Props) {
   const shareUrl =
     typeof window !== "undefined"
       ? `${window.location.origin}/?city=${citySlug}`
-      : `https://roam.live/?city=${citySlug}`;
+      : `https://nearaway.in/?city=${citySlug}`;
 
-  const landingUrl = `https://roam.live/walk/${citySlug}`;
+  const landingUrl = `https://nearaway.in/walk/${citySlug}`;
 
   const twitterText = encodeURIComponent(
-    `${flagEmoji} Just virtually walked through ${cityName} on Roam.Live — no passport required 🌍\n\n#VirtualTravel #${cityName.replace(/\s+/g, "")} #RoamLive`
+    `${flagEmoji} Just virtually walked through ${cityName} on Nearaway.in — no passport required 🌍\n\n#VirtualTravel #${cityName.replace(/\s+/g, "")} #RoamLive`
   );
   const twitterUrl = `https://twitter.com/intent/tweet?text=${twitterText}&url=${encodeURIComponent(landingUrl)}`;
 
@@ -48,7 +48,7 @@ export function ShareButton({ citySlug, cityName, flagEmoji = "" }: Props) {
   const handleNativeShare = async () => {
     if (navigator.share) {
       await navigator.share({
-        title: `Walk ${cityName} on Roam.Live`,
+        title: `Walk ${cityName} on Nearaway.in`,
         text: `${flagEmoji} Take a virtual walk through ${cityName} — no passport required.`,
         url: shareUrl,
       });

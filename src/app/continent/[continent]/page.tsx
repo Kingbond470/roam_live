@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const continentCities = getCitiesByContinent(meta.display === "The Americas" ? "Americas" : meta.display);
   const cityCount = continentCities.length;
 
-  const title = `Virtual City Walks in ${meta.display} — ${cityCount} Cities | Roam.Live`;
+  const title = `Virtual City Walks in ${meta.display} — ${cityCount} Cities | Nearaway.in`;
   return {
     title,
     description: meta.description,
@@ -69,18 +69,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "virtual travel",
       "4K city tour",
     ],
-    alternates: { canonical: `https://roam.live/continent/${continent}` },
+    alternates: { canonical: `https://nearaway.in/continent/${continent}` },
     openGraph: {
       title,
       description: meta.description,
       type: "website",
-      url: `https://roam.live/continent/${continent}`,
-      siteName: "Roam.Live",
+      url: `https://nearaway.in/continent/${continent}`,
+      siteName: "Nearaway.in",
       images: [{ url: `/api/og?type=continent&name=${continent}`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      site: "@roamlive",
+      site: "@nearawayin",
       title,
       description: meta.description,
       images: [`/api/og?type=continent&name=${continent}`],
@@ -110,11 +110,11 @@ export default async function ContinentPage({ params }: Props) {
     "@type": "CollectionPage",
     name: `Virtual City Walks in ${meta.display}`,
     description: meta.description,
-    url: `https://roam.live/continent/${continent}`,
+    url: `https://nearaway.in/continent/${continent}`,
     hasPart: continentCities.map((city) => ({
       "@type": "VideoObject",
       name: `${city.name} 4K Virtual Walk`,
-      url: `https://roam.live/walk/${city.slug}`,
+      url: `https://nearaway.in/walk/${city.slug}`,
     })),
   };
 
@@ -131,7 +131,7 @@ export default async function ContinentPage({ params }: Props) {
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </Link>
           <Link
@@ -326,7 +326,7 @@ export default async function ContinentPage({ params }: Props) {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Globe className="w-4 h-4 text-amber-400" />
             <span className="font-bold tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </div>
           <div className="flex items-center justify-center gap-4 text-white/30 text-sm flex-wrap">

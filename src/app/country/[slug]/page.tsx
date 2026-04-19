@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityNames = countryCities.map((c) => c.name).join(", ");
   const totalVideos = countryCities.reduce((s, c) => s + c.videos.length, 0);
 
-  const title = `Virtual Walking Tours in ${country} — ${countryCities.length} ${countryCities.length === 1 ? "City" : "Cities"} | Roam.Live`;
+  const title = `Virtual Walking Tours in ${country} — ${countryCities.length} ${countryCities.length === 1 ? "City" : "Cities"} | Nearaway.in`;
   const description = `Explore ${country} from your screen with immersive 4K virtual walks. ${countryCities.length > 1 ? `Cities include ${cityNames}.` : `Walk through ${cityNames}.`} ${totalVideos} walks, no passport required.`;
 
   return {
@@ -83,19 +83,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `4K walk ${country}`,
       ...countryCities.map((c) => `${c.name} virtual tour`),
     ],
-    alternates: { canonical: `https://roam.live/country/${slug}` },
+    alternates: { canonical: `https://nearaway.in/country/${slug}` },
     openGraph: {
-      title: `${flag} Virtual Walks in ${country} | Roam.Live`,
+      title: `${flag} Virtual Walks in ${country} | Nearaway.in`,
       description,
       type: "website",
-      url: `https://roam.live/country/${slug}`,
-      siteName: "Roam.Live",
+      url: `https://nearaway.in/country/${slug}`,
+      siteName: "Nearaway.in",
       images: [{ url: `/api/og?type=country&name=${encodeURIComponent(country)}`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      site: "@roamlive",
-      title: `${flag} Virtual Walks in ${country} | Roam.Live`,
+      site: "@nearawayin",
+      title: `${flag} Virtual Walks in ${country} | Nearaway.in`,
       description,
       images: [`/api/og?type=country&name=${encodeURIComponent(country)}`],
     },
@@ -128,11 +128,11 @@ export default async function CountryPage({ params }: Props) {
     "@type": "CollectionPage",
     name: `Virtual Walking Tours in ${country}`,
     description: `Explore ${country} virtually with 4K walking tours of ${countryCities.map((c) => c.name).join(", ")}.`,
-    url: `https://roam.live/country/${slug}`,
+    url: `https://nearaway.in/country/${slug}`,
     hasPart: countryCities.map((city) => ({
       "@type": "VideoObject",
       name: `${city.name} 4K Virtual Walk`,
-      url: `https://roam.live/walk/${city.slug}`,
+      url: `https://nearaway.in/walk/${city.slug}`,
     })),
   };
 
@@ -149,7 +149,7 @@ export default async function CountryPage({ params }: Props) {
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </Link>
           <Link
@@ -310,7 +310,7 @@ export default async function CountryPage({ params }: Props) {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Globe className="w-4 h-4 text-amber-400" />
             <span className="font-bold tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </div>
           <div className="flex items-center justify-center gap-4 text-white/30 text-sm">

@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityB = getCityBySlug(slugB);
   if (!cityA || !cityB) return {};
 
-  const title = `${cityA.name} vs ${cityB.name} — Which City Should You Visit? | Roam.Live`;
+  const title = `${cityA.name} vs ${cityB.name} — Which City Should You Visit? | Nearaway.in`;
   const description = `Compare ${cityA.name} and ${cityB.name} side by side. Culture, food, best seasons, local tips, and immersive 4K virtual walks. No passport required.`;
 
   return {
@@ -72,19 +72,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "virtual travel comparison",
     ],
     alternates: {
-      canonical: `https://roam.live/compare/${pair}`,
+      canonical: `https://nearaway.in/compare/${pair}`,
     },
     openGraph: {
       title,
       description,
       type: "website",
-      url: `https://roam.live/compare/${pair}`,
-      siteName: "Roam.Live",
+      url: `https://nearaway.in/compare/${pair}`,
+      siteName: "Nearaway.in",
       images: [{ url: `/api/og?city=${cityA.slug}`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      site: "@roamlive",
+      site: "@nearawayin",
       title: `${cityA.flagEmoji} ${cityA.name} vs ${cityB.flagEmoji} ${cityB.name} — Compare Cities`,
       description,
       images: [`/api/og?city=${cityA.slug}`],
@@ -127,7 +127,7 @@ export default async function ComparePage({ params }: Props) {
     "@type": "WebPage",
     name: `${cityA.name} vs ${cityB.name} — City Comparison`,
     description: `Compare ${cityA.name} and ${cityB.name}: culture, food, climate, and virtual walking tours.`,
-    url: `https://roam.live/compare/${pair}`,
+    url: `https://nearaway.in/compare/${pair}`,
     mainEntity: [
       {
         "@type": "TouristAttraction",
@@ -186,7 +186,7 @@ export default async function ComparePage({ params }: Props) {
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">
-              Roam<span className="text-amber-400">.Live</span>
+              Nearaway<span className="text-amber-400">.in</span>
             </span>
           </Link>
           <Link
@@ -236,7 +236,7 @@ export default async function ComparePage({ params }: Props) {
                   href={`/?city=${city.slug}`}
                   className="block text-center py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium hover:bg-amber-500/20 transition-colors"
                 >
-                  Explore {city.name} on Roam.Live →
+                  Explore {city.name} on Nearaway.in →
                 </Link>
               </div>
             ))}
@@ -364,7 +364,7 @@ export default async function ComparePage({ params }: Props) {
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
             >
               <Globe className="w-4 h-4" />
-              Open in Roam.Live
+              Open in Nearaway.in
             </Link>
           </div>
 

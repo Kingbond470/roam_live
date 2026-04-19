@@ -12,7 +12,7 @@ export default function NotFound() {
         <Link href="/" className="flex items-center gap-2">
           <Globe className="w-5 h-5 text-amber-400" />
           <span className="font-bold text-lg tracking-tight">
-            Roam<span className="text-amber-400">.Live</span>
+            Nearaway<span className="text-amber-400">.in</span>
           </span>
         </Link>
         <Link
