@@ -441,129 +441,128 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
         {phase === "idle" && (
           <motion.div
             key="globe-bottombar"
-            className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-safe"
+            className="absolute inset-x-0 bottom-0 w-full flex flex-col pb-safe"
             style={{ zIndex: 15, pointerEvents: "none" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            {/* Action row: Shuffle · Discover · Journeys · Stats */}
-            <div className="flex items-center gap-2 mb-3 overflow-x-auto px-4" style={{ pointerEvents: "auto", scrollbarWidth: "none" }}>
-              <button
-                onClick={() => selectRandomCity(cities)}
-                className="glass flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white/50 hover:text-white transition-colors text-xs"
-                title="Random city (R)"
-              >
-                <Shuffle className="w-3 h-3" />
-                Shuffle
-              </button>
+            {/* Action row — full-width scrollable so all buttons are reachable on narrow screens */}
+            <div
+              className="w-full overflow-x-auto mb-2.5"
+              style={{ pointerEvents: "auto", scrollbarWidth: "none", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
+            >
+              <div className="flex items-center gap-2 px-4 w-max mx-auto whitespace-nowrap">
+                <button
+                  onClick={() => selectRandomCity(cities)}
+                  className="glass flex items-center gap-1.5 px-3 py-2 rounded-full text-white/50 hover:text-white transition-colors text-xs"
+                  title="Random city (R)"
+                >
+                  <Shuffle className="w-3 h-3" />
+                  Shuffle
+                </button>
 
-              <button
-                onClick={handleToggleDiscover}
-                className={`glass flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-xs ${
-                  discoverMode ? "text-amber-400" : "text-white/50 hover:text-white"
-                }`}
-                title={discoverMode ? "Stop auto-cycling" : "Auto-cycle cities every 30s"}
-              >
-                {discoverMode ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
-                {discoverMode ? "Stop" : "Discover"}
-              </button>
+                <button
+                  onClick={handleToggleDiscover}
+                  className={`glass flex items-center gap-1.5 px-3 py-2 rounded-full transition-colors text-xs ${
+                    discoverMode ? "text-amber-400" : "text-white/50 hover:text-white"
+                  }`}
+                >
+                  {discoverMode ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                  {discoverMode ? "Stop" : "Discover"}
+                </button>
 
-              <button
-                onClick={() => setJourneyOpen(true)}
-                className={`glass flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-xs max-w-[120px] ${
-                  activePath ? "text-amber-400" : "text-white/50 hover:text-white"
-                }`}
-                title="Thematic Journeys"
-              >
-                {activePath ? <span>{activePath.emoji}</span> : <Compass className="w-3 h-3" />}
-                <span className="truncate">{activePath ? activePath.name : "Journeys"}</span>
-              </button>
+                <button
+                  onClick={() => setJourneyOpen(true)}
+                  className={`glass flex items-center gap-1.5 px-3 py-2 rounded-full transition-colors text-xs max-w-[130px] ${
+                    activePath ? "text-amber-400" : "text-white/50 hover:text-white"
+                  }`}
+                >
+                  {activePath ? <span>{activePath.emoji}</span> : <Compass className="w-3 h-3" />}
+                  <span className="truncate">{activePath ? activePath.name : "Journeys"}</span>
+                </button>
 
-              {/* Streak + explored counter (shown once user has walked at least 1 city) */}
-              {visitedSlugs.length > 0 && (
-                <div className="glass flex items-center gap-2.5 px-3 py-1.5 rounded-full text-xs">
-                  {streak >= 2 && (
-                    <span className="flex items-center gap-1 text-orange-400 font-semibold">
-                      <Flame className="w-3 h-3" />
-                      {streak}
+                {visitedSlugs.length > 0 && (
+                  <div className="glass flex items-center gap-2 px-3 py-2 rounded-full text-xs">
+                    {streak >= 2 && (
+                      <>
+                        <span className="flex items-center gap-1 text-orange-400 font-semibold">
+                          <Flame className="w-3 h-3" />
+                          {streak}
+                        </span>
+                        <span className="w-px h-3 bg-white/15" />
+                      </>
+                    )}
+                    <span className="flex items-center gap-1 text-white/50">
+                      <MapPin className="w-3 h-3" />
+                      {visitedSlugs.length}/{cities.length}
                     </span>
-                  )}
-                  {streak >= 2 && <span className="w-px h-3 bg-white/15" />}
-                  <span className="flex items-center gap-1 text-white/50">
-                    <MapPin className="w-3 h-3" />
-                    {visitedSlugs.length}/{cities.length}
-                  </span>
-                </div>
-              )}
+                  </div>
+                )}
+              </div>
             </div>
 
-            {/* Continent + saved filter pills */}
-            <div className="relative mb-4 w-full" style={{ pointerEvents: "auto" }}>
-              {/* Left-edge fade hint */}
-              <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-[#050508] to-transparent z-10" />
-              {/* Right-edge fade hint */}
-              <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-[#050508] to-transparent z-10" />
-            <div
-              className="flex items-center gap-1.5 px-4 overflow-x-auto"
-              style={{ scrollbarWidth: "none" }}
-            >
-              <button
-                onClick={() => setTagFilter(null)}
-                className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                  activeTag === null
-                    ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
-                    : "text-white/30 hover:text-white/60 border border-white/10"
-                }`}
+            {/* Filter pills — full-width scrollable */}
+            <div className="relative w-full mb-4" style={{ pointerEvents: "auto" }}>
+              <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#050508] to-transparent z-10" />
+              <div
+                className="w-full overflow-x-auto flex items-center gap-1.5 px-4"
+                style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
               >
-                All
-              </button>
-
-              <button
-                onClick={() => setTagFilter(activeTag === "__favorites__" ? null : "__favorites__")}
-                className={`shrink-0 flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                  activeTag === "__favorites__"
-                    ? "bg-rose-500/20 text-rose-400 border border-rose-500/40"
-                    : "text-white/30 hover:text-white/60 border border-white/10"
-                }`}
-              >
-                <Heart className="w-3 h-3" />
-                Saved
-              </button>
-
-              {allContinents.map((continent) => (
                 <button
-                  key={continent}
-                  onClick={() => setTagFilter(activeTag === continent ? null : continent)}
-                  className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                    activeTag === continent
+                  onClick={() => setTagFilter(null)}
+                  className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+                    activeTag === null
                       ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
                       : "text-white/30 hover:text-white/60 border border-white/10"
                   }`}
                 >
-                  {continent}
+                  All
                 </button>
-              ))}
 
-              {/* Divider */}
-              <span className="shrink-0 w-px h-4 bg-white/10 mx-0.5" />
-
-              {/* Vibe filter pills */}
-              {VIBE_PILLS.map(({ label, tag }) => (
                 <button
-                  key={tag}
-                  onClick={() => setTagFilter(activeTag === tag ? null : tag)}
-                  className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                    activeTag === tag
-                      ? "bg-violet-500/20 text-violet-300 border border-violet-500/40"
+                  onClick={() => setTagFilter(activeTag === "__favorites__" ? null : "__favorites__")}
+                  className={`shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+                    activeTag === "__favorites__"
+                      ? "bg-rose-500/20 text-rose-400 border border-rose-500/40"
                       : "text-white/30 hover:text-white/60 border border-white/10"
                   }`}
                 >
-                  {label}
+                  <Heart className="w-3 h-3" />
+                  Saved
                 </button>
-              ))}
-            </div>
+
+                {allContinents.map((continent) => (
+                  <button
+                    key={continent}
+                    onClick={() => setTagFilter(activeTag === continent ? null : continent)}
+                    className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+                      activeTag === continent
+                        ? "bg-amber-500/20 text-amber-400 border border-amber-500/40"
+                        : "text-white/30 hover:text-white/60 border border-white/10"
+                    }`}
+                  >
+                    {continent}
+                  </button>
+                ))}
+
+                <span className="shrink-0 w-px h-4 bg-white/10 mx-0.5" />
+
+                {VIBE_PILLS.map(({ label, tag }) => (
+                  <button
+                    key={tag}
+                    onClick={() => setTagFilter(activeTag === tag ? null : tag)}
+                    className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+                      activeTag === tag
+                        ? "bg-violet-500/20 text-violet-300 border border-violet-500/40"
+                        : "text-white/30 hover:text-white/60 border border-white/10"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
