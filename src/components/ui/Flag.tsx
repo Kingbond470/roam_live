@@ -1,12 +1,22 @@
+"use client";
+
+import { useState } from "react";
+
 interface Props {
   countryCode: string;
+  flagEmoji: string;
   size?: number;
   className?: string;
 }
 
-export function Flag({ countryCode, size = 20, className = "" }: Props) {
+export function Flag({ countryCode, flagEmoji, size = 20, className = "" }: Props) {
+  const [failed, setFailed] = useState(false);
   const code = countryCode.toLowerCase();
-  // Using <img> directly — flagcdn.com is external, Next/Image doesn't support srcSet shorthand
+
+  if (failed) {
+    return <span className={`leading-none flex-shrink-0 ${className}`}>{flagEmoji}</span>;
+  }
+
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
@@ -17,6 +27,7 @@ export function Flag({ countryCode, size = 20, className = "" }: Props) {
       alt={countryCode}
       className={`inline-block rounded-[2px] object-cover flex-shrink-0 ${className}`}
       loading="lazy"
+      onError={() => setFailed(true)}
     />
   );
 }

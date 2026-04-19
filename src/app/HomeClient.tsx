@@ -26,6 +26,7 @@ import { PWAInstallPrompt } from "@/components/onboarding/PWAInstallPrompt";
 import { JourneyPanel } from "@/components/journey/JourneyPanel";
 import { MilestoneToast } from "@/components/onboarding/MilestoneToast";
 import { useWalkStats } from "@/hooks/useWalkStats";
+import { Flag } from "@/components/ui/Flag";
 
 // Vibe filter pills — map display label → city tag value
 const VIBE_PILLS = [
@@ -391,7 +392,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
             <div className="flex items-center gap-2">
               <Globe className="w-5 h-5 text-amber-400" />
               <span className="text-white font-bold text-lg tracking-tight">
-                Nearaway<span className="text-amber-400">.in</span>
+                Near<span className="text-amber-400">away</span>
               </span>
             </div>
 
@@ -419,7 +420,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
                 className="glass flex items-center gap-2 px-3 py-2 rounded-full text-white/60 hover:text-white transition-colors"
                 title={`Today's walk: ${cityOfTheDay.name}`}
               >
-                <span className="text-base">{cityOfTheDay.flagEmoji}</span>
+                <Flag countryCode={cityOfTheDay.countryCode} flagEmoji={cityOfTheDay.flagEmoji} size={16} />
                 <span className="text-xs">{cityOfTheDay.name}</span>
               </button>
 
@@ -471,13 +472,13 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
 
               <button
                 onClick={() => setJourneyOpen(true)}
-                className={`glass flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-xs ${
+                className={`glass flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-xs max-w-[120px] ${
                   activePath ? "text-amber-400" : "text-white/50 hover:text-white"
                 }`}
                 title="Thematic Journeys"
               >
-                <Compass className="w-3 h-3" />
-                {activePath ? activePath.name : "Journeys"}
+                {activePath ? <span>{activePath.emoji}</span> : <Compass className="w-3 h-3" />}
+                <span className="truncate">{activePath ? activePath.name : "Journeys"}</span>
               </button>
 
               {/* Streak + explored counter (shown once user has walked at least 1 city) */}
@@ -619,7 +620,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
                   onClick={() => { setShowSuggestions(false); useAppStore.getState().selectCity(city); }}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/8 hover:bg-white/15 border border-white/10 hover:border-amber-500/40 transition-colors text-sm text-white/70 hover:text-white"
                 >
-                  <span>{city.flagEmoji}</span>
+                  <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={14} />
                   <span>{city.name}</span>
                 </button>
               ))}

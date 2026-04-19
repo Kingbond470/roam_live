@@ -113,7 +113,7 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
                 }`}
               >
                 <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "Georgia, serif" }}>
-                  <Flag countryCode={cityA.countryCode} size={16} />
+                  <Flag countryCode={cityA.countryCode} flagEmoji={cityA.flagEmoji} size={16} />
                   {cityA.name}
                 </p>
                 <p className="text-white/50 text-[10px] sm:text-xs">{cityA.country}</p>
@@ -145,7 +145,7 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
                 }`}
               >
                 <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "Georgia, serif" }}>
-                  <Flag countryCode={cityB.countryCode} size={16} />
+                  <Flag countryCode={cityB.countryCode} flagEmoji={cityB.flagEmoji} size={16} />
                   {cityB.name}
                 </p>
                 <p className="text-white/50 text-[10px] sm:text-xs">{cityB.country}</p>

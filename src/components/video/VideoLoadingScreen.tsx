@@ -39,7 +39,7 @@ export function VideoLoadingScreen({ city, isVisible }: Props) {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <Flag countryCode={city.countryCode} size={80} className="rounded-md shadow-2xl" />
+            <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={80} className="rounded-md shadow-2xl" />
           </motion.div>
 
           {/* City name */}

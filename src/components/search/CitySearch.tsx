@@ -140,7 +140,7 @@ export function CitySearch({ cities, isOpen, onClose }: Props) {
                             <div className="flex items-end justify-between gap-1">
                               <div className="min-w-0">
                                 <p className="text-white font-semibold text-sm leading-tight truncate flex items-center gap-1.5">
-                                  <Flag countryCode={city.countryCode} size={14} />
+                                  <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={14} />
                                   {city.name}
                                 </p>
                                 <p className="text-white/50 text-xs truncate">{city.country}</p>

@@ -21,7 +21,7 @@ export default function Error({ error, reset }: Props) {
         <Link href="/" className="flex items-center gap-2">
           <Globe className="w-5 h-5 text-amber-400" />
           <span className="font-bold text-lg tracking-tight">
-            Nearaway<span className="text-amber-400">.in</span>
+            Near<span className="text-amber-400">away</span>
           </span>
         </Link>
         <Link

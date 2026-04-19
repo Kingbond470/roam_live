@@ -105,7 +105,7 @@ export function VideoSwitcher({ city, activeVideoId, isOpen, onClose, onSelect }
             <div className="flex items-center justify-between px-5 py-3 border-b border-white/6">
               <div>
                 <p className="font-bold text-white flex items-center gap-2">
-                  <Flag countryCode={city.countryCode} size={18} />
+                  <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={18} />
                   {city.name}
                 </p>
                 <p className="text-white/40 text-xs mt-0.5">

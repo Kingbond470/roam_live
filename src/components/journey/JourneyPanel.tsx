@@ -143,7 +143,7 @@ export function JourneyPanel({ cities, isOpen, onClose }: Props) {
                                 key={city.slug}
                                 className="flex items-center gap-1 text-xs text-white/50"
                               >
-                                <Flag countryCode={city.countryCode} size={14} />
+                                <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={14} />
                                 <span>{city.name}</span>
                                 {i < pathCities.length - 1 && (
                                   <span className="text-white/15 ml-0.5">→</span>
