@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Globe, ArrowLeft, MapPin, Film, Utensils, Clock } from "lucide-react";
+import { Flag } from "@/components/ui/Flag";
 import { cities, getCitiesByCountry, getUniqueCountries, countryToSlug } from "@/lib/cities";
 
 interface Props {
@@ -173,7 +174,9 @@ export default async function CountryPage({ params }: Props) {
           <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold mb-4">
             Virtual Walks
           </p>
-          <div className="text-6xl sm:text-8xl mb-4">{flagEmoji}</div>
+          <div className="mb-4 flex justify-center">
+            <Flag countryCode={countryCities[0].countryCode} flagEmoji={flagEmoji} size={96} className="rounded-md shadow-lg" />
+          </div>
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-3">{country}</h1>
           {COUNTRY_TAGLINES[country] && (
             <p className="text-white/50 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-4 italic">
@@ -297,7 +300,7 @@ export default async function CountryPage({ params }: Props) {
                   href={`/country/${c.slug}`}
                   className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-white/20 text-sm text-white/50 hover:text-white transition-colors"
                 >
-                  <span>{c.flagEmoji}</span>
+                  <Flag countryCode={cities.find(city => city.country === c.country)?.countryCode ?? ""} flagEmoji={c.flagEmoji} size={16} />
                   <span>{c.country}</span>
                 </Link>
               ))}

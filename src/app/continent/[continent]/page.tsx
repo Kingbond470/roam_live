@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Globe, ArrowLeft, MapPin, Film, Compass } from "lucide-react";
+import { Flag } from "@/components/ui/Flag";
 import { cities, getCitiesByContinent, countryToSlug } from "@/lib/cities";
 import { journeys } from "@/data/journeys";
 
@@ -202,7 +203,7 @@ export default async function ContinentPage({ params }: Props) {
                 href={`/walk/${city.slug}`}
                 className="group flex items-center gap-3 rounded-2xl bg-white/[0.03] border border-white/8 p-4 hover:border-amber-500/30 hover:bg-amber-500/5 transition-colors"
               >
-                <span className="text-3xl leading-none">{city.flagEmoji}</span>
+                <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={28} />
                 <div className="flex-1 min-w-0">
                   <p className="font-semibold text-white group-hover:text-amber-300 transition-colors truncate">
                     {city.name}
@@ -274,7 +275,7 @@ export default async function ContinentPage({ params }: Props) {
                     href={`/country/${countryToSlug(country)}`}
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/4 border border-white/8 hover:border-amber-500/30 hover:bg-amber-500/5 text-sm text-white/60 hover:text-white transition-colors"
                   >
-                    <span>{sample.flagEmoji}</span>
+                    <Flag countryCode={sample.countryCode} flagEmoji={sample.flagEmoji} size={16} />
                     <span>{country}</span>
                     <span className="text-white/25">
                       {continentCities.filter((c) => c.country === country).length}

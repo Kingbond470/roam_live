@@ -5,6 +5,7 @@ import { cities, getCityBySlug } from "@/lib/cities";
 import { getFeaturedVideo } from "@/lib/utils";
 import { Globe, ArrowLeft, MapPin, Clock, Utensils, Lightbulb, Star, Landmark } from "lucide-react";
 import { ShareButton } from "@/components/hud/ShareButton";
+import { Flag } from "@/components/ui/Flag";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -161,7 +162,7 @@ export default async function CityWalkPage({ params }: Props) {
         {/* City Header */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div className="flex items-start gap-3 sm:gap-5 mb-6">
-            <span className="text-4xl sm:text-6xl leading-none mt-1">{city.flagEmoji}</span>
+            <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={64} className="mt-1 rounded-md" />
             <div>
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name}</h1>
               <div className="flex items-center gap-2 text-white/50 text-sm">
@@ -179,7 +180,7 @@ export default async function CityWalkPage({ params }: Props) {
             className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors mb-10"
           >
             <Globe className="w-4 h-4" />
-            Explore {city.name} in Nearaway.in
+            Explore {city.name} on Nearaway
           </Link>
 
           {/* Culture Grid */}
@@ -311,7 +312,7 @@ export default async function CityWalkPage({ params }: Props) {
                     href={`/walk/${c.slug}`}
                     className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-white/20 text-sm text-white/60 hover:text-white transition-colors"
                   >
-                    <span>{c.flagEmoji}</span>
+                    <Flag countryCode={c.countryCode} flagEmoji={c.flagEmoji} size={16} />
                     <span>{c.name}</span>
                   </Link>
                 ))}

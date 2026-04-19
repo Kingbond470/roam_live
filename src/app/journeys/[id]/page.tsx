@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Globe, ArrowLeft, MapPin, Utensils, Star, Compass } from "lucide-react";
+import { Flag } from "@/components/ui/Flag";
 import { cities } from "@/lib/cities";
 import { journeys } from "@/data/journeys";
 
@@ -192,7 +193,7 @@ export default async function JourneyDetailPage({ params }: Props) {
                     style={{ borderColor: journey.accentColor + "20" }}
                   >
                     <div className="flex items-start gap-4 mb-3">
-                      <span className="text-4xl leading-none flex-shrink-0">{city.flagEmoji}</span>
+                      <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={40} className="flex-shrink-0 rounded-sm" />
                       <div className="flex-1 min-w-0">
                         <h2 className="text-xl font-bold text-white group-hover:text-amber-300 transition-colors">
                           {city.name}
@@ -262,7 +263,7 @@ export default async function JourneyDetailPage({ params }: Props) {
                   style={{ background: journey.accentColor + "0a", borderColor: journey.accentColor + "20" }}
                 >
                   <p className="text-xs font-semibold mb-1.5" style={{ color: journey.accentColor + "cc" }}>
-                    {city.flagEmoji} {city.name}
+                    <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={12} className="inline-block mr-1" /> {city.name}
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed">{city.culture.localTip}</p>
                 </div>

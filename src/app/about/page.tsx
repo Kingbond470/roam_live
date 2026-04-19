@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Globe, ArrowLeft, MapPin, Film, Compass, SplitSquareHorizontal, BookOpen, Heart } from "lucide-react";
 import { cities } from "@/lib/cities";
+import { Flag } from "@/components/ui/Flag";
 
 export const metadata: Metadata = {
   title: "About Nearaway.in — Free 4K Virtual City Walks, No Passport",
@@ -288,7 +289,7 @@ export default function AboutPage() {
                       href={`/?city=${city.slug}`}
                       className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-amber-500/30 hover:bg-amber-500/5 text-sm text-white/60 hover:text-white transition-colors"
                     >
-                      <span>{city.flagEmoji}</span>
+                      <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={16} />
                       <span>{city.name}</span>
                     </Link>
                   ))}

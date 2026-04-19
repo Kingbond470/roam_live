@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Globe, ArrowLeft, MapPin } from "lucide-react";
+import { Flag } from "@/components/ui/Flag";
 import { cities } from "@/lib/cities";
 import { journeys } from "@/data/journeys";
 
@@ -183,7 +184,7 @@ export default function JourneysPage() {
                         href={`/walk/${city.slug}`}
                         className="group flex items-center gap-3 flex-1 py-1 hover:opacity-80 transition-opacity"
                       >
-                        <span className="text-xl leading-none">{city.flagEmoji}</span>
+                        <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={20} className="flex-shrink-0 rounded-sm" />
                         <div className="flex-1 min-w-0">
                           <span className="font-semibold text-white group-hover:text-amber-300 transition-colors">
                             {city.name}
