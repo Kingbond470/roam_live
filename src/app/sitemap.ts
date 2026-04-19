@@ -1,54 +1,62 @@
 import { MetadataRoute } from "next";
 import { cities, getUniqueCountries } from "@/lib/cities";
 import { journeys } from "@/data/journeys";
+import { getFeaturedVideo } from "@/lib/utils";
 
+const BASE = "https://nearaway.in";
 const CONTINENTS = ["asia", "europe", "americas", "africa", "oceania"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://nearaway.in";
   const now = new Date();
 
   // Static pages
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: base,               lastModified: now, changeFrequency: "daily",  priority: 1.0 },
-    { url: `${base}/about`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/journeys`, lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
+    { url: BASE,                  lastModified: now, changeFrequency: "daily",   priority: 1.0 },
+    { url: `${BASE}/journeys`,    lastModified: now, changeFrequency: "weekly",   priority: 0.9 },
+    { url: `${BASE}/about`,       lastModified: now, changeFrequency: "monthly",  priority: 0.6 },
   ];
 
-  // Individual journey pages (5)
+  // Journey pages
   const journeyRoutes: MetadataRoute.Sitemap = journeys.map((j) => ({
-    url: `${base}/journeys/${j.id}`,
+    url: `${BASE}/journeys/${j.id}`,
     lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.75,
-  }));
-
-  // Continent pages (5)
-  const continentRoutes: MetadataRoute.Sitemap = CONTINENTS.map((c) => ({
-    url: `${base}/continent/${c}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.85,
-  }));
-
-  // Country pages (39)
-  const countryRoutes: MetadataRoute.Sitemap = getUniqueCountries().map(({ slug }) => ({
-    url: `${base}/country/${slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.75,
-  }));
-
-  // City walk pages (62)
-  const cityRoutes: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${base}/walk/${city.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
-  // All compare pairs: same-country pairs + top curated cross-country pairs
-  // Mirrors generateStaticParams in compare/[pair]/page.tsx exactly
+  // Continent pages
+  const continentRoutes: MetadataRoute.Sitemap = CONTINENTS.map((c) => ({
+    url: `${BASE}/continent/${c}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  // Country pages
+  const countryRoutes: MetadataRoute.Sitemap = getUniqueCountries().map(({ slug }) => ({
+    url: `${BASE}/country/${slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.75,
+  }));
+
+  // City walk pages — include YouTube thumbnail as image for Google Image/Video indexing
+  const cityRoutes: MetadataRoute.Sitemap = cities.map((city) => {
+    const featured = getFeaturedVideo(city);
+    const thumbnailUrl = featured
+      ? `https://img.youtube.com/vi/${featured.youtubeId}/maxresdefault.jpg`
+      : undefined;
+
+    return {
+      url: `${BASE}/walk/${city.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+      images: thumbnailUrl ? [thumbnailUrl] : undefined,
+    };
+  });
+
+  // Compare pages — same-country + curated cross-country pairs
   const comparePairs = new Set<string>();
 
   const byCountry: Record<string, string[]> = {};
@@ -80,10 +88,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   const compareRoutes: MetadataRoute.Sitemap = [...comparePairs].map((pair) => ({
-    url: `${base}/compare/${pair}`,
+    url: `${BASE}/compare/${pair}`,
     lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.6,
+    changeFrequency: "monthly" as const,
+    priority: 0.55,
   }));
 
   return [

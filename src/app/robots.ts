@@ -9,6 +9,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://nearaway.in/sitemap.xml",
+    sitemap: [
+      "https://nearaway.in/sitemap.xml",
+      "https://www.nearaway.in/sitemap.xml",
+    ],
+    host: "https://nearaway.in",
   };
 }

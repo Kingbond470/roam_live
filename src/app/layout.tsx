@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     description: "Immersive 4K virtual walks across 62 cities. No passport required.",
     images: ["/api/og"],
   },
+  alternates: {
+    canonical: "https://nearaway.in",
+  },
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
