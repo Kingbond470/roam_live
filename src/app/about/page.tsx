@@ -91,7 +91,7 @@ export default function AboutPage() {
   }));
 
   return (
-    <div className="min-h-full overflow-y-auto bg-[#050508] text-white">
+    <div className="h-full overflow-y-auto bg-[#050508] text-white">
       {/* Nav */}
       <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
         <Link href="/" className="flex items-center gap-2">
