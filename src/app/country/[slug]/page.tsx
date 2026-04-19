@@ -235,7 +235,7 @@ export default async function CountryPage({ params }: Props) {
                       <span>{city.culture.bestSeason}</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-400/70 text-xs bg-amber-500/10 border border-amber-500/20 rounded-full px-2.5 py-1">
+                  <div className="flex items-center gap-1 text-amber-400/70 text-xs bg-amber-500/10 border border-amber-500/20 rounded-full px-2.5 py-1 whitespace-nowrap flex-shrink-0">
                     <Film className="w-3 h-3" />
                     <span>{city.videos.length} walk{city.videos.length !== 1 ? "s" : ""}</span>
                   </div>

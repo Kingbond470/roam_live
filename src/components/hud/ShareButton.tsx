@@ -35,7 +35,7 @@ export function ShareButton({ citySlug, cityName, flagEmoji = "" }: Props) {
   const landingUrl = `https://nearaway.in/walk/${citySlug}`;
 
   const twitterText = encodeURIComponent(
-    `${flagEmoji} Just virtually walked through ${cityName} on Nearaway.in — no passport required 🌍\n\n#VirtualTravel #${cityName.replace(/\s+/g, "")} #RoamLive`
+    `${flagEmoji} Just virtually walked through ${cityName} on Nearaway.in — no passport required 🌍\n\n#VirtualTravel #${cityName.replace(/\s+/g, "")} #Nearaway`
   );
   const twitterUrl = `https://twitter.com/intent/tweet?text=${twitterText}&url=${encodeURIComponent(landingUrl)}`;
 

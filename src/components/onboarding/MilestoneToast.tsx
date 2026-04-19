@@ -27,7 +27,7 @@ export function MilestoneToast({
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[70] pointer-events-auto"
+          className="fixed bottom-40 left-1/2 -translate-x-1/2 z-[70] pointer-events-auto"
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 10, scale: 0.95 }}

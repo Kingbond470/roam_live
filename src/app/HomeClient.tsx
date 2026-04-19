@@ -449,7 +449,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             {/* Action row: Shuffle · Discover · Journeys · Stats */}
-            <div className="flex items-center gap-2 mb-3" style={{ pointerEvents: "auto" }}>
+            <div className="flex items-center gap-2 mb-3 overflow-x-auto px-4" style={{ pointerEvents: "auto", scrollbarWidth: "none" }}>
               <button
                 onClick={() => selectRandomCity(cities)}
                 className="glass flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white/50 hover:text-white transition-colors text-xs"
@@ -500,7 +500,9 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
             </div>
 
             {/* Continent + saved filter pills */}
-            <div className="relative mb-4" style={{ pointerEvents: "auto" }}>
+            <div className="relative mb-4 w-full" style={{ pointerEvents: "auto" }}>
+              {/* Left-edge fade hint */}
+              <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-[#050508] to-transparent z-10" />
               {/* Right-edge fade hint */}
               <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-[#050508] to-transparent z-10" />
             <div
