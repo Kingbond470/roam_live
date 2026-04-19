@@ -3,6 +3,53 @@ import { getCityOfTheDay } from "@/lib/cityOfTheDay";
 import { journeys } from "@/data/journeys";
 import { HomeClient } from "./HomeClient";
 
+const homeFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is Nearaway?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nearaway is a free virtual travel platform that lets you explore cities around the world through immersive 4K walking tours. No account or passport required — just open the globe and start walking.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How many cities can I virtually visit on Nearaway?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `Nearaway features ${cities.length} cities across 5 continents — Asia, Europe, the Americas, Africa, and Oceania — with multiple 4K walks per city covering different times of day.`,
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Nearaway free to use?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Nearaway is completely free. No sign-up, no subscription, no downloads. Open nearaway.in in any browser and start exploring instantly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are Journeys on Nearaway?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `Journeys are curated, themed routes connecting multiple cities — for example Ancient Empires, Neon After Dark, or Street Food Trail. Nearaway has ${journeys.length} journeys that guide you through cities connected by a common theme.`,
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I compare two cities side by side?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Nearaway has a split-screen compare mode that lets you watch two different city walks simultaneously, side by side, to compare culture, atmosphere, and vibe.",
+      },
+    },
+  ],
+};
+
 const VALID_CONTINENTS = new Set(["Asia", "Europe", "Americas", "Africa", "Oceania"]);
 
 interface Props {
@@ -50,11 +97,17 @@ export default async function HomePage({ searchParams }: Props) {
     ? params.continent
     : null;
   return (
-    <HomeClient
-      cities={cities}
-      initialCity={initialCity}
-      initialJourney={initialJourney}
-      initialContinent={initialContinent}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }}
+      />
+      <HomeClient
+        cities={cities}
+        initialCity={initialCity}
+        initialJourney={initialJourney}
+        initialContinent={initialContinent}
+      />
+    </>
   );
 }
