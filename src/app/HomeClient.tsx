@@ -84,6 +84,8 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
 
   // Walk stats: streak, visited cities, milestones
   const { visitedSlugs, streak, markVisited, newlyCompletedJourney, clearCompletedJourney } = useWalkStats();
+  const [dismissedMilestones, setDismissedMilestones] = useState<number[]>([]);
+  const dismissMilestone = (count: number) => setDismissedMilestones((prev) => [...prev, count]);
 
   // Post-walk suggestions
   const lastWatchedRef = useRef<City | null>(null);
@@ -644,27 +646,27 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
 
       {/* ── Cities explored milestone toasts ── */}
       <MilestoneToast
-        visible={visitedSlugs.length === 1}
+        visible={visitedSlugs.length === 1 && !dismissedMilestones.includes(1)}
         emoji="🌍"
         title="First walk complete!"
         subtitle="You've started your virtual adventure. Keep exploring."
-        onDismiss={() => {}}
+        onDismiss={() => dismissMilestone(1)}
         autoDismissMs={5000}
       />
       <MilestoneToast
-        visible={visitedSlugs.length === 10}
+        visible={visitedSlugs.length === 10 && !dismissedMilestones.includes(10)}
         emoji="🔥"
         title="10 cities explored!"
         subtitle="You're a seasoned virtual traveller. The globe awaits."
-        onDismiss={() => {}}
+        onDismiss={() => dismissMilestone(10)}
         autoDismissMs={5000}
       />
       <MilestoneToast
-        visible={visitedSlugs.length === 25}
+        visible={visitedSlugs.length === 25 && !dismissedMilestones.includes(25)}
         emoji="✈️"
         title="25 cities — world explorer!"
         subtitle="Nearly halfway around Nearaway.in. Impressive."
-        onDismiss={() => {}}
+        onDismiss={() => dismissMilestone(25)}
         autoDismissMs={5000}
       />
     </div>
