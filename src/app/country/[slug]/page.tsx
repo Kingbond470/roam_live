@@ -137,11 +137,25 @@ export default async function CountryPage({ params }: Props) {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Nearaway", item: "https://nearaway.in" },
+      { "@type": "ListItem", position: 2, name: continent, item: `https://nearaway.in/continent/${continentSlug}` },
+      { "@type": "ListItem", position: 3, name: country, item: `https://nearaway.in/country/${slug}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div className="h-full overflow-y-auto bg-[#050508] text-white">

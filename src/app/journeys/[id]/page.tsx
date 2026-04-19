@@ -84,11 +84,25 @@ export default async function JourneyDetailPage({ params }: Props) {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Nearaway", item: "https://nearaway.in" },
+      { "@type": "ListItem", position: 2, name: "Journeys", item: "https://nearaway.in/journeys" },
+      { "@type": "ListItem", position: 3, name: journey.name, item: `https://nearaway.in/journeys/${id}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div className="h-full overflow-y-auto bg-[#050508] text-white">

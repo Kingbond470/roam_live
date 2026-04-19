@@ -5,11 +5,14 @@ import { cities } from "@/lib/cities";
 import { Flag } from "@/components/ui/Flag";
 
 export const metadata: Metadata = {
-  title: "About Nearaway.in — Free 4K Virtual City Walks, No Passport",
+  title: "About Nearaway — Free 4K Virtual City Walks, No Passport",
   description:
-    "Nearaway.in brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 62 cities, 5 continents, no passport required.",
+    "Nearaway brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 62 cities, 5 continents, no passport required.",
+  alternates: {
+    canonical: "https://nearaway.in/about",
+  },
   openGraph: {
-    title: "About Nearaway.in — A Window to Every Place on Earth",
+    title: "About Nearaway — A Window to Every Place on Earth",
     description: "Explore 62 cities across 5 continents with 4K walks and deep cultural insight.",
     url: "https://nearaway.in/about",
     siteName: "Nearaway.in",

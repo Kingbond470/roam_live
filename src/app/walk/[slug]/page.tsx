@@ -106,6 +106,53 @@ export default async function CityWalkPage({ params }: Props) {
     touristType: ["Virtual traveler", "Cultural explorer"],
   };
 
+  const continentSlug = city.continent.toLowerCase();
+  const countrySlug = city.country.toLowerCase().replace(/\s+/g, "-");
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Nearaway", item: "https://nearaway.in" },
+      { "@type": "ListItem", position: 2, name: city.continent, item: `https://nearaway.in/continent/${continentSlug}` },
+      { "@type": "ListItem", position: 3, name: city.country, item: `https://nearaway.in/country/${countrySlug}` },
+      { "@type": "ListItem", position: 4, name: city.name, item: `https://nearaway.in/walk/${city.slug}` },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `What is the best time to visit ${city.name}?`,
+        acceptedAnswer: { "@type": "Answer", text: city.culture.bestSeason },
+      },
+      {
+        "@type": "Question",
+        name: `What food should I try in ${city.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Must-try foods in ${city.name} include: ${city.culture.mustEat.join(", ")}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What is ${city.name} known for?`,
+        acceptedAnswer: { "@type": "Answer", text: city.culture.funFact },
+      },
+      {
+        "@type": "Question",
+        name: `How do locals greet each other in ${city.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `In ${city.name}, locals say "${city.culture.greeting}".`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -115,6 +162,14 @@ export default async function CityWalkPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(placeJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="h-full overflow-y-auto bg-[#050508] text-white">
