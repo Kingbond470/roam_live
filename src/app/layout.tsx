@@ -88,6 +88,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        {/* Preconnect to external origins used on most pages */}
+        <link rel="preconnect" href="https://www.youtube.com" />
+        <link rel="preconnect" href="https://img.youtube.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://flagcdn.com" crossOrigin="anonymous" />
+        {/* Preload globe texture — largest asset on the homepage */}
+        <link rel="preload" href="/earth-night.jpg" as="image" />
+      </head>
       <body className="h-full bg-[#050508] text-white overflow-hidden" suppressHydrationWarning>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />

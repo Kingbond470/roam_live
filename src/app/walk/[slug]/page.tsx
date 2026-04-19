@@ -6,6 +6,7 @@ import { getFeaturedVideo } from "@/lib/utils";
 import { Globe, ArrowLeft, MapPin, Clock, Utensils, Lightbulb, Star, Landmark } from "lucide-react";
 import { ShareButton } from "@/components/hud/ShareButton";
 import { Flag } from "@/components/ui/Flag";
+import { YouTubeFacade } from "@/components/video/YouTubeFacade";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -192,16 +193,13 @@ export default async function CityWalkPage({ params }: Props) {
 
         {/* Hero */}
         <div className="relative pt-16">
-          {/* YouTube Embed — capped at 70vh so content stays above fold on wide screens */}
+          {/* YouTube Facade — thumbnail loads instantly (LCP), iframe loads on click */}
           <div className="relative w-full" style={{ paddingBottom: "min(56.25%, 70vh)" }}>
             {featuredVideo ? (
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${featuredVideo.youtubeId}?autoplay=0&rel=0&modestbranding=1&start=90`}
+              <YouTubeFacade
+                youtubeId={featuredVideo.youtubeId}
                 title={`${city.name} 4K Virtual Walk`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
+                startSeconds={90}
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center bg-black/60">
