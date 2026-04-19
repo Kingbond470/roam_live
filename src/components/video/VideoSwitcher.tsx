@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import type { City, CityVideo, VideoTimeOfDay, VideoType } from "@/types/city";
 import { getMoodLabel } from "@/lib/utils";
+import { Flag } from "@/components/ui/Flag";
 
 interface Props {
   city: City;
@@ -103,8 +104,9 @@ export function VideoSwitcher({ city, activeVideoId, isOpen, onClose, onSelect }
             {/* Header */}
             <div className="flex items-center justify-between px-5 py-3 border-b border-white/6">
               <div>
-                <p className="font-bold text-white">
-                  {city.flagEmoji} {city.name}
+                <p className="font-bold text-white flex items-center gap-2">
+                  <Flag countryCode={city.countryCode} size={18} />
+                  {city.name}
                 </p>
                 <p className="text-white/40 text-xs mt-0.5">
                   {city.videos.length} {city.videos.length === 1 ? "video" : "videos"} available

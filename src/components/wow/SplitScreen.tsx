@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronsLeftRight, ChevronsUpDown } from "lucide-react";
+import { Flag } from "@/components/ui/Flag";
 import type { City } from "@/types/city";
 import { getFeaturedVideo } from "@/lib/utils";
 
@@ -111,8 +112,9 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
                   isPortrait ? "top-3 sm:top-4 left-1/2 -translate-x-1/2" : "top-4 sm:top-6 left-3 sm:left-5"
                 }`}
               >
-                <p className="text-white font-bold text-xs sm:text-base" style={{ fontFamily: "Georgia, serif" }}>
-                  {cityA.flagEmoji} {cityA.name}
+                <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "Georgia, serif" }}>
+                  <Flag countryCode={cityA.countryCode} size={16} />
+                  {cityA.name}
                 </p>
                 <p className="text-white/50 text-[10px] sm:text-xs">{cityA.country}</p>
               </div>
@@ -142,8 +144,9 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
                     : "top-4 sm:top-6 right-3 sm:right-5 text-right"
                 }`}
               >
-                <p className="text-white font-bold text-xs sm:text-base" style={{ fontFamily: "Georgia, serif" }}>
-                  {cityB.flagEmoji} {cityB.name}
+                <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "Georgia, serif" }}>
+                  <Flag countryCode={cityB.countryCode} size={16} />
+                  {cityB.name}
                 </p>
                 <p className="text-white/50 text-[10px] sm:text-xs">{cityB.country}</p>
               </div>

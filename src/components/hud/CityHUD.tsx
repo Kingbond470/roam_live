@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ChevronLeft, ChevronRight, Volume2, VolumeX, SplitSquareHorizontal, Heart, Film, BookOpen } from "lucide-react";
+import { Flag } from "@/components/ui/Flag";
 import { ShareButton } from "./ShareButton";
 import type { City } from "@/types/city";
 import { LiveBadge } from "./LiveBadge";
@@ -226,7 +227,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
                       )}
 
                       <div className="flex items-center gap-2 text-white/50 text-sm">
-                        <span>{city.flagEmoji}</span>
+                        <Flag countryCode={city.countryCode} size={16} />
                         <span>{city.country}</span>
                         <span className="w-px h-3 bg-white/20" />
                         <LocalClock timezone={city.timezone} />

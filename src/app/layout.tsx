@@ -3,6 +3,29 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Nearaway",
+  legalName: "Nearaway",
+  url: "https://nearaway.in",
+  logo: "https://nearaway.in/android-chrome-192x192.png",
+  sameAs: ["https://twitter.com/nearawayin"],
+  description: "Nearaway is a virtual travel platform offering immersive 4K walking tours of cities around the world.",
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Nearaway",
+  url: "https://nearaway.in",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: "https://nearaway.in/?city={search_term_string}" },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -58,6 +81,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="h-full bg-[#050508] text-white overflow-hidden" suppressHydrationWarning>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         {children}
         {/* YouTube IFrame API — loaded once globally */}
         <Script

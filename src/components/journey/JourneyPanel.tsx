@@ -5,6 +5,7 @@ import { X, Compass } from "lucide-react";
 import { journeys, type Journey } from "@/data/journeys";
 import type { City } from "@/types/city";
 import { useAppStore } from "@/store/appStore";
+import { Flag } from "@/components/ui/Flag";
 
 interface Props {
   cities: City[];
@@ -142,7 +143,7 @@ export function JourneyPanel({ cities, isOpen, onClose }: Props) {
                                 key={city.slug}
                                 className="flex items-center gap-1 text-xs text-white/50"
                               >
-                                <span className="text-sm">{city.flagEmoji}</span>
+                                <Flag countryCode={city.countryCode} size={14} />
                                 <span>{city.name}</span>
                                 {i < pathCities.length - 1 && (
                                   <span className="text-white/15 ml-0.5">→</span>

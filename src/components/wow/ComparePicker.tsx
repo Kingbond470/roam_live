@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, SplitSquareHorizontal } from "lucide-react";
 import Fuse from "fuse.js";
 import type { City } from "@/types/city";
+import { Flag } from "@/components/ui/Flag";
 
 interface Props {
   isOpen: boolean;
@@ -98,7 +99,7 @@ export function ComparePicker({ isOpen, cities, onSelect, onClose }: Props) {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.03 }}
                     >
-                      <span className="text-xl">{city.flagEmoji}</span>
+                      <Flag countryCode={city.countryCode} size={20} />
                       <div className="flex-1 min-w-0">
                         <p className="text-white font-medium text-sm">{city.name}</p>
                         <p className="text-white/40 text-xs">{city.country} · {city.continent}</p>

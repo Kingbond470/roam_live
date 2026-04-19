@@ -80,7 +80,7 @@ export default async function CityWalkPage({ params }: Props) {
     embedUrl: `https://www.youtube.com/embed/${featuredVideo?.youtubeId}`,
     publisher: {
       "@type": "Organization",
-      name: "Nearaway.in",
+      name: "Nearaway",
       url: "https://nearaway.in",
     },
   };

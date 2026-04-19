@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import type { City } from "@/types/city";
+import { Flag } from "@/components/ui/Flag";
 
 interface Props {
   city: City;
@@ -33,12 +34,12 @@ export function VideoLoadingScreen({ city, isVisible }: Props) {
 
           {/* Flag — large, glows in */}
           <motion.div
-            className="text-8xl mb-6 relative"
+            className="mb-6 relative"
             initial={{ scale: 0.6, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            {city.flagEmoji}
+            <Flag countryCode={city.countryCode} size={80} className="rounded-md shadow-2xl" />
           </motion.div>
 
           {/* City name */}
