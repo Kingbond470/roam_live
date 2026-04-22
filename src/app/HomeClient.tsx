@@ -112,11 +112,16 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
   });
 
   // Deep-link: auto-select city, activate journey, or pre-filter continent on load
-  const { selectCity, setActivePath } = useAppStore();
+  const { selectCity, selectCityDirect, setActivePath } = useAppStore();
   useEffect(() => {
     if (initialContinent) setTagFilter(initialContinent);
     if (initialJourney) setActivePath(initialJourney);
-    if (initialCity) selectCity(initialCity);
+    if (initialCity) {
+      // Deep-link: skip the globe zoom. GlobeScene hasn't loaded yet so
+      // selectCity's "zooming" phase would get stuck (advanceToVideo never fires).
+      // Go straight to video-fadein instead.
+      selectCityDirect(initialCity);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

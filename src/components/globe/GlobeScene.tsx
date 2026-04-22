@@ -176,6 +176,19 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
 
       globeRef.current = globe;
 
+      // Safety net: if phase was already "zooming" before globe.gl finished loading
+      // (can happen on slow connections), the phase-change useEffect fired with
+      // globeRef.current = null and skipped advanceToVideo. Recover here.
+      const storeState = useAppStore.getState();
+      if (storeState.phase === "zooming" && storeState.selectedCity) {
+        globe.controls().autoRotate = false;
+        globe.pointOfView(
+          { lat: storeState.selectedCity.coordinates.lat, lng: storeState.selectedCity.coordinates.lng, altitude: 0.6 },
+          1200
+        );
+        setTimeout(() => { useAppStore.getState().advanceToVideo(); }, 1200);
+      }
+
       // BUG-02 FIX: store ro in a ref so the outer cleanup can disconnect it
       const ro = new ResizeObserver(() => {
         if (containerRef.current) {

@@ -44,6 +44,8 @@ interface AppState {
   toggleDiscoverMode: () => void;
 
   selectCity: (city: City) => void;
+  /** Skip the globe zoom animation — go straight to video. Used for deep-links. */
+  selectCityDirect: (city: City) => void;
   advanceToVideo: () => void;
   setWatching: () => void;
   returnToGlobe: () => void;
@@ -92,6 +94,15 @@ export const useAppStore = create<AppState>()(
         set({
           selectedCity: city,
           phase: "zooming",
+          cardOpen: false,
+          playerMuted: true,
+          activeVideoId: null,
+        }),
+
+      selectCityDirect: (city) =>
+        set({
+          selectedCity: city,
+          phase: "video-fadein",
           cardOpen: false,
           playerMuted: true,
           activeVideoId: null,
