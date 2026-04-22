@@ -287,6 +287,6 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
   }, [activePath, activeTag, cities]);
 
   return (
-    <div ref={containerRef} className="w-full h-full" style={{ cursor: "grab" }} />
+    <div ref={containerRef} className="w-full h-full" style={{ cursor: "grab", touchAction: "none" }} />
   );
 }
