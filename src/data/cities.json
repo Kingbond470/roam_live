@@ -4441,5 +4441,739 @@
       "story": "Ekaterinburg was founded in 1723 by Peter the Great as an iron foundry and administrative centre for the Ural mining region. The Urals were Russia's industrial heartland — rich in iron, copper, malachite, and precious gems — and the city became the manufacturing engine of the expanding empire. Renamed Sverdlovsk in 1924 after Bolshevik leader Yakov Sverdlov, it served as a critical Soviet industrial hub and in World War II absorbed over 1,500 evacuated factories from western Russia. The city's darkest hour came on 16–17 July 1918, when Tsar Nicholas II, his family, and their servants were executed in the basement of the Ipatiev House — ending the 300-year Romanov dynasty. Standing precisely at the Europe–Asia continental boundary, Ekaterinburg regained its original name in 1991 and is today Russia's fourth-largest city and the self-styled 'capital of the Urals.'",
       "era": "Early Modern"
     }
+  },
+  {
+    "slug": "beijing",
+    "name": "Beijing",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 39.9042, "lng": 116.4074 },
+    "timezone": "Asia/Shanghai",
+    "population": 21893095,
+    "tags": ["imperial", "historic", "modern", "culture", "street-food"],
+    "videos": [
+      {
+        "youtubeId": "qztRJrWt-Es",
+        "label": "Shichahai Hutong Tour – Old Beijing 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "bpY4aDOK-0E",
+        "label": "Wangfujing Shopping Street – Beijing 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "XIPNBBRnHLY",
+        "label": "Beijing Rush Hour Walk – Real City Life 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "SsZAFsgf58A",
+        "label": "Wangjing Soho – Beijing's Modern District 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "Qd4gRNZvZCE",
+        "label": "Sanlitun – Beijing's Vibrant Nightlife District 4K",
+        "timeOfDay": "golden-hour",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "WXIfF7TN1QQ",
+        "label": "Great Wall of China – Mutianyu Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo) — standard; 您好 (Nín hǎo) — respectful formal",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–May (spring blossoms, pre-heat) or October (golden autumn, clear skies after summer smog)",
+      "mustEat": ["Peking Roast Duck (kǎo yā) — crispy skin served with pancakes, hoisin, and scallions", "Zhajiangmian (noodles with fermented soybean paste and pork)", "Jianbing (breakfast crêpe with egg, chilli sauce, and crispy wonton)", "Mala hotpot (Sichuan-spiced communal broth)", "Douzhi (fermented mung bean milk — an acquired Beijinger taste)"],
+      "localTip": "The hutong neighbourhoods around Shichahai and Nanluoguxiang are the real Beijing — ancient alleyway networks of courtyard homes that survived the modern city. Hire a rickshaw guide for an hour at dawn before the tourist groups arrive. Wangfujing Night Market on the east side of the pedestrian street sells scorpions on sticks, but the real food is in the lanes behind it.",
+      "funFact": "Beijing has been China's capital for over 700 years across the Mongol Yuan, Ming, and Qing dynasties. The Forbidden City — the imperial palace complex at its centre — has 9,999 rooms (one short of the mythological 10,000 rooms of Heaven), was home to 24 emperors, and is the largest surviving palace complex on Earth.",
+      "culturalDos": ["Download WeChat before arriving — it is the operating system of daily Chinese life (payments, maps, ordering)", "Remove shoes when entering someone's home", "Accept business cards and gifts with both hands"],
+      "culturalDonts": ["Photograph military installations or police checkpoints", "Discuss politically sensitive topics in public — the Great Firewall applies to conversations too", "Tip in restaurants — tipping is not customary and can cause confusion"]
+    },
+    "origin": {
+      "founded": "circa 1045 BC (Zhou dynasty settlement Ji); made imperial capital 1279 AD",
+      "originalName": "Ji (姬); later Zhongdu, Dadu, Beiping, finally Beijing (北京 — 'Northern Capital')",
+      "founders": "Zhou dynasty; elevated to Mongol capital by Kublai Khan",
+      "story": "The Beijing area has been inhabited for over 700,000 years — Peking Man fossils were found just 50 km from the city centre. The settlement of Ji was established around 1045 BC and became a regional capital under successive Chinese dynasties. Beijing's imperial era began in earnest in 1279 when Kublai Khan made Dadu his capital and built the first version of the palace complex. The Ming dynasty (1368–1644) rebuilt the city in its current form, constructing the Forbidden City and the Temple of Heaven, and began the final expansion of the Great Wall. The Qing dynasty (1644–1912) further expanded the imperial gardens (Summer Palace, Yuan Ming Yuan). After the 1912 Republic, the city was renamed Beiping ('Northern Peace'). Mao Zedong proclaimed the People's Republic of China from Tiananmen Gate on 1 October 1949 and the name Beijing — Northern Capital — was restored.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "suzhou",
+    "name": "Suzhou",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 31.2990, "lng": 120.5853 },
+    "timezone": "Asia/Shanghai",
+    "population": 10748000,
+    "tags": ["water-town", "canal", "garden", "historic", "scenic"],
+    "videos": [
+      {
+        "youtubeId": "EcayPS05Yh4",
+        "label": "Suzhou Rain Walk – China's Most Beautiful Water Town 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "UJtxdlOsk6Y",
+        "label": "Suzhou's Stunning Views – China Travel 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); locals also use Suzhounese Wu dialect — 侬好 (Nong hao)",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "March–April (cherry blossoms in the classical gardens) or October–November (autumn maples reflected in canal water)",
+      "mustEat": ["Squirrel-shaped Mandarin fish (songshuyuyu) — Suzhou's most iconic dish", "Biluochun green tea (grown on Dongting Hill, one of China's top ten teas)", "Suzhou-style mooncakes (thin crust, flaky, savoury filling)", "Dried tofu 百叶 (bǎi yè)", "Sweet osmanthus rice wine in autumn"],
+      "localTip": "The classical gardens are UNESCO World Heritage Sites and extraordinarily beautiful — but visit at 8 am when they open to beat the crowds. The Humble Administrator's Garden is the largest and most famous; the Master of Nets Garden is more intimate and designed to feel infinite through layered framing. For the full water-town experience, take the No. 7 canal boat between Shantang Street and Tiger Hill.",
+      "funFact": "Suzhou has been called 'the Venice of the East' for at least 2,000 years — its canal network predates Venice by over a millennium. The city is also China's silk capital; Suzhou embroidery (one of the four great embroidery traditions) uses up to 40 strands per thread and takes months to complete a single piece. Marco Polo described Suzhou as a 'great and noble city' in 1276.",
+      "culturalDos": ["Hire a private guide for the classical gardens — the symbolism of every rock and window shape has specific meaning", "Take a gondola-style boat (摇橹船) along Shantang Street at dusk", "Visit the Suzhou Museum (designed by I.M. Pei) even if you're not a museum person — the building itself is a masterpiece"],
+      "culturalDonts": ["Rush the gardens — they are designed for slow, contemplative walking", "Skip the silk market — Suzhou silk is genuinely different in quality from mass-produced fabric", "Visit only the tourist core; Pingjiang Road canal district in the east retains authentic neighbourhood life"]
+    },
+    "origin": {
+      "founded": "514 BC (Wu Kingdom capital Helü City)",
+      "originalName": "Helü City (阖闾大城); renamed Suzhou in 589 AD",
+      "founders": "King Helü of the State of Wu, planned by strategist Wu Zixu",
+      "story": "Suzhou was founded in 514 BC as the capital of the Wu Kingdom and planned with remarkable urban sophistication — the city's grid layout with land gates and water gates still shapes the modern street plan. It became the silk and cultural capital of China under the Tang dynasty (618–907 AD), a status reinforced by the Grand Canal which connected it to the imperial capitals of the north. The city reached its cultural zenith under the Ming dynasty (1368–1644) when wealthy merchants commissioned the classical gardens that are now UNESCO World Heritage Sites. The phrase 'above there is heaven; on earth there is Suzhou and Hangzhou' (上有天堂，下有苏杭) has been used to describe the city's refinement for over a thousand years.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "fenghuang",
+    "name": "Fenghuang",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 27.9476, "lng": 109.5998 },
+    "timezone": "Asia/Shanghai",
+    "population": 380000,
+    "tags": ["ancient-town", "ethnic", "tujia", "miao", "scenic"],
+    "videos": [
+      {
+        "youtubeId": "RSjXEtBcKkk",
+        "label": "Fenghuang Phoenix Ancient Town – Most Beautiful in China 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "yP5hDuK-G1I",
+        "label": "Fenghuang Night Walk – Phoenix Ancient Town 4K HDR",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "nbPiTidpwBU",
+        "label": "Xiangxi Region – Aizhai Bridge & Fenghuang Ancient City 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Tujia minority greeting: 你嗯达 (Nǐ ēn dá)",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–May (river fog and wisteria) or October (autumn golds reflected in the Tuojiang River)",
+      "mustEat": ["Sour fish soup (酸鱼汤) — a Miao staple made with fermented fish", "Xiangxi-style sour meat (酸肉)", "Sticky rice cake (糯米糍粑) wrapped in lotus leaf", "Chenzhou blood duck (blood-braised duck, deeply savoury)", "Tujia three-layer meat (三层肉) — slow-cured pork belly"],
+      "localTip": "The iconic red lantern reflections in the Tuojiang River are most beautiful at dusk when the stilted houses (吊脚楼) light up. Cross the Hongqiao bridge at night and walk downstream along the south bank — you'll find the quieter riverside away from souvenir stalls. The old town walls at Dongmen Gate are free to climb and give the best view of the jumbled roofscape.",
+      "funFact": "Fenghuang means 'phoenix' in Chinese and the town is shaped like a phoenix in flight when viewed from above. It was the birthplace of Shen Congwen (1902–1988), widely considered the greatest Chinese prose writer of the 20th century and a five-time Nobel Prize nominee. The town's Tujia and Miao ethnic minorities maintain living traditions of hand-woven batik fabric and silver jewellery.",
+      "culturalDos": ["Ask permission before photographing Miao women in their elaborate silver headdresses", "Visit the city walls before 8 am for empty streets and morning mist on the river", "Buy silver jewellery directly from Miao craftswomen — it's a living tradition, not a souvenir factory"],
+      "culturalDonts": ["Assume every old building is original — much of the 'ancient town' was restored in the 2000s; the most authentic areas are east of the main tourist strip", "Visit only the central tourist zone — the riverbank downstream and the old residential lanes behind it are far more atmospheric", "Swim in the Tuojiang River — it looks inviting but currents and water quality are unpredictable"]
+    },
+    "origin": {
+      "founded": "circa 202 BC (Han dynasty fort); town established Ming dynasty 1556",
+      "originalName": "Zhengan (镇竿) — the fort of the suppressing rod; renamed Fenghuang (Phoenix) in the Qing dynasty",
+      "founders": "Han dynasty military garrison; later developed by Tujia and Miao settlers",
+      "story": "The Fenghuang area has been a strategic garrison for controlling the Xiangxi region since the Han dynasty (206 BC–220 AD), positioned at the confluence of the Tuojiang River and surrounding mountain passes. The current town layout dates to the Ming dynasty when stilted wooden houses (吊脚楼) were built overhanging the river by Tujia and Miao ethnic communities. It served as a military and trading post throughout the Qing dynasty. The town's fame is partly literary — novelist Shen Congwen immortalised its misty river and lantern-lit evenings in his 1934 novel 'Border Town' (边城). Hidden from the outside world until the tourism boom of the 1990s, Fenghuang was declared a nationally protected historic town in 2001. Today it is considered one of the most beautiful surviving examples of Ming-Qing riverside vernacular architecture in China.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "lijiang",
+    "name": "Lijiang",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 26.8721, "lng": 100.2270 },
+    "timezone": "Asia/Shanghai",
+    "population": 1237000,
+    "tags": ["ancient-town", "naxi", "yunnan", "historic", "scenic"],
+    "videos": [
+      {
+        "youtubeId": "IsT7dpHiSQs",
+        "label": "Lijiang Old Town – China's Best-Known Ancient Town 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "-N2iGmx-NwM",
+        "label": "Shuhe Ancient Town – Amazing Tour in Lijiang, Yunnan 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Naxi greeting: 你好咯 (Nǐ hǎo lo)",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "March–May (snowmelt from Jade Dragon Snow Mountain, wildflower meadows) or September–October (harvest season, clear skies)",
+      "mustEat": ["Lijiang baba (丽江粑粑) — crispy sesame flatbread, the town's most famous snack", "Naxi grilled yak cheese (烤奶酪)", "Black bean jelly (黑豆凉粉) with chilli and vinegar", "Yunnan crossing-bridge noodles (过桥米线)", "Naxi mountain ham"],
+      "localTip": "The famous Old Town is perpetually crowded — escape to Shuhe Ancient Town, just 4 km north, which has the same Naxi architecture and canal system but a fraction of the visitors. For the best view of Jade Dragon Snow Mountain reflected in the cobblestone streets after rain, walk to the Mu Family Mansion in the old town at dawn before the tour buses arrive.",
+      "funFact": "Lijiang Old Town was built without any city walls — virtually unique among Chinese ancient towns — because the Naxi people's surname Mu (木) would be 'encased' if walls were built, forming the character for 'trapped' (困). The town survived the 1996 Yunnan earthquake largely intact due to its traditional timber-frame construction, which is inherently flexible — a lesson in vernacular earthquake engineering.",
+      "culturalDos": ["Learn a few words of Naxi — locals are genuinely delighted when visitors attempt their language", "Visit the Dongba Cultural Research Institute to see the only living pictographic script in the world", "Hire a bicycle to reach Shuhe — the road through the wetlands is flat and scenic"],
+      "culturalDonts": ["Stay only in the tourist core of the Old Town — the Naxi village life happens in the alleys away from bar street", "Skip the Jade Dragon Snow Mountain — the cable car to 4,506m is expensive but the views are incomparable", "Bargain aggressively at Naxi craft stalls — handmade brasswork and embroidery reflects real skill and time"]
+    },
+    "origin": {
+      "founded": "circa 7th century AD; Naxi Kingdom capital established Song dynasty (960–1279)",
+      "originalName": "Dayan (大研) — 'Great Inkstone,' referring to the black inkstone-coloured cobblestones of the town",
+      "founders": "Naxi people (a Tibeto-Burman ethnic group) under the Mu clan chieftains",
+      "story": "The Naxi people settled the Lijiang basin from the north around the 7th century AD, establishing a feudal kingdom under the Mu clan that lasted over 400 years. Unlike most Chinese cities, Lijiang Old Town (Dayan) was designed around a network of three forks of the Yuhe River which runs through every street, giving the town its unique canal-and-cobblestone character. The Mu clan governed Lijiang as Ming dynasty vassals for over two centuries and built the Mu Family Mansion as their palace. The town served as a key waystation on the Ancient Tea Horse Road (茶马古道), which connected Yunnan's tea-growing regions with Tibet's horse markets. A devastating earthquake in 1996 killed over 300 people but, paradoxically, brought international attention and UNESCO World Heritage listing the following year, which funded the town's restoration.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "yangshuo",
+    "name": "Yangshuo",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 24.7773, "lng": 110.4936 },
+    "timezone": "Asia/Shanghai",
+    "population": 300000,
+    "tags": ["karst", "scenic", "nature", "river", "adventure"],
+    "videos": [
+      {
+        "youtubeId": "rim2s7HBOcE",
+        "label": "Yangshuo West Street Night Walk – Most Famous Global Street 4K HDR",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "5-HdVYVJ--A",
+        "label": "Yangshuo – Living Landscapes & Bamboo Raft Adventure 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); local Zhuang greeting: 谢谢侬 (roughly, 'thank you friend')",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–June (morning river mist, lush green peaks) or September–November (golden light, less rain)",
+      "mustEat": ["Beer fish (啤酒鱼) — Yangshuo's signature dish: fresh Li River fish braised in local beer", "Stuffed Li River snails (田螺)", "Guilin rice noodles (桂林米粉) with pickled vegetables and peanuts", "Osmanthus rice wine in autumn (桂花酒)", "Stir-fried Yangshuo countryside vegetables with chilli and garlic"],
+      "localTip": "The Li River between Guilin and Yangshuo is one of the world's most recognisable landscapes (it's on the 20 RMB note). Take the official Li River cruise one-way and cycle back through the karst villages — the cycle route between Yangshuo and Xingping follows the river and passes through rice paddies with unobstructed views of the peaks. Rent a bamboo raft at Fuli village for the most immersive experience.",
+      "funFact": "The limestone karst peaks around Yangshuo are up to 300 million years old — formed when this part of Guangxi was a tropical sea floor. The landscape inspired the phrase 'Guilin's scenery is the finest under heaven' (桂林山水甲天下) which has been used since the Tang dynasty. The iconic image of a fisherman on a bamboo raft with a cormorant on his arm is a real — though now touristic — Zhuang fishing tradition.",
+      "culturalDos": ["Cycle through the countryside at dawn for uncrowded views of the karst peaks", "Eat at restaurants along the river rather than West Street for fresher food and lower prices", "Book the Li River cruise early — the morning mist before 10 am is the photographic sweet spot"],
+      "culturalDonts": ["Spend all your time on West Street (the tourist strip) — the real beauty is in the countryside 2 km outside town", "Visit only in summer peak season — the heat and crowds diminish the landscape experience", "Skip moon hill (月亮山) — a 30-minute walk from town leads to a natural arch peak that frames the whole valley"]
+    },
+    "origin": {
+      "founded": "circa 111 BC (Han dynasty garrison)",
+      "originalName": "Yangshuo (阳朔) — 'sunny and quiet'",
+      "founders": "Han dynasty administrative settlement in the Lingnan region",
+      "story": "Yangshuo has been inhabited since prehistoric times, but its recorded history begins with the Han dynasty expansion south of the Nanling Mountains around 111 BC. For most of its history it was a small riverside market town serving the agricultural communities living among the karst peaks. Its transformation into a destination began in the 1980s when early backpackers discovered the extraordinary landscape — the town was one of the first in China to develop a 'foreigner street' (西街, West Street) catering to international travellers. The Li River between Guilin and Yangshuo was designated a scenic area in the 1950s and appears on the Chinese 20 yuan banknote — making its karst peaks one of the world's most reproduced landscapes.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "guizhou",
+    "name": "Guizhou",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 26.5833, "lng": 107.9833 },
+    "timezone": "Asia/Shanghai",
+    "population": 38000000,
+    "tags": ["ethnic", "miao", "tujia", "nature", "ancient-town"],
+    "videos": [
+      {
+        "youtubeId": "igIyvlhlWhA",
+        "label": "Xijiang Qianhu Miao Village – Hidden Wonders of Guizhou 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "j5y8GU2RbZw",
+        "label": "Xijiang Thousand Household Miao Village – Breathtaking Views 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "4VLfue2oCZA",
+        "label": "Zhenyuan Ancient Town – Dragon Boat Season 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "iPpkCJftNOo",
+        "label": "Walking in Zhenyuan Old Town – China's Hidden Paradise 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "5UCMmKkIFFU",
+        "label": "Tongren Night Walk – Ancient City of Guizhou 4K HDR",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "r_wVLrwfXio",
+        "label": "Liupanshui Walking Trail – Guizhou's Cool Capital 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Miao greeting: 嗯哦 (Ǹg ó); Dong greeting: 侬好 (Nong hao)",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–October (dragon boat festivals, Miao festivals, mild mountain climate) — Guizhou rarely exceeds 28°C in summer",
+      "mustEat": ["Sour soup fish (酸汤鱼) — Miao-style fermented red pepper broth with fresh river fish", "Silk doll rice (娃娃鱼饭)", "Guizhou sour and spicy noodles (酸辣粉)", "Kaili sour soup with tofu and bamboo", "Miao glutinous rice wine (糯米酒) served in a bamboo tube"],
+      "localTip": "Xijiang Miao Village (西江千户苗寨) is best experienced at sunrise or at night — over 1,200 wooden stilt houses (吊脚楼) blanketing a hillside light up after dark like a living constellation. The Long Table Banquet (长桌宴) is offered to visitors during festivals — if you're there during Lusheng Festival (正月十五), the musical horn performances are extraordinary.",
+      "funFact": "Guizhou is home to over 18 recognised ethnic minorities — more than any other Chinese province. The Miao people of Guizhou maintain the world's most elaborate traditional silver jewellery culture: a Miao bride's headdress can weigh over 15 kg and a full festival costume represents a family's wealth accumulated over generations. Guizhou is also the birthplace of Moutai (茅台) — China's most prestigious and expensive baijiu spirit.",
+      "culturalDos": ["Attend a village festival if at all possible — Guizhou minorities celebrate over 1,000 festivals annually", "Ask permission before photographing villagers in ceremonial dress", "Try the local rice wine — refusing it can be considered rude at a Miao welcome ceremony"],
+      "culturalDonts": ["Visit only Xijiang — Zhenyuan, Zhaoxing Dong village, and the Huangguoshu waterfall area are equally spectacular and far less visited", "Touch or handle silver jewellery on display without asking — many pieces are ceremonial heirlooms", "Underestimate distances — Guizhou's mountain terrain makes travel times much longer than maps suggest"]
+    },
+    "origin": {
+      "founded": "1413 AD (Guizhou Province established by the Ming dynasty)",
+      "originalName": "Guizhou (贵州) — 'precious land'",
+      "founders": "Ming dynasty imperial administration; indigenous Miao, Dong, Tujia, and Buyi peoples have inhabited the region for millennia",
+      "story": "The mountainous terrain of Guizhou kept it largely isolated from Chinese imperial expansion until the Ming dynasty established formal provincial administration in 1413. The indigenous Miao, Dong, Tujia, Buyi, and Yi peoples had maintained distinct cultures in the region's deep river valleys and hill villages for thousands of years — and despite centuries of Han Chinese settlement, over 37% of Guizhou's population still belongs to ethnic minorities. Zhenyuan Ancient Town on the Wuyang River dates to the Han dynasty (206 BC–220 AD) and served as a military and commercial hub on the route connecting the southwest. Xijiang Miao Village (西江千户苗寨) preserves a community that migrated south from the Yellow River valley over 2,000 years ago and has maintained near-continuous Miao cultural practice. Guizhou today is one of China's most economically dynamic provinces, but its extraordinary ethnic heritage and dramatic karst-mountain-waterfall landscape remain largely unknown to international visitors.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "wuyuan",
+    "name": "Wuyuan",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 29.2473, "lng": 117.8614 },
+    "timezone": "Asia/Shanghai",
+    "population": 356000,
+    "tags": ["ancient-village", "scenic", "tea", "culture", "jiangxi"],
+    "videos": [
+      {
+        "youtubeId": "ZYZw-Sregeg",
+        "label": "Fairy Valley (Wangxian Valley) – Dreamlike Landscape of Jiangxi 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "scenic"
+      },
+      {
+        "youtubeId": "Vxj_XLhH_lo",
+        "label": "Huangling Village – Dreamlike Paradise of Jiangxi 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "F2kEd96J1RM",
+        "label": "Hidden Gems of Shangrao – Breathtaking Jiangxi Attractions 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); locals speak Hui dialect (Huizhou dialect — distinct from Mandarin)",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "March–April (rapeseed flower season — entire valleys turn electric yellow) or November (red maple leaves against white Huizhou walls)",
+      "mustEat": ["Wuyuan smoked tofu (徽州臭豆腐) — pungent, crispy fermented tofu from roadside braziers", "Steamed stone frog (石蛙)", "Huizhou-style stewed pork belly with dried bamboo shoots", "Green tea of Wuyuan (婺源绿茶) — among China's finest", "Qingming festival rice balls wrapped in mugwort leaf"],
+      "localTip": "The rapeseed season (late March–early April) transforms the entire Wuyuan valley into a sea of yellow — but it lasts only 2–3 weeks and draws enormous crowds. Come early morning or use the lesser-known Jiangwan and Likeng villages instead of the photographic hotspot Shicheng. Huangling Village (篁岭) is built on a cliff face and accessed by cable car — the drying racks of sunflower, chilli, and corn outside each house glow in afternoon light.",
+      "funFact": "Wuyuan is often called 'China's most beautiful countryside' and the birthplace of Neo-Confucianism — philosopher Zhu Xi (1130–1200), whose synthesis of Confucian thought shaped East Asian intellectual culture for 800 years, was born here. The distinctive white-walled, black-roofed Huizhou architecture (徽派建筑) seen throughout the village was developed by wealthy salt and tea merchants who built elaborate homes while conducting business far away.",
+      "culturalDos": ["Walk between villages rather than driving — the footpaths through tea plantations and rice paddies reveal the countryside at its best", "Visit the horse-head walls (马头墙) of the old merchant homes — each shaped like a rising step to prevent fire spreading between houses", "Drink the local green tea at a village teahouse — it's grown on the surrounding hills"],
+      "culturalDonts": ["Visit only during peak rapeseed season without booking accommodation months in advance", "Limit yourself to the two or three most famous villages — the real magic is in the unphotographed ones down side roads", "Rush — Wuyuan is made for wandering slowly with no plan"]
+    },
+    "origin": {
+      "founded": "742 AD (Tang dynasty county established)",
+      "originalName": "Wuyuan (婺源) — from the Wujiang River",
+      "founders": "Tang dynasty administrative settlement; largely shaped by Huizhou merchant culture from Song–Ming dynasties",
+      "story": "Wuyuan was established as a county in 742 AD during the Tang dynasty, positioned at the headwaters of the Raohe River in the Huangshan mountain region. The area's wealth came from two sources: the Huizhou salt trade, which made local merchants among the richest in China from the Song through Qing dynasties, and the quality of its green tea, which reached imperial tribute status. Successful merchants built elaborate whitewashed homes and ancestral halls in their villages even as they spent most of the year trading in distant cities — this 'absent merchant' culture produced an extraordinarily rich rural architectural heritage. Wuyuan was historically part of Anhui Province's Huizhou region and was administratively transferred to Jiangxi Province in 1934. The county contains over 16 nationally protected ancient villages and is classified as a national ecological forest county.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "hunan-ancient-towns",
+    "name": "Hunan Ancient Towns",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 28.1000, "lng": 109.9000 },
+    "timezone": "Asia/Shanghai",
+    "population": 4500000,
+    "tags": ["ancient-town", "waterfall", "scenic", "tujia", "culture"],
+    "videos": [
+      {
+        "youtubeId": "GpunTJKzCis",
+        "label": "Furong Ancient Town – The Town Hanging On The Waterfall 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "GCzl5-_Anss",
+        "label": "Lingling Ancient City Rainy Evening Walk – Yongzhou, Hunan 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Xiang (Hunanese) dialect widely spoken alongside Mandarin",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–June (waterfalls at full flow, green terraces) or September–October (harvest colours, mist in the river valleys)",
+      "mustEat": ["Mao's red braised pork (毛氏红烧肉) — Mao Zedong was Hunanese and this rich fatty pork dish is the province's most famous", "Stinky tofu (臭豆腐 Changsha style) — fermented, deep-fried, served with chilli sauce", "Dong'an chicken (东安鸡) — vinegar and chilli-poached chicken from Yongzhou", "Hunan spicy beef jerky (湖南牛肉干)", "Rice noodles with pickled vegetables (米粉)"],
+      "localTip": "Furong Ancient Town is built around a natural 60-metre waterfall that pours directly through the middle of the village — the main street overlooks the falls, and at night the illuminated mist creates an otherworldly atmosphere. Arrive by taking the river boat from Wangcun, which approaches the town from below and gives the most dramatic reveal of the 'hanging town' perched on the cliff.",
+      "funFact": "Furong Ancient Town (芙蓉镇) became famous across China when director Xie Jin filmed his acclaimed 1986 movie there — the film was so popular that the real town of Wangcun was officially renamed Furong Town. Lingling (零陵) in Yongzhou is one of China's oldest counties, established in 221 BC, and the source of the name 'Ling' in the phrase 'Guilin' (桂林).",
+      "culturalDos": ["Arrive at Furong Town by river boat from Wangcun for the iconic 'hanging waterfall' approach", "Walk the old town at night when the lantern reflections animate the wet cobblestones", "Try the local tofu flower (豆腐花) sold by street vendors at the base of the waterfall"],
+      "culturalDonts": ["Visit Furong Town without walking beyond the main tourist street — the Tujia residential lanes above and below are the real town", "Forget an umbrella — the permanent waterfall mist keeps the town damp year-round", "Skip Lingling's ancient Wumu ancient well area — it predates the tourist infrastructure and remains largely unchanged"]
+    },
+    "origin": {
+      "founded": "Furong Town (Wangcun): established Ming dynasty; Lingling: 221 BC (Qin dynasty county)",
+      "originalName": "Wangcun (王村 — King's Village); Lingling (零陵 — ancient administrative name)",
+      "founders": "Tujia ethnic settlers at Wangcun; Qin dynasty administration at Lingling",
+      "story": "The Xiangxi region of western Hunan has been inhabited by Tujia and Miao peoples for thousands of years, with the high gorge terrain providing natural protection from Han Chinese expansion. Wangcun (later renamed Furong Town) grew as a commercial hub where boat traffic from the You River met the mountain trade routes, with merchants building stone-paved streets and wooden houses directly against the cliff faces through which waterfalls pour. Lingling is one of China's oldest administrative units, established in 221 BC immediately after the Qin unification — its name appears in records as a southern outpost of the newly unified empire. The area's isolation preserved Tujia language, music (especially the hand drum and gong tradition), and architecture through China's turbulent 20th century. Both towns gained national heritage protection in the 2000s as examples of pre-industrial vernacular architecture.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "chongqing",
+    "name": "Chongqing",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 29.5630, "lng": 106.5516 },
+    "timezone": "Asia/Shanghai",
+    "population": 32000000,
+    "tags": ["mountain-city", "river", "historic", "street-food", "modern"],
+    "videos": [
+      {
+        "youtubeId": "YoxtuCT45H4",
+        "label": "Chongqing Ciqikou Ancient Town – Back to Old Chongqing 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Chongqing dialect (Chongqinghua) — a Southwestern Mandarin variant, closer to Sichuan dialect",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "March–May or September–November — Chongqing is called 'Fog Capital' (雾都) and 'Furnace City' (火炉) for its extreme summer heat (often 40°C+) and winter fog",
+      "mustEat": ["Chongqing mala hotpot (重庆麻辣火锅) — the original, most intensely spiced version in China", "Xiaomian noodles (小面) — simple spicy noodles eaten for breakfast by locals", "Sichuan-style twice-cooked pork (回锅肉)", "Ciqikou glutinous rice balls (磁器口汤圆)", "Fuling pickled mustard root (涪陵榨菜) — sour-spicy, eaten with everything"],
+      "localTip": "Chongqing is built vertically on hills between the Yangtze and Jialing rivers — there are no bicycles here because the city has no flat ground. The Hongyadong 'hanging house' complex at night, reflected in the Jialing River, is the most dramatic urban spectacle in China. For the Ciqikou experience, arrive before 10 am — by noon it's wall-to-wall tour groups.",
+      "funFact": "Chongqing is technically the world's largest city by administrative area — its municipality covers 82,400 km², roughly the size of Austria. The Three Gorges Dam project displaced over 1 million Chongqing residents in the early 2000s. The city's unique vertical topography means some metro stations have exits 7 floors apart, and the Liziba station passes directly through a residential skyscraper.",
+      "culturalDos": ["Try the hotpot at a local restaurant off the main tourist strip — Chongqing hotpot is a religion, not a meal", "Take the Yangtze River night cruise to see the city illuminated on its cliffs from the water", "Visit Ciqikou on a weekday to see the tea houses and local life rather than tourist crowds"],
+      "culturalDonts": ["Order 'mild' hotpot expecting it to be mild by non-Chinese standards — even mild Chongqing hotpot is intensely spiced", "Visit only Ciqikou — the rest of the old city at Huguang Guild Hall and Hongyadong is equally spectacular", "Underestimate the heat in July–August — Chongqing regularly leads China's temperature rankings"]
+    },
+    "origin": {
+      "founded": "316 BC (Qin conquest of Ba Kingdom); made municipality 1997",
+      "originalName": "Jiangzhou (江州); renamed Chongqing (重庆 — 'double celebration') in 1189 when Prince Zhao Dun was crowned and promoted",
+      "founders": "Ba Kingdom; Qin dynasty conquest in 316 BC",
+      "story": "The Chongqing area has been inhabited since at least the Palaeolithic era and was the capital of the Ba Kingdom — a confederation famous for tiger shamans and bronze drums — before Qin's General Zhang Yi conquered it in 316 BC, incorporating it into the empire that would unify China five years later. The city's name was given in 1189 in celebration of a prince's double good fortune. During World War II, Chongqing served as the wartime capital of the Republic of China from 1937–1945 when the government retreated before Japanese advances — the city was subjected to the most sustained bombing campaign on a civilian population in history up to that point. In 1997, Chongqing was separated from Sichuan Province and elevated to one of China's four direct-controlled municipalities (alongside Beijing, Shanghai, and Tianjin), triggering an economic and construction boom that transformed the river gorge skyline into one of the world's most spectacular urban landscapes.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "dali",
+    "name": "Dali",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 25.6065, "lng": 100.2676 },
+    "timezone": "Asia/Shanghai",
+    "population": 3705000,
+    "tags": ["yunnan", "bai-minority", "ancient-town", "lake", "scenic"],
+    "videos": [
+      {
+        "youtubeId": "d4iID_6J25U",
+        "label": "Dali Old Town – A Journey Through Time in Yunnan 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Bai greeting: 你来了 (Nǐ lái le — 'you've come') — an expression of warm welcome",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "March–May (Cherry blossom and Bai minority 'March Fair' festival) or October (clear skies, Erhai Lake at its most brilliant)",
+      "mustEat": ["Bai Three-Course Tea (三道茶) — bitter, sweet, then aftertaste; a ceremonial welcome drink", "Eryuan goat cheese (乳扇 rushan) — grilled or fried, sold on skewers", "Dali pork ribs with wild mushrooms", "Across-the-bridge rice noodles (过桥米线)", "Yunnan-style ham (云腿)"],
+      "localTip": "Dali Old Town (大理古城) is charming but Erhai Lake is the soul of the region — rent a bicycle and ride the 120 km lakeside path over 1–2 days, stopping at Bai fishing villages. The Three Pagodas (三塔) at the foot of the Cangshan Mountains are best photographed at sunrise when they're reflected in the still pool in front.",
+      "funFact": "Dali was the capital of the Nanzhao Kingdom (738–937 AD) and the Dali Kingdom (937–1253 AD) — two powerful independent states that resisted Tang and Song Chinese expansion for over 500 years. The Dali Kingdom was the last territory conquered by Kublai Khan before his invasion of Song China, falling in 1253 — a fact immortalised in Jin Yong's martial arts novel 'Demi-Gods and Semi-Devils' which imagined a secret Dali royal family of supreme kung fu masters.",
+      "culturalDos": ["Visit the Bai villages around Erhai Lake — Xizhou, Zhoucheng, and Shaxi preserve whitewashed courtyard architecture largely unchanged from the Qing dynasty", "Attend the Three Temples Fair (绕三灵) in late April if you're there — a three-day Bai pilgrimage-festival around the lake", "Buy Bai tie-dye (扎染) fabric in Zhoucheng village where every family still practices the craft"],
+      "culturalDonts": ["Spend all your time in the main tourist street of Old Town — the Bai culture lives in the surrounding villages", "Visit Erhai Lake in summer without planning — motorboats were banned to protect the lake's ecology, but summer brings dense crowds", "Skip the Cangshan Mountains hiking trails above the town — the mountain-lake panorama is extraordinary"]
+    },
+    "origin": {
+      "founded": "738 AD (Nanzhao Kingdom capital established)",
+      "originalName": "Taihe (太和); Dali (大理) became the name during the Dali Kingdom (937–1253 AD)",
+      "founders": "Piluoge, first king of the Nanzhao Kingdom, a Bai-Yi confederation",
+      "story": "The Dali basin between the Cangshan Mountains and Erhai Lake has supported civilisation for over 4,000 years. The Bai people established the Nanzhao Kingdom here in 738 AD as a buffer state between Tang China and the Tibetan Empire, growing powerful enough to defeat Tang armies at the Battle of Xiaguan in 751. After Nanzhao's collapse, the Duan clan founded the Dali Kingdom in 937 — it survived for 316 years, maintaining a sophisticated Buddhist civilisation that produced the Chongsheng Temple and its famous Three Pagodas (built 9th–10th century). The kingdom was conquered by Kublai Khan's Mongol forces in 1253. The area became a Yunnan prefecture under Ming and Qing dynasties. Dali Old Town was rebuilt in its current form after a devastating 1925 earthquake and is today a UNESCO-protected historic town and the cultural heart of the Bai people, who number about 2 million.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "shaoxing",
+    "name": "Shaoxing",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 29.9939, "lng": 120.5817 },
+    "timezone": "Asia/Shanghai",
+    "population": 5365000,
+    "tags": ["water-town", "historic", "canal", "culture", "scenic"],
+    "videos": [
+      {
+        "youtubeId": "rdXXA6v4a8c",
+        "label": "Shaoxing – China's Famous Water Town & Museum without Walls 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Shaoxing locals speak Wu dialect (吴语) which is very different from Mandarin",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–May (osmanthus blossoms) or October–November (rice wine fermentation season fills the streets with fragrance)",
+      "mustEat": ["Shaoxing rice wine (绍兴黄酒) — China's most famous aged rice wine, drunk warm in winter", "Stinky tofu (臭豆腐 Shaoxing style) — milder than Changsha's, fried in sesame oil", "Dried bamboo shoots with Shaoxing wine (笋干烧肉)", "Fennel beans (茴香豆) — the snack Lu Xun immortalised in his short stories", "Shaoxing dried tofu (腐乳)"],
+      "localTip": "The blue-awning wupeng boats (乌篷船) — shallow gondola-like vessels rowed with the feet — are Shaoxing's most iconic image and can be rented for canal tours. The boats are extraordinarily low (passengers recline) and were historically used for all transport in the canal network. Lu Xun's childhood home and former residence in the old town is beautifully preserved and gives an intimate picture of late-Qing scholarly life.",
+      "funFact": "Shaoxing is called a 'museum without walls' because virtually every street and canal dates to the Tang or Song dynasty. The city is the birthplace of Lu Xun (1881–1936) — considered the father of modern Chinese literature — and Wang Xizhi, China's most celebrated calligrapher (303–361 AD). Shaoxing rice wine has been produced for over 2,500 years and is traditionally given to families when a girl is born; the jar is buried and opened at her wedding.",
+      "culturalDos": ["Take a wupeng boat canal tour at dawn before the tourist boats launch", "Visit the Lu Xun Former Residence and San Wei Bookstore — the actual room where he studied as a child is preserved", "Buy a bottle of aged Shaoxing Huadiao wine (花雕酒) — the clay jars with carved designs are genuine regional craft"],
+      "culturalDonts": ["Visit only the restored tourist areas — the working canal neighbourhoods west of the scenic zone show real Shaoxing daily life", "Expect Shaoxing wine to taste like grape wine — it's fermented rice wine with a deep, sweet, aged character", "Rush through the ancient town — the pleasure is in the slow pace of the wupeng boats and the canal reflections"]
+    },
+    "origin": {
+      "founded": "490 BC (capital of Yue Kingdom)",
+      "originalName": "Kuaiji (会稽); Shaoxing name given in 1131 AD during the Southern Song dynasty",
+      "founders": "King Goujian of the State of Yue",
+      "story": "Shaoxing is one of China's oldest cities, serving as the capital of the Yue Kingdom (496–334 BC) — famous for the legendary story of King Goujian's years of humiliating subjugation under Wu Kingdom, followed by his patient comeback victory (the origin of the Chinese proverb 'sleeping on brushwood and tasting gall'). The Grand Canal extended to Shaoxing under the Sui dynasty (581–618 AD), making it a key node in China's inland waterway network. The city's canal culture flourished through the Tang and Song dynasties, producing the unique wupeng boat culture. Shaoxing became a centre of literati culture under the Southern Song (1127–1279 AD), a tradition that produced Lu Xun, the writer Wang Xizhi, and numerous officials and scholars across two millennia.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "dalian",
+    "name": "Dalian",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 38.9140, "lng": 121.6147 },
+    "timezone": "Asia/Shanghai",
+    "population": 6990000,
+    "tags": ["coastal", "port", "modern", "architecture", "scenic"],
+    "videos": [
+      {
+        "youtubeId": "qlR9k64RWTc",
+        "label": "Dalian – China's Most Underrated Stunning Coastal City 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Dalian locals speak Northeastern Mandarin (东北话) — a cleaner, accent-free variety",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "May–October (mild coastal climate, seafood at its peak) or January–February (frozen sea, snow on European-style squares)",
+      "mustEat": ["Fresh Yellow Sea seafood — sea cucumber, abalone, urchin, and clams from the morning fish markets", "Dalian-style seafood hotpot (海鲜火锅)", "Frozen persimmons (冻柿子) in winter — a Northeastern delicacy", "Jiaohe sausage (哈尔滨红肠 style)", "Fresh scallop skewers from Xinghai Square stalls"],
+      "localTip": "Dalian's downtown was designed by Russian and Japanese urban planners in the early 1900s and has a distinctly European character — wide circular plazas, tree-lined boulevards, and colonial-era buildings that make it unique among Chinese cities. Xinghai Square is the world's largest city square by area (176 hectares). The coastal road from Xinghai Bay to Bangchuidao Island at sunset is one of the most scenic urban drives in Northeast China.",
+      "funFact": "Dalian was founded as a Russian naval port (Dalny) in 1898 and then captured and rebuilt by Japan (Dairen) from 1905–1945 — it is one of the few Chinese cities with significant Russian and Japanese urban planning imprints simultaneously. The city has no bicycles by local tradition (too hilly and windy) but has one of China's most functional tram networks, with antique trams still running along the seafront.",
+      "culturalDos": ["Walk the seafront coastal road (滨海路) by bicycle for the most scenic route between the beaches", "Visit the Russian Street and Japanese-era architecture district in the city centre", "Eat seafood at the Xinghai Market morning auction — prices are a fraction of restaurant rates"],
+      "culturalDonts": ["Visit in summer without booking accommodation — Dalian is China's summer escape city and hotels fill completely", "Expect a typical 'industrial Northeast' city — Dalian is conspicuously clean, green, and architecturally distinctive", "Skip Tiger Beach Ocean Park if you have children — it's one of China's best marine parks"]
+    },
+    "origin": {
+      "founded": "1898 (Russian Empire established port town Dalny)",
+      "originalName": "青泥洼 (Qīngníwā) — 'blue mud bay'; Russian: Dalny; Japanese: Dairen; Chinese: 大连 Dàlián",
+      "founders": "Russian Empire (1898); developed by Imperial Japan (1905–1945)",
+      "story": "The Dalian area has been inhabited since prehistoric times but its modern city was born from imperial rivalry. Russia obtained the Liaodong Peninsula lease from China in 1898 and immediately began constructing a modern port city named Dalny, designed with European-style circular plazas and wide boulevards by Russian architects. After Russia's defeat in the 1905 Russo-Japanese War, Japan took control and expanded the city as 'Dairen' — adding Japanese-colonial architecture, parks, and a streetcar system. Japanese investment made Dalian one of Asia's most modern cities by the 1930s. The Soviet Union occupied the city from 1945 to 1955 before handing it to the People's Republic of China. This layered colonial history left Dalian with an architectural mix — Russian plazas, Japanese buildings, and Soviet-era factories — unique among Chinese cities, and a cosmopolitan, clean, seafood-rich culture distinct from the rest of Liaoning Province.",
+      "era": "Modern"
+    }
+  },
+  {
+    "slug": "hefei",
+    "name": "Hefei",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 31.8206, "lng": 117.2272 },
+    "timezone": "Asia/Shanghai",
+    "population": 9369000,
+    "tags": ["modern", "culture", "history", "tech", "anhui"],
+    "videos": [
+      {
+        "youtubeId": "uITOB7INlgo",
+        "label": "Hefei Walking Tour – Unveiling China's Cool and Cozy Marvels 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Hefei dialect is a Northern Mandarin variety — generally mutually intelligible with standard Mandarin",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–May (Chaohu Lake lotus blossoms, spring parks) or October (clear autumn weather, Huizhou culture festival)",
+      "mustEat": ["Li Hongzhang hodgepodge (李鸿章杂烩) — a rich mixed-ingredient stew created for the Qing diplomat's American banquet", "Hefei steamed buns (合肥包子) — distinct local style", "Luzhou roast duck (庐州烤鸭)", "Anhui-style stewed tofu with crabmeat (徽式豆腐)", "Salted duck from Chaohu Lake area"],
+      "localTip": "Hefei's most rewarding cultural site is the Li Hongzhang Former Residence (李鸿章故居) — a magnificent Huizhou-style compound that illuminates the life of China's most important 19th-century statesman. The Baohe Park around Baohe Tower on Nanfei River is a genuine local escape, far from tourist infrastructure. Anhui Provincial Museum has one of China's best bronze collections from the Shang and Zhou dynasties.",
+      "funFact": "Hefei is known as 'Science Island' (科学岛) — home to the Chinese Academy of Sciences' Institute of Plasma Physics, which operates EAST (Experimental Advanced Superconducting Tokamak), the world's most advanced nuclear fusion reactor. In 2023 EAST achieved 403 seconds of plasma at 120 million°C — breaking the world record for sustained nuclear fusion. China's quantum communication satellite network is also managed from Hefei.",
+      "culturalDos": ["Visit the Anhui Provincial Museum for the bronze and Huizhou architecture collections", "Walk the Binhu Wetland Park on Chaohu Lake at dawn for migratory bird watching (October–March)", "Try the local baijiu — Gujing Gongjiu (古井贡酒) from nearby Bozhou is one of China's eight great liquors"],
+      "culturalDonts": ["Confuse Hefei with the surrounding Huizhou cultural region — Hefei is a modern industrial capital, not a preserved ancient town", "Skip the lakeside districts — Chaohu Lake (China's fifth-largest freshwater lake) is beautiful and largely undiscovered by tourists", "Underestimate the city's research culture — Hefei has more Nobel Prizes per capita (through USTC alumni) than any other Chinese city"]
+    },
+    "origin": {
+      "founded": "202 BC (Han dynasty settlement); provincial capital status from Tang dynasty",
+      "originalName": "Luzhou (庐州) — from the ancient Lu commandery; became Hefei (合肥) from the merging of the Fei River tributaries",
+      "founders": "Han dynasty administrative settlement at the convergence of the Dongfei and Nanfei rivers",
+      "story": "Hefei's location at the convergence of the Fei River tributaries made it strategically vital for controlling the middle Yangtze region. The area saw numerous battles during the Three Kingdoms period (220–280 AD) — the Battle of Xiaoyaojin (215 AD) where Wei general Zhang Liao famously defeated a much larger Wu army is still celebrated locally. Hefei served as a regional capital under the Tang, Song, and Ming dynasties and was the birthplace of Bao Zheng (999–1062 AD), the incorruptible Song dynasty judge whose integrity became a symbol of justice in Chinese culture. The city's modern transformation began in 1952 when it was designated capital of the newly reorganised Anhui Province. The founding of the University of Science and Technology of China (USTC) here in 1969 — after it was evacuated from Beijing during the Cultural Revolution — planted the seed of Hefei's extraordinary scientific ecosystem.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "zhengzhou",
+    "name": "Zhengzhou",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 34.7466, "lng": 113.6253 },
+    "timezone": "Asia/Shanghai",
+    "population": 12740000,
+    "tags": ["historic", "culture", "modern", "shaolin", "yellow-river"],
+    "videos": [
+      {
+        "youtubeId": "wd96qTP75_Q",
+        "label": "Zhengzhou – Vibrant Culture Through an Immersive Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Henan dialect (中原官话) — a Central Plains Mandarin variety",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–May or September–October — Zhengzhou summers are brutally hot (40°C+) and winters cold",
+      "mustEat": ["Henan braised noodles (烩面 huìmiàn) — Zhengzhou's most beloved dish, thick wheat noodles in a lamb bone broth", "Shaolin Temple vegetarian food (素斋) — traditional Buddhist temple cuisine", "Kaifeng soup dumplings (开封灌汤包) from nearby Kaifeng", "Luoyang Water Banquet dishes (水席)", "Sunflower seed candy and sesame flatbread from Zhengzhou street markets"],
+      "localTip": "Zhengzhou is the gateway to both the Shaolin Temple (少林寺, 80 km west) and the Yellow River scenic area. The Shaolin Temple monks perform live kung fu demonstrations daily — buy tickets in advance and go early to avoid the worst of the tour groups. The Henan Museum is one of China's top five, with extraordinary Shang and Zhou dynasty bronzes from the Central Plains.",
+      "funFact": "Zhengzhou sits at the centre of China's ancient civilisation heartland — within 100 km lie Anyang (Shang dynasty capital and birthplace of Chinese writing), Luoyang (Han and Tang eastern capital), Kaifeng (Song dynasty capital), and the Shaolin Temple birthplace of both Chan (Zen) Buddhism and Chinese martial arts. The Yellow River passes 30 km north of the city — the cradle of Chinese civilisation for 5,000 years.",
+      "culturalDos": ["Visit the Henan Museum for Shang dynasty oracle bone script and the world's finest collection of Chinese Bronze Age artefacts", "Take the day trip to Shaolin Temple and Songshan Mountain — the scenery and cultural significance are extraordinary", "Eat huìmiàn for breakfast at a street stall — it's the authentic Zhengzhou morning experience"],
+      "culturalDonts": ["Visit Shaolin Temple without understanding its history — it's a 1,500-year-old Buddhist monastery, not a kung fu theme park", "Miss the Yellow River Cultural Park — the view of the river from the observation platform shows why it shaped Chinese civilisation", "Expect coastal-city polish — Zhengzhou is proud of its inland, agricultural, historically rooted identity"]
+    },
+    "origin": {
+      "founded": "circa 1500 BC (Shang dynasty settlement Ao); modern city from 1923 (railway junction)",
+      "originalName": "Ao (隞) — Shang dynasty capital;郑州 Zhengzhou from the Tang dynasty",
+      "founders": "Shang dynasty; elevated to railway hub by the Beijing–Hankou rail line (1905)",
+      "story": "The Zhengzhou area has been central to Chinese civilisation since the Shang dynasty (circa 1600–1046 BC), when the ancient city of Ao served as a royal capital — archaeological excavations have revealed massive bronze-age walls, palace foundations, and oracle bone workshops. The area hosted the capitals of several subsequent states, and the Tang dynasty established the Zhengzhou prefecture in 605 AD. However, the modern city was essentially created by the railway — the 1905 completion of the Beijing–Hankou line and the 1910 Longhai Railway intersection transformed a minor county town into one of China's most important rail junctions. This transportation hub status drove rapid industrialisation and population growth in the 20th century. Today Zhengzhou is the capital of Henan Province, home to 100 million people and the most historically significant provincial landmass in Chinese history.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "quanzhou",
+    "name": "Quanzhou",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 24.8741, "lng": 118.6757 },
+    "timezone": "Asia/Shanghai",
+    "population": 8905000,
+    "tags": ["historic", "silk-road", "maritime", "culture", "temple"],
+    "videos": [
+      {
+        "youtubeId": "43LJyGY3L_w",
+        "label": "Amazing Trip in Quanzhou – City Overflowing with Traditional Riches 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); locals speak Minnan (闽南语 Hokkien dialect) — the same language spoken by many overseas Chinese in Southeast Asia",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "October–April (mild subtropical winter and spring, avoiding summer typhoon season)",
+      "mustEat": ["Oyster omelette (蚵仔煎 ô-á-chian) — the defining Minnan seafood dish", "Satay beef noodles (沙茶面 shāchā miàn) — Quanzhou's most famous noodle dish", "Fried spring rolls (春卷) Hokkien style", "Dried longan (桂圆) from the local orchards", "Peanut soup (花生汤) served hot for breakfast"],
+      "localTip": "Quanzhou's old city centre around Tumen Street and Zhongshan Road preserves a remarkable density of temples, mosques, churches, and ancestral halls within a few blocks — testifying to the centuries when it was the world's most cosmopolitan port. The Qingjing Mosque (清净寺) — built in 1009 AD — is one of the oldest functioning mosques in China; the Kaiyuan Temple (开元寺) with its twin Song-dynasty pagodas is the most spectacular Buddhist complex in Fujian.",
+      "funFact": "Quanzhou was the world's largest trading port from the 10th–14th centuries — Marco Polo called it 'Zayton' and described it as the greatest port he had ever seen, larger than Venice and Alexandria combined. It sent out China's Maritime Silk Road across Southeast Asia, the Middle East, and East Africa. The city has 22 UNESCO World Heritage monuments recognising its role as the starting point of the Maritime Silk Road, inscribed in 2021.",
+      "culturalDos": ["Walk the historic core around Tumen Street at night when the temple incense smoke fills the lanes", "Visit the Maritime Museum (海外交通史博物馆) — the most important collection of Song-Yuan maritime trade artefacts anywhere", "See the Kaiyuan Temple at dawn before the crowds — the Twin Pagodas in early light are extraordinary"],
+      "culturalDonts": ["Visit without learning that Hokkien (Minnan) culture originated here — the language spoken by 50 million overseas Chinese in Southeast Asia is Quanzhou's gift to the diaspora", "Skip the Qingjing Mosque — built in 1009, it is architectural and historical proof of medieval Quanzhou's extraordinary cosmopolitanism", "Miss the stone-carved Manichean shrine at Cao'an — the only surviving Manichean temple in the world, hidden in a hillside outside the city"]
+    },
+    "origin": {
+      "founded": "260 AD (Three Kingdoms era fortress); peak prosperity 10th–14th century",
+      "originalName": "Wenling (温陵); Quanzhou (泉州 — 'spring prefecture') from the Tang dynasty (618 AD)",
+      "founders": "Wu Kingdom (Three Kingdoms era); developed as maritime capital under the Tang–Song–Yuan dynasties",
+      "story": "Quanzhou's history as a major port began under the Tang dynasty (618–907 AD) when its natural harbour and position at the Minnan River delta made it a natural collection point for the maritime trade routes of Southeast Asia. Under the Song dynasty (960–1279 AD), it surpassed Guangzhou to become China's — and arguably the world's — busiest port, exporting silk, porcelain, and tea while importing spices, pearls, and ivory. The city's cosmopolitanism was extraordinary: Arab, Persian, Indian, Jewish, and Nestorian Christian merchants all built permanent communities, leaving behind the mosques, temples, and gravestones that make Quanzhou a living archaeological site of medieval globalisation. Marco Polo, Ibn Battuta, and the Moroccan traveller all described the city in astonishment. The port declined after the Ming dynasty's maritime bans and the silting of the harbour in the 15th century. In 2021, UNESCO inscribed 22 of Quanzhou's monuments as a World Heritage Site recognising its unique role as the eastern terminus of the Maritime Silk Road.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "yanan",
+    "name": "Yan'an",
+    "country": "China",
+    "countryCode": "CN",
+    "flagEmoji": "🇨🇳",
+    "continent": "Asia",
+    "coordinates": { "lat": 36.5853, "lng": 109.4897 },
+    "timezone": "Asia/Shanghai",
+    "population": 2290000,
+    "tags": ["revolutionary", "historic", "cave-dwellings", "culture", "shaanxi"],
+    "videos": [
+      {
+        "youtubeId": "cqrqSFZWJ3s",
+        "label": "Yan'an City Night Walk – China's Iconic Revolutionary Base 4K HDR",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "你好 (Nǐ hǎo); Shaanxi dialect (陕西话) — a distinct Guanzhong Mandarin variety",
+      "currency": "Chinese Yuan / Renminbi (CNY ¥)",
+      "bestSeason": "April–June (yellow loess plateau in spring green) or September–October (harvest season, millet and apple orchards golden)",
+      "mustEat": ["Yan'an millet porridge (小米粥) — the food that sustained the Red Army; locals eat it daily", "Shaanxi lamb paomo (羊肉泡馍) — flatbread crumbled into a rich lamb broth", "Yellow noodles (黄面) with vinegar and chilli", "Buckwheat jelly (荞麦凉粉)", "Apple products — Yan'an is one of China's top apple-producing regions"],
+      "localTip": "The cave dwellings (窑洞 yáodòng) carved into the loess cliffs are the definitive architectural experience of Yan'an — both the revolutionary leaders' preserved caves at Zaoyuan and Yangjialing are open to visit, and many local guesthouses also offer cave-dwelling accommodation. The Yan River illuminated at night against the loess cliffs and classical pavilion bridges creates a uniquely surreal cityscape.",
+      "funFact": "Yan'an served as the headquarters of the Chinese Communist Party from 1936–1947 — the decade when Mao Zedong consolidated control, the CCP survived Japanese invasion, and the revolutionary ideology that would govern 1.4 billion people was formulated. Over one million CCP officials and cadres make compulsory 'red education' pilgrimages to Yan'an annually. The city sits in the heart of the Loess Plateau — the world's largest deposit of wind-blown silt, which gave the Yellow River its colour and allowed ancient agriculture to develop in this otherwise arid landscape.",
+      "culturalDos": ["Visit the revolutionary sites — even without political interest, the cave headquarters where Mao wrote key theoretical texts and the simple living conditions are historically extraordinary", "See the Yan River canyon at night when the city illuminates the loess cliffs", "Try the local millet — the cave-era staple crop of the Loess Plateau tastes completely different from commercial varieties"],
+      "culturalDonts": ["Expect a polished tourist city — Yan'an is a working provincial city proud of its revolutionary heritage", "Skip the Yan'an Revolution Memorial Museum — one of China's most important 20th-century historical collections", "Underestimate the summer heat on the exposed loess plateau — temperatures exceed 35°C in July–August with intense UV"]
+    },
+    "origin": {
+      "founded": "circa 3rd century BC (Qin dynasty garrison); revolutionary capital 1936–1947",
+      "originalName": "Fushi (肤施); Yan'an (延安) name established Song dynasty",
+      "founders": "Qin dynasty frontier garrison; modern significance from CCP headquarters 1936",
+      "story": "The Yan'an area on the Loess Plateau has been inhabited since prehistoric times — the plateau's deep, workable soil enabled some of China's earliest agriculture. It served as a northern frontier garrison town throughout the Han, Tang, and Song dynasties, positioned on trade routes between the Central Plains and the steppes. Yan'an's defining moment came in 1936 when the exhausted remnants of the Red Army completed the Long March and established their headquarters in the city's cave complexes, carved into the soft loess cliffs. For a decade, the CCP governed the Yan'an base area from these caves, developing the ideology, party structure, and military strategy that would win the Civil War against the Nationalists in 1949. Documents written in Yan'an's caves — including Mao's 'On Contradiction,' 'On Practice,' and 'Talks at the Yan'an Forum on Literature and Art' — became foundational texts of the People's Republic.",
+      "era": "Ancient"
+    }
   }
 ]
