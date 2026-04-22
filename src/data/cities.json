@@ -3979,5 +3979,123 @@
       "story": "Hallstatt has been inhabited for at least 7,000 years, making it one of the oldest continuously settled places on Earth. Its name derives from the Celtic word for salt — the source of extraordinary wealth in antiquity. So much Celtic material was excavated from the prehistoric mines and burial grounds that archaeologists named an entire Iron Age period after the village: the Hallstatt culture (800–450 BC). Romans continued salt extraction, and in the medieval period Hallstatt supplied salt across the Habsburg Empire via an ingenious 40-km wooden pipeline to Ebensee. Today the village's dramatic setting — compressed between sheer limestone cliffs and the mirror-still Hallstätter See — has made it one of the most photographed places on the planet and a UNESCO World Heritage Site since 1997.",
       "era": "Prehistoric"
     }
+  },
+  {
+    "slug": "kathmandu",
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "countryCode": "NP",
+    "flagEmoji": "🇳🇵",
+    "continent": "Asia",
+    "coordinates": { "lat": 27.7172, "lng": 85.3240 },
+    "timezone": "Asia/Kathmandu",
+    "population": 1003285,
+    "tags": ["spiritual", "historic", "himalayan", "temple", "culture"],
+    "videos": [
+      {
+        "youtubeId": "uuIfmC6H4-4",
+        "label": "Kathmandu Evening Walk – City Centre 4K HDR",
+        "timeOfDay": "golden-hour",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "R2aYiyDZoXM",
+        "label": "Nepal's Most Authentic Spiritual Capital – Kathmandu",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "P8X08UCWWqQ",
+        "label": "Kathmandu Main Shopping Street – Sundhara & New Road 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "IHIaPxNJU9Q",
+        "label": "Kathmandu Modern City – Evening Walk 4K 2025",
+        "timeOfDay": "golden-hour",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "OUn1IztygQQ",
+        "label": "Kathmandu Rain Walk – Thamel & Jyatha Area 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Namaste (नमस्ते) — said with palms pressed together",
+      "currency": "Nepalese Rupee (NPR)",
+      "bestSeason": "October–November (post-monsoon, crystal-clear skies) or March–April (spring blossoms before trekking season peak)",
+      "mustEat": ["Dal Bhat (rice, lentils, curried vegetables — eaten twice daily by locals)", "Momo (Tibetan-style steamed dumplings)", "Sel Roti (crispy ring-shaped rice bread)", "Newari Samay Baji (beaten rice feast platter)", "Butter tea (po cha) in the Tibetan quarter"],
+      "localTip": "Kathmandu's Thamel neighbourhood is tourist-central but the real soul of the city is in the Newari old town around Asan Chowk and Indra Chowk. Walk north from Durbar Square at dawn when the vegetable sellers set up and the temples come alive with puja smoke and devotees.",
+      "funFact": "Kathmandu sits in a valley that was, geologically, an ancient lake — the Kathmandu Lake drained roughly 10,000 years ago. The city is home to seven UNESCO World Heritage Sites within just 15 km of each other, including the living goddess (Kumari) whose incarnations have been venerated since the 17th century.",
+      "culturalDos": ["Remove shoes before entering any temple or someone's home", "Walk clockwise around stupas and Buddhist monuments", "Accept any offered food or tea with both hands as a sign of respect"],
+      "culturalDonts": ["Touch religious statues or prayer wheels with your left hand", "Point feet toward shrines, sacred images, or elders", "Wear shorts or sleeveless clothing when visiting temples — carry a scarf"]
+    },
+    "origin": {
+      "founded": "circa 723 AD (Licchavi era city foundation); valley settled since at least 7th century BC",
+      "originalName": "Kāntipur (City of Glory) — 'Kathmandu' derives from Kasthamandap, a 12th-century wooden pagoda pavilion built from a single tree",
+      "founders": "Licchavi dynasty, later consolidated under the Malla kings",
+      "story": "The Kathmandu Valley has been a centre of civilisation for over 2,500 years, situated on ancient trade routes connecting India and Tibet. The Licchavi dynasty built the first great monuments; the Malla kings transformed the valley into a trio of city-states (Kathmandu, Patan, Bhaktapur) from the 12th–18th centuries, competing to outdo each other in temple architecture and producing the ornate wood-and-brick pagodas that still define the skyline. The iconic Kasthamandap pavilion — from which the city takes its name — was a single-roomed shelter for pilgrims on the India–Tibet trade route, reportedly built from the timber of a single sal tree. Kathmandu was unified under the Shah dynasty in 1768 when Prithvi Narayan Shah conquered the valley and declared it the capital of a unified Nepal. Today it is the cultural and spiritual heart of the Himalayan world, home to seven UNESCO World Heritage Sites and the living goddess Kumari.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "nepal-himalayas",
+    "name": "Nepal Himalayas",
+    "country": "Nepal",
+    "countryCode": "NP",
+    "flagEmoji": "🇳🇵",
+    "continent": "Asia",
+    "coordinates": { "lat": 28.5967, "lng": 84.1000 },
+    "timezone": "Asia/Kathmandu",
+    "population": 52000,
+    "tags": ["trekking", "himalayan", "nature", "alpine", "adventure"],
+    "videos": [
+      {
+        "youtubeId": "kbfs_RHYx7c",
+        "label": "Tsum Valley Trek – Where Tibet and Nepal Meet",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "OlIFXpCQH6w",
+        "label": "The Himalayas – The World Hidden Above the Clouds",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      },
+      {
+        "youtubeId": "bY_gRApfoJk",
+        "label": "Nepal 4K – Relaxation Film with Peaceful Mountain Music",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      }
+    ],
+    "culture": {
+      "greeting": "Namaste (नमस्ते) — in remote Himalayan villages also Tashi Delek (Tibetan Buddhist greeting)",
+      "currency": "Nepalese Rupee (NPR); some teahouses in remote areas prefer USD",
+      "bestSeason": "October–November (post-monsoon clarity, best mountain views) or April–May (rhododendron forests in bloom)",
+      "mustEat": ["Dal Bhat (the trekker's fuel — unlimited refills at most teahouses)", "Yak cheese and butter", "Tibetan butter tea (po cha) for altitude warmth", "Tsampa (roasted barley porridge) in high-altitude villages", "Gundruk soup (fermented greens — a trekking staple)"],
+      "localTip": "Acclimatise properly — gain no more than 500m of sleeping altitude per day above 3,000m. The rule 'climb high, sleep low' is not a suggestion. Tsum Valley requires a special restricted area permit on top of the standard Trekking Information Management System (TIMS) card and ACAP/Manaslu permit.",
+      "funFact": "The Himalayas are the youngest mountain range on Earth — still growing roughly 5mm per year as the Indian tectonic plate pushes into the Eurasian plate. Tsum Valley remained sealed from outsiders until 2008 and its Tibetan Buddhist culture is virtually unchanged from centuries ago.",
+      "culturalDos": ["Always pass mani walls and chortens on the left (clockwise direction)", "Ask permission before photographing villagers, monks, or religious ceremonies", "Hire a licensed local guide — it supports mountain communities directly"],
+      "culturalDonts": ["Trek solo in remote valleys like Tsum — rescue access is days away", "Touch or step over prayer flags, mani stones, or offerings", "Underestimate altitude sickness — descend immediately if symptoms worsen"]
+    },
+    "origin": {
+      "founded": "Settled since prehistoric times; Tsum Valley isolated Tibetan Buddhist communities established circa 7th–8th century AD",
+      "originalName": "Tsum (from Tibetan 'Tsoom' = vivid and clear); the Himalayas from Sanskrit 'himālaya' = abode of snow",
+      "founders": "Tibetan Buddhist settlers and indigenous Gurung and Tamang peoples",
+      "story": "The Nepal Himalayas form the world's highest mountain system, home to eight of the ten tallest peaks on Earth including Everest (8,849m) and Manaslu (8,163m). Tsum Valley — hidden in the northern reaches of the Gorkha district — was one of the last valleys in Nepal to open to trekkers (2008). Its inhabitants trace descent from Tibetan Buddhist migrants and have maintained a near-intact medieval Tibetan culture including a 'no-kill' zone where hunting is forbidden by ancient decree. The valley contains over 30 monasteries, including Rachen Gompa — one of the largest nunneries in Nepal. The broader Himalayan region served as both the spiritual heartland of Hinduism and Buddhism and the most formidable natural barrier in human history, shaping the civilisations of South Asia on one side and Central Asia on the other.",
+      "era": "Medieval"
+    }
   }
 ]
