@@ -427,6 +427,27 @@
         "timeOfDay": "day",
         "type": "walk",
         "isFeatured": false
+      },
+      {
+        "youtubeId": "9dOw1zvAk78",
+        "label": "Mumbai Walking Tour – Narrated 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "DFQO7Zn-KM4",
+        "label": "The Real Mumbai – Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "5l-NM6gRKBQ",
+        "label": "Mumbai Downtown Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
       }
     ],
     "culture": {
@@ -3375,10 +3396,18 @@
     "countryCode": "CH",
     "flagEmoji": "🇨🇭",
     "continent": "Europe",
-    "coordinates": { "lat": 46.2044, "lng": 6.1432 },
+    "coordinates": {
+      "lat": 46.2044,
+      "lng": 6.1432
+    },
     "timezone": "Europe/Zurich",
     "population": 203856,
-    "tags": ["elegant", "lakeside", "diplomacy", "luxury"],
+    "tags": [
+      "elegant",
+      "lakeside",
+      "diplomacy",
+      "luxury"
+    ],
     "videos": [
       {
         "youtubeId": "-75nCcpU5u8",
@@ -3392,11 +3421,25 @@
       "greeting": "Bonjour (French) / Grüezi (German)",
       "currency": "Swiss Franc (CHF)",
       "bestSeason": "May–September (warm summers, lake views)",
-      "mustEat": ["Fondue", "Raclette", "Rösti", "Chocolate", "Swiss cheese"],
+      "mustEat": [
+        "Fondue",
+        "Raclette",
+        "Rösti",
+        "Chocolate",
+        "Swiss cheese"
+      ],
       "localTip": "Geneva runs on punctuality — buses and trains leave on the dot. Tap water is exceptionally pure and free to drink from public fountains.",
       "funFact": "Geneva hosts more international organisations per capita than any other city on Earth, including the UN, Red Cross, and WHO.",
-      "culturalDos": ["Greet shopkeepers when entering", "Speak quietly in public spaces", "Respect recycling rules strictly"],
-      "culturalDonts": ["Flush the toilet late at night in apartments", "Mow the lawn on Sunday", "Expect shops open on Sunday"]
+      "culturalDos": [
+        "Greet shopkeepers when entering",
+        "Speak quietly in public spaces",
+        "Respect recycling rules strictly"
+      ],
+      "culturalDonts": [
+        "Flush the toilet late at night in apartments",
+        "Mow the lawn on Sunday",
+        "Expect shops open on Sunday"
+      ]
     },
     "origin": {
       "founded": "58 BC",
@@ -3413,10 +3456,18 @@
     "countryCode": "CH",
     "flagEmoji": "🇨🇭",
     "continent": "Europe",
-    "coordinates": { "lat": 46.0037, "lng": 8.9511 },
+    "coordinates": {
+      "lat": 46.0037,
+      "lng": 8.9511
+    },
     "timezone": "Europe/Zurich",
     "population": 62000,
-    "tags": ["lakeside", "mediterranean", "luxury", "mountains"],
+    "tags": [
+      "lakeside",
+      "mediterranean",
+      "luxury",
+      "mountains"
+    ],
     "videos": [
       {
         "youtubeId": "GkhMz52zMG0",
@@ -3430,11 +3481,25 @@
       "greeting": "Buongiorno (Italian) / Ciao",
       "currency": "Swiss Franc (CHF)",
       "bestSeason": "April–October (Mediterranean microclimate, warm and sunny)",
-      "mustEat": ["Risotto", "Polenta", "Luganighetta sausage", "Ticinese wine", "Panettone"],
+      "mustEat": [
+        "Risotto",
+        "Polenta",
+        "Luganighetta sausage",
+        "Ticinese wine",
+        "Panettone"
+      ],
       "localTip": "Take the funicular up Monte San Salvatore for a 360° view of three lakes and the Alps. Italian is the primary language — a rare Swiss canton where it rules.",
       "funFact": "Lugano sits in the Italian-speaking canton of Ticino and enjoys a Mediterranean microclimate unusual for Switzerland — palm trees line its lakefront promenade.",
-      "culturalDos": ["Speak Italian or English", "Linger over long lunches", "Take the boat across the lake"],
-      "culturalDonts": ["Rush through meals", "Assume everyone speaks German", "Skip the smaller lakeside villages"]
+      "culturalDos": [
+        "Speak Italian or English",
+        "Linger over long lunches",
+        "Take the boat across the lake"
+      ],
+      "culturalDonts": [
+        "Rush through meals",
+        "Assume everyone speaks German",
+        "Skip the smaller lakeside villages"
+      ]
     },
     "origin": {
       "founded": "circa 4th century AD",
@@ -3451,10 +3516,18 @@
     "countryCode": "CH",
     "flagEmoji": "🇨🇭",
     "continent": "Europe",
-    "coordinates": { "lat": 47.5596, "lng": 7.5886 },
+    "coordinates": {
+      "lat": 47.5596,
+      "lng": 7.5886
+    },
     "timezone": "Europe/Zurich",
     "population": 178000,
-    "tags": ["art", "architecture", "rhine", "culture"],
+    "tags": [
+      "art",
+      "architecture",
+      "rhine",
+      "culture"
+    ],
     "videos": [
       {
         "youtubeId": "UpOSdA2burI",
@@ -3468,11 +3541,25 @@
       "greeting": "Grüezi / Hallo",
       "currency": "Swiss Franc (CHF)",
       "bestSeason": "June (Art Basel) and December (Christmas market)",
-      "mustEat": ["Läckerli (spiced biscuit)", "Mehlsuppe (flour soup)", "Basler Rüeblitorte (carrot cake)", "Wiener Schnitzel", "Rhine fish"],
+      "mustEat": [
+        "Läckerli (spiced biscuit)",
+        "Mehlsuppe (flour soup)",
+        "Basler Rüeblitorte (carrot cake)",
+        "Wiener Schnitzel",
+        "Rhine fish"
+      ],
       "localTip": "Basel sits at the border of France, Germany, and Switzerland — you can walk between three countries in an afternoon. The free Rhine swimming culture in summer is unmissable.",
       "funFact": "Basel hosts Art Basel, the world's most prestigious contemporary art fair, every June — transforming the city into the global art capital for one week.",
-      "culturalDos": ["Visit a museum on Sundays (many are free)", "Swim in the Rhine with locals in summer", "Attend Fasnacht carnival in February"],
-      "culturalDonts": ["Miss the Old Town's medieval streets", "Confuse Swiss German with High German", "Skip the Kunstmuseum"]
+      "culturalDos": [
+        "Visit a museum on Sundays (many are free)",
+        "Swim in the Rhine with locals in summer",
+        "Attend Fasnacht carnival in February"
+      ],
+      "culturalDonts": [
+        "Miss the Old Town's medieval streets",
+        "Confuse Swiss German with High German",
+        "Skip the Kunstmuseum"
+      ]
     },
     "origin": {
       "founded": "44 BC (Roman fort)",
@@ -3489,10 +3576,18 @@
     "countryCode": "CH",
     "flagEmoji": "🇨🇭",
     "continent": "Europe",
-    "coordinates": { "lat": 46.9480, "lng": 7.4474 },
+    "coordinates": {
+      "lat": 46.948,
+      "lng": 7.4474
+    },
     "timezone": "Europe/Zurich",
     "population": 134591,
-    "tags": ["capital", "medieval", "arcades", "bears"],
+    "tags": [
+      "capital",
+      "medieval",
+      "arcades",
+      "bears"
+    ],
     "videos": [
       {
         "youtubeId": "gbWQWTwPRW0",
@@ -3506,11 +3601,25 @@
       "greeting": "Grüezi / Guete Tag (Bernese German)",
       "currency": "Swiss Franc (CHF)",
       "bestSeason": "May–September (mild summers, long arcaded walks in any weather)",
-      "mustEat": ["Bernese Platte (meat and sauerkraut)", "Läckerli", "Berner Rösti", "Meringue with cream", "Toblerone chocolate"],
+      "mustEat": [
+        "Bernese Platte (meat and sauerkraut)",
+        "Läckerli",
+        "Berner Rösti",
+        "Meringue with cream",
+        "Toblerone chocolate"
+      ],
       "localTip": "Bern's 6km of covered arcades (Lauben) mean you can walk the entire old city without an umbrella in any weather. The city's bear symbol is everywhere — don't miss the Bear Park by the river.",
       "funFact": "Albert Einstein developed his Special Theory of Relativity while working as a patent clerk in Bern in 1905. His apartment at Kramgasse 49 is now a museum.",
-      "culturalDos": ["Walk the arcaded old town", "Visit the Zytglogge clock tower", "Explore the Rose Garden for panoramic views"],
-      "culturalDonts": ["Rush — Bern moves at a gentle pace", "Miss the Einstein Museum", "Confuse Bern with Berlin"]
+      "culturalDos": [
+        "Walk the arcaded old town",
+        "Visit the Zytglogge clock tower",
+        "Explore the Rose Garden for panoramic views"
+      ],
+      "culturalDonts": [
+        "Rush — Bern moves at a gentle pace",
+        "Miss the Einstein Museum",
+        "Confuse Bern with Berlin"
+      ]
     },
     "origin": {
       "founded": "1191",
@@ -3527,10 +3636,18 @@
     "countryCode": "CH",
     "flagEmoji": "🇨🇭",
     "continent": "Europe",
-    "coordinates": { "lat": 47.3769, "lng": 8.5417 },
+    "coordinates": {
+      "lat": 47.3769,
+      "lng": 8.5417
+    },
     "timezone": "Europe/Zurich",
     "population": 421878,
-    "tags": ["finance", "luxury", "lakeside", "nightlife"],
+    "tags": [
+      "finance",
+      "luxury",
+      "lakeside",
+      "nightlife"
+    ],
     "videos": [
       {
         "youtubeId": "VFt1vGi5D0c",
@@ -3551,11 +3668,25 @@
       "greeting": "Grüezi / Hoi (informal)",
       "currency": "Swiss Franc (CHF)",
       "bestSeason": "June–August (lake swimming, festivals) and December (Christmas markets)",
-      "mustEat": ["Zürcher Geschnetzeltes (veal in cream sauce)", "Birchermüesli", "Fondue", "Swiss chocolate", "Raclette"],
+      "mustEat": [
+        "Zürcher Geschnetzeltes (veal in cream sauce)",
+        "Birchermüesli",
+        "Fondue",
+        "Swiss chocolate",
+        "Raclette"
+      ],
       "localTip": "The Zürichsee (lake) is clean enough to swim in summer — locals do it daily. The Langstrasse district transforms at night into Zurich's best bar and restaurant scene.",
       "funFact": "Zurich consistently ranks as one of the world's most liveable cities, yet it also hosts one of Europe's wildest street parties — the Street Parade techno festival, drawing 1 million visitors each August.",
-      "culturalDos": ["Buy a day pass for trams and buses", "Swim in the lake or Limmat river in summer", "Explore the Altstadt's narrow medieval lanes"],
-      "culturalDonts": ["Jaywalk — it's taken seriously", "Be loud on public transport", "Forget that almost everything closes Sunday"]
+      "culturalDos": [
+        "Buy a day pass for trams and buses",
+        "Swim in the lake or Limmat river in summer",
+        "Explore the Altstadt's narrow medieval lanes"
+      ],
+      "culturalDonts": [
+        "Jaywalk — it's taken seriously",
+        "Be loud on public transport",
+        "Forget that almost everything closes Sunday"
+      ]
     },
     "origin": {
       "founded": "15 BC (Roman)",
@@ -3572,10 +3703,18 @@
     "countryCode": "QA",
     "flagEmoji": "🇶🇦",
     "continent": "Asia",
-    "coordinates": { "lat": 25.2854, "lng": 51.5310 },
+    "coordinates": {
+      "lat": 25.2854,
+      "lng": 51.531
+    },
     "timezone": "Asia/Qatar",
     "population": 2382000,
-    "tags": ["modern", "luxury", "desert", "skyline"],
+    "tags": [
+      "modern",
+      "luxury",
+      "desert",
+      "skyline"
+    ],
     "videos": [
       {
         "youtubeId": "MWvrDzIzfhQ",
@@ -3589,11 +3728,25 @@
       "greeting": "As-salamu alaykum (السلام عليكم)",
       "currency": "Qatari Riyal (QAR)",
       "bestSeason": "November–March (cool and dry, 20–28°C)",
-      "mustEat": ["Machboos (spiced rice with meat)", "Harees (wheat and meat porridge)", "Balaleet (sweet vermicelli)", "Saloona (vegetable stew)", "Luqaimat (fried dumplings with honey)"],
+      "mustEat": [
+        "Machboos (spiced rice with meat)",
+        "Harees (wheat and meat porridge)",
+        "Balaleet (sweet vermicelli)",
+        "Saloona (vegetable stew)",
+        "Luqaimat (fried dumplings with honey)"
+      ],
       "localTip": "Dress modestly in public, especially near mosques and the souq. The Corniche waterfront is best walked at sunset when the skyline turns golden. Taxis and ride-hailing are the easiest way around.",
       "funFact": "Qatar has the world's highest GDP per capita and built a skyline from near-zero in just 30 years — most of Doha visible today didn't exist before 1990.",
-      "culturalDos": ["Accept hospitality warmly — refusing tea or coffee is impolite", "Dress modestly in public areas", "Bargain respectfully in the Souq Waqif"],
-      "culturalDonts": ["Display affection in public", "Photograph people without permission", "Eat or drink in public during Ramadan"]
+      "culturalDos": [
+        "Accept hospitality warmly — refusing tea or coffee is impolite",
+        "Dress modestly in public areas",
+        "Bargain respectfully in the Souq Waqif"
+      ],
+      "culturalDonts": [
+        "Display affection in public",
+        "Photograph people without permission",
+        "Eat or drink in public during Ramadan"
+      ]
     },
     "origin": {
       "founded": "circa 1820",
@@ -3610,10 +3763,18 @@
     "countryCode": "PL",
     "flagEmoji": "🇵🇱",
     "continent": "Europe",
-    "coordinates": { "lat": 52.2297, "lng": 21.0122 },
+    "coordinates": {
+      "lat": 52.2297,
+      "lng": 21.0122
+    },
     "timezone": "Europe/Warsaw",
     "population": 1860000,
-    "tags": ["historical", "resilient", "culture", "modern"],
+    "tags": [
+      "historical",
+      "resilient",
+      "culture",
+      "modern"
+    ],
     "videos": [
       {
         "youtubeId": "RInBAatA11Q",
@@ -3627,11 +3788,25 @@
       "greeting": "Dzień dobry (good day) / Cześć (hi, informal)",
       "currency": "Polish Złoty (PLN)",
       "bestSeason": "May–September (warm summers, outdoor cafés, festivals)",
-      "mustEat": ["Pierogi (dumplings)", "Żurek (sour rye soup)", "Bigos (hunter's stew)", "Oscypek (smoked cheese)", "Pączki (fried doughnuts)"],
+      "mustEat": [
+        "Pierogi (dumplings)",
+        "Żurek (sour rye soup)",
+        "Bigos (hunter's stew)",
+        "Oscypek (smoked cheese)",
+        "Pączki (fried doughnuts)"
+      ],
       "localTip": "Warsaw's Old Town is entirely a postwar reconstruction — every cobblestone was rebuilt after 85% of the city was deliberately destroyed in 1944. The rebuilt city won UNESCO status for the extraordinary act of collective memory. Praga district across the river is the edgy, authentic side most visitors miss.",
       "funFact": "Warsaw was almost completely erased from the map in 1944 — the Nazis systematically dynamited 85% of the city building by building after the Warsaw Uprising. Citizens rebuilt it block by block using 18th-century paintings as blueprints.",
-      "culturalDos": ["Learn a few Polish words — locals deeply appreciate the effort", "Visit the POLIN Jewish history museum", "Try vodka the Polish way — neat and cold"],
-      "culturalDonts": ["Confuse Poland with Russia politically", "Skip the Uprising Museum", "Assume Warsaw is dull — it's one of Europe's fastest-changing cities"]
+      "culturalDos": [
+        "Learn a few Polish words — locals deeply appreciate the effort",
+        "Visit the POLIN Jewish history museum",
+        "Try vodka the Polish way — neat and cold"
+      ],
+      "culturalDonts": [
+        "Confuse Poland with Russia politically",
+        "Skip the Uprising Museum",
+        "Assume Warsaw is dull — it's one of Europe's fastest-changing cities"
+      ]
     },
     "origin": {
       "founded": "circa 13th century",
@@ -3648,10 +3823,18 @@
     "countryCode": "HR",
     "flagEmoji": "🇭🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 42.6507, "lng": 18.0944 },
+    "coordinates": {
+      "lat": 42.6507,
+      "lng": 18.0944
+    },
     "timezone": "Europe/Zagreb",
     "population": 41562,
-    "tags": ["coastal", "historical", "walled-city", "adriatic"],
+    "tags": [
+      "coastal",
+      "historical",
+      "walled-city",
+      "adriatic"
+    ],
     "videos": [
       {
         "youtubeId": "kCmNLkDmODA",
@@ -3665,11 +3848,25 @@
       "greeting": "Dobar dan (good day) / Bok (informal hi)",
       "currency": "Euro (EUR)",
       "bestSeason": "May–June or September–October (warm, fewer crowds than July–August)",
-      "mustEat": ["Black risotto (crni rižot)", "Peka (slow-cooked lamb or octopus)", "Burek", "Fresh grilled fish", "Rozata (caramel custard)"],
+      "mustEat": [
+        "Black risotto (crni rižot)",
+        "Peka (slow-cooked lamb or octopus)",
+        "Burek",
+        "Fresh grilled fish",
+        "Rozata (caramel custard)"
+      ],
       "localTip": "Walk the city walls at opening time (8 AM) to beat the cruise ship crowds. The Old Town is pedestrian-only — wear comfortable shoes on the marble Stradun which gets slippery when wet.",
       "funFact": "Dubrovnik was the first state in the world to officially abolish the slave trade — in 1416, over 400 years before the British Empire. The city-republic of Ragusa prided itself on freedom ('Libertas') above all.",
-      "culturalDos": ["Walk the entire 2km city wall circuit", "Eat at a konoba (traditional tavern) away from the main drag", "Take the cable car for a view of the red rooftops and sea"],
-      "culturalDonts": ["Visit in peak July–August without booking months ahead", "Wear swimwear away from the beach", "Drag wheeled luggage on the marble streets — it's prohibited"]
+      "culturalDos": [
+        "Walk the entire 2km city wall circuit",
+        "Eat at a konoba (traditional tavern) away from the main drag",
+        "Take the cable car for a view of the red rooftops and sea"
+      ],
+      "culturalDonts": [
+        "Visit in peak July–August without booking months ahead",
+        "Wear swimwear away from the beach",
+        "Drag wheeled luggage on the marble streets — it's prohibited"
+      ]
     },
     "origin": {
       "founded": "614 AD",
@@ -3686,10 +3883,18 @@
     "countryCode": "HR",
     "flagEmoji": "🇭🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 43.1727, "lng": 16.4414 },
+    "coordinates": {
+      "lat": 43.1727,
+      "lng": 16.4414
+    },
     "timezone": "Europe/Zagreb",
     "population": 4250,
-    "tags": ["coastal", "adriatic", "islands", "lavender"],
+    "tags": [
+      "coastal",
+      "adriatic",
+      "islands",
+      "lavender"
+    ],
     "videos": [
       {
         "youtubeId": "Ut7AADJYTYg",
@@ -3703,11 +3908,25 @@
       "greeting": "Dobar dan / Bok",
       "currency": "Euro (EUR)",
       "bestSeason": "June or September (warm sea, lavender in bloom, manageable crowds)",
-      "mustEat": ["Grilled fish with blitva (Swiss chard)", "Peka (lamb under the bell)", "Local olive oil", "Prosek (sweet dessert wine)", "Lavender honey"],
+      "mustEat": [
+        "Grilled fish with blitva (Swiss chard)",
+        "Peka (lamb under the bell)",
+        "Local olive oil",
+        "Prosek (sweet dessert wine)",
+        "Lavender honey"
+      ],
       "localTip": "Hvar town is car-free. Take a water taxi to the Pakleni islands for secluded swimming spots the tour groups miss. The fortress above the town offers the best views at golden hour.",
       "funFact": "Hvar is one of the sunniest spots in Europe with over 2,700 hours of sunshine per year — and has been cultivating lavender since the 14th century. The island's lavender fields bloom purple every June.",
-      "culturalDos": ["Rent a boat or kayak to explore hidden coves", "Buy local lavender products", "Watch the sunset from the fortress hilltop"],
-      "culturalDonts": ["Come in August without accommodation pre-booked", "Expect nightlife everywhere — the town is the party hub, the rest is quiet", "Skip the Venetian loggia in the main square"]
+      "culturalDos": [
+        "Rent a boat or kayak to explore hidden coves",
+        "Buy local lavender products",
+        "Watch the sunset from the fortress hilltop"
+      ],
+      "culturalDonts": [
+        "Come in August without accommodation pre-booked",
+        "Expect nightlife everywhere — the town is the party hub, the rest is quiet",
+        "Skip the Venetian loggia in the main square"
+      ]
     },
     "origin": {
       "founded": "385 BC (Greek colony)",
@@ -3724,10 +3943,18 @@
     "countryCode": "HR",
     "flagEmoji": "🇭🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 45.3380, "lng": 14.3055 },
+    "coordinates": {
+      "lat": 45.338,
+      "lng": 14.3055
+    },
     "timezone": "Europe/Zagreb",
     "population": 11659,
-    "tags": ["coastal", "elegant", "belle-epoque", "riviera"],
+    "tags": [
+      "coastal",
+      "elegant",
+      "belle-epoque",
+      "riviera"
+    ],
     "videos": [
       {
         "youtubeId": "t3zpoZZB2cE",
@@ -3741,11 +3968,25 @@
       "greeting": "Dobar dan / Bok",
       "currency": "Euro (EUR)",
       "bestSeason": "May–October (mild Adriatic climate, mild even in winter)",
-      "mustEat": ["Šurlice pasta with truffles", "Grilled sea bream", "Scampi na buzaru", "Kvarner bay scallops", "Fritule (fried doughnuts)"],
+      "mustEat": [
+        "Šurlice pasta with truffles",
+        "Grilled sea bream",
+        "Scampi na buzaru",
+        "Kvarner bay scallops",
+        "Fritule (fried doughnuts)"
+      ],
       "localTip": "Walk the Lungomare — a 12km seafront promenade built in 1885 that connects Opatija to Lovran. The morning mist over Kvarner Bay is extraordinary. Visit the Villa Angiolina gardens for free.",
       "funFact": "Opatija was the Austro-Hungarian Empire's most fashionable resort — Emperor Franz Joseph, Gustav Mahler, and Anton Chekhov all strolled its promenade. The Habsburgs essentially invented beach tourism here.",
-      "culturalDos": ["Walk the full Lungomare promenade", "Try the spa culture at the grand hotels", "Visit in spring when the camellias bloom"],
-      "culturalDonts": ["Overlook the Belle Époque villas hidden behind the main road", "Expect a party scene — Opatija is refined and quiet", "Skip Lovran at the end of the Lungomare"]
+      "culturalDos": [
+        "Walk the full Lungomare promenade",
+        "Try the spa culture at the grand hotels",
+        "Visit in spring when the camellias bloom"
+      ],
+      "culturalDonts": [
+        "Overlook the Belle Époque villas hidden behind the main road",
+        "Expect a party scene — Opatija is refined and quiet",
+        "Skip Lovran at the end of the Lungomare"
+      ]
     },
     "origin": {
       "founded": "1844 (as a resort)",
@@ -3762,10 +4003,18 @@
     "countryCode": "HR",
     "flagEmoji": "🇭🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 43.5081, "lng": 16.4402 },
+    "coordinates": {
+      "lat": 43.5081,
+      "lng": 16.4402
+    },
     "timezone": "Europe/Zagreb",
     "population": 178192,
-    "tags": ["coastal", "historical", "roman", "adriatic"],
+    "tags": [
+      "coastal",
+      "historical",
+      "roman",
+      "adriatic"
+    ],
     "videos": [
       {
         "youtubeId": "yuGlwzC3Dms",
@@ -3779,11 +4028,25 @@
       "greeting": "Dobar dan / Bok / Čao",
       "currency": "Euro (EUR)",
       "bestSeason": "May–June or September (hot Adriatic summer, lively but not overcrowded)",
-      "mustEat": ["Pašticada (slow-braised beef)", "Soparnik (Swiss chard pie)", "Grilled fish on the Riva", "Peka", "Arancini (candied orange peel)"],
+      "mustEat": [
+        "Pašticada (slow-braised beef)",
+        "Soparnik (Swiss chard pie)",
+        "Grilled fish on the Riva",
+        "Peka",
+        "Arancini (candied orange peel)"
+      ],
       "localTip": "People actually live inside Diocletian's Palace — apartments, cafés, and bars occupy the Roman emperor's retirement home. Walk through the golden gate at dawn before the crowds arrive. The Riva promenade is the evening social scene.",
       "funFact": "Split's old town is literally a Roman emperor's retirement palace. Diocletian built his palace in 305 AD to retire into, and citizens simply moved in after his death — making it one of the best-preserved Roman monuments with people still living inside.",
-      "culturalDos": ["Get lost in the labyrinthine palace lanes at night", "Watch locals play picigin (a ball game) in the shallow sea at Bačvice beach", "Climb the cathedral bell tower for panoramic views"],
-      "culturalDonts": ["Come only for the Diocletian selfie and leave — the city rewards slow exploration", "Ignore the Mestrovic Gallery", "Visit in August without heat-readiness — temperatures regularly hit 35°C+"]
+      "culturalDos": [
+        "Get lost in the labyrinthine palace lanes at night",
+        "Watch locals play picigin (a ball game) in the shallow sea at Bačvice beach",
+        "Climb the cathedral bell tower for panoramic views"
+      ],
+      "culturalDonts": [
+        "Come only for the Diocletian selfie and leave — the city rewards slow exploration",
+        "Ignore the Mestrovic Gallery",
+        "Visit in August without heat-readiness — temperatures regularly hit 35°C+"
+      ]
     },
     "origin": {
       "founded": "305 AD (palace built)",
@@ -3800,10 +4063,18 @@
     "countryCode": "HR",
     "flagEmoji": "🇭🇷",
     "continent": "Europe",
-    "coordinates": { "lat": 44.1194, "lng": 15.2314 },
+    "coordinates": {
+      "lat": 44.1194,
+      "lng": 15.2314
+    },
     "timezone": "Europe/Zagreb",
     "population": 75082,
-    "tags": ["coastal", "historical", "roman", "sunsets"],
+    "tags": [
+      "coastal",
+      "historical",
+      "roman",
+      "sunsets"
+    ],
     "videos": [
       {
         "youtubeId": "4xJf5PfuMjg",
@@ -3817,11 +4088,25 @@
       "greeting": "Dobar dan / Bok",
       "currency": "Euro (EUR)",
       "bestSeason": "May–June or September (warm, fewer tourists than peak summer)",
-      "mustEat": ["Maraschino liqueur (invented here)", "Pag cheese (Paški sir)", "Dried figs with almonds", "Grilled squid", "Lamb from the island of Pag"],
+      "mustEat": [
+        "Maraschino liqueur (invented here)",
+        "Pag cheese (Paški sir)",
+        "Dried figs with almonds",
+        "Grilled squid",
+        "Lamb from the island of Pag"
+      ],
       "localTip": "Alfred Hitchcock called Zadar's sunset 'the most beautiful in the world.' The Sea Organ on the waterfront uses wave energy to play music through stone pipes — sit beside it at dusk. The nearby Greeting to the Sun installation lights up at night.",
       "funFact": "Zadar has been bombed, besieged, and devastated more times than almost any city in Europe — Byzantines, Venetians, Crusaders, Austrians, and NATO aircraft in 1944 all left their mark. Yet its Roman forum still stands in the city centre.",
-      "culturalDos": ["Sit by the Sea Organ at sunset — take your time", "Visit the Roman forum in the old town centre", "Try Maraschino in its city of origin"],
-      "culturalDonts": ["Rush through — Zadar rewards those who wander slowly", "Skip the Museum of Ancient Glass", "Miss the Greeting to the Sun light display after dark"]
+      "culturalDos": [
+        "Sit by the Sea Organ at sunset — take your time",
+        "Visit the Roman forum in the old town centre",
+        "Try Maraschino in its city of origin"
+      ],
+      "culturalDonts": [
+        "Rush through — Zadar rewards those who wander slowly",
+        "Skip the Museum of Ancient Glass",
+        "Miss the Greeting to the Sun light display after dark"
+      ]
     },
     "origin": {
       "founded": "circa 9th century BC (Liburnian)",
@@ -3838,10 +4123,18 @@
     "countryCode": "NO",
     "flagEmoji": "🇳🇴",
     "continent": "Europe",
-    "coordinates": { "lat": 59.9139, "lng": 10.7522 },
+    "coordinates": {
+      "lat": 59.9139,
+      "lng": 10.7522
+    },
     "timezone": "Europe/Oslo",
     "population": 717710,
-    "tags": ["nordic", "fjords", "museums", "modern"],
+    "tags": [
+      "nordic",
+      "fjords",
+      "museums",
+      "modern"
+    ],
     "videos": [
       {
         "youtubeId": "wBrrg_fGSkU",
@@ -3876,11 +4169,25 @@
       "greeting": "Hei (hi) / God dag (good day)",
       "currency": "Norwegian Krone (NOK)",
       "bestSeason": "May–August (long daylight hours, midnight sun, outdoor life) or December (Christmas markets, northern lights nearby)",
-      "mustEat": ["Rakfisk (fermented trout)", "Fårikål (lamb and cabbage stew)", "Brunost (brown cheese)", "Kjøttkaker (Norwegian meatballs)", "Smørbrød (open sandwiches)"],
+      "mustEat": [
+        "Rakfisk (fermented trout)",
+        "Fårikål (lamb and cabbage stew)",
+        "Brunost (brown cheese)",
+        "Kjøttkaker (Norwegian meatballs)",
+        "Smørbrød (open sandwiches)"
+      ],
       "localTip": "Vigeland Park is free and open 24/7 — 212 bronze and granite sculptures by Gustav Vigeland covering the full range of human emotion. The T-bane (metro) goes almost everywhere and doubles as a museum on wheels through the city's modernist station art.",
       "funFact": "Oslo is consistently ranked one of the world's most expensive cities, yet Vigeland Park — one of the world's most visited sculpture parks — is completely free. The city also has more electric vehicles per capita than anywhere else on Earth.",
-      "culturalDos": ["Embrace outdoor life in all weather — Norwegians say 'there's no bad weather, only bad clothing'", "Respect queuing and personal space", "Take the ferry to the Bygdøy peninsula museums"],
-      "culturalDonts": ["Talk loudly in public spaces", "Assume you can drink alcohol bought outside a Vinmonopolet store freely", "Miss the Munch Museum's original The Scream"]
+      "culturalDos": [
+        "Embrace outdoor life in all weather — Norwegians say 'there's no bad weather, only bad clothing'",
+        "Respect queuing and personal space",
+        "Take the ferry to the Bygdøy peninsula museums"
+      ],
+      "culturalDonts": [
+        "Talk loudly in public spaces",
+        "Assume you can drink alcohol bought outside a Vinmonopolet store freely",
+        "Miss the Munch Museum's original The Scream"
+      ]
     },
     "origin": {
       "founded": "circa 1000 AD",
@@ -3897,10 +4204,18 @@
     "countryCode": "NO",
     "flagEmoji": "🇳🇴",
     "continent": "Europe",
-    "coordinates": { "lat": 69.6489, "lng": 18.9551 },
+    "coordinates": {
+      "lat": 69.6489,
+      "lng": 18.9551
+    },
     "timezone": "Europe/Oslo",
     "population": 77878,
-    "tags": ["arctic", "northern-lights", "midnight-sun", "nature"],
+    "tags": [
+      "arctic",
+      "northern-lights",
+      "midnight-sun",
+      "nature"
+    ],
     "videos": [
       {
         "youtubeId": "3T0IIEUfDGA",
@@ -3914,11 +4229,25 @@
       "greeting": "Hei / Moi (informal)",
       "currency": "Norwegian Krone (NOK)",
       "bestSeason": "November–February (northern lights) or June–July (midnight sun)",
-      "mustEat": ["Reindeer steak", "King crab", "Stockfish (tørrfisk)", "Whale steak (traditional, controversial)", "Cloudberry jam (multekrem)"],
+      "mustEat": [
+        "Reindeer steak",
+        "King crab",
+        "Stockfish (tørrfisk)",
+        "Whale steak (traditional, controversial)",
+        "Cloudberry jam (multekrem)"
+      ],
       "localTip": "For the northern lights, get away from city lights — even a 20-minute drive makes a huge difference. Download a KP index app to track solar activity. The Arctic Cathedral (Ishavskatedralen) is illuminated beautifully at night.",
       "funFact": "Tromsø sits 350km north of the Arctic Circle, making it the northernmost city of its size in the world. In winter, the sun doesn't rise for two months (polar night); in summer, it doesn't set for two months (midnight sun).",
-      "culturalDos": ["Dress in proper Arctic layers — wind chill is the real danger", "Book northern lights tours in advance for November–February", "Visit the Polaria aquarium for Arctic wildlife"],
-      "culturalDonts": ["Underestimate Norwegian winter darkness — bring a sun lamp if staying long", "Expect the northern lights every night — it depends on solar activity and cloud cover", "Skip Tromsø's surprisingly vibrant café and bar scene"]
+      "culturalDos": [
+        "Dress in proper Arctic layers — wind chill is the real danger",
+        "Book northern lights tours in advance for November–February",
+        "Visit the Polaria aquarium for Arctic wildlife"
+      ],
+      "culturalDonts": [
+        "Underestimate Norwegian winter darkness — bring a sun lamp if staying long",
+        "Expect the northern lights every night — it depends on solar activity and cloud cover",
+        "Skip Tromsø's surprisingly vibrant café and bar scene"
+      ]
     },
     "origin": {
       "founded": "1794 (town charter)",
@@ -3935,10 +4264,19 @@
     "countryCode": "AT",
     "flagEmoji": "🇦🇹",
     "continent": "Europe",
-    "coordinates": { "lat": 47.5623, "lng": 13.6493 },
+    "coordinates": {
+      "lat": 47.5623,
+      "lng": 13.6493
+    },
     "timezone": "Europe/Vienna",
     "population": 800,
-    "tags": ["alpine", "lake", "village", "nature", "historic"],
+    "tags": [
+      "alpine",
+      "lake",
+      "village",
+      "nature",
+      "historic"
+    ],
     "videos": [
       {
         "youtubeId": "AQB6dVt-t64",
@@ -3966,11 +4304,25 @@
       "greeting": "Grüß Gott (formal) / Servus (informal)",
       "currency": "Euro (EUR)",
       "bestSeason": "May–October (wildflowers and lake walks) or December–January (Christmas market)",
-      "mustEat": ["Wiener Schnitzel", "Kaiserschmarrn", "Tafelspitz", "Apple Strudel", "Salt-cured Alpine trout"],
+      "mustEat": [
+        "Wiener Schnitzel",
+        "Kaiserschmarrn",
+        "Tafelspitz",
+        "Apple Strudel",
+        "Salt-cured Alpine trout"
+      ],
       "localTip": "Arrive before 9 am or after 5 pm — Hallstatt's 800 residents receive over a million visitors a year. The viewpoint on the lakeside road just north of the village gives the iconic postcard shot. The free ferry from the Hallstatt train station takes 5 minutes and avoids the road.",
       "funFact": "Hallstatt is so strikingly beautiful that China built a full-scale replica of it in Guangdong province. More remarkably, the village lends its name to an entire archaeological era — the Hallstatt culture (800–450 BC) — the earliest phase of the European Iron Age, discovered in the prehistoric salt mines here.",
-      "culturalDos": ["Use the Park & Ride in Lahn and walk or take the shuttle — private cars are banned in the village centre", "Book the salt mine tour in advance (oldest working salt mine in the world)", "Walk the Echerntal valley trail for alpine meadows and waterfalls away from crowds"],
-      "culturalDonts": ["Block the narrow lakeside path for photos — residents rely on it daily", "Arrive by car on summer weekends without a parking reservation", "Skip the Beinhaus (Charnel house) — a genuine 400-year-old tradition, not a tourist attraction"]
+      "culturalDos": [
+        "Use the Park & Ride in Lahn and walk or take the shuttle — private cars are banned in the village centre",
+        "Book the salt mine tour in advance (oldest working salt mine in the world)",
+        "Walk the Echerntal valley trail for alpine meadows and waterfalls away from crowds"
+      ],
+      "culturalDonts": [
+        "Block the narrow lakeside path for photos — residents rely on it daily",
+        "Arrive by car on summer weekends without a parking reservation",
+        "Skip the Beinhaus (Charnel house) — a genuine 400-year-old tradition, not a tourist attraction"
+      ]
     },
     "origin": {
       "founded": "circa 5000 BC (prehistoric settlement)",
@@ -3987,10 +4339,19 @@
     "countryCode": "NP",
     "flagEmoji": "🇳🇵",
     "continent": "Asia",
-    "coordinates": { "lat": 27.7172, "lng": 85.3240 },
+    "coordinates": {
+      "lat": 27.7172,
+      "lng": 85.324
+    },
     "timezone": "Asia/Kathmandu",
     "population": 1003285,
-    "tags": ["spiritual", "historic", "himalayan", "temple", "culture"],
+    "tags": [
+      "spiritual",
+      "historic",
+      "himalayan",
+      "temple",
+      "culture"
+    ],
     "videos": [
       {
         "youtubeId": "uuIfmC6H4-4",
@@ -4032,11 +4393,25 @@
       "greeting": "Namaste (नमस्ते) — said with palms pressed together",
       "currency": "Nepalese Rupee (NPR)",
       "bestSeason": "October–November (post-monsoon, crystal-clear skies) or March–April (spring blossoms before trekking season peak)",
-      "mustEat": ["Dal Bhat (rice, lentils, curried vegetables — eaten twice daily by locals)", "Momo (Tibetan-style steamed dumplings)", "Sel Roti (crispy ring-shaped rice bread)", "Newari Samay Baji (beaten rice feast platter)", "Butter tea (po cha) in the Tibetan quarter"],
+      "mustEat": [
+        "Dal Bhat (rice, lentils, curried vegetables — eaten twice daily by locals)",
+        "Momo (Tibetan-style steamed dumplings)",
+        "Sel Roti (crispy ring-shaped rice bread)",
+        "Newari Samay Baji (beaten rice feast platter)",
+        "Butter tea (po cha) in the Tibetan quarter"
+      ],
       "localTip": "Kathmandu's Thamel neighbourhood is tourist-central but the real soul of the city is in the Newari old town around Asan Chowk and Indra Chowk. Walk north from Durbar Square at dawn when the vegetable sellers set up and the temples come alive with puja smoke and devotees.",
       "funFact": "Kathmandu sits in a valley that was, geologically, an ancient lake — the Kathmandu Lake drained roughly 10,000 years ago. The city is home to seven UNESCO World Heritage Sites within just 15 km of each other, including the living goddess (Kumari) whose incarnations have been venerated since the 17th century.",
-      "culturalDos": ["Remove shoes before entering any temple or someone's home", "Walk clockwise around stupas and Buddhist monuments", "Accept any offered food or tea with both hands as a sign of respect"],
-      "culturalDonts": ["Touch religious statues or prayer wheels with your left hand", "Point feet toward shrines, sacred images, or elders", "Wear shorts or sleeveless clothing when visiting temples — carry a scarf"]
+      "culturalDos": [
+        "Remove shoes before entering any temple or someone's home",
+        "Walk clockwise around stupas and Buddhist monuments",
+        "Accept any offered food or tea with both hands as a sign of respect"
+      ],
+      "culturalDonts": [
+        "Touch religious statues or prayer wheels with your left hand",
+        "Point feet toward shrines, sacred images, or elders",
+        "Wear shorts or sleeveless clothing when visiting temples — carry a scarf"
+      ]
     },
     "origin": {
       "founded": "circa 723 AD (Licchavi era city foundation); valley settled since at least 7th century BC",
@@ -4053,10 +4428,19 @@
     "countryCode": "NP",
     "flagEmoji": "🇳🇵",
     "continent": "Asia",
-    "coordinates": { "lat": 28.5967, "lng": 84.1000 },
+    "coordinates": {
+      "lat": 28.5967,
+      "lng": 84.1
+    },
     "timezone": "Asia/Kathmandu",
     "population": 52000,
-    "tags": ["trekking", "himalayan", "nature", "alpine", "adventure"],
+    "tags": [
+      "trekking",
+      "himalayan",
+      "nature",
+      "alpine",
+      "adventure"
+    ],
     "videos": [
       {
         "youtubeId": "kbfs_RHYx7c",
@@ -4084,11 +4468,25 @@
       "greeting": "Namaste (नमस्ते) — in remote Himalayan villages also Tashi Delek (Tibetan Buddhist greeting)",
       "currency": "Nepalese Rupee (NPR); some teahouses in remote areas prefer USD",
       "bestSeason": "October–November (post-monsoon clarity, best mountain views) or April–May (rhododendron forests in bloom)",
-      "mustEat": ["Dal Bhat (the trekker's fuel — unlimited refills at most teahouses)", "Yak cheese and butter", "Tibetan butter tea (po cha) for altitude warmth", "Tsampa (roasted barley porridge) in high-altitude villages", "Gundruk soup (fermented greens — a trekking staple)"],
+      "mustEat": [
+        "Dal Bhat (the trekker's fuel — unlimited refills at most teahouses)",
+        "Yak cheese and butter",
+        "Tibetan butter tea (po cha) for altitude warmth",
+        "Tsampa (roasted barley porridge) in high-altitude villages",
+        "Gundruk soup (fermented greens — a trekking staple)"
+      ],
       "localTip": "Acclimatise properly — gain no more than 500m of sleeping altitude per day above 3,000m. The rule 'climb high, sleep low' is not a suggestion. Tsum Valley requires a special restricted area permit on top of the standard Trekking Information Management System (TIMS) card and ACAP/Manaslu permit.",
       "funFact": "The Himalayas are the youngest mountain range on Earth — still growing roughly 5mm per year as the Indian tectonic plate pushes into the Eurasian plate. Tsum Valley remained sealed from outsiders until 2008 and its Tibetan Buddhist culture is virtually unchanged from centuries ago.",
-      "culturalDos": ["Always pass mani walls and chortens on the left (clockwise direction)", "Ask permission before photographing villagers, monks, or religious ceremonies", "Hire a licensed local guide — it supports mountain communities directly"],
-      "culturalDonts": ["Trek solo in remote valleys like Tsum — rescue access is days away", "Touch or step over prayer flags, mani stones, or offerings", "Underestimate altitude sickness — descend immediately if symptoms worsen"]
+      "culturalDos": [
+        "Always pass mani walls and chortens on the left (clockwise direction)",
+        "Ask permission before photographing villagers, monks, or religious ceremonies",
+        "Hire a licensed local guide — it supports mountain communities directly"
+      ],
+      "culturalDonts": [
+        "Trek solo in remote valleys like Tsum — rescue access is days away",
+        "Touch or step over prayer flags, mani stones, or offerings",
+        "Underestimate altitude sickness — descend immediately if symptoms worsen"
+      ]
     },
     "origin": {
       "founded": "Settled since prehistoric times; Tsum Valley isolated Tibetan Buddhist communities established circa 7th–8th century AD",
@@ -4105,10 +4503,19 @@
     "countryCode": "RU",
     "flagEmoji": "🇷🇺",
     "continent": "Europe",
-    "coordinates": { "lat": 55.7558, "lng": 37.6173 },
+    "coordinates": {
+      "lat": 55.7558,
+      "lng": 37.6173
+    },
     "timezone": "Europe/Moscow",
     "population": 12506468,
-    "tags": ["iconic", "historic", "nightlife", "architecture", "culture"],
+    "tags": [
+      "iconic",
+      "historic",
+      "nightlife",
+      "architecture",
+      "culture"
+    ],
     "videos": [
       {
         "youtubeId": "sBqG9gU_4jU",
@@ -4206,11 +4613,25 @@
       "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
       "currency": "Russian Ruble (RUB)",
       "bestSeason": "May–June (warm, pre-summer rush) or December–January (Red Square Christmas market and snow-dusted Kremlin)",
-      "mustEat": ["Beef Stroganoff", "Borscht (deep beet and beef soup)", "Pelmeni (Siberian meat dumplings with sour cream)", "Blini with sour cream or caviar", "Medovik (honey layer cake)"],
+      "mustEat": [
+        "Beef Stroganoff",
+        "Borscht (deep beet and beef soup)",
+        "Pelmeni (Siberian meat dumplings with sour cream)",
+        "Blini with sour cream or caviar",
+        "Medovik (honey layer cake)"
+      ],
       "localTip": "The Moscow Metro is a tourist attraction in itself — stations like Komsomolskaya, Mayakovskaya, and Novoslobodskaya are palatial with mosaics, marble, and chandeliers. Buy a Troika card at any station; a single swipe costs far less than tourist day passes. Avoid rush hour (8–9 am, 5:30–7 pm) when carriages are wall-to-wall.",
       "funFact": "Moscow's Metro is the busiest in Europe and among the world's most architecturally spectacular — Stalin ordered each station to be a 'palace for the people.' The deepest station, Park Pobedy, is 84 metres underground, deeper than any London Underground station, and its murals depict Russian military victories from 1812 and 1945.",
-      "culturalDos": ["Stand on the right of Metro escalators — the left lane is for walking", "Visit GUM department store on Red Square even if you don't shop — the interior arcade is extraordinary", "Time your Red Square visit at dusk when the Kremlin's red walls glow gold under floodlights"],
-      "culturalDonts": ["Photograph police, military personnel, or government buildings without asking", "Smile at strangers on the street — in Russian culture a smile is reserved for people you know; random smiling reads as insincere", "Forget to validate your Metro card before the turnstile — inspectors fine on the spot"]
+      "culturalDos": [
+        "Stand on the right of Metro escalators — the left lane is for walking",
+        "Visit GUM department store on Red Square even if you don't shop — the interior arcade is extraordinary",
+        "Time your Red Square visit at dusk when the Kremlin's red walls glow gold under floodlights"
+      ],
+      "culturalDonts": [
+        "Photograph police, military personnel, or government buildings without asking",
+        "Smile at strangers on the street — in Russian culture a smile is reserved for people you know; random smiling reads as insincere",
+        "Forget to validate your Metro card before the turnstile — inspectors fine on the spot"
+      ]
     },
     "origin": {
       "founded": "1147 AD (first written mention)",
@@ -4227,10 +4648,19 @@
     "countryCode": "RU",
     "flagEmoji": "🇷🇺",
     "continent": "Europe",
-    "coordinates": { "lat": 59.9311, "lng": 30.3609 },
+    "coordinates": {
+      "lat": 59.9311,
+      "lng": 30.3609
+    },
     "timezone": "Europe/Moscow",
     "population": 5383890,
-    "tags": ["imperial", "historic", "architecture", "canal", "culture"],
+    "tags": [
+      "imperial",
+      "historic",
+      "architecture",
+      "canal",
+      "culture"
+    ],
     "videos": [
       {
         "youtubeId": "DPqxJwcbHXc",
@@ -4265,11 +4695,25 @@
       "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
       "currency": "Russian Ruble (RUB)",
       "bestSeason": "June (White Nights — sun barely sets, city stays awake around the clock) or December (snow-covered canals and New Year lights on Nevsky Prospekt)",
-      "mustEat": ["Olivier salad (the original 'Russian salad', invented here)", "Pirozhki (baked or fried pastries stuffed with meat, cabbage, or egg)", "Ukha (clear fish broth — a St Petersburg staple)", "Korushka (smelt fish — the city's obsessive spring delicacy, briefly sold April–May)", "Syrniki (cottage cheese pancakes with jam and sour cream)"],
+      "mustEat": [
+        "Olivier salad (the original 'Russian salad', invented here)",
+        "Pirozhki (baked or fried pastries stuffed with meat, cabbage, or egg)",
+        "Ukha (clear fish broth — a St Petersburg staple)",
+        "Korushka (smelt fish — the city's obsessive spring delicacy, briefly sold April–May)",
+        "Syrniki (cottage cheese pancakes with jam and sour cream)"
+      ],
       "localTip": "During White Nights in June, the city's historic drawbridges open at 1 am simultaneously to let ships through the Neva River — watched by thousands from the Palace Embankment. It's free, atmospheric, and unmissable. Book Hermitage tickets online a day ahead; walk-up queues in summer can be 2–3 hours.",
       "funFact": "Saint Petersburg was built on 42 islands and is connected by 342 bridges — more bridges than any other city on Earth. Peter the Great was so determined to build his 'window to the West' that an estimated 30,000–100,000 workers died during construction on the swampy Neva delta. The city changed its name three times: St Petersburg → Petrograd (1914) → Leningrad (1924) → St Petersburg again (1991).",
-      "culturalDos": ["Climb the colonnade of Saint Isaac's Cathedral for a 360° panorama of the city", "Take an evening canal boat tour — the city looks entirely different from the water", "Visit Peterhof's Lower Park fountains in summer — the Grand Cascade rivals Versailles"],
-      "culturalDonts": ["Confuse St Petersburg with Moscow — Petersburgers are fiercely proud of their city's cultural distinction", "Visit the Hermitage without at least 3–4 hours; the Winter Palace alone overwhelms", "Miss the view from the Rostral Columns on Vasilievsky Island at night when they are lit with gas torches"]
+      "culturalDos": [
+        "Climb the colonnade of Saint Isaac's Cathedral for a 360° panorama of the city",
+        "Take an evening canal boat tour — the city looks entirely different from the water",
+        "Visit Peterhof's Lower Park fountains in summer — the Grand Cascade rivals Versailles"
+      ],
+      "culturalDonts": [
+        "Confuse St Petersburg with Moscow — Petersburgers are fiercely proud of their city's cultural distinction",
+        "Visit the Hermitage without at least 3–4 hours; the Winter Palace alone overwhelms",
+        "Miss the view from the Rostral Columns on Vasilievsky Island at night when they are lit with gas torches"
+      ]
     },
     "origin": {
       "founded": "1703",
@@ -4286,10 +4730,19 @@
     "countryCode": "RU",
     "flagEmoji": "🇷🇺",
     "continent": "Europe",
-    "coordinates": { "lat": 55.8304, "lng": 49.0661 },
+    "coordinates": {
+      "lat": 55.8304,
+      "lng": 49.0661
+    },
     "timezone": "Europe/Moscow",
     "population": 1243500,
-    "tags": ["historic", "tatarstan", "culture", "kremlin", "volga"],
+    "tags": [
+      "historic",
+      "tatarstan",
+      "culture",
+      "kremlin",
+      "volga"
+    ],
     "videos": [
       {
         "youtubeId": "v23KSmoyp0Y",
@@ -4331,11 +4784,25 @@
       "greeting": "Исәнмесез (İsänmesez) in Tatar / Здравствуйте (Zdravstvuyte) in Russian — both are used daily",
       "currency": "Russian Ruble (RUB)",
       "bestSeason": "May–September (Volga promenade, outdoor cafés, Sabantuy Tatar festival in June) or January (winter festivals and snow-covered Kremlin)",
-      "mustEat": ["Echpochmak (triangular pastry filled with meat and potato — Kazan's signature street food)", "Chak-chak (deep-fried dough soaked in honey — the Tatar national dessert)", "Tutyrma (Tatar sausage with rice or buckwheat)", "Kystyby (flatbread stuffed with potato or millet)", "Elesh (round Tatar pasty with chicken and potato)"],
+      "mustEat": [
+        "Echpochmak (triangular pastry filled with meat and potato — Kazan's signature street food)",
+        "Chak-chak (deep-fried dough soaked in honey — the Tatar national dessert)",
+        "Tutyrma (Tatar sausage with rice or buckwheat)",
+        "Kystyby (flatbread stuffed with potato or millet)",
+        "Elesh (round Tatar pasty with chicken and potato)"
+      ],
       "localTip": "The Kazan Kremlin contains both an Orthodox cathedral and a mosque within the same fortress walls — walk between the Kul Sharif Mosque and the Annunciation Cathedral to understand the city's dual soul. Bauman Street (the pedestrian 'Kazan Arbat') is best at evening when locals promenade and street performers fill the space.",
       "funFact": "Kazan is officially Russia's 'third capital' and the only place in the country where Russian Orthodoxy and Sunni Islam have coexisted within the same Kremlin for nearly 500 years. The city hosted the 2013 Summer Universiade and 2015 World Aquatics Championships, and the 1,000-year anniversary celebrations in 2005 triggered a complete restoration of the Kremlin and old city.",
-      "culturalDos": ["Try echpochmak from a street stall on Bauman Street — cheapest and best introduction to Tatar cuisine", "Visit the underground archaeological museum inside the Kremlin — it reveals layers of the original medieval city", "Explore the Staro-Tatarskaya Sloboda neighbourhood for traditional wooden Tatar architecture"],
-      "culturalDonts": ["Confuse Tatarstan's Tatar culture with Central Asian cultures — Tatars are a Volga Turkic people with a distinct identity and history", "Miss the Kul Sharif Mosque interior — one of the most beautiful mosques in Russia, free to enter (dress modestly)", "Skip the view from the Kremlin's Syuyumbike Tower — one of Russia's most distinctive leaning towers"]
+      "culturalDos": [
+        "Try echpochmak from a street stall on Bauman Street — cheapest and best introduction to Tatar cuisine",
+        "Visit the underground archaeological museum inside the Kremlin — it reveals layers of the original medieval city",
+        "Explore the Staro-Tatarskaya Sloboda neighbourhood for traditional wooden Tatar architecture"
+      ],
+      "culturalDonts": [
+        "Confuse Tatarstan's Tatar culture with Central Asian cultures — Tatars are a Volga Turkic people with a distinct identity and history",
+        "Miss the Kul Sharif Mosque interior — one of the most beautiful mosques in Russia, free to enter (dress modestly)",
+        "Skip the view from the Kremlin's Syuyumbike Tower — one of Russia's most distinctive leaning towers"
+      ]
     },
     "origin": {
       "founded": "circa 10th–11th century; Kazan Khanate capital from 1438",
@@ -4352,10 +4819,19 @@
     "countryCode": "RU",
     "flagEmoji": "🇷🇺",
     "continent": "Asia",
-    "coordinates": { "lat": 43.1332, "lng": 131.9113 },
+    "coordinates": {
+      "lat": 43.1332,
+      "lng": 131.9113
+    },
     "timezone": "Asia/Vladivostok",
     "population": 600871,
-    "tags": ["coastal", "port", "pacific", "architecture", "scenic"],
+    "tags": [
+      "coastal",
+      "port",
+      "pacific",
+      "architecture",
+      "scenic"
+    ],
     "videos": [
       {
         "youtubeId": "g0tZNuqlpLg",
@@ -4376,11 +4852,25 @@
       "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
       "currency": "Russian Ruble (RUB)",
       "bestSeason": "July–September (warm Pacific weather, king crab season) or February–March (frozen harbour ice creates surreal views)",
-      "mustEat": ["Fresh king crab from the harbour market — sold live, the world's finest", "Sea urchin (uni) eaten fresh at seaside stalls", "Korean-influenced Goryeo cuisine (kimchi Vladivostok-style, Korean BBQ)", "Pacific salmon pelmeni", "Solyanka fish soup with Pacific salmon and capers"],
+      "mustEat": [
+        "Fresh king crab from the harbour market — sold live, the world's finest",
+        "Sea urchin (uni) eaten fresh at seaside stalls",
+        "Korean-influenced Goryeo cuisine (kimchi Vladivostok-style, Korean BBQ)",
+        "Pacific salmon pelmeni",
+        "Solyanka fish soup with Pacific salmon and capers"
+      ],
       "localTip": "The Russky Island Bridge — completed 2012 for the APEC summit and briefly the world's longest cable-stayed bridge — is free to cross by bus or car. The view of Golden Horn Bay from the bridge at golden hour is among the most spectacular urban panoramas in Russia.",
       "funFact": "Vladivostok means 'Ruler of the East' in Russian. The city is closer to San Francisco than to Moscow, and was completely closed to all foreigners — and most Soviet citizens — until 1992, classified as a top-secret Pacific naval base. The Trans-Siberian Railway terminates here, 9,289 km and 8 time zones from Moscow.",
-      "culturalDos": ["Visit the morning harbour seafood market — vendors sell live Pacific crab and urchin straight off boats", "Take the funicular to Orlinoe Gnezdo (Eagle's Nest) hill for a panorama over Golden Horn Bay", "Explore the Millionka district — the atmospheric old Chinese quarter with narrow lanes and peeling facades"],
-      "culturalDonts": ["Underestimate the Pacific wind chill in winter — temperatures hit −25°C with brutal sea gusts", "Expect Moscow prices — Vladivostok is 9,000 km from the capital and import costs are high", "Miss the sunset over Amur Bay — the bridge silhouette against Pacific light is genuinely stunning"]
+      "culturalDos": [
+        "Visit the morning harbour seafood market — vendors sell live Pacific crab and urchin straight off boats",
+        "Take the funicular to Orlinoe Gnezdo (Eagle's Nest) hill for a panorama over Golden Horn Bay",
+        "Explore the Millionka district — the atmospheric old Chinese quarter with narrow lanes and peeling facades"
+      ],
+      "culturalDonts": [
+        "Underestimate the Pacific wind chill in winter — temperatures hit −25°C with brutal sea gusts",
+        "Expect Moscow prices — Vladivostok is 9,000 km from the capital and import costs are high",
+        "Miss the sunset over Amur Bay — the bridge silhouette against Pacific light is genuinely stunning"
+      ]
     },
     "origin": {
       "founded": "1860 (Russian military post established)",
@@ -4397,10 +4887,19 @@
     "countryCode": "RU",
     "flagEmoji": "🇷🇺",
     "continent": "Europe",
-    "coordinates": { "lat": 56.8389, "lng": 60.6057 },
+    "coordinates": {
+      "lat": 56.8389,
+      "lng": 60.6057
+    },
     "timezone": "Asia/Yekaterinburg",
     "population": 1544376,
-    "tags": ["industrial", "historic", "ural", "culture", "architecture"],
+    "tags": [
+      "industrial",
+      "historic",
+      "ural",
+      "culture",
+      "architecture"
+    ],
     "videos": [
       {
         "youtubeId": "-E-s2R_Ziyc",
@@ -4428,11 +4927,25 @@
       "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
       "currency": "Russian Ruble (RUB)",
       "bestSeason": "June–August (green Ural parks and outdoor festivals) or January (snow sculpture competitions and crisp Ural winter)",
-      "mustEat": ["Ural pelmeni — the city claims to be the birthplace of Russia's most beloved dumpling", "Shanezhki (sweet buns glazed with sour cream, a classic Ural bakery staple)", "Chebureki (deep-fried meat pastry from street stalls)", "Kvass (fermented bread drink — sold from yellow tanks on street corners in summer)", "Wild mushroom dishes in season (August–September — the Ural forests are extraordinarily rich)"],
+      "mustEat": [
+        "Ural pelmeni — the city claims to be the birthplace of Russia's most beloved dumpling",
+        "Shanezhki (sweet buns glazed with sour cream, a classic Ural bakery staple)",
+        "Chebureki (deep-fried meat pastry from street stalls)",
+        "Kvass (fermented bread drink — sold from yellow tanks on street corners in summer)",
+        "Wild mushroom dishes in season (August–September — the Ural forests are extraordinarily rich)"
+      ],
       "localTip": "The Yeltsin Centre is one of the most architecturally striking and intellectually honest presidential museums anywhere — Boris Yeltsin was born near Ekaterinburg and the museum unflinchingly documents the Soviet collapse and chaotic 1990s. Even with no interest in Russian history, the building and interactive exhibits are extraordinary.",
       "funFact": "Ekaterinburg straddles the Europe–Asia continental boundary — there is a literal obelisk monument marking the divide just 17 km from the city centre. The city is also where Tsar Nicholas II, Tsarina Alexandra, and all five of their children were executed in a basement by Bolshevik guards on the night of 16–17 July 1918, ending the 300-year Romanov dynasty.",
-      "culturalDos": ["Visit the Church on the Blood, built on the exact site where the Romanovs were shot — open to all faiths", "Walk Weiner Street (the pedestrian main street) on a summer evening when street performers come out", "Cross the Europe–Asia obelisk and take the obligatory 'one foot on each continent' photo"],
-      "culturalDonts": ["Call the city 'Sverdlovsk' — the Soviet name was dropped in 1991 and locals take the name seriously", "Miss the observation deck of the Vysotsky skyscraper — it reveals Ural forests stretching to the horizon", "Underestimate the scale — Ekaterinburg is large and spread out; plan transport between sights"]
+      "culturalDos": [
+        "Visit the Church on the Blood, built on the exact site where the Romanovs were shot — open to all faiths",
+        "Walk Weiner Street (the pedestrian main street) on a summer evening when street performers come out",
+        "Cross the Europe–Asia obelisk and take the obligatory 'one foot on each continent' photo"
+      ],
+      "culturalDonts": [
+        "Call the city 'Sverdlovsk' — the Soviet name was dropped in 1991 and locals take the name seriously",
+        "Miss the observation deck of the Vysotsky skyscraper — it reveals Ural forests stretching to the horizon",
+        "Underestimate the scale — Ekaterinburg is large and spread out; plan transport between sights"
+      ]
     },
     "origin": {
       "founded": "1723",
@@ -4449,10 +4962,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 39.9042, "lng": 116.4074 },
+    "coordinates": {
+      "lat": 39.9042,
+      "lng": 116.4074
+    },
     "timezone": "Asia/Shanghai",
     "population": 21893095,
-    "tags": ["imperial", "historic", "modern", "culture", "street-food"],
+    "tags": [
+      "imperial",
+      "historic",
+      "modern",
+      "culture",
+      "street-food"
+    ],
     "videos": [
       {
         "youtubeId": "qztRJrWt-Es",
@@ -4501,11 +5023,25 @@
       "greeting": "你好 (Nǐ hǎo) — standard; 您好 (Nín hǎo) — respectful formal",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–May (spring blossoms, pre-heat) or October (golden autumn, clear skies after summer smog)",
-      "mustEat": ["Peking Roast Duck (kǎo yā) — crispy skin served with pancakes, hoisin, and scallions", "Zhajiangmian (noodles with fermented soybean paste and pork)", "Jianbing (breakfast crêpe with egg, chilli sauce, and crispy wonton)", "Mala hotpot (Sichuan-spiced communal broth)", "Douzhi (fermented mung bean milk — an acquired Beijinger taste)"],
+      "mustEat": [
+        "Peking Roast Duck (kǎo yā) — crispy skin served with pancakes, hoisin, and scallions",
+        "Zhajiangmian (noodles with fermented soybean paste and pork)",
+        "Jianbing (breakfast crêpe with egg, chilli sauce, and crispy wonton)",
+        "Mala hotpot (Sichuan-spiced communal broth)",
+        "Douzhi (fermented mung bean milk — an acquired Beijinger taste)"
+      ],
       "localTip": "The hutong neighbourhoods around Shichahai and Nanluoguxiang are the real Beijing — ancient alleyway networks of courtyard homes that survived the modern city. Hire a rickshaw guide for an hour at dawn before the tourist groups arrive. Wangfujing Night Market on the east side of the pedestrian street sells scorpions on sticks, but the real food is in the lanes behind it.",
       "funFact": "Beijing has been China's capital for over 700 years across the Mongol Yuan, Ming, and Qing dynasties. The Forbidden City — the imperial palace complex at its centre — has 9,999 rooms (one short of the mythological 10,000 rooms of Heaven), was home to 24 emperors, and is the largest surviving palace complex on Earth.",
-      "culturalDos": ["Download WeChat before arriving — it is the operating system of daily Chinese life (payments, maps, ordering)", "Remove shoes when entering someone's home", "Accept business cards and gifts with both hands"],
-      "culturalDonts": ["Photograph military installations or police checkpoints", "Discuss politically sensitive topics in public — the Great Firewall applies to conversations too", "Tip in restaurants — tipping is not customary and can cause confusion"]
+      "culturalDos": [
+        "Download WeChat before arriving — it is the operating system of daily Chinese life (payments, maps, ordering)",
+        "Remove shoes when entering someone's home",
+        "Accept business cards and gifts with both hands"
+      ],
+      "culturalDonts": [
+        "Photograph military installations or police checkpoints",
+        "Discuss politically sensitive topics in public — the Great Firewall applies to conversations too",
+        "Tip in restaurants — tipping is not customary and can cause confusion"
+      ]
     },
     "origin": {
       "founded": "circa 1045 BC (Zhou dynasty settlement Ji); made imperial capital 1279 AD",
@@ -4522,10 +5058,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 31.2990, "lng": 120.5853 },
+    "coordinates": {
+      "lat": 31.299,
+      "lng": 120.5853
+    },
     "timezone": "Asia/Shanghai",
     "population": 10748000,
-    "tags": ["water-town", "canal", "garden", "historic", "scenic"],
+    "tags": [
+      "water-town",
+      "canal",
+      "garden",
+      "historic",
+      "scenic"
+    ],
     "videos": [
       {
         "youtubeId": "EcayPS05Yh4",
@@ -4546,11 +5091,25 @@
       "greeting": "你好 (Nǐ hǎo); locals also use Suzhounese Wu dialect — 侬好 (Nong hao)",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "March–April (cherry blossoms in the classical gardens) or October–November (autumn maples reflected in canal water)",
-      "mustEat": ["Squirrel-shaped Mandarin fish (songshuyuyu) — Suzhou's most iconic dish", "Biluochun green tea (grown on Dongting Hill, one of China's top ten teas)", "Suzhou-style mooncakes (thin crust, flaky, savoury filling)", "Dried tofu 百叶 (bǎi yè)", "Sweet osmanthus rice wine in autumn"],
+      "mustEat": [
+        "Squirrel-shaped Mandarin fish (songshuyuyu) — Suzhou's most iconic dish",
+        "Biluochun green tea (grown on Dongting Hill, one of China's top ten teas)",
+        "Suzhou-style mooncakes (thin crust, flaky, savoury filling)",
+        "Dried tofu 百叶 (bǎi yè)",
+        "Sweet osmanthus rice wine in autumn"
+      ],
       "localTip": "The classical gardens are UNESCO World Heritage Sites and extraordinarily beautiful — but visit at 8 am when they open to beat the crowds. The Humble Administrator's Garden is the largest and most famous; the Master of Nets Garden is more intimate and designed to feel infinite through layered framing. For the full water-town experience, take the No. 7 canal boat between Shantang Street and Tiger Hill.",
       "funFact": "Suzhou has been called 'the Venice of the East' for at least 2,000 years — its canal network predates Venice by over a millennium. The city is also China's silk capital; Suzhou embroidery (one of the four great embroidery traditions) uses up to 40 strands per thread and takes months to complete a single piece. Marco Polo described Suzhou as a 'great and noble city' in 1276.",
-      "culturalDos": ["Hire a private guide for the classical gardens — the symbolism of every rock and window shape has specific meaning", "Take a gondola-style boat (摇橹船) along Shantang Street at dusk", "Visit the Suzhou Museum (designed by I.M. Pei) even if you're not a museum person — the building itself is a masterpiece"],
-      "culturalDonts": ["Rush the gardens — they are designed for slow, contemplative walking", "Skip the silk market — Suzhou silk is genuinely different in quality from mass-produced fabric", "Visit only the tourist core; Pingjiang Road canal district in the east retains authentic neighbourhood life"]
+      "culturalDos": [
+        "Hire a private guide for the classical gardens — the symbolism of every rock and window shape has specific meaning",
+        "Take a gondola-style boat (摇橹船) along Shantang Street at dusk",
+        "Visit the Suzhou Museum (designed by I.M. Pei) even if you're not a museum person — the building itself is a masterpiece"
+      ],
+      "culturalDonts": [
+        "Rush the gardens — they are designed for slow, contemplative walking",
+        "Skip the silk market — Suzhou silk is genuinely different in quality from mass-produced fabric",
+        "Visit only the tourist core; Pingjiang Road canal district in the east retains authentic neighbourhood life"
+      ]
     },
     "origin": {
       "founded": "514 BC (Wu Kingdom capital Helü City)",
@@ -4567,10 +5126,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 27.9476, "lng": 109.5998 },
+    "coordinates": {
+      "lat": 27.9476,
+      "lng": 109.5998
+    },
     "timezone": "Asia/Shanghai",
     "population": 380000,
-    "tags": ["ancient-town", "ethnic", "tujia", "miao", "scenic"],
+    "tags": [
+      "ancient-town",
+      "ethnic",
+      "tujia",
+      "miao",
+      "scenic"
+    ],
     "videos": [
       {
         "youtubeId": "RSjXEtBcKkk",
@@ -4598,11 +5166,25 @@
       "greeting": "你好 (Nǐ hǎo); Tujia minority greeting: 你嗯达 (Nǐ ēn dá)",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–May (river fog and wisteria) or October (autumn golds reflected in the Tuojiang River)",
-      "mustEat": ["Sour fish soup (酸鱼汤) — a Miao staple made with fermented fish", "Xiangxi-style sour meat (酸肉)", "Sticky rice cake (糯米糍粑) wrapped in lotus leaf", "Chenzhou blood duck (blood-braised duck, deeply savoury)", "Tujia three-layer meat (三层肉) — slow-cured pork belly"],
+      "mustEat": [
+        "Sour fish soup (酸鱼汤) — a Miao staple made with fermented fish",
+        "Xiangxi-style sour meat (酸肉)",
+        "Sticky rice cake (糯米糍粑) wrapped in lotus leaf",
+        "Chenzhou blood duck (blood-braised duck, deeply savoury)",
+        "Tujia three-layer meat (三层肉) — slow-cured pork belly"
+      ],
       "localTip": "The iconic red lantern reflections in the Tuojiang River are most beautiful at dusk when the stilted houses (吊脚楼) light up. Cross the Hongqiao bridge at night and walk downstream along the south bank — you'll find the quieter riverside away from souvenir stalls. The old town walls at Dongmen Gate are free to climb and give the best view of the jumbled roofscape.",
       "funFact": "Fenghuang means 'phoenix' in Chinese and the town is shaped like a phoenix in flight when viewed from above. It was the birthplace of Shen Congwen (1902–1988), widely considered the greatest Chinese prose writer of the 20th century and a five-time Nobel Prize nominee. The town's Tujia and Miao ethnic minorities maintain living traditions of hand-woven batik fabric and silver jewellery.",
-      "culturalDos": ["Ask permission before photographing Miao women in their elaborate silver headdresses", "Visit the city walls before 8 am for empty streets and morning mist on the river", "Buy silver jewellery directly from Miao craftswomen — it's a living tradition, not a souvenir factory"],
-      "culturalDonts": ["Assume every old building is original — much of the 'ancient town' was restored in the 2000s; the most authentic areas are east of the main tourist strip", "Visit only the central tourist zone — the riverbank downstream and the old residential lanes behind it are far more atmospheric", "Swim in the Tuojiang River — it looks inviting but currents and water quality are unpredictable"]
+      "culturalDos": [
+        "Ask permission before photographing Miao women in their elaborate silver headdresses",
+        "Visit the city walls before 8 am for empty streets and morning mist on the river",
+        "Buy silver jewellery directly from Miao craftswomen — it's a living tradition, not a souvenir factory"
+      ],
+      "culturalDonts": [
+        "Assume every old building is original — much of the 'ancient town' was restored in the 2000s; the most authentic areas are east of the main tourist strip",
+        "Visit only the central tourist zone — the riverbank downstream and the old residential lanes behind it are far more atmospheric",
+        "Swim in the Tuojiang River — it looks inviting but currents and water quality are unpredictable"
+      ]
     },
     "origin": {
       "founded": "circa 202 BC (Han dynasty fort); town established Ming dynasty 1556",
@@ -4619,10 +5201,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 26.8721, "lng": 100.2270 },
+    "coordinates": {
+      "lat": 26.8721,
+      "lng": 100.227
+    },
     "timezone": "Asia/Shanghai",
     "population": 1237000,
-    "tags": ["ancient-town", "naxi", "yunnan", "historic", "scenic"],
+    "tags": [
+      "ancient-town",
+      "naxi",
+      "yunnan",
+      "historic",
+      "scenic"
+    ],
     "videos": [
       {
         "youtubeId": "IsT7dpHiSQs",
@@ -4643,11 +5234,25 @@
       "greeting": "你好 (Nǐ hǎo); Naxi greeting: 你好咯 (Nǐ hǎo lo)",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "March–May (snowmelt from Jade Dragon Snow Mountain, wildflower meadows) or September–October (harvest season, clear skies)",
-      "mustEat": ["Lijiang baba (丽江粑粑) — crispy sesame flatbread, the town's most famous snack", "Naxi grilled yak cheese (烤奶酪)", "Black bean jelly (黑豆凉粉) with chilli and vinegar", "Yunnan crossing-bridge noodles (过桥米线)", "Naxi mountain ham"],
+      "mustEat": [
+        "Lijiang baba (丽江粑粑) — crispy sesame flatbread, the town's most famous snack",
+        "Naxi grilled yak cheese (烤奶酪)",
+        "Black bean jelly (黑豆凉粉) with chilli and vinegar",
+        "Yunnan crossing-bridge noodles (过桥米线)",
+        "Naxi mountain ham"
+      ],
       "localTip": "The famous Old Town is perpetually crowded — escape to Shuhe Ancient Town, just 4 km north, which has the same Naxi architecture and canal system but a fraction of the visitors. For the best view of Jade Dragon Snow Mountain reflected in the cobblestone streets after rain, walk to the Mu Family Mansion in the old town at dawn before the tour buses arrive.",
       "funFact": "Lijiang Old Town was built without any city walls — virtually unique among Chinese ancient towns — because the Naxi people's surname Mu (木) would be 'encased' if walls were built, forming the character for 'trapped' (困). The town survived the 1996 Yunnan earthquake largely intact due to its traditional timber-frame construction, which is inherently flexible — a lesson in vernacular earthquake engineering.",
-      "culturalDos": ["Learn a few words of Naxi — locals are genuinely delighted when visitors attempt their language", "Visit the Dongba Cultural Research Institute to see the only living pictographic script in the world", "Hire a bicycle to reach Shuhe — the road through the wetlands is flat and scenic"],
-      "culturalDonts": ["Stay only in the tourist core of the Old Town — the Naxi village life happens in the alleys away from bar street", "Skip the Jade Dragon Snow Mountain — the cable car to 4,506m is expensive but the views are incomparable", "Bargain aggressively at Naxi craft stalls — handmade brasswork and embroidery reflects real skill and time"]
+      "culturalDos": [
+        "Learn a few words of Naxi — locals are genuinely delighted when visitors attempt their language",
+        "Visit the Dongba Cultural Research Institute to see the only living pictographic script in the world",
+        "Hire a bicycle to reach Shuhe — the road through the wetlands is flat and scenic"
+      ],
+      "culturalDonts": [
+        "Stay only in the tourist core of the Old Town — the Naxi village life happens in the alleys away from bar street",
+        "Skip the Jade Dragon Snow Mountain — the cable car to 4,506m is expensive but the views are incomparable",
+        "Bargain aggressively at Naxi craft stalls — handmade brasswork and embroidery reflects real skill and time"
+      ]
     },
     "origin": {
       "founded": "circa 7th century AD; Naxi Kingdom capital established Song dynasty (960–1279)",
@@ -4664,10 +5269,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 24.7773, "lng": 110.4936 },
+    "coordinates": {
+      "lat": 24.7773,
+      "lng": 110.4936
+    },
     "timezone": "Asia/Shanghai",
     "population": 300000,
-    "tags": ["karst", "scenic", "nature", "river", "adventure"],
+    "tags": [
+      "karst",
+      "scenic",
+      "nature",
+      "river",
+      "adventure"
+    ],
     "videos": [
       {
         "youtubeId": "rim2s7HBOcE",
@@ -4688,11 +5302,25 @@
       "greeting": "你好 (Nǐ hǎo); local Zhuang greeting: 谢谢侬 (roughly, 'thank you friend')",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–June (morning river mist, lush green peaks) or September–November (golden light, less rain)",
-      "mustEat": ["Beer fish (啤酒鱼) — Yangshuo's signature dish: fresh Li River fish braised in local beer", "Stuffed Li River snails (田螺)", "Guilin rice noodles (桂林米粉) with pickled vegetables and peanuts", "Osmanthus rice wine in autumn (桂花酒)", "Stir-fried Yangshuo countryside vegetables with chilli and garlic"],
+      "mustEat": [
+        "Beer fish (啤酒鱼) — Yangshuo's signature dish: fresh Li River fish braised in local beer",
+        "Stuffed Li River snails (田螺)",
+        "Guilin rice noodles (桂林米粉) with pickled vegetables and peanuts",
+        "Osmanthus rice wine in autumn (桂花酒)",
+        "Stir-fried Yangshuo countryside vegetables with chilli and garlic"
+      ],
       "localTip": "The Li River between Guilin and Yangshuo is one of the world's most recognisable landscapes (it's on the 20 RMB note). Take the official Li River cruise one-way and cycle back through the karst villages — the cycle route between Yangshuo and Xingping follows the river and passes through rice paddies with unobstructed views of the peaks. Rent a bamboo raft at Fuli village for the most immersive experience.",
       "funFact": "The limestone karst peaks around Yangshuo are up to 300 million years old — formed when this part of Guangxi was a tropical sea floor. The landscape inspired the phrase 'Guilin's scenery is the finest under heaven' (桂林山水甲天下) which has been used since the Tang dynasty. The iconic image of a fisherman on a bamboo raft with a cormorant on his arm is a real — though now touristic — Zhuang fishing tradition.",
-      "culturalDos": ["Cycle through the countryside at dawn for uncrowded views of the karst peaks", "Eat at restaurants along the river rather than West Street for fresher food and lower prices", "Book the Li River cruise early — the morning mist before 10 am is the photographic sweet spot"],
-      "culturalDonts": ["Spend all your time on West Street (the tourist strip) — the real beauty is in the countryside 2 km outside town", "Visit only in summer peak season — the heat and crowds diminish the landscape experience", "Skip moon hill (月亮山) — a 30-minute walk from town leads to a natural arch peak that frames the whole valley"]
+      "culturalDos": [
+        "Cycle through the countryside at dawn for uncrowded views of the karst peaks",
+        "Eat at restaurants along the river rather than West Street for fresher food and lower prices",
+        "Book the Li River cruise early — the morning mist before 10 am is the photographic sweet spot"
+      ],
+      "culturalDonts": [
+        "Spend all your time on West Street (the tourist strip) — the real beauty is in the countryside 2 km outside town",
+        "Visit only in summer peak season — the heat and crowds diminish the landscape experience",
+        "Skip moon hill (月亮山) — a 30-minute walk from town leads to a natural arch peak that frames the whole valley"
+      ]
     },
     "origin": {
       "founded": "circa 111 BC (Han dynasty garrison)",
@@ -4709,10 +5337,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 26.5833, "lng": 107.9833 },
+    "coordinates": {
+      "lat": 26.5833,
+      "lng": 107.9833
+    },
     "timezone": "Asia/Shanghai",
     "population": 38000000,
-    "tags": ["ethnic", "miao", "tujia", "nature", "ancient-town"],
+    "tags": [
+      "ethnic",
+      "miao",
+      "tujia",
+      "nature",
+      "ancient-town"
+    ],
     "videos": [
       {
         "youtubeId": "igIyvlhlWhA",
@@ -4761,11 +5398,25 @@
       "greeting": "你好 (Nǐ hǎo); Miao greeting: 嗯哦 (Ǹg ó); Dong greeting: 侬好 (Nong hao)",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–October (dragon boat festivals, Miao festivals, mild mountain climate) — Guizhou rarely exceeds 28°C in summer",
-      "mustEat": ["Sour soup fish (酸汤鱼) — Miao-style fermented red pepper broth with fresh river fish", "Silk doll rice (娃娃鱼饭)", "Guizhou sour and spicy noodles (酸辣粉)", "Kaili sour soup with tofu and bamboo", "Miao glutinous rice wine (糯米酒) served in a bamboo tube"],
+      "mustEat": [
+        "Sour soup fish (酸汤鱼) — Miao-style fermented red pepper broth with fresh river fish",
+        "Silk doll rice (娃娃鱼饭)",
+        "Guizhou sour and spicy noodles (酸辣粉)",
+        "Kaili sour soup with tofu and bamboo",
+        "Miao glutinous rice wine (糯米酒) served in a bamboo tube"
+      ],
       "localTip": "Xijiang Miao Village (西江千户苗寨) is best experienced at sunrise or at night — over 1,200 wooden stilt houses (吊脚楼) blanketing a hillside light up after dark like a living constellation. The Long Table Banquet (长桌宴) is offered to visitors during festivals — if you're there during Lusheng Festival (正月十五), the musical horn performances are extraordinary.",
       "funFact": "Guizhou is home to over 18 recognised ethnic minorities — more than any other Chinese province. The Miao people of Guizhou maintain the world's most elaborate traditional silver jewellery culture: a Miao bride's headdress can weigh over 15 kg and a full festival costume represents a family's wealth accumulated over generations. Guizhou is also the birthplace of Moutai (茅台) — China's most prestigious and expensive baijiu spirit.",
-      "culturalDos": ["Attend a village festival if at all possible — Guizhou minorities celebrate over 1,000 festivals annually", "Ask permission before photographing villagers in ceremonial dress", "Try the local rice wine — refusing it can be considered rude at a Miao welcome ceremony"],
-      "culturalDonts": ["Visit only Xijiang — Zhenyuan, Zhaoxing Dong village, and the Huangguoshu waterfall area are equally spectacular and far less visited", "Touch or handle silver jewellery on display without asking — many pieces are ceremonial heirlooms", "Underestimate distances — Guizhou's mountain terrain makes travel times much longer than maps suggest"]
+      "culturalDos": [
+        "Attend a village festival if at all possible — Guizhou minorities celebrate over 1,000 festivals annually",
+        "Ask permission before photographing villagers in ceremonial dress",
+        "Try the local rice wine — refusing it can be considered rude at a Miao welcome ceremony"
+      ],
+      "culturalDonts": [
+        "Visit only Xijiang — Zhenyuan, Zhaoxing Dong village, and the Huangguoshu waterfall area are equally spectacular and far less visited",
+        "Touch or handle silver jewellery on display without asking — many pieces are ceremonial heirlooms",
+        "Underestimate distances — Guizhou's mountain terrain makes travel times much longer than maps suggest"
+      ]
     },
     "origin": {
       "founded": "1413 AD (Guizhou Province established by the Ming dynasty)",
@@ -4782,10 +5433,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 29.2473, "lng": 117.8614 },
+    "coordinates": {
+      "lat": 29.2473,
+      "lng": 117.8614
+    },
     "timezone": "Asia/Shanghai",
     "population": 356000,
-    "tags": ["ancient-village", "scenic", "tea", "culture", "jiangxi"],
+    "tags": [
+      "ancient-village",
+      "scenic",
+      "tea",
+      "culture",
+      "jiangxi"
+    ],
     "videos": [
       {
         "youtubeId": "ZYZw-Sregeg",
@@ -4813,11 +5473,25 @@
       "greeting": "你好 (Nǐ hǎo); locals speak Hui dialect (Huizhou dialect — distinct from Mandarin)",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "March–April (rapeseed flower season — entire valleys turn electric yellow) or November (red maple leaves against white Huizhou walls)",
-      "mustEat": ["Wuyuan smoked tofu (徽州臭豆腐) — pungent, crispy fermented tofu from roadside braziers", "Steamed stone frog (石蛙)", "Huizhou-style stewed pork belly with dried bamboo shoots", "Green tea of Wuyuan (婺源绿茶) — among China's finest", "Qingming festival rice balls wrapped in mugwort leaf"],
+      "mustEat": [
+        "Wuyuan smoked tofu (徽州臭豆腐) — pungent, crispy fermented tofu from roadside braziers",
+        "Steamed stone frog (石蛙)",
+        "Huizhou-style stewed pork belly with dried bamboo shoots",
+        "Green tea of Wuyuan (婺源绿茶) — among China's finest",
+        "Qingming festival rice balls wrapped in mugwort leaf"
+      ],
       "localTip": "The rapeseed season (late March–early April) transforms the entire Wuyuan valley into a sea of yellow — but it lasts only 2–3 weeks and draws enormous crowds. Come early morning or use the lesser-known Jiangwan and Likeng villages instead of the photographic hotspot Shicheng. Huangling Village (篁岭) is built on a cliff face and accessed by cable car — the drying racks of sunflower, chilli, and corn outside each house glow in afternoon light.",
       "funFact": "Wuyuan is often called 'China's most beautiful countryside' and the birthplace of Neo-Confucianism — philosopher Zhu Xi (1130–1200), whose synthesis of Confucian thought shaped East Asian intellectual culture for 800 years, was born here. The distinctive white-walled, black-roofed Huizhou architecture (徽派建筑) seen throughout the village was developed by wealthy salt and tea merchants who built elaborate homes while conducting business far away.",
-      "culturalDos": ["Walk between villages rather than driving — the footpaths through tea plantations and rice paddies reveal the countryside at its best", "Visit the horse-head walls (马头墙) of the old merchant homes — each shaped like a rising step to prevent fire spreading between houses", "Drink the local green tea at a village teahouse — it's grown on the surrounding hills"],
-      "culturalDonts": ["Visit only during peak rapeseed season without booking accommodation months in advance", "Limit yourself to the two or three most famous villages — the real magic is in the unphotographed ones down side roads", "Rush — Wuyuan is made for wandering slowly with no plan"]
+      "culturalDos": [
+        "Walk between villages rather than driving — the footpaths through tea plantations and rice paddies reveal the countryside at its best",
+        "Visit the horse-head walls (马头墙) of the old merchant homes — each shaped like a rising step to prevent fire spreading between houses",
+        "Drink the local green tea at a village teahouse — it's grown on the surrounding hills"
+      ],
+      "culturalDonts": [
+        "Visit only during peak rapeseed season without booking accommodation months in advance",
+        "Limit yourself to the two or three most famous villages — the real magic is in the unphotographed ones down side roads",
+        "Rush — Wuyuan is made for wandering slowly with no plan"
+      ]
     },
     "origin": {
       "founded": "742 AD (Tang dynasty county established)",
@@ -4834,10 +5508,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 28.1000, "lng": 109.9000 },
+    "coordinates": {
+      "lat": 28.1,
+      "lng": 109.9
+    },
     "timezone": "Asia/Shanghai",
     "population": 4500000,
-    "tags": ["ancient-town", "waterfall", "scenic", "tujia", "culture"],
+    "tags": [
+      "ancient-town",
+      "waterfall",
+      "scenic",
+      "tujia",
+      "culture"
+    ],
     "videos": [
       {
         "youtubeId": "GpunTJKzCis",
@@ -4858,11 +5541,25 @@
       "greeting": "你好 (Nǐ hǎo); Xiang (Hunanese) dialect widely spoken alongside Mandarin",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–June (waterfalls at full flow, green terraces) or September–October (harvest colours, mist in the river valleys)",
-      "mustEat": ["Mao's red braised pork (毛氏红烧肉) — Mao Zedong was Hunanese and this rich fatty pork dish is the province's most famous", "Stinky tofu (臭豆腐 Changsha style) — fermented, deep-fried, served with chilli sauce", "Dong'an chicken (东安鸡) — vinegar and chilli-poached chicken from Yongzhou", "Hunan spicy beef jerky (湖南牛肉干)", "Rice noodles with pickled vegetables (米粉)"],
+      "mustEat": [
+        "Mao's red braised pork (毛氏红烧肉) — Mao Zedong was Hunanese and this rich fatty pork dish is the province's most famous",
+        "Stinky tofu (臭豆腐 Changsha style) — fermented, deep-fried, served with chilli sauce",
+        "Dong'an chicken (东安鸡) — vinegar and chilli-poached chicken from Yongzhou",
+        "Hunan spicy beef jerky (湖南牛肉干)",
+        "Rice noodles with pickled vegetables (米粉)"
+      ],
       "localTip": "Furong Ancient Town is built around a natural 60-metre waterfall that pours directly through the middle of the village — the main street overlooks the falls, and at night the illuminated mist creates an otherworldly atmosphere. Arrive by taking the river boat from Wangcun, which approaches the town from below and gives the most dramatic reveal of the 'hanging town' perched on the cliff.",
       "funFact": "Furong Ancient Town (芙蓉镇) became famous across China when director Xie Jin filmed his acclaimed 1986 movie there — the film was so popular that the real town of Wangcun was officially renamed Furong Town. Lingling (零陵) in Yongzhou is one of China's oldest counties, established in 221 BC, and the source of the name 'Ling' in the phrase 'Guilin' (桂林).",
-      "culturalDos": ["Arrive at Furong Town by river boat from Wangcun for the iconic 'hanging waterfall' approach", "Walk the old town at night when the lantern reflections animate the wet cobblestones", "Try the local tofu flower (豆腐花) sold by street vendors at the base of the waterfall"],
-      "culturalDonts": ["Visit Furong Town without walking beyond the main tourist street — the Tujia residential lanes above and below are the real town", "Forget an umbrella — the permanent waterfall mist keeps the town damp year-round", "Skip Lingling's ancient Wumu ancient well area — it predates the tourist infrastructure and remains largely unchanged"]
+      "culturalDos": [
+        "Arrive at Furong Town by river boat from Wangcun for the iconic 'hanging waterfall' approach",
+        "Walk the old town at night when the lantern reflections animate the wet cobblestones",
+        "Try the local tofu flower (豆腐花) sold by street vendors at the base of the waterfall"
+      ],
+      "culturalDonts": [
+        "Visit Furong Town without walking beyond the main tourist street — the Tujia residential lanes above and below are the real town",
+        "Forget an umbrella — the permanent waterfall mist keeps the town damp year-round",
+        "Skip Lingling's ancient Wumu ancient well area — it predates the tourist infrastructure and remains largely unchanged"
+      ]
     },
     "origin": {
       "founded": "Furong Town (Wangcun): established Ming dynasty; Lingling: 221 BC (Qin dynasty county)",
@@ -4879,10 +5576,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 29.5630, "lng": 106.5516 },
+    "coordinates": {
+      "lat": 29.563,
+      "lng": 106.5516
+    },
     "timezone": "Asia/Shanghai",
     "population": 32000000,
-    "tags": ["mountain-city", "river", "historic", "street-food", "modern"],
+    "tags": [
+      "mountain-city",
+      "river",
+      "historic",
+      "street-food",
+      "modern"
+    ],
     "videos": [
       {
         "youtubeId": "YoxtuCT45H4",
@@ -4896,11 +5602,25 @@
       "greeting": "你好 (Nǐ hǎo); Chongqing dialect (Chongqinghua) — a Southwestern Mandarin variant, closer to Sichuan dialect",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "March–May or September–November — Chongqing is called 'Fog Capital' (雾都) and 'Furnace City' (火炉) for its extreme summer heat (often 40°C+) and winter fog",
-      "mustEat": ["Chongqing mala hotpot (重庆麻辣火锅) — the original, most intensely spiced version in China", "Xiaomian noodles (小面) — simple spicy noodles eaten for breakfast by locals", "Sichuan-style twice-cooked pork (回锅肉)", "Ciqikou glutinous rice balls (磁器口汤圆)", "Fuling pickled mustard root (涪陵榨菜) — sour-spicy, eaten with everything"],
+      "mustEat": [
+        "Chongqing mala hotpot (重庆麻辣火锅) — the original, most intensely spiced version in China",
+        "Xiaomian noodles (小面) — simple spicy noodles eaten for breakfast by locals",
+        "Sichuan-style twice-cooked pork (回锅肉)",
+        "Ciqikou glutinous rice balls (磁器口汤圆)",
+        "Fuling pickled mustard root (涪陵榨菜) — sour-spicy, eaten with everything"
+      ],
       "localTip": "Chongqing is built vertically on hills between the Yangtze and Jialing rivers — there are no bicycles here because the city has no flat ground. The Hongyadong 'hanging house' complex at night, reflected in the Jialing River, is the most dramatic urban spectacle in China. For the Ciqikou experience, arrive before 10 am — by noon it's wall-to-wall tour groups.",
       "funFact": "Chongqing is technically the world's largest city by administrative area — its municipality covers 82,400 km², roughly the size of Austria. The Three Gorges Dam project displaced over 1 million Chongqing residents in the early 2000s. The city's unique vertical topography means some metro stations have exits 7 floors apart, and the Liziba station passes directly through a residential skyscraper.",
-      "culturalDos": ["Try the hotpot at a local restaurant off the main tourist strip — Chongqing hotpot is a religion, not a meal", "Take the Yangtze River night cruise to see the city illuminated on its cliffs from the water", "Visit Ciqikou on a weekday to see the tea houses and local life rather than tourist crowds"],
-      "culturalDonts": ["Order 'mild' hotpot expecting it to be mild by non-Chinese standards — even mild Chongqing hotpot is intensely spiced", "Visit only Ciqikou — the rest of the old city at Huguang Guild Hall and Hongyadong is equally spectacular", "Underestimate the heat in July–August — Chongqing regularly leads China's temperature rankings"]
+      "culturalDos": [
+        "Try the hotpot at a local restaurant off the main tourist strip — Chongqing hotpot is a religion, not a meal",
+        "Take the Yangtze River night cruise to see the city illuminated on its cliffs from the water",
+        "Visit Ciqikou on a weekday to see the tea houses and local life rather than tourist crowds"
+      ],
+      "culturalDonts": [
+        "Order 'mild' hotpot expecting it to be mild by non-Chinese standards — even mild Chongqing hotpot is intensely spiced",
+        "Visit only Ciqikou — the rest of the old city at Huguang Guild Hall and Hongyadong is equally spectacular",
+        "Underestimate the heat in July–August — Chongqing regularly leads China's temperature rankings"
+      ]
     },
     "origin": {
       "founded": "316 BC (Qin conquest of Ba Kingdom); made municipality 1997",
@@ -4917,10 +5637,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 25.6065, "lng": 100.2676 },
+    "coordinates": {
+      "lat": 25.6065,
+      "lng": 100.2676
+    },
     "timezone": "Asia/Shanghai",
     "population": 3705000,
-    "tags": ["yunnan", "bai-minority", "ancient-town", "lake", "scenic"],
+    "tags": [
+      "yunnan",
+      "bai-minority",
+      "ancient-town",
+      "lake",
+      "scenic"
+    ],
     "videos": [
       {
         "youtubeId": "d4iID_6J25U",
@@ -4934,11 +5663,25 @@
       "greeting": "你好 (Nǐ hǎo); Bai greeting: 你来了 (Nǐ lái le — 'you've come') — an expression of warm welcome",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "March–May (Cherry blossom and Bai minority 'March Fair' festival) or October (clear skies, Erhai Lake at its most brilliant)",
-      "mustEat": ["Bai Three-Course Tea (三道茶) — bitter, sweet, then aftertaste; a ceremonial welcome drink", "Eryuan goat cheese (乳扇 rushan) — grilled or fried, sold on skewers", "Dali pork ribs with wild mushrooms", "Across-the-bridge rice noodles (过桥米线)", "Yunnan-style ham (云腿)"],
+      "mustEat": [
+        "Bai Three-Course Tea (三道茶) — bitter, sweet, then aftertaste; a ceremonial welcome drink",
+        "Eryuan goat cheese (乳扇 rushan) — grilled or fried, sold on skewers",
+        "Dali pork ribs with wild mushrooms",
+        "Across-the-bridge rice noodles (过桥米线)",
+        "Yunnan-style ham (云腿)"
+      ],
       "localTip": "Dali Old Town (大理古城) is charming but Erhai Lake is the soul of the region — rent a bicycle and ride the 120 km lakeside path over 1–2 days, stopping at Bai fishing villages. The Three Pagodas (三塔) at the foot of the Cangshan Mountains are best photographed at sunrise when they're reflected in the still pool in front.",
       "funFact": "Dali was the capital of the Nanzhao Kingdom (738–937 AD) and the Dali Kingdom (937–1253 AD) — two powerful independent states that resisted Tang and Song Chinese expansion for over 500 years. The Dali Kingdom was the last territory conquered by Kublai Khan before his invasion of Song China, falling in 1253 — a fact immortalised in Jin Yong's martial arts novel 'Demi-Gods and Semi-Devils' which imagined a secret Dali royal family of supreme kung fu masters.",
-      "culturalDos": ["Visit the Bai villages around Erhai Lake — Xizhou, Zhoucheng, and Shaxi preserve whitewashed courtyard architecture largely unchanged from the Qing dynasty", "Attend the Three Temples Fair (绕三灵) in late April if you're there — a three-day Bai pilgrimage-festival around the lake", "Buy Bai tie-dye (扎染) fabric in Zhoucheng village where every family still practices the craft"],
-      "culturalDonts": ["Spend all your time in the main tourist street of Old Town — the Bai culture lives in the surrounding villages", "Visit Erhai Lake in summer without planning — motorboats were banned to protect the lake's ecology, but summer brings dense crowds", "Skip the Cangshan Mountains hiking trails above the town — the mountain-lake panorama is extraordinary"]
+      "culturalDos": [
+        "Visit the Bai villages around Erhai Lake — Xizhou, Zhoucheng, and Shaxi preserve whitewashed courtyard architecture largely unchanged from the Qing dynasty",
+        "Attend the Three Temples Fair (绕三灵) in late April if you're there — a three-day Bai pilgrimage-festival around the lake",
+        "Buy Bai tie-dye (扎染) fabric in Zhoucheng village where every family still practices the craft"
+      ],
+      "culturalDonts": [
+        "Spend all your time in the main tourist street of Old Town — the Bai culture lives in the surrounding villages",
+        "Visit Erhai Lake in summer without planning — motorboats were banned to protect the lake's ecology, but summer brings dense crowds",
+        "Skip the Cangshan Mountains hiking trails above the town — the mountain-lake panorama is extraordinary"
+      ]
     },
     "origin": {
       "founded": "738 AD (Nanzhao Kingdom capital established)",
@@ -4955,10 +5698,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 29.9939, "lng": 120.5817 },
+    "coordinates": {
+      "lat": 29.9939,
+      "lng": 120.5817
+    },
     "timezone": "Asia/Shanghai",
     "population": 5365000,
-    "tags": ["water-town", "historic", "canal", "culture", "scenic"],
+    "tags": [
+      "water-town",
+      "historic",
+      "canal",
+      "culture",
+      "scenic"
+    ],
     "videos": [
       {
         "youtubeId": "rdXXA6v4a8c",
@@ -4972,11 +5724,25 @@
       "greeting": "你好 (Nǐ hǎo); Shaoxing locals speak Wu dialect (吴语) which is very different from Mandarin",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–May (osmanthus blossoms) or October–November (rice wine fermentation season fills the streets with fragrance)",
-      "mustEat": ["Shaoxing rice wine (绍兴黄酒) — China's most famous aged rice wine, drunk warm in winter", "Stinky tofu (臭豆腐 Shaoxing style) — milder than Changsha's, fried in sesame oil", "Dried bamboo shoots with Shaoxing wine (笋干烧肉)", "Fennel beans (茴香豆) — the snack Lu Xun immortalised in his short stories", "Shaoxing dried tofu (腐乳)"],
+      "mustEat": [
+        "Shaoxing rice wine (绍兴黄酒) — China's most famous aged rice wine, drunk warm in winter",
+        "Stinky tofu (臭豆腐 Shaoxing style) — milder than Changsha's, fried in sesame oil",
+        "Dried bamboo shoots with Shaoxing wine (笋干烧肉)",
+        "Fennel beans (茴香豆) — the snack Lu Xun immortalised in his short stories",
+        "Shaoxing dried tofu (腐乳)"
+      ],
       "localTip": "The blue-awning wupeng boats (乌篷船) — shallow gondola-like vessels rowed with the feet — are Shaoxing's most iconic image and can be rented for canal tours. The boats are extraordinarily low (passengers recline) and were historically used for all transport in the canal network. Lu Xun's childhood home and former residence in the old town is beautifully preserved and gives an intimate picture of late-Qing scholarly life.",
       "funFact": "Shaoxing is called a 'museum without walls' because virtually every street and canal dates to the Tang or Song dynasty. The city is the birthplace of Lu Xun (1881–1936) — considered the father of modern Chinese literature — and Wang Xizhi, China's most celebrated calligrapher (303–361 AD). Shaoxing rice wine has been produced for over 2,500 years and is traditionally given to families when a girl is born; the jar is buried and opened at her wedding.",
-      "culturalDos": ["Take a wupeng boat canal tour at dawn before the tourist boats launch", "Visit the Lu Xun Former Residence and San Wei Bookstore — the actual room where he studied as a child is preserved", "Buy a bottle of aged Shaoxing Huadiao wine (花雕酒) — the clay jars with carved designs are genuine regional craft"],
-      "culturalDonts": ["Visit only the restored tourist areas — the working canal neighbourhoods west of the scenic zone show real Shaoxing daily life", "Expect Shaoxing wine to taste like grape wine — it's fermented rice wine with a deep, sweet, aged character", "Rush through the ancient town — the pleasure is in the slow pace of the wupeng boats and the canal reflections"]
+      "culturalDos": [
+        "Take a wupeng boat canal tour at dawn before the tourist boats launch",
+        "Visit the Lu Xun Former Residence and San Wei Bookstore — the actual room where he studied as a child is preserved",
+        "Buy a bottle of aged Shaoxing Huadiao wine (花雕酒) — the clay jars with carved designs are genuine regional craft"
+      ],
+      "culturalDonts": [
+        "Visit only the restored tourist areas — the working canal neighbourhoods west of the scenic zone show real Shaoxing daily life",
+        "Expect Shaoxing wine to taste like grape wine — it's fermented rice wine with a deep, sweet, aged character",
+        "Rush through the ancient town — the pleasure is in the slow pace of the wupeng boats and the canal reflections"
+      ]
     },
     "origin": {
       "founded": "490 BC (capital of Yue Kingdom)",
@@ -4993,10 +5759,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 38.9140, "lng": 121.6147 },
+    "coordinates": {
+      "lat": 38.914,
+      "lng": 121.6147
+    },
     "timezone": "Asia/Shanghai",
     "population": 6990000,
-    "tags": ["coastal", "port", "modern", "architecture", "scenic"],
+    "tags": [
+      "coastal",
+      "port",
+      "modern",
+      "architecture",
+      "scenic"
+    ],
     "videos": [
       {
         "youtubeId": "qlR9k64RWTc",
@@ -5010,11 +5785,25 @@
       "greeting": "你好 (Nǐ hǎo); Dalian locals speak Northeastern Mandarin (东北话) — a cleaner, accent-free variety",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "May–October (mild coastal climate, seafood at its peak) or January–February (frozen sea, snow on European-style squares)",
-      "mustEat": ["Fresh Yellow Sea seafood — sea cucumber, abalone, urchin, and clams from the morning fish markets", "Dalian-style seafood hotpot (海鲜火锅)", "Frozen persimmons (冻柿子) in winter — a Northeastern delicacy", "Jiaohe sausage (哈尔滨红肠 style)", "Fresh scallop skewers from Xinghai Square stalls"],
+      "mustEat": [
+        "Fresh Yellow Sea seafood — sea cucumber, abalone, urchin, and clams from the morning fish markets",
+        "Dalian-style seafood hotpot (海鲜火锅)",
+        "Frozen persimmons (冻柿子) in winter — a Northeastern delicacy",
+        "Jiaohe sausage (哈尔滨红肠 style)",
+        "Fresh scallop skewers from Xinghai Square stalls"
+      ],
       "localTip": "Dalian's downtown was designed by Russian and Japanese urban planners in the early 1900s and has a distinctly European character — wide circular plazas, tree-lined boulevards, and colonial-era buildings that make it unique among Chinese cities. Xinghai Square is the world's largest city square by area (176 hectares). The coastal road from Xinghai Bay to Bangchuidao Island at sunset is one of the most scenic urban drives in Northeast China.",
       "funFact": "Dalian was founded as a Russian naval port (Dalny) in 1898 and then captured and rebuilt by Japan (Dairen) from 1905–1945 — it is one of the few Chinese cities with significant Russian and Japanese urban planning imprints simultaneously. The city has no bicycles by local tradition (too hilly and windy) but has one of China's most functional tram networks, with antique trams still running along the seafront.",
-      "culturalDos": ["Walk the seafront coastal road (滨海路) by bicycle for the most scenic route between the beaches", "Visit the Russian Street and Japanese-era architecture district in the city centre", "Eat seafood at the Xinghai Market morning auction — prices are a fraction of restaurant rates"],
-      "culturalDonts": ["Visit in summer without booking accommodation — Dalian is China's summer escape city and hotels fill completely", "Expect a typical 'industrial Northeast' city — Dalian is conspicuously clean, green, and architecturally distinctive", "Skip Tiger Beach Ocean Park if you have children — it's one of China's best marine parks"]
+      "culturalDos": [
+        "Walk the seafront coastal road (滨海路) by bicycle for the most scenic route between the beaches",
+        "Visit the Russian Street and Japanese-era architecture district in the city centre",
+        "Eat seafood at the Xinghai Market morning auction — prices are a fraction of restaurant rates"
+      ],
+      "culturalDonts": [
+        "Visit in summer without booking accommodation — Dalian is China's summer escape city and hotels fill completely",
+        "Expect a typical 'industrial Northeast' city — Dalian is conspicuously clean, green, and architecturally distinctive",
+        "Skip Tiger Beach Ocean Park if you have children — it's one of China's best marine parks"
+      ]
     },
     "origin": {
       "founded": "1898 (Russian Empire established port town Dalny)",
@@ -5031,10 +5820,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 31.8206, "lng": 117.2272 },
+    "coordinates": {
+      "lat": 31.8206,
+      "lng": 117.2272
+    },
     "timezone": "Asia/Shanghai",
     "population": 9369000,
-    "tags": ["modern", "culture", "history", "tech", "anhui"],
+    "tags": [
+      "modern",
+      "culture",
+      "history",
+      "tech",
+      "anhui"
+    ],
     "videos": [
       {
         "youtubeId": "uITOB7INlgo",
@@ -5048,11 +5846,25 @@
       "greeting": "你好 (Nǐ hǎo); Hefei dialect is a Northern Mandarin variety — generally mutually intelligible with standard Mandarin",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–May (Chaohu Lake lotus blossoms, spring parks) or October (clear autumn weather, Huizhou culture festival)",
-      "mustEat": ["Li Hongzhang hodgepodge (李鸿章杂烩) — a rich mixed-ingredient stew created for the Qing diplomat's American banquet", "Hefei steamed buns (合肥包子) — distinct local style", "Luzhou roast duck (庐州烤鸭)", "Anhui-style stewed tofu with crabmeat (徽式豆腐)", "Salted duck from Chaohu Lake area"],
+      "mustEat": [
+        "Li Hongzhang hodgepodge (李鸿章杂烩) — a rich mixed-ingredient stew created for the Qing diplomat's American banquet",
+        "Hefei steamed buns (合肥包子) — distinct local style",
+        "Luzhou roast duck (庐州烤鸭)",
+        "Anhui-style stewed tofu with crabmeat (徽式豆腐)",
+        "Salted duck from Chaohu Lake area"
+      ],
       "localTip": "Hefei's most rewarding cultural site is the Li Hongzhang Former Residence (李鸿章故居) — a magnificent Huizhou-style compound that illuminates the life of China's most important 19th-century statesman. The Baohe Park around Baohe Tower on Nanfei River is a genuine local escape, far from tourist infrastructure. Anhui Provincial Museum has one of China's best bronze collections from the Shang and Zhou dynasties.",
       "funFact": "Hefei is known as 'Science Island' (科学岛) — home to the Chinese Academy of Sciences' Institute of Plasma Physics, which operates EAST (Experimental Advanced Superconducting Tokamak), the world's most advanced nuclear fusion reactor. In 2023 EAST achieved 403 seconds of plasma at 120 million°C — breaking the world record for sustained nuclear fusion. China's quantum communication satellite network is also managed from Hefei.",
-      "culturalDos": ["Visit the Anhui Provincial Museum for the bronze and Huizhou architecture collections", "Walk the Binhu Wetland Park on Chaohu Lake at dawn for migratory bird watching (October–March)", "Try the local baijiu — Gujing Gongjiu (古井贡酒) from nearby Bozhou is one of China's eight great liquors"],
-      "culturalDonts": ["Confuse Hefei with the surrounding Huizhou cultural region — Hefei is a modern industrial capital, not a preserved ancient town", "Skip the lakeside districts — Chaohu Lake (China's fifth-largest freshwater lake) is beautiful and largely undiscovered by tourists", "Underestimate the city's research culture — Hefei has more Nobel Prizes per capita (through USTC alumni) than any other Chinese city"]
+      "culturalDos": [
+        "Visit the Anhui Provincial Museum for the bronze and Huizhou architecture collections",
+        "Walk the Binhu Wetland Park on Chaohu Lake at dawn for migratory bird watching (October–March)",
+        "Try the local baijiu — Gujing Gongjiu (古井贡酒) from nearby Bozhou is one of China's eight great liquors"
+      ],
+      "culturalDonts": [
+        "Confuse Hefei with the surrounding Huizhou cultural region — Hefei is a modern industrial capital, not a preserved ancient town",
+        "Skip the lakeside districts — Chaohu Lake (China's fifth-largest freshwater lake) is beautiful and largely undiscovered by tourists",
+        "Underestimate the city's research culture — Hefei has more Nobel Prizes per capita (through USTC alumni) than any other Chinese city"
+      ]
     },
     "origin": {
       "founded": "202 BC (Han dynasty settlement); provincial capital status from Tang dynasty",
@@ -5069,10 +5881,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 34.7466, "lng": 113.6253 },
+    "coordinates": {
+      "lat": 34.7466,
+      "lng": 113.6253
+    },
     "timezone": "Asia/Shanghai",
     "population": 12740000,
-    "tags": ["historic", "culture", "modern", "shaolin", "yellow-river"],
+    "tags": [
+      "historic",
+      "culture",
+      "modern",
+      "shaolin",
+      "yellow-river"
+    ],
     "videos": [
       {
         "youtubeId": "wd96qTP75_Q",
@@ -5086,11 +5907,25 @@
       "greeting": "你好 (Nǐ hǎo); Henan dialect (中原官话) — a Central Plains Mandarin variety",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–May or September–October — Zhengzhou summers are brutally hot (40°C+) and winters cold",
-      "mustEat": ["Henan braised noodles (烩面 huìmiàn) — Zhengzhou's most beloved dish, thick wheat noodles in a lamb bone broth", "Shaolin Temple vegetarian food (素斋) — traditional Buddhist temple cuisine", "Kaifeng soup dumplings (开封灌汤包) from nearby Kaifeng", "Luoyang Water Banquet dishes (水席)", "Sunflower seed candy and sesame flatbread from Zhengzhou street markets"],
+      "mustEat": [
+        "Henan braised noodles (烩面 huìmiàn) — Zhengzhou's most beloved dish, thick wheat noodles in a lamb bone broth",
+        "Shaolin Temple vegetarian food (素斋) — traditional Buddhist temple cuisine",
+        "Kaifeng soup dumplings (开封灌汤包) from nearby Kaifeng",
+        "Luoyang Water Banquet dishes (水席)",
+        "Sunflower seed candy and sesame flatbread from Zhengzhou street markets"
+      ],
       "localTip": "Zhengzhou is the gateway to both the Shaolin Temple (少林寺, 80 km west) and the Yellow River scenic area. The Shaolin Temple monks perform live kung fu demonstrations daily — buy tickets in advance and go early to avoid the worst of the tour groups. The Henan Museum is one of China's top five, with extraordinary Shang and Zhou dynasty bronzes from the Central Plains.",
       "funFact": "Zhengzhou sits at the centre of China's ancient civilisation heartland — within 100 km lie Anyang (Shang dynasty capital and birthplace of Chinese writing), Luoyang (Han and Tang eastern capital), Kaifeng (Song dynasty capital), and the Shaolin Temple birthplace of both Chan (Zen) Buddhism and Chinese martial arts. The Yellow River passes 30 km north of the city — the cradle of Chinese civilisation for 5,000 years.",
-      "culturalDos": ["Visit the Henan Museum for Shang dynasty oracle bone script and the world's finest collection of Chinese Bronze Age artefacts", "Take the day trip to Shaolin Temple and Songshan Mountain — the scenery and cultural significance are extraordinary", "Eat huìmiàn for breakfast at a street stall — it's the authentic Zhengzhou morning experience"],
-      "culturalDonts": ["Visit Shaolin Temple without understanding its history — it's a 1,500-year-old Buddhist monastery, not a kung fu theme park", "Miss the Yellow River Cultural Park — the view of the river from the observation platform shows why it shaped Chinese civilisation", "Expect coastal-city polish — Zhengzhou is proud of its inland, agricultural, historically rooted identity"]
+      "culturalDos": [
+        "Visit the Henan Museum for Shang dynasty oracle bone script and the world's finest collection of Chinese Bronze Age artefacts",
+        "Take the day trip to Shaolin Temple and Songshan Mountain — the scenery and cultural significance are extraordinary",
+        "Eat huìmiàn for breakfast at a street stall — it's the authentic Zhengzhou morning experience"
+      ],
+      "culturalDonts": [
+        "Visit Shaolin Temple without understanding its history — it's a 1,500-year-old Buddhist monastery, not a kung fu theme park",
+        "Miss the Yellow River Cultural Park — the view of the river from the observation platform shows why it shaped Chinese civilisation",
+        "Expect coastal-city polish — Zhengzhou is proud of its inland, agricultural, historically rooted identity"
+      ]
     },
     "origin": {
       "founded": "circa 1500 BC (Shang dynasty settlement Ao); modern city from 1923 (railway junction)",
@@ -5107,10 +5942,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 24.8741, "lng": 118.6757 },
+    "coordinates": {
+      "lat": 24.8741,
+      "lng": 118.6757
+    },
     "timezone": "Asia/Shanghai",
     "population": 8905000,
-    "tags": ["historic", "silk-road", "maritime", "culture", "temple"],
+    "tags": [
+      "historic",
+      "silk-road",
+      "maritime",
+      "culture",
+      "temple"
+    ],
     "videos": [
       {
         "youtubeId": "43LJyGY3L_w",
@@ -5124,11 +5968,25 @@
       "greeting": "你好 (Nǐ hǎo); locals speak Minnan (闽南语 Hokkien dialect) — the same language spoken by many overseas Chinese in Southeast Asia",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "October–April (mild subtropical winter and spring, avoiding summer typhoon season)",
-      "mustEat": ["Oyster omelette (蚵仔煎 ô-á-chian) — the defining Minnan seafood dish", "Satay beef noodles (沙茶面 shāchā miàn) — Quanzhou's most famous noodle dish", "Fried spring rolls (春卷) Hokkien style", "Dried longan (桂圆) from the local orchards", "Peanut soup (花生汤) served hot for breakfast"],
+      "mustEat": [
+        "Oyster omelette (蚵仔煎 ô-á-chian) — the defining Minnan seafood dish",
+        "Satay beef noodles (沙茶面 shāchā miàn) — Quanzhou's most famous noodle dish",
+        "Fried spring rolls (春卷) Hokkien style",
+        "Dried longan (桂圆) from the local orchards",
+        "Peanut soup (花生汤) served hot for breakfast"
+      ],
       "localTip": "Quanzhou's old city centre around Tumen Street and Zhongshan Road preserves a remarkable density of temples, mosques, churches, and ancestral halls within a few blocks — testifying to the centuries when it was the world's most cosmopolitan port. The Qingjing Mosque (清净寺) — built in 1009 AD — is one of the oldest functioning mosques in China; the Kaiyuan Temple (开元寺) with its twin Song-dynasty pagodas is the most spectacular Buddhist complex in Fujian.",
       "funFact": "Quanzhou was the world's largest trading port from the 10th–14th centuries — Marco Polo called it 'Zayton' and described it as the greatest port he had ever seen, larger than Venice and Alexandria combined. It sent out China's Maritime Silk Road across Southeast Asia, the Middle East, and East Africa. The city has 22 UNESCO World Heritage monuments recognising its role as the starting point of the Maritime Silk Road, inscribed in 2021.",
-      "culturalDos": ["Walk the historic core around Tumen Street at night when the temple incense smoke fills the lanes", "Visit the Maritime Museum (海外交通史博物馆) — the most important collection of Song-Yuan maritime trade artefacts anywhere", "See the Kaiyuan Temple at dawn before the crowds — the Twin Pagodas in early light are extraordinary"],
-      "culturalDonts": ["Visit without learning that Hokkien (Minnan) culture originated here — the language spoken by 50 million overseas Chinese in Southeast Asia is Quanzhou's gift to the diaspora", "Skip the Qingjing Mosque — built in 1009, it is architectural and historical proof of medieval Quanzhou's extraordinary cosmopolitanism", "Miss the stone-carved Manichean shrine at Cao'an — the only surviving Manichean temple in the world, hidden in a hillside outside the city"]
+      "culturalDos": [
+        "Walk the historic core around Tumen Street at night when the temple incense smoke fills the lanes",
+        "Visit the Maritime Museum (海外交通史博物馆) — the most important collection of Song-Yuan maritime trade artefacts anywhere",
+        "See the Kaiyuan Temple at dawn before the crowds — the Twin Pagodas in early light are extraordinary"
+      ],
+      "culturalDonts": [
+        "Visit without learning that Hokkien (Minnan) culture originated here — the language spoken by 50 million overseas Chinese in Southeast Asia is Quanzhou's gift to the diaspora",
+        "Skip the Qingjing Mosque — built in 1009, it is architectural and historical proof of medieval Quanzhou's extraordinary cosmopolitanism",
+        "Miss the stone-carved Manichean shrine at Cao'an — the only surviving Manichean temple in the world, hidden in a hillside outside the city"
+      ]
     },
     "origin": {
       "founded": "260 AD (Three Kingdoms era fortress); peak prosperity 10th–14th century",
@@ -5145,10 +6003,19 @@
     "countryCode": "CN",
     "flagEmoji": "🇨🇳",
     "continent": "Asia",
-    "coordinates": { "lat": 36.5853, "lng": 109.4897 },
+    "coordinates": {
+      "lat": 36.5853,
+      "lng": 109.4897
+    },
     "timezone": "Asia/Shanghai",
     "population": 2290000,
-    "tags": ["revolutionary", "historic", "cave-dwellings", "culture", "shaanxi"],
+    "tags": [
+      "revolutionary",
+      "historic",
+      "cave-dwellings",
+      "culture",
+      "shaanxi"
+    ],
     "videos": [
       {
         "youtubeId": "cqrqSFZWJ3s",
@@ -5162,11 +6029,25 @@
       "greeting": "你好 (Nǐ hǎo); Shaanxi dialect (陕西话) — a distinct Guanzhong Mandarin variety",
       "currency": "Chinese Yuan / Renminbi (CNY ¥)",
       "bestSeason": "April–June (yellow loess plateau in spring green) or September–October (harvest season, millet and apple orchards golden)",
-      "mustEat": ["Yan'an millet porridge (小米粥) — the food that sustained the Red Army; locals eat it daily", "Shaanxi lamb paomo (羊肉泡馍) — flatbread crumbled into a rich lamb broth", "Yellow noodles (黄面) with vinegar and chilli", "Buckwheat jelly (荞麦凉粉)", "Apple products — Yan'an is one of China's top apple-producing regions"],
+      "mustEat": [
+        "Yan'an millet porridge (小米粥) — the food that sustained the Red Army; locals eat it daily",
+        "Shaanxi lamb paomo (羊肉泡馍) — flatbread crumbled into a rich lamb broth",
+        "Yellow noodles (黄面) with vinegar and chilli",
+        "Buckwheat jelly (荞麦凉粉)",
+        "Apple products — Yan'an is one of China's top apple-producing regions"
+      ],
       "localTip": "The cave dwellings (窑洞 yáodòng) carved into the loess cliffs are the definitive architectural experience of Yan'an — both the revolutionary leaders' preserved caves at Zaoyuan and Yangjialing are open to visit, and many local guesthouses also offer cave-dwelling accommodation. The Yan River illuminated at night against the loess cliffs and classical pavilion bridges creates a uniquely surreal cityscape.",
       "funFact": "Yan'an served as the headquarters of the Chinese Communist Party from 1936–1947 — the decade when Mao Zedong consolidated control, the CCP survived Japanese invasion, and the revolutionary ideology that would govern 1.4 billion people was formulated. Over one million CCP officials and cadres make compulsory 'red education' pilgrimages to Yan'an annually. The city sits in the heart of the Loess Plateau — the world's largest deposit of wind-blown silt, which gave the Yellow River its colour and allowed ancient agriculture to develop in this otherwise arid landscape.",
-      "culturalDos": ["Visit the revolutionary sites — even without political interest, the cave headquarters where Mao wrote key theoretical texts and the simple living conditions are historically extraordinary", "See the Yan River canyon at night when the city illuminates the loess cliffs", "Try the local millet — the cave-era staple crop of the Loess Plateau tastes completely different from commercial varieties"],
-      "culturalDonts": ["Expect a polished tourist city — Yan'an is a working provincial city proud of its revolutionary heritage", "Skip the Yan'an Revolution Memorial Museum — one of China's most important 20th-century historical collections", "Underestimate the summer heat on the exposed loess plateau — temperatures exceed 35°C in July–August with intense UV"]
+      "culturalDos": [
+        "Visit the revolutionary sites — even without political interest, the cave headquarters where Mao wrote key theoretical texts and the simple living conditions are historically extraordinary",
+        "See the Yan River canyon at night when the city illuminates the loess cliffs",
+        "Try the local millet — the cave-era staple crop of the Loess Plateau tastes completely different from commercial varieties"
+      ],
+      "culturalDonts": [
+        "Expect a polished tourist city — Yan'an is a working provincial city proud of its revolutionary heritage",
+        "Skip the Yan'an Revolution Memorial Museum — one of China's most important 20th-century historical collections",
+        "Underestimate the summer heat on the exposed loess plateau — temperatures exceed 35°C in July–August with intense UV"
+      ]
     },
     "origin": {
       "founded": "circa 3rd century BC (Qin dynasty garrison); revolutionary capital 1936–1947",
@@ -5174,6 +6055,672 @@
       "founders": "Qin dynasty frontier garrison; modern significance from CCP headquarters 1936",
       "story": "The Yan'an area on the Loess Plateau has been inhabited since prehistoric times — the plateau's deep, workable soil enabled some of China's earliest agriculture. It served as a northern frontier garrison town throughout the Han, Tang, and Song dynasties, positioned on trade routes between the Central Plains and the steppes. Yan'an's defining moment came in 1936 when the exhausted remnants of the Red Army completed the Long March and established their headquarters in the city's cave complexes, carved into the soft loess cliffs. For a decade, the CCP governed the Yan'an base area from these caves, developing the ideology, party structure, and military strategy that would win the Civil War against the Nationalists in 1949. Documents written in Yan'an's caves — including Mao's 'On Contradiction,' 'On Practice,' and 'Talks at the Yan'an Forum on Literature and Art' — became foundational texts of the People's Republic.",
       "era": "Ancient"
+    }
+  },
+  {
+    "slug": "meghalaya",
+    "name": "Meghalaya",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 25.467,
+      "lng": 91.3662
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 2966889,
+    "tags": [
+      "northeast-india",
+      "tribal",
+      "nature",
+      "canyon",
+      "village"
+    ],
+    "videos": [
+      {
+        "youtubeId": "zDXyWHvHL10",
+        "label": "Laitlum Canyon Walk – Meghalaya 4K with Immersive Sounds",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "g-8DQ_eTBnk",
+        "label": "Khongtong – India's Whistling Village Walk in Meghalaya 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "zDZ5ka99Br0",
+        "label": "Garo Tribal Village Walk – Peaceful Life in NE India 4K ASMR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Khublei (ক্লেই) in Khasi — the all-purpose greeting, thanks, and goodbye; Hello in English is widely used",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "October–April (dry season, clear skies, canyons fully visible) — avoid June–September when Cherrapunji records the world's highest rainfall",
+      "mustEat": [
+        "Jadoh (red rice cooked with pork or chicken — the Khasi staple)",
+        "Dohneiiong (pork with black sesame)",
+        "Tungrymbai (fermented soybean chutney)",
+        "Bamboo shoot curry",
+        "Pumaloi (steamed rice cake)"
+      ],
+      "localTip": "Laitlum Canyon ('end of hills' in Khasi) is best at sunrise before the mist burns off — arrive by 6 am. The Living Root Bridges near Cherrapunji (two-hour drive south) are one of the world's most extraordinary natural engineering feats: the Khasi people train the roots of rubber trees over decades to form living pedestrian bridges across ravines. The village of Mawlynnong near Dawki has been called 'Asia's cleanest village' and is immaculate.",
+      "funFact": "Meghalaya receives the world's highest annual rainfall — Mawsynram village records an average of 11,871 mm per year (about 40 times London's annual rainfall). The state is governed by matrilineal societies (Khasi and Garo tribes) where lineage and property pass through the mother — one of the few functioning matrilineal societies in the world. 'Meghalaya' means 'abode of clouds' in Sanskrit.",
+      "culturalDos": [
+        "Always remove footwear before entering a Khasi home",
+        "Accept offered food — refusing hospitality is considered rude",
+        "Hire a local Khasi guide in the canyon areas — they know the paths and support the community"
+      ],
+      "culturalDonts": [
+        "Enter sacred groves (Law Kyntang) without permission — these are protected forest spirits' domains in Khasi belief",
+        "Photograph tribal ceremonies without explicit consent",
+        "Litter anywhere — Meghalaya's communities take environmental cleanliness extremely seriously"
+      ]
+    },
+    "origin": {
+      "founded": "Inhabited since prehistoric times; state of Meghalaya formed 1972",
+      "originalName": "Meghalaya (মেঘালয়) — Sanskrit for 'abode of clouds'; formerly part of Assam",
+      "founders": "Khasi, Jaintia, and Garo indigenous peoples; modern state carved from Assam on 21 January 1972",
+      "story": "The Khasi Hills, Jaintia Hills, and Garo Hills have been home to their respective peoples for thousands of years, with oral traditions suggesting settlement from Southeast Asia over 4,000 years ago. The Khasi confederacy maintained independence from the Mughal Empire and later the British, negotiating a complex subordinate relationship with the East India Company from 1833. The British were fascinated by the matrilineal Khasi society — so different from Victorian norms — and documented it extensively. After Indian independence, the hill peoples resisted incorporation into Assam and agitated for a separate state. Meghalaya was carved out of Assam on 21 January 1972. The state remains one of India's most distinctive — overwhelmingly tribal, Christian (over 70%), forested, and rain-drenched, with a culture that has more in common with Southeast Asia than the Indian subcontinent.",
+      "era": "Modern"
+    }
+  },
+  {
+    "slug": "nagaland",
+    "name": "Nagaland",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 25.6747,
+      "lng": 94.1085
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 1978502,
+    "tags": [
+      "northeast-india",
+      "tribal",
+      "culture",
+      "village",
+      "naga"
+    ],
+    "videos": [
+      {
+        "youtubeId": "f35SuWBWbEE",
+        "label": "Nagaland Village Walk – How People Actually Live in NE India 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Hello is universal; in Angami Naga: Kezie (greetings)",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "October–March (cool and dry; Hornbill Festival in December is the unmissable event)",
+      "mustEat": [
+        "Smoked pork with bamboo shoot (Nagaland's most iconic dish)",
+        "Axone (fermented soybean — deeply pungent, intensely flavoured)",
+        "Galho (rice and vegetable porridge similar to congee)",
+        "Anishi (fermented taro leaf with meat)",
+        "Dog meat — a traditional ceremonial food in some Naga tribes"
+      ],
+      "localTip": "The Hornbill Festival (first week of December) at Kisama Heritage Village near Kohima is one of India's most extraordinary cultural events — all 16 Naga tribes perform together in traditional dress, with warrior dances, folk music, and traditional food stalls. Book accommodation in Kohima months in advance for festival week. The WWII cemetery on Garrison Hill, Kohima — where the British and Indian armies halted the Japanese advance in 1944 — is hauntingly beautiful.",
+      "funFact": "Nagaland is home to 16 major Naga tribes, each with its own distinct language, costume, and traditions — tribes that were historically headhunting enemies of each other. The last recorded headhunting raid occurred in 1969. Today over 90% of Nagas are Christian — the result of American Baptist missionary work in the 19th century — making it one of the most intensely Christian regions in Asia. The state has no alcohol prohibition but produces no commercial wine.",
+      "culturalDos": [
+        "Attend the Hornbill Festival in December if at all possible — it is a once-in-a-lifetime cultural experience",
+        "Accept food from a Naga host — hospitality is a core cultural value",
+        "Visit the WWII battlefield at Kohima — the Battle of Kohima (1944) was called 'the turning point of the war in Asia'"
+      ],
+      "culturalDonts": [
+        "Photograph tribal elders or ceremonies without explicit permission",
+        "Bring alcohol as a gift to conservative Christian villages — attitudes to alcohol vary enormously by area",
+        "Dismiss the political complexity — Nagaland has had an insurgency since 1956 and the Naga political question remains sensitive"
+      ]
+    },
+    "origin": {
+      "founded": "Inhabited for millennia; State of Nagaland formed 1 December 1963",
+      "originalName": "Nagaland — from 'Naga,' the collective name for the hill tribes (origin disputed; possibly from Burmese 'naka' — pierced-ear people)",
+      "founders": "Naga indigenous peoples; first Indian state created specifically to address tribal autonomy demands",
+      "story": "The Naga hills were never conquered by any Indian empire — Mughal forces never reached these mountains, and the Ahom Kingdom of Assam maintained only an uneasy border with the Naga tribes. The British encountered fierce Naga resistance during their 19th-century expansion into the hills, including the 1879–1880 Anglo-Naga War. American Baptist missionaries arrived from 1872 and transformed Naga society, converting most of the population to Christianity and creating written scripts for previously oral languages. In World War II, the Battle of Kohima (April–June 1944) saw the Japanese advance into India halted on the tennis court of the British deputy commissioner's bungalow — now a war cemetery. Nagaland became India's 16th state in 1963 as part of a negotiated settlement with the Naga National Council, which had declared independence in 1947. A low-level insurgency continued for decades; the Naga peace process remains ongoing.",
+      "era": "Modern"
+    }
+  },
+  {
+    "slug": "aizawl",
+    "name": "Aizawl",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 23.7271,
+      "lng": 92.7176
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 293416,
+    "tags": [
+      "northeast-india",
+      "mizoram",
+      "hill-city",
+      "culture",
+      "peaceful"
+    ],
+    "videos": [
+      {
+        "youtubeId": "0o4yNlX17Tg",
+        "label": "Aizawl Walking Tour – India's Quietest City in Mizoram 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Chibai (চিবাই) in Mizo — a warm, informal all-purpose greeting",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "October–March (cool and clear, ideal walking weather); avoid May–September monsoon",
+      "mustEat": [
+        "Bai (boiled pork or beef with local greens and bamboo shoot)",
+        "Sawhchiar (rice porridge with pork or chicken)",
+        "Vawksa rep (smoked pork)",
+        "Chhangban (steamed rice cake)",
+        "Bamboo shoot pickle (sold from every roadside stall)"
+      ],
+      "localTip": "Aizawl is built on a single ridge at 1,132 metres — the city has no flat ground, no rickshaws, and no bicycles. Every street winds steeply and every view is a panorama of misty hills. The Durtlang Hills above the city give a 360° view of the entire ridge-city below. The Saturday market (Zaikhum) in the city centre is the social heart of the week — everything from woven shawls to live fish is sold.",
+      "funFact": "Aizawl is the only state capital in India with no traffic lights — the city is too hilly for them to be practical. Mizoram has India's highest literacy rate (91.3%) and lowest crime rate. The Mizo people have a tradition called 'Tlawmngaihna' — an untranslatable concept of selfless service, hospitality, and putting others before oneself — which functions as the unofficial moral code of Mizo society.",
+      "culturalDos": [
+        "Dress modestly — Mizoram is deeply Christian and conservative in public behaviour",
+        "Attend a local church service on Sunday if invited — the choral singing in Mizo churches is internationally renowned",
+        "Try tlawmngaihna in practice: offer help before being asked"
+      ],
+      "culturalDonts": [
+        "Play loud music in residential areas, especially on Sundays",
+        "Assume connectivity — mobile data in Aizawl's hillside neighbourhoods can be patchy",
+        "Visit without experiencing the view at dawn when the city rises above the cloud layer"
+      ]
+    },
+    "origin": {
+      "founded": "1890 (British administrative post established)",
+      "originalName": "Aizawl (আইজল) — meaning uncertain; possibly 'the land between' in Mizo",
+      "founders": "British administration after the 1890 Mizo Hills expedition; Mizo settlers",
+      "story": "The Mizo hills (then called the Lushai Hills) were brought under British control after a series of military expeditions in 1871 and 1890 following Mizo raids on British-administered territory. Aizawl was established as the administrative headquarters in 1890 on a narrow ridge. American and Welsh Presbyterian missionaries arrived in the 1890s and within 50 years had converted virtually the entire Mizo population to Christianity, translating the Bible into Mizo and establishing schools — the foundation of today's extraordinary literacy rate. The Mizo National Front insurgency (1966–1987) led to a 20-year conflict that ended with the Mizoram Peace Accord in 1986 — one of India's most successful counter-insurgency peace settlements. Mizoram became a full state in 1987. Today Aizawl is one of India's safest, cleanest, and most literate cities, perched improbably on a mountain ridge in near-total isolation from the rest of the country.",
+      "era": "Modern"
+    }
+  },
+  {
+    "slug": "assam",
+    "name": "Assam",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 26.2006,
+      "lng": 92.9376
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 31205576,
+    "tags": [
+      "northeast-india",
+      "nature",
+      "tea",
+      "forest",
+      "river"
+    ],
+    "videos": [
+      {
+        "youtubeId": "8ReEVTS6fx4",
+        "label": "Rural Assam Nature Walk – 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "scenic"
+      },
+      {
+        "youtubeId": "vU3q7FGu1lw",
+        "label": "Assam Deep Forest Winter Walk – Relaxing Nature Sounds 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      }
+    ],
+    "culture": {
+      "greeting": "Namaskar (নমস্কার) — formal; Nomoskar in Assamese; Jai Ai Asom (Victory to Mother Assam) — informal patriotic greeting",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "November–April (dry season, clear views of Himalayas from tea gardens; Kaziranga rhino park open)",
+      "mustEat": [
+        "Assam tea (the world's most produced black tea — drink it plain to appreciate the malty character)",
+        "Masor tenga (sour fish curry with tomato and elephant apple)",
+        "Duck meat curry with ash gourd",
+        "Pitha (rice flour pancakes or steamed cakes)",
+        "Bamboo shoot pickle (khorisa)"
+      ],
+      "localTip": "Kaziranga National Park (3 hours from Guwahati) protects over two-thirds of the world's one-horned rhinoceroses — an elephant safari at dawn is one of India's greatest wildlife experiences. The Majuli River Island (accessed by ferry from Jorhat) is the world's largest river island and the cultural heartland of Assamese neo-Vaishnavism — its satras (monastery-temples) perform centuries-old mask dances year-round.",
+      "funFact": "Assam produces over 50% of India's tea output — and 6% of global tea production. The Brahmaputra River, which flows through the state, is one of only a few rivers in the world classified as male in Hindu tradition. During the 2004 floods, the Brahmaputra was over 80 km wide in places. Assam is also one of only two regions in the world (the other being Kaziranga) where tigers, elephants, rhinos, and wild buffalo coexist in the wild.",
+      "culturalDos": [
+        "Attend Bihu festival (April) — the Assamese New Year celebration with its distinctive bihu dance is one of India's most joyful festivals",
+        "Visit a tea garden and ask to see the full picking and processing cycle",
+        "Try Assamese silk — Muga silk (golden) is found only in Assam"
+      ],
+      "culturalDonts": [
+        "Visit Kaziranga between May and October when the park floods and closes",
+        "Assume Assam is culturally similar to Bengal — Assamese identity is distinct and there is historical tension",
+        "Travel the Brahmaputra riverbanks in monsoon — flooding is extreme and river islands can disappear overnight"
+      ]
+    },
+    "origin": {
+      "founded": "Inhabited since prehistoric times; Ahom Kingdom 1228–1826",
+      "originalName": "Pragjyotishpura (ancient name — 'city of eastern astrology'); Assam possibly from Ahom kingdom name",
+      "founders": "Ahom people (Tai group from Southeast Asia), who founded their kingdom in 1228",
+      "story": "The Ahom Kingdom of Assam is one of the most remarkable polities in Indian history — founded by Tai-Ahom immigrants from present-day Yunnan, China, they ruled Assam for nearly 600 years (1228–1826) without ever being conquered by the Mughal Empire despite 17 military campaigns including the famous Battle of Saraighat (1671) where Ahom general Lachit Borphukan routed a Mughal fleet on the Brahmaputra. The kingdom maintained a sophisticated administrative system and promoted Assamese language and culture. British conquest in 1826 after the First Anglo-Burmese War introduced tea cultivation — transforming the economy and ecology of the entire valley. The tea gardens planted from the 1840s onwards brought over one million labourers from central India, permanently changing Assam's demographic composition. Today Assam is the gateway to the Seven Sister States of Northeast India, home to extraordinary wildlife, the world's most productive tea region, and the diverse cultures of over 30 indigenous groups.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "kolkata",
+    "name": "Kolkata",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 22.5726,
+      "lng": 88.3639
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 14850000,
+    "tags": [
+      "historic",
+      "culture",
+      "bazaar",
+      "colonial",
+      "bengali"
+    ],
+    "videos": [
+      {
+        "youtubeId": "J4TDkiY6WRA",
+        "label": "Kolkata Busy Roads & Bazaar – Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "65PFTShr79k",
+        "label": "Howrah Station, Howrah Bridge & M.G. Road – Kolkata 2025 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "Tt8pM9A_dVk",
+        "label": "Lake Town – Explore the Suburb of Kolkata 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "QTd3Ti7202E",
+        "label": "Shobhabazar – Heritage Walk in North Kolkata & Kumartuli 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "Wrna-y2Kw00",
+        "label": "Bara Bazar & Zakaria Street to Howrah Station – Kolkata 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Namaskar (নমস্কার) — formal; Kemon acho (কেমন আছ) — 'how are you?' casual",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "October–February (cool, dry; Durga Puja in October is a once-in-a-lifetime spectacle)",
+      "mustEat": [
+        "Kathi roll (egg and meat roll in flaky paratha — invented at Nizam's restaurant, Kolkata, 1932)",
+        "Mishti doi (sweetened yoghurt set in earthen pots — Kolkata's definitive dessert)",
+        "Rasgolla (soft cheese balls in sugar syrup — Kolkata claims its invention)",
+        "Hilsa fish curry (Ilish maach — Bengal's national obsession, banned from export for weeks at the season peak)",
+        "Puchka (Kolkata's pani puri — a sharper, tangier version than Mumbai's)"
+      ],
+      "localTip": "Durga Puja (October) transforms Kolkata into the world's largest open-air art festival — over 3,500 pandals (temporary bamboo pavilions) compete with sculptural and thematic installations, and the entire city walks through the night for four days. Outside puja season, Kumartuli (the potters' quarter) north of Shobhabazar is where all the idols are made year-round — watching craftsmen shape 20-foot clay goddesses is extraordinary. The yellow Ambassador taxis and hand-pulled rickshaws are becoming rare — take one while they still exist.",
+      "funFact": "Kolkata is the only Indian city still running hand-pulled rickshaws — a practice banned elsewhere but maintained by the city's High Court. The Howrah Bridge (1943) carries an estimated 100,000 vehicles and 150,000 pedestrians daily with no nuts or bolts — the entire structure is held together by rivets. Kolkata has won more Nobel Prizes per capita than any other city in Asia (Rabindranath Tagore 1913, Mother Teresa 1979, Amartya Sen 1998).",
+      "culturalDos": [
+        "Attend an adda (ঐদ্দা) — the Bengali tradition of long, unstructured intellectual conversation over tea; you'll find it in every para (neighbourhood) tea stall",
+        "Visit College Street (Boi Para) for second-hand books — the largest second-hand book market in the world",
+        "Eat at a bhaat-er hotel (rice hotel) — basic canteen serving Bengali home cooking at ₹40 a plate"
+      ],
+      "culturalDonts": [
+        "Rush — Kolkata operates on its own time and resents hurry",
+        "Confuse Bengalis with any other Indian community — Bengali identity is fiercely distinct with its own literature, music, film, and food culture",
+        "Skip the Victoria Memorial — whatever your feelings about colonialism, it is one of the most spectacular buildings in Asia"
+      ]
+    },
+    "origin": {
+      "founded": "1690 (Job Charnock's East India Company trading post); ancient villages on the same site predate the British settlement",
+      "originalName": "Kalikata — from Kalighat (a temple of Kali) or Kilkila (a flat area) — renamed Calcutta by the British, restored to Kolkata in 2001",
+      "founders": "Job Charnock (East India Company) established the British settlement in 1690; however the site was already occupied by three villages",
+      "story": "The villages of Sutanuti, Govindapur, and Kalikata on the Hooghly River were ancient when Job Charnock established the East India Company trading post in 1690. Kolkata grew to become the capital of British India by 1773 — the seat of the Bengal Presidency and the richest city in Asia through the 18th and 19th centuries. Its wealth came from the opium trade (Bengal opium was exported to China), indigo, jute, and later textiles. The city was the centre of the Bengal Renaissance (19th–early 20th century) — a flowering of literature, philosophy, science, and social reform led by Rabindranath Tagore, Ram Mohan Roy, and others that shaped modern India. The capital was moved to the new city of New Delhi in 1911. Partition in 1947 and the Bangladesh Liberation War of 1971 sent millions of refugees into the city. Despite economic decline, Kolkata remains India's intellectual and cultural capital — home to its most vibrant literature, cinema, football culture, and political discourse.",
+      "era": "Early Modern"
+    }
+  },
+  {
+    "slug": "bengaluru",
+    "name": "Bengaluru",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 12.9716,
+      "lng": 77.5946
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 12765000,
+    "tags": [
+      "tech",
+      "garden-city",
+      "modern",
+      "nightlife",
+      "culture"
+    ],
+    "videos": [
+      {
+        "youtubeId": "YnuMd2yWDlQ",
+        "label": "Bengaluru Weekend Night Walk – Garden City 4K 60fps 2024",
+        "timeOfDay": "night",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "st7rGnwyVwQ",
+        "label": "Silicon City of India – Bengaluru Immersive Evening Walk 4K",
+        "timeOfDay": "golden-hour",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Namaste (ನಮಸ್ತೆ) in Kannada — same gesture as Hindi; Hege idira (ಹೇಗಿದ್ದೀರ) — 'how are you?' formal",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "October–February (the city's naturally temperate climate — at 920m altitude — makes it pleasant year-round, but this period is coolest and driest)",
+      "mustEat": [
+        "Masala dosa (crispy fermented rice crêpe with spiced potato filling — Bengaluru's most iconic breakfast)",
+        "Bisi bele bath (hot lentil-rice dish with vegetables and spices)",
+        "Ragi mudde (finger millet balls eaten with sambar — a classic Kannadiga working-class meal)",
+        "Filter coffee (South Indian style — strong, sweet, frothed by pouring between steel tumblers)",
+        "Mangalore Buns (sweet banana-flour puris, available at Udupi restaurants throughout the city)"
+      ],
+      "localTip": "Bengaluru has India's most vibrant craft beer scene — the city has over 30 microbreweries. The MG Road and Brigade Road area is the nightlife core, but the quieter Indiranagar and Koramangala neighbourhoods have the best restaurants and bars. Lalbagh Botanical Garden (240 acres) hosts a spectacular flower show twice a year (Republic Day and Independence Day) in its Victorian glass house — outside show season, it's the city's most peaceful escape from the traffic.",
+      "funFact": "Bengaluru hosts over 40% of India's IT exports, making it responsible for a significant share of the global technology services market. The city is also home to ISRO (Indian Space Research Organisation) — which put a spacecraft in Mars orbit (Mangalyaan) on its first attempt in 2014 at a cost lower than the production budget of the Hollywood film Gravity. Bengaluru has more pubs per capita than any other Indian city.",
+      "culturalDos": [
+        "Learn a few words of Kannada — Bengalurians appreciate the effort, and Kannada pride is strong",
+        "Visit Cubbon Park on a Sunday morning when the roads close to traffic and the city cycles",
+        "Explore the old pete (market) area around Avenue Road and Chickpet for a pre-tech Bengaluru that still exists"
+      ],
+      "culturalDonts": [
+        "Call it Bangalore in formal contexts — the Kannada name Bengaluru was officially adopted in 2014",
+        "Assume the city is only tech and malls — the Kannadiga cultural heritage is rich and the old city is fascinating",
+        "Drive during peak hours if avoidable — Bengaluru's traffic is among India's worst due to inadequate infrastructure growth relative to population"
+      ]
+    },
+    "origin": {
+      "founded": "1537 (Kempe Gowda I established the mud fort)",
+      "originalName": "Bendakaluru (ಬೆಂದಕಾಳೂರು — 'town of boiled beans') — Kempe Gowda was reportedly fed boiled beans by an old woman when he lost his way; anglicised to Bangalore",
+      "founders": "Kempe Gowda I, a chieftain under the Vijayanagara Empire",
+      "story": "Bengaluru was founded in 1537 by Kempe Gowda I, who built a mud fort and established the city's distinctive four-tower boundary markers. The city changed hands between the Vijayanagara Empire, the Marathas, and Hyder Ali before Tipu Sultan made it a major military garrison in the 1780s. After Tipu's defeat in 1799, the British took control and established a large cantonment, giving Bengaluru its distinctive dual character — the old pete (market city) and the British cantonment with its clubs, parks, and colonial bungalows. The East India Company brought a temperate garden city aesthetic, establishing Lalbagh Botanical Garden (1760) and Cubbon Park (1870). After Indian independence, the government deliberately chose Bengaluru as the location for aerospace and defence research (HAL, ISRO, DRDO) due to its inland location — strategic security during the Cold War era. The 1991 liberalisation of the Indian economy opened the door for the IT revolution; Texas Instruments established India's first offshore software development centre in Bengaluru in 1985, and the city never looked back.",
+      "era": "Early Modern"
+    }
+  },
+  {
+    "slug": "ahmedabad",
+    "name": "Ahmedabad",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 23.0225,
+      "lng": 72.5714
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 8059441,
+    "tags": [
+      "historic",
+      "gujarat",
+      "heritage",
+      "culture",
+      "textile"
+    ],
+    "videos": [
+      {
+        "youtubeId": "xitw1xVmqAA",
+        "label": "Ahmedabad Historic City – Every Corner Tells a Story 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Jai Shree Krishna (જય શ્રી કૃષ્ણ) — the standard Gujarati greeting among Vaishnavas; Kéem cho (કેમ છો) — 'how are you?'",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "November–February (mild winters; Uttarayan kite festival on 14 January is spectacular)",
+      "mustEat": [
+        "Dhokla (fermented chickpea flour steamed cake — the definitive Gujarati snack)",
+        "Thepla (spiced flatbread made with fenugreek leaves, eaten with pickle)",
+        "Fafda-jalebi (crispy chickpea flour sticks with sweet jalebi — the Sunday morning ritual)",
+        "Gujarati thali (multi-course vegetarian feast with unlimited refills)",
+        "Undhiyu (slow-cooked mixed vegetable dish from Surat — eaten only in winter)"
+      ],
+      "localTip": "The old walled city around Manek Chowk is a UNESCO World Heritage Site — walk through the pols (traditional neighbourhoods of interlocking wooden houses) at dawn before the traffic starts. Manek Chowk serves as a jewellery market by day, vegetable market by afternoon, and street food stall by night — the same square transforms completely every few hours. Kankaria Lake at night during the winter festival is one of Gujarat's most festive urban experiences.",
+      "funFact": "Ahmedabad is India's first UNESCO World Heritage City (inscribed 2017). Mahatma Gandhi established his Sabarmati Ashram here in 1917 — it was the base of the Indian independence movement and the starting point of the 1930 Salt March (385 km to the sea). Ahmedabad is also the home of the world's largest stock exchange building (BSE) outside of Mumbai and is the diamond-polishing capital of the world — 90% of the world's rough diamonds are cut and polished here.",
+      "culturalDos": [
+        "Walk the Heritage Walk route through the old city pol neighbourhoods at dawn — free walking tours depart from Swaminarayan Temple",
+        "Visit during Uttarayan (14 January) kite festival when the sky above the entire city fills with kites and the rooftops become social gathering spaces",
+        "Eat at a Gujarati thali restaurant — it operates on unlimited refill culture and the food rotation never ends"
+      ],
+      "culturalDonts": [
+        "Expect alcohol — Ahmedabad is in Gujarat, India's largest dry state; alcohol requires a permit (available at some hotels)",
+        "Confuse Gujarati vegetarianism with restriction — Gujarati cuisine is one of India's most complex and flavourful",
+        "Miss the evening aarti (prayer ceremony) at Sabarmati Ashram — simple, unhurried, and deeply moving"
+      ]
+    },
+    "origin": {
+      "founded": "1411 AD",
+      "originalName": "Karnavati (the ancient name still used colloquially) — Ahmad Shah I renamed it Ahmedabad after himself",
+      "founders": "Sultan Ahmad Shah I of the Gujarat Sultanate",
+      "story": "The site of Ahmedabad was an ancient Hindu settlement called Karnavati before Sultan Ahmad Shah I of the Gujarat Sultanate established his new capital on the east bank of the Sabarmati River in 1411. According to legend, Ahmad Shah saw a hare chasing hounds near the riverbank and interpreted this reversal of predator and prey as an auspicious sign. The Gujarat Sultanate made Ahmedabad one of the medieval world's great trading cities — Venetian traveller Giosafat Barbaro described it in 1419 as 'the finest city in Hindustan.' The Mughal Emperor Akbar captured the city in 1572, and it served as a Mughal provincial capital before passing to the Marathas in 1758 and the British in 1817. The city's extraordinary Hindu-Islamic architectural synthesis — seen in the step-wells (vavs), mosques, and pols — reflects 600 years of cultural fusion. Gandhi's Sabarmati Ashram (1917–1930) made Ahmedabad the epicentre of the Indian independence movement. Post-independence, the city became India's textile capital and, in the 21st century, a major hub for pharmaceuticals, chemicals, and finance.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "kashmir",
+    "name": "Kashmir",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 34.0837,
+      "lng": 74.7973
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 1250000,
+    "tags": [
+      "mountain",
+      "lake",
+      "scenic",
+      "culture",
+      "himalayan"
+    ],
+    "videos": [
+      {
+        "youtubeId": "mUVPj3kQs4Q",
+        "label": "Kashmir – Stunning Walking Tour 4K 60fps",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "As-salamu alaykum (السلام عليكم) — standard Muslim greeting; Namaskar for Hindu Pandits",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "April–June (tulip gardens, shikara rides on Dal Lake) or December–February (skiing at Gulmarg, snow-covered Mughal gardens)",
+      "mustEat": [
+        "Rogan josh (slow-braised lamb in Kashmiri red chilli — the definitive Wazwan dish)",
+        "Yakhni (lamb in yoghurt-based white gravy)",
+        "Noon chai (pink Kashmiri salt tea with milk and pistachios)",
+        "Dum aloo Kashmiri (baby potatoes in spiced gravy)",
+        "Harissa (slow-cooked meat porridge eaten for winter breakfasts — sold only before noon)"
+      ],
+      "localTip": "A shikara boat ride on Dal Lake at dawn — before the flower sellers, tourists, and vegetable markets emerge — is one of the most serene experiences in India. The Mughal gardens (Shalimar Bagh, Nishat Bagh, Chashme Shahi) were designed by Mughal emperors as their paradise on earth and are best at sunrise before the coach tours arrive. Gulmarg (2,650m) is 50 km from Srinagar and runs the highest gondola in the world — in winter, the snow quality rivals the Alps.",
+      "funFact": "The Dal Lake 'floating gardens' (rad) are man-made islands of vegetation woven together over centuries — vegetable farmers grow tomatoes, cucumbers, and lotus roots in plots that literally float on the lake and can be poled to market by shikara. Kashmir saffron (Crocus sativus Kashmirianus) grown in the Pampore crocus fields is among the world's most prized — it takes 150,000 flowers to produce 1 kg of dried saffron, and the harvest window is just two weeks in October.",
+      "culturalDos": [
+        "Dress modestly in Srinagar — particularly around the Jama Masjid and in the old city",
+        "Stay on a houseboat on Dal Lake — a Kashmiri tradition since the British Raj when Europeans were not permitted to own land",
+        "Buy Pashmina wool directly from a certified cooperative — genuine Kashmiri pashmina (from Changthangi goats) is a completely different material from the Chinese imitations"
+      ],
+      "culturalDonts": [
+        "Photograph army installations, checkpoints, or security forces",
+        "Debate the political status of Kashmir with locals — the geopolitical situation is deeply personal and painful",
+        "Miss the chance to attend a traditional Wazwan feast if invited — a multi-course Kashmiri banquet is one of India's greatest culinary experiences"
+      ]
+    },
+    "origin": {
+      "founded": "Inhabited since Neolithic times; Kashmir Valley kingdom from circa 3rd century BC",
+      "originalName": "Kashyapmira (lake of the sage Kashyap) — according to legend the valley was a lake drained by the sage Kashyapa",
+      "founders": "Naga peoples and later the kings of the Kashmir Valley; Karkota dynasty first major kingdom",
+      "story": "The Kashmir Valley has been inhabited since the Neolithic period. Hindu tradition holds that the valley was a primordial lake (Satisar) drained by the sage Kashyapa to create habitable land. The Karkota dynasty (625–885 AD) united the valley and produced its first great cultural flowering under King Lalitaditya Muktapida, who built the Sun Temple at Martand. Islam arrived in the 14th century under Shah Mir, who founded the first Muslim sultanate in 1339. The Mughals captured Kashmir in 1586 — Emperors Akbar, Jahangir, and Shah Jahan all built gardens here, describing the valley as paradise on earth. ('If there is a paradise on earth, it is this, it is this, it is this.') The British Raj passed suzerainty to the Dogra Maharajas. At Indian independence in 1947, the Hindu Maharaja Hari Singh signed the Instrument of Accession to India following a Pakistani-backed invasion — initiating the Kashmir conflict that has continued in various forms ever since. The valley remains the world's most militarised civilian territory and one of its most achingly beautiful.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "vrindavan",
+    "name": "Vrindavan",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 27.5794,
+      "lng": 77.6964
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 63005,
+    "tags": [
+      "spiritual",
+      "krishna",
+      "temple",
+      "pilgrimage",
+      "culture"
+    ],
+    "videos": [
+      {
+        "youtubeId": "OkkntBZQKo8",
+        "label": "Vrindavan Mathura – City of Krishna Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Radhe Radhe (राधे राधे) — the universal greeting in Vrindavan, invoking the name of Radha (Krishna's divine consort)",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "October–March (cool, pilgrimage season; Holi in Vrindavan starts a week before the rest of India and is the world's most intense Holi celebration)",
+      "mustEat": [
+        "Pedha (milk-based sweet from Mathura — the most famous mithai in India)",
+        "Makhan mishri (fresh butter with raw sugar — offered at Krishna temples)",
+        "Puri sabzi breakfast at temple prasad stalls",
+        "Rabri (reduced milk dessert with rose and saffron)",
+        "Govardhan parikrama food (simple lentils and flatbread eaten during the 21 km ritual walk)"
+      ],
+      "localTip": "The Banke Bihari Temple is one of India's most emotionally intense — the priests briefly draw a curtain across the image of Krishna (because it's believed his gaze is so powerful it would overwhelm visitors), creating a rhythm of hiding and revealing that devotees find deeply moving. The evening aarti at ISKCON temple and at the ghats on the Yamuna River is open to all. For Holi, arrive early March — the festival starts here with Widow Holi at Gopinath Temple (now open to all), then builds daily.",
+      "funFact": "Vrindavan has over 5,000 temples in a town of 63,000 people — more temples per capita than anywhere else in India. The town is mentioned in the Bhagavata Purana as the forest where Krishna spent his childhood playing with the gopis (cowgirls) — making it 5,000 years old in Hindu tradition. The town is also home to thousands of widows who come from across India to spend their final years close to Krishna — a tradition that ISKCON and local NGOs are now working to transform through empowerment programmes.",
+      "culturalDos": [
+        "Remove shoes before entering all temples — this is non-negotiable",
+        "Observe silence and remove leather items (belt, bag) in the most sacred inner shrines",
+        "Accept prasad (blessed food) offered by temple priests with both hands and eat it — refusing is considered inauspicious"
+      ],
+      "culturalDonts": [
+        "Wear leather inside the main temples — this is strictly forbidden",
+        "Visit Banke Bihari Temple during peak festival times without preparing for extreme crowds",
+        "Photograph inside temple sanctums where signs prohibit — priests enforce this firmly"
+      ]
+    },
+    "origin": {
+      "founded": "Ancient — sacred since at least the 5th century BC; rediscovered by Chaitanya Mahaprabhu 1515 AD",
+      "originalName": "Vrindavan (वृन्दावन) — 'forest of the tulsi (holy basil) plant'; also Brindaban",
+      "founders": "Sacred to Krishna from time immemorial; physical temples and town established by the Six Goswamis sent by Chaitanya Mahaprabhu in 1515",
+      "story": "Vrindavan is one of Hinduism's most sacred tirthas (pilgrimage sites), held to be the actual forest where the god Krishna spent his childhood and youth — herding cows, playing his flute, and dancing with the gopis. The site is described in texts dating to at least 400 BC. The physical town and its temple culture as it exists today was largely created by the Bengali saint Chaitanya Mahaprabhu, who visited in 1515 and identified the key sacred sites by divine vision, then dispatched six disciple scholars (the Six Goswamis) to excavate lost temples and establish new ones. Mughal Emperor Akbar's revenue minister (and devotee) Todar Mal funded several of Vrindavan's grandest temples in the late 16th century. The Govindadeva Temple (1590), built in red sandstone, was once the tallest building in northern India before Aurangzeb demolished its upper storeys fearing it would overlook his fort. Today Vrindavan draws millions of pilgrims annually, particularly from Bengal, and is the global headquarters of ISKCON (the International Society for Krishna Consciousness, or Hare Krishnas), founded in 1966.",
+      "era": "Ancient"
+    }
+  },
+  {
+    "slug": "jaipur",
+    "name": "Jaipur",
+    "country": "India",
+    "countryCode": "IN",
+    "flagEmoji": "🇮🇳",
+    "continent": "Asia",
+    "coordinates": {
+      "lat": 26.9124,
+      "lng": 75.7873
+    },
+    "timezone": "Asia/Kolkata",
+    "population": 3073350,
+    "tags": [
+      "pink-city",
+      "rajasthan",
+      "historic",
+      "heritage",
+      "culture"
+    ],
+    "videos": [
+      {
+        "youtubeId": "eCOW5Ud2v5o",
+        "label": "Jaipur – Uncovering the Beauty of the Wealthiest City in Rajasthan 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Khamma Ghani (खम्मा घणी) — the traditional Rajasthani greeting, meaning 'I salute you with great respect'; Namaskar widely used",
+      "currency": "Indian Rupee (INR ₹)",
+      "bestSeason": "October–March (cool desert air, clear skies; avoid April–June when temperatures exceed 45°C)",
+      "mustEat": [
+        "Dal baati churma (three-part meal: lentil curry, baked wheat balls, and sweet crushed wheat — Rajasthan's most iconic dish)",
+        "Laal maas (fiery red goat curry with Mathania red chillies)",
+        "Pyaaz kachori (deep-fried onion pastry from Rawat Mishthan Bhandar)",
+        "Ghevar (disc-shaped festival sweet soaked in saffron syrup)",
+        "Kulhad chai (tea served in a clay cup — the kulhad gives it an earthy flavour, then smash and discard)"
+      ],
+      "localTip": "The Hawa Mahal (Palace of Winds) is best seen at sunrise before the crowds — the 953 latticed windows were designed so royal women could watch street processions without being seen, and in the right light the pink sandstone facade glows. The City Palace complex is still partially occupied by the Jaipur royal family. For jewellery, head to Johari Bazaar where certified gem dealers sell the precious stones Jaipur has been mining for 500 years — the city is the world capital of gemstone cutting.",
+      "funFact": "Jaipur was the world's first planned city with a grid layout and zone-based urban design when it was built in 1727 — 40 years before Washington DC. The entire old city was painted pink in 1876 to welcome Prince Albert (later Edward VII) — the colour stuck and gave Jaipur its eternal nickname. Jaipur's gem-cutting industry processes over $800 million worth of coloured gemstones annually, with over 25,000 artisans cutting everything from emeralds to rubies.",
+      "culturalDos": [
+        "Hire a local guide for the City Palace and Amber Fort — the oral histories and hidden rooms they reveal are not in any guidebook",
+        "Visit Amber Fort by elephant or jeep at dawn before the heat — the fort's hilltop position gives views across the Aravalli Hills",
+        "Attend the Pushkar Camel Fair in November if timings align (90 minutes by road) — one of the most visually extraordinary events in India"
+      ],
+      "culturalDonts": [
+        "Bargain insultingly low in the gem markets — quality Rajasthani gemstones represent real craft and provenance",
+        "Visit the major forts and palaces during Diwali week when they're lit up but impossibly crowded",
+        "Assume all the traditional dress and folk performance in tourist areas is inauthentic — Rajasthan has the most living folk tradition of any Indian state"
+      ]
+    },
+    "origin": {
+      "founded": "1727 AD",
+      "originalName": "Jaipur (जयपुर) — 'city of victory' — named for its founder Jai Singh II",
+      "founders": "Maharaja Sawai Jai Singh II of the Kachwaha Rajput clan",
+      "story": "Jaipur was founded in 1727 by the polymath Maharaja Sawai Jai Singh II, who was not only a ruler but a mathematician, astronomer, and urban planner of extraordinary vision. He designed the city according to the Shilpa Shastra (ancient Hindu architecture treatise) on a perfect grid of nine rectangular blocks (nau graha — the nine celestial bodies), with wide boulevards 33 metres wide and a systematic allocation of each zone to a different craft or trade. The Jantar Mantar — his personal astronomical observatory, built simultaneously with the city — contains the world's largest sundial, accurate to 2 seconds. The city replaced the hill fort at Amber (Amer), which had been the Kachwaha capital since the 12th century. Jaipur became fabulously wealthy as the Mughal Empire declined, controlling the trade routes of northern Rajputana. The maharajas accumulated one of the world's greatest collections of arms, jewels, art, and manuscripts. The 1876 pink painting was a diplomatic masterstroke — the colour was chosen because pink represents hospitality in Rajput tradition. Jaipur was the first princely state to accede to the Indian Union in 1949 and became the capital of Rajasthan.",
+      "era": "Early Modern"
     }
   }
 ]
