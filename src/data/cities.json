@@ -3927,5 +3927,57 @@
       "story": "A church was established on the island of Tromsøya in 1252, making it one of the northernmost Christian outposts in the medieval world. The town was granted its charter in 1794, growing as a hub for Arctic hunting, fishing, and — critically — as the gateway for polar expeditions. Roald Amundsen launched his race to the South Pole from Tromsø's harbour in 1910. The city became an important trading post with northern Sami communities and served as a significant Allied supply point in World War II. Today it is the world's premier destination for chasing the northern lights and experiencing the phenomenon of the midnight sun.",
       "era": "Medieval"
     }
+  },
+  {
+    "slug": "hallstatt",
+    "name": "Hallstatt",
+    "country": "Austria",
+    "countryCode": "AT",
+    "flagEmoji": "🇦🇹",
+    "continent": "Europe",
+    "coordinates": { "lat": 47.5623, "lng": 13.6493 },
+    "timezone": "Europe/Vienna",
+    "population": 800,
+    "tags": ["alpine", "lake", "village", "nature", "historic"],
+    "videos": [
+      {
+        "youtubeId": "AQB6dVt-t64",
+        "label": "Rainy Walk in Hallstatt – Thunderstorm & Rain Ambience",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "G_yK-lpIG9g",
+        "label": "Austria 4K – Alpine Dreams, Misty Valleys & Green Lakes",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      },
+      {
+        "youtubeId": "humZuN2DlCU",
+        "label": "Austria 8K – Alpine Lakes, Storybook Villages & Majestic Peaks",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "scenic"
+      }
+    ],
+    "culture": {
+      "greeting": "Grüß Gott (formal) / Servus (informal)",
+      "currency": "Euro (EUR)",
+      "bestSeason": "May–October (wildflowers and lake walks) or December–January (Christmas market)",
+      "mustEat": ["Wiener Schnitzel", "Kaiserschmarrn", "Tafelspitz", "Apple Strudel", "Salt-cured Alpine trout"],
+      "localTip": "Arrive before 9 am or after 5 pm — Hallstatt's 800 residents receive over a million visitors a year. The viewpoint on the lakeside road just north of the village gives the iconic postcard shot. The free ferry from the Hallstatt train station takes 5 minutes and avoids the road.",
+      "funFact": "Hallstatt is so strikingly beautiful that China built a full-scale replica of it in Guangdong province. More remarkably, the village lends its name to an entire archaeological era — the Hallstatt culture (800–450 BC) — the earliest phase of the European Iron Age, discovered in the prehistoric salt mines here.",
+      "culturalDos": ["Use the Park & Ride in Lahn and walk or take the shuttle — private cars are banned in the village centre", "Book the salt mine tour in advance (oldest working salt mine in the world)", "Walk the Echerntal valley trail for alpine meadows and waterfalls away from crowds"],
+      "culturalDonts": ["Block the narrow lakeside path for photos — residents rely on it daily", "Arrive by car on summer weekends without a parking reservation", "Skip the Beinhaus (Charnel house) — a genuine 400-year-old tradition, not a tourist attraction"]
+    },
+    "origin": {
+      "founded": "circa 5000 BC (prehistoric settlement)",
+      "originalName": "Hallstatt (from Celtic 'Hall' = salt)",
+      "founders": "Celtic and later Roman settlers exploiting the salt deposits",
+      "story": "Hallstatt has been inhabited for at least 7,000 years, making it one of the oldest continuously settled places on Earth. Its name derives from the Celtic word for salt — the source of extraordinary wealth in antiquity. So much Celtic material was excavated from the prehistoric mines and burial grounds that archaeologists named an entire Iron Age period after the village: the Hallstatt culture (800–450 BC). Romans continued salt extraction, and in the medieval period Hallstatt supplied salt across the Habsburg Empire via an ingenious 40-km wooden pipeline to Ebensee. Today the village's dramatic setting — compressed between sheer limestone cliffs and the mirror-still Hallstätter See — has made it one of the most photographed places on the planet and a UNESCO World Heritage Site since 1997.",
+      "era": "Prehistoric"
+    }
   }
 ]
