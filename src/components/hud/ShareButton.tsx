@@ -40,18 +40,42 @@ export function ShareButton({ citySlug, cityName, flagEmoji = "" }: Props) {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${twitterText}&url=${encodeURIComponent(landingUrl)}`;
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(shareUrl);
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+    } catch {
+      // Clipboard API unavailable (WebView, HTTP, Samsung private mode).
+      // Fall back to legacy execCommand so copy still works.
+      try {
+        const el = document.createElement("textarea");
+        el.value = shareUrl;
+        el.style.cssText = "position:fixed;top:-9999px;left:-9999px";
+        document.body.appendChild(el);
+        el.focus();
+        el.select();
+        document.execCommand("copy");
+        document.body.removeChild(el);
+      } catch {
+        // Both methods failed — leave modal open so user can copy manually
+        return;
+      }
+    }
     setCopied(true);
     setTimeout(() => { setCopied(false); setOpen(false); }, 1500);
   };
 
   const handleNativeShare = async () => {
     if (navigator.share) {
-      await navigator.share({
-        title: `Walk ${cityName} on Nearaway.in`,
-        text: `${flagEmoji} Take a virtual walk through ${cityName} — no passport required.`,
-        url: shareUrl,
-      });
+      try {
+        await navigator.share({
+          title: `Walk ${cityName} on Nearaway.in`,
+          text: `${flagEmoji} Take a virtual walk through ${cityName} — no passport required.`,
+          url: shareUrl,
+        });
+      } catch {
+        // User cancelled or WebView share failed — fall back to copy
+        handleCopy();
+        return;
+      }
       setOpen(false);
     } else {
       handleCopy();

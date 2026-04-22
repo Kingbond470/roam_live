@@ -114,7 +114,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
               {/* Sprint 2C: favorite button */}
               <button
                 onClick={() => toggleFavorite(city.slug)}
-                className="glass rounded-full p-2.5 transition-colors"
+                className="glass rounded-full p-3 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                 title={isFavorited ? "Remove from saved" : "Save city (F)"}
               >
                 <Heart
@@ -126,7 +126,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
 
               <button
                 onClick={toggleMute}
-                className="glass rounded-full p-2.5 text-white/70 hover:text-white transition-colors"
+                className="glass rounded-full p-3 text-white/70 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                 title={playerMuted ? "Unmute (M)" : "Mute (M)"}
               >
                 {playerMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
@@ -134,7 +134,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
 
               <button
                 onClick={onOpenPicker}
-                className="glass rounded-full p-2.5 text-white/70 hover:text-white transition-colors"
+                className="glass rounded-full p-3 text-white/70 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                 title="Compare with another city"
               >
                 <SplitSquareHorizontal className="w-4 h-4" />
@@ -220,7 +220,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
                   <div className="flex items-center gap-2 flex-shrink-0">
                     <button
                       onClick={(e) => { e.stopPropagation(); navigateCity(navCities, "prev"); }}
-                      className="glass rounded-full p-2.5 text-white/60 hover:text-white transition-colors"
+                      className="glass rounded-full p-3 text-white/60 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                       title="Previous city (←)"
                       style={{ pointerEvents: show ? "auto" : "none" }}
                     >
@@ -234,7 +234,7 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
 
                     <button
                       onClick={(e) => { e.stopPropagation(); navigateCity(navCities, "next"); }}
-                      className="glass rounded-full p-2.5 text-white/60 hover:text-white transition-colors"
+                      className="glass rounded-full p-3 text-white/60 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                       title="Next city (→)"
                       style={{ pointerEvents: show ? "auto" : "none" }}
                     >
@@ -251,13 +251,13 @@ export function CityHUD({ city, isVisible, onOpenCard, onOpenPicker, onOpenSwitc
             <div className="flex items-center justify-between px-2 pb-3 pointer-events-auto">
               <button
                 onClick={() => navigateCity(navCities, "prev")}
-                className="glass rounded-full p-3 text-white/20"
+                className="glass rounded-full p-3 text-white/20 min-w-[48px] min-h-[48px] flex items-center justify-center"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => navigateCity(navCities, "next")}
-                className="glass rounded-full p-3 text-white/20"
+                className="glass rounded-full p-3 text-white/20 min-w-[48px] min-h-[48px] flex items-center justify-center"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>

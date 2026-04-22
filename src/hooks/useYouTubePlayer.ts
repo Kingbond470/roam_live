@@ -14,13 +14,20 @@ let apiReadyPromise: Promise<void> | null = null;
 
 function waitForYTApi(): Promise<void> {
   if (apiReadyPromise) return apiReadyPromise;
-  apiReadyPromise = new Promise((resolve) => {
+  apiReadyPromise = new Promise((resolve, reject) => {
     if (typeof window !== "undefined" && window.YT?.Player) {
       resolve();
       return;
     }
+    // Reject after 10s — covers ISP/firewall/WebView blocks where the script
+    // loads but never fires onYouTubeIframeAPIReady
+    const timeout = setTimeout(() => {
+      apiReadyPromise = null; // allow retry on next mount
+      reject(new Error("YouTube API timed out"));
+    }, 10_000);
     const prev = window.onYouTubeIframeAPIReady;
     window.onYouTubeIframeAPIReady = () => {
+      clearTimeout(timeout);
       prev?.();
       resolve();
     };
@@ -66,7 +73,7 @@ export function useYouTubePlayer(
       const el = document.getElementById(containerId);
       if (!el) return;
 
-      playerRef.current = new window.YT.Player(containerId, {
+      try { playerRef.current = new window.YT.Player(containerId, {
         // BUG-07 FIX: explicit dimensions so iframe fills its container
         width: "100%",
         height: "100%",
@@ -123,7 +130,16 @@ export function useYouTubePlayer(
             setIsLoading(false);
           },
         },
-      });
+      }); } catch {
+        if (mountedRef.current) { setHasError(true); setIsLoading(false); }
+      }
+    }).catch(() => {
+      // YouTube API failed to load (blocked by ISP, WebView, firewall)
+      if (!cancelled && mountedRef.current) {
+        setHasError(true);
+        setIsLoading(false);
+        if (loadTimeoutRef.current) clearTimeout(loadTimeoutRef.current);
+      }
     });
 
     return () => {
