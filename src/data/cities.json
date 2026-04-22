@@ -4097,5 +4097,349 @@
       "story": "The Nepal Himalayas form the world's highest mountain system, home to eight of the ten tallest peaks on Earth including Everest (8,849m) and Manaslu (8,163m). Tsum Valley — hidden in the northern reaches of the Gorkha district — was one of the last valleys in Nepal to open to trekkers (2008). Its inhabitants trace descent from Tibetan Buddhist migrants and have maintained a near-intact medieval Tibetan culture including a 'no-kill' zone where hunting is forbidden by ancient decree. The valley contains over 30 monasteries, including Rachen Gompa — one of the largest nunneries in Nepal. The broader Himalayan region served as both the spiritual heartland of Hinduism and Buddhism and the most formidable natural barrier in human history, shaping the civilisations of South Asia on one side and Central Asia on the other.",
       "era": "Medieval"
     }
+  },
+  {
+    "slug": "moscow",
+    "name": "Moscow",
+    "country": "Russia",
+    "countryCode": "RU",
+    "flagEmoji": "🇷🇺",
+    "continent": "Europe",
+    "coordinates": { "lat": 55.7558, "lng": 37.6173 },
+    "timezone": "Europe/Moscow",
+    "population": 12506468,
+    "tags": ["iconic", "historic", "nightlife", "architecture", "culture"],
+    "videos": [
+      {
+        "youtubeId": "sBqG9gU_4jU",
+        "label": "Moscow City Walk Part 1 – 4K 60fps Real Ambient Sounds",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "-gzsiUIrz5o",
+        "label": "Moscow City 2025 – Real Russia Now 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "b5O_4xfaig4",
+        "label": "Moscow City Walk Part 2 – 4K 60fps Real Ambient Sounds",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "1xr02iennNo",
+        "label": "New Arbat to Red Square – 4K HDR City Walk",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "4egq77o-3bE",
+        "label": "Moscow Downtown – Kuznetsky Most, Lubyanka & Pokrovka 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "SeYYEhPFUG0",
+        "label": "Moscow Nightlife After Dark – Neon Lights & City Energy 4K HDR",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "fcs6WgBMNFk",
+        "label": "Real Russian Nightlife – Street Culture & Urban Vibes 4K HDR",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "nOrN5EIIlog",
+        "label": "Hidden Gems of Moscow – City Tour 4K HDR",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "vzgD1tTVyXU",
+        "label": "Autumn Evening – Patriarch Ponds & Chistye Prudy 4K HDR",
+        "timeOfDay": "golden-hour",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "sQCrIJHYtSI",
+        "label": "Moscow City Walk 2026 – 4K 60fps",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "dbIp7SzIFxo",
+        "label": "Moscow Snowy Christmas – Winter Wonderland 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "9FZB882_vpw",
+        "label": "Moscow Virtual Walking Tour – Luxury & City Life 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "atud53sOPSg",
+        "label": "Magic Christmas – Red Square Moscow 4K HDR",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
+      "currency": "Russian Ruble (RUB)",
+      "bestSeason": "May–June (warm, pre-summer rush) or December–January (Red Square Christmas market and snow-dusted Kremlin)",
+      "mustEat": ["Beef Stroganoff", "Borscht (deep beet and beef soup)", "Pelmeni (Siberian meat dumplings with sour cream)", "Blini with sour cream or caviar", "Medovik (honey layer cake)"],
+      "localTip": "The Moscow Metro is a tourist attraction in itself — stations like Komsomolskaya, Mayakovskaya, and Novoslobodskaya are palatial with mosaics, marble, and chandeliers. Buy a Troika card at any station; a single swipe costs far less than tourist day passes. Avoid rush hour (8–9 am, 5:30–7 pm) when carriages are wall-to-wall.",
+      "funFact": "Moscow's Metro is the busiest in Europe and among the world's most architecturally spectacular — Stalin ordered each station to be a 'palace for the people.' The deepest station, Park Pobedy, is 84 metres underground, deeper than any London Underground station, and its murals depict Russian military victories from 1812 and 1945.",
+      "culturalDos": ["Stand on the right of Metro escalators — the left lane is for walking", "Visit GUM department store on Red Square even if you don't shop — the interior arcade is extraordinary", "Time your Red Square visit at dusk when the Kremlin's red walls glow gold under floodlights"],
+      "culturalDonts": ["Photograph police, military personnel, or government buildings without asking", "Smile at strangers on the street — in Russian culture a smile is reserved for people you know; random smiling reads as insincere", "Forget to validate your Metro card before the turnstile — inspectors fine on the spot"]
+    },
+    "origin": {
+      "founded": "1147 AD (first written mention)",
+      "originalName": "Moskva (from the Moskva River — pre-Slavic root possibly meaning 'wet' or 'marshy')",
+      "founders": "Prince Yuri Dolgoruky of the Suzdal principality",
+      "story": "Moscow was first mentioned in chronicles in 1147 when Prince Yuri Dolgoruky invited an ally to 'come to me, brother, to Moscow.' By the 14th century it had become the seat of the Grand Duchy of Moscow, steadily absorbing neighbouring principalities to build the Russian state. Ivan III completed the Kremlin in its current form in the 1490s and proclaimed Moscow the 'Third Rome' after the fall of Constantinople. It served as Russia's capital until 1712 when Peter the Great relocated power to the newly built Saint Petersburg. Moscow returned as capital after the 1917 Revolution. Despite Napoleon burning three-quarters of the city in 1812 and the Nazi advance halting just 19 km from the city limits in 1941, Moscow endured both catastrophes and now ranks among the ten largest cities on Earth.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "saint-petersburg",
+    "name": "Saint Petersburg",
+    "country": "Russia",
+    "countryCode": "RU",
+    "flagEmoji": "🇷🇺",
+    "continent": "Europe",
+    "coordinates": { "lat": 59.9311, "lng": 30.3609 },
+    "timezone": "Europe/Moscow",
+    "population": 5383890,
+    "tags": ["imperial", "historic", "architecture", "canal", "culture"],
+    "videos": [
+      {
+        "youtubeId": "DPqxJwcbHXc",
+        "label": "St Petersburg Weekend City Walk 4K 2025",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "mPiXpQ7c-ww",
+        "label": "Imperial Russia – Saint Petersburg's Iconic Landmarks After Dark",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "JbwM48YMJTY",
+        "label": "Nevsky Prospekt in Winter – 4K Street Walk",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "P4QOx7FynXQ",
+        "label": "Saint Petersburg Walking Tour – Snowfall in the City",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
+      "currency": "Russian Ruble (RUB)",
+      "bestSeason": "June (White Nights — sun barely sets, city stays awake around the clock) or December (snow-covered canals and New Year lights on Nevsky Prospekt)",
+      "mustEat": ["Olivier salad (the original 'Russian salad', invented here)", "Pirozhki (baked or fried pastries stuffed with meat, cabbage, or egg)", "Ukha (clear fish broth — a St Petersburg staple)", "Korushka (smelt fish — the city's obsessive spring delicacy, briefly sold April–May)", "Syrniki (cottage cheese pancakes with jam and sour cream)"],
+      "localTip": "During White Nights in June, the city's historic drawbridges open at 1 am simultaneously to let ships through the Neva River — watched by thousands from the Palace Embankment. It's free, atmospheric, and unmissable. Book Hermitage tickets online a day ahead; walk-up queues in summer can be 2–3 hours.",
+      "funFact": "Saint Petersburg was built on 42 islands and is connected by 342 bridges — more bridges than any other city on Earth. Peter the Great was so determined to build his 'window to the West' that an estimated 30,000–100,000 workers died during construction on the swampy Neva delta. The city changed its name three times: St Petersburg → Petrograd (1914) → Leningrad (1924) → St Petersburg again (1991).",
+      "culturalDos": ["Climb the colonnade of Saint Isaac's Cathedral for a 360° panorama of the city", "Take an evening canal boat tour — the city looks entirely different from the water", "Visit Peterhof's Lower Park fountains in summer — the Grand Cascade rivals Versailles"],
+      "culturalDonts": ["Confuse St Petersburg with Moscow — Petersburgers are fiercely proud of their city's cultural distinction", "Visit the Hermitage without at least 3–4 hours; the Winter Palace alone overwhelms", "Miss the view from the Rostral Columns on Vasilievsky Island at night when they are lit with gas torches"]
+    },
+    "origin": {
+      "founded": "1703",
+      "originalName": "Sankt Peterburg (Saint Peter's city — named for Peter the Great's patron saint, not Peter himself)",
+      "founders": "Tsar Peter the Great",
+      "story": "Saint Petersburg was founded in 1703 by Tsar Peter the Great on land freshly seized from Sweden, built at immense human cost on the marshy delta of the Neva River. Peter's ambition was radical — a European-style capital that would drag Russia into the modern world and give it direct sea access to the West. Dutch and Italian architects designed a city of baroque palaces, wide boulevards, and canals on 42 islands, earning it the nickname 'Venice of the North.' It served as Russia's imperial capital for two centuries, accumulating the Hermitage's 3 million artworks and architectural masterpieces including the Winter Palace and Saint Isaac's Cathedral. In World War II the city endured the 872-day Siege of Leningrad — during which over 800,000 civilians died of starvation. The city voted to reclaim its original name in 1991.",
+      "era": "Early Modern"
+    }
+  },
+  {
+    "slug": "kazan",
+    "name": "Kazan",
+    "country": "Russia",
+    "countryCode": "RU",
+    "flagEmoji": "🇷🇺",
+    "continent": "Europe",
+    "coordinates": { "lat": 55.8304, "lng": 49.0661 },
+    "timezone": "Europe/Moscow",
+    "population": 1243500,
+    "tags": ["historic", "tatarstan", "culture", "kremlin", "volga"],
+    "videos": [
+      {
+        "youtubeId": "v23KSmoyp0Y",
+        "label": "Kazan City Walk – 8K 60fps Real Ambient Sounds",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "y666uL516es",
+        "label": "Kazan, Russia – Walking Tour 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "Ca4dFubMeos",
+        "label": "Kazan – Walk through the Streets and Gardens 4K",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "L8sRIZ7ox9c",
+        "label": "Kazan Bauman Street – Night Walking Tour 4K",
+        "timeOfDay": "night",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "lYchoTt-Ve4",
+        "label": "Kazan City – A Beautiful Walk through Streets and Gardens",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Исәнмесез (İsänmesez) in Tatar / Здравствуйте (Zdravstvuyte) in Russian — both are used daily",
+      "currency": "Russian Ruble (RUB)",
+      "bestSeason": "May–September (Volga promenade, outdoor cafés, Sabantuy Tatar festival in June) or January (winter festivals and snow-covered Kremlin)",
+      "mustEat": ["Echpochmak (triangular pastry filled with meat and potato — Kazan's signature street food)", "Chak-chak (deep-fried dough soaked in honey — the Tatar national dessert)", "Tutyrma (Tatar sausage with rice or buckwheat)", "Kystyby (flatbread stuffed with potato or millet)", "Elesh (round Tatar pasty with chicken and potato)"],
+      "localTip": "The Kazan Kremlin contains both an Orthodox cathedral and a mosque within the same fortress walls — walk between the Kul Sharif Mosque and the Annunciation Cathedral to understand the city's dual soul. Bauman Street (the pedestrian 'Kazan Arbat') is best at evening when locals promenade and street performers fill the space.",
+      "funFact": "Kazan is officially Russia's 'third capital' and the only place in the country where Russian Orthodoxy and Sunni Islam have coexisted within the same Kremlin for nearly 500 years. The city hosted the 2013 Summer Universiade and 2015 World Aquatics Championships, and the 1,000-year anniversary celebrations in 2005 triggered a complete restoration of the Kremlin and old city.",
+      "culturalDos": ["Try echpochmak from a street stall on Bauman Street — cheapest and best introduction to Tatar cuisine", "Visit the underground archaeological museum inside the Kremlin — it reveals layers of the original medieval city", "Explore the Staro-Tatarskaya Sloboda neighbourhood for traditional wooden Tatar architecture"],
+      "culturalDonts": ["Confuse Tatarstan's Tatar culture with Central Asian cultures — Tatars are a Volga Turkic people with a distinct identity and history", "Miss the Kul Sharif Mosque interior — one of the most beautiful mosques in Russia, free to enter (dress modestly)", "Skip the view from the Kremlin's Syuyumbike Tower — one of Russia's most distinctive leaning towers"]
+    },
+    "origin": {
+      "founded": "circa 10th–11th century; Kazan Khanate capital from 1438",
+      "originalName": "Qazan (from Tatar — possibly meaning 'cauldron,' referring to a spring said to boil like one)",
+      "founders": "Volga Bulgarian settlers; elevated to khanate capital by Khan Ulug Muhammad",
+      "story": "Kazan originated as a frontier fort of the Volga Bulgaria state around the 10th–11th century and became the capital of the powerful Kazan Khanate in 1438 — a successor to the Golden Horde that controlled the Volga trade routes between Europe and Asia. The khanate was one of the richest post-Mongol states, and its fall came in 1552 when Ivan the Terrible besieged the city and detonated a massive mine beneath its walls — an event commemorated by the Cathedral of Kazan in Moscow's Red Square. The conquest opened Russia's eastward expansion into Siberia. Today Kazan is the capital of the Republic of Tatarstan within the Russian Federation, a living emblem of multicultural Russia where Russian and Tatar languages, Orthodox and Islamic architecture, and Slavic and Turkic traditions coexist on the banks of the Volga.",
+      "era": "Medieval"
+    }
+  },
+  {
+    "slug": "vladivostok",
+    "name": "Vladivostok",
+    "country": "Russia",
+    "countryCode": "RU",
+    "flagEmoji": "🇷🇺",
+    "continent": "Asia",
+    "coordinates": { "lat": 43.1332, "lng": 131.9113 },
+    "timezone": "Asia/Vladivostok",
+    "population": 600871,
+    "tags": ["coastal", "port", "pacific", "architecture", "scenic"],
+    "videos": [
+      {
+        "youtubeId": "g0tZNuqlpLg",
+        "label": "Vladivostok City Walk Part 1 – Downtown & Seaside",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "GuLSI9oS1tY",
+        "label": "Vladivostok City Walk Part 2",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
+      "currency": "Russian Ruble (RUB)",
+      "bestSeason": "July–September (warm Pacific weather, king crab season) or February–March (frozen harbour ice creates surreal views)",
+      "mustEat": ["Fresh king crab from the harbour market — sold live, the world's finest", "Sea urchin (uni) eaten fresh at seaside stalls", "Korean-influenced Goryeo cuisine (kimchi Vladivostok-style, Korean BBQ)", "Pacific salmon pelmeni", "Solyanka fish soup with Pacific salmon and capers"],
+      "localTip": "The Russky Island Bridge — completed 2012 for the APEC summit and briefly the world's longest cable-stayed bridge — is free to cross by bus or car. The view of Golden Horn Bay from the bridge at golden hour is among the most spectacular urban panoramas in Russia.",
+      "funFact": "Vladivostok means 'Ruler of the East' in Russian. The city is closer to San Francisco than to Moscow, and was completely closed to all foreigners — and most Soviet citizens — until 1992, classified as a top-secret Pacific naval base. The Trans-Siberian Railway terminates here, 9,289 km and 8 time zones from Moscow.",
+      "culturalDos": ["Visit the morning harbour seafood market — vendors sell live Pacific crab and urchin straight off boats", "Take the funicular to Orlinoe Gnezdo (Eagle's Nest) hill for a panorama over Golden Horn Bay", "Explore the Millionka district — the atmospheric old Chinese quarter with narrow lanes and peeling facades"],
+      "culturalDonts": ["Underestimate the Pacific wind chill in winter — temperatures hit −25°C with brutal sea gusts", "Expect Moscow prices — Vladivostok is 9,000 km from the capital and import costs are high", "Miss the sunset over Amur Bay — the bridge silhouette against Pacific light is genuinely stunning"]
+    },
+    "origin": {
+      "founded": "1860 (Russian military post established)",
+      "originalName": "Vladivostok (Владивосток — 'Ruler of the East')",
+      "founders": "Russian Imperial military expedition under Count Nikolai Muravyov-Amursky",
+      "story": "Vladivostok was founded in 1860 as a military outpost after Russia secured Primorsky Krai from Qing China through the Treaty of Peking. Its natural deep-water harbour, sheltered from the open Pacific by Russky Island, made it immediately valuable as a naval base. The city grew rapidly after the Trans-Siberian Railway completed in 1916, making it the eastern terminus of the world's longest railway and Russia's crucial Pacific trade gateway. After the Bolshevik Revolution it was one of the last White Army and Allied interventionist holdouts, falling in 1922. From 1958 to 1992 the entire city was a closed military zone, completely off-limits to foreigners. Since opening, it has evolved a cosmopolitan Pacific identity shaped by proximity to Japan, Korea, and China — the nearest major city across the sea is Sapporo.",
+      "era": "Modern"
+    }
+  },
+  {
+    "slug": "ekaterinburg",
+    "name": "Ekaterinburg",
+    "country": "Russia",
+    "countryCode": "RU",
+    "flagEmoji": "🇷🇺",
+    "continent": "Europe",
+    "coordinates": { "lat": 56.8389, "lng": 60.6057 },
+    "timezone": "Asia/Yekaterinburg",
+    "population": 1544376,
+    "tags": ["industrial", "historic", "ural", "culture", "architecture"],
+    "videos": [
+      {
+        "youtubeId": "-E-s2R_Ziyc",
+        "label": "Walking in Ekaterinburg – Spring 4K 2023",
+        "timeOfDay": "day",
+        "isFeatured": true,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "O_KHoJueXAg",
+        "label": "Ekaterinburg – Chapaeva, Dekabristov & Park 4K Spring",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      },
+      {
+        "youtubeId": "xsz2OaCElzg",
+        "label": "Yekaterinburg City Centre – Grinvich, Passage & Central Walk",
+        "timeOfDay": "day",
+        "isFeatured": false,
+        "type": "walk"
+      }
+    ],
+    "culture": {
+      "greeting": "Здравствуйте (Zdravstvuyte) — formal; Привет (Privet) — informal",
+      "currency": "Russian Ruble (RUB)",
+      "bestSeason": "June–August (green Ural parks and outdoor festivals) or January (snow sculpture competitions and crisp Ural winter)",
+      "mustEat": ["Ural pelmeni — the city claims to be the birthplace of Russia's most beloved dumpling", "Shanezhki (sweet buns glazed with sour cream, a classic Ural bakery staple)", "Chebureki (deep-fried meat pastry from street stalls)", "Kvass (fermented bread drink — sold from yellow tanks on street corners in summer)", "Wild mushroom dishes in season (August–September — the Ural forests are extraordinarily rich)"],
+      "localTip": "The Yeltsin Centre is one of the most architecturally striking and intellectually honest presidential museums anywhere — Boris Yeltsin was born near Ekaterinburg and the museum unflinchingly documents the Soviet collapse and chaotic 1990s. Even with no interest in Russian history, the building and interactive exhibits are extraordinary.",
+      "funFact": "Ekaterinburg straddles the Europe–Asia continental boundary — there is a literal obelisk monument marking the divide just 17 km from the city centre. The city is also where Tsar Nicholas II, Tsarina Alexandra, and all five of their children were executed in a basement by Bolshevik guards on the night of 16–17 July 1918, ending the 300-year Romanov dynasty.",
+      "culturalDos": ["Visit the Church on the Blood, built on the exact site where the Romanovs were shot — open to all faiths", "Walk Weiner Street (the pedestrian main street) on a summer evening when street performers come out", "Cross the Europe–Asia obelisk and take the obligatory 'one foot on each continent' photo"],
+      "culturalDonts": ["Call the city 'Sverdlovsk' — the Soviet name was dropped in 1991 and locals take the name seriously", "Miss the observation deck of the Vysotsky skyscraper — it reveals Ural forests stretching to the horizon", "Underestimate the scale — Ekaterinburg is large and spread out; plan transport between sights"]
+    },
+    "origin": {
+      "founded": "1723",
+      "originalName": "Yekaterinburg (Екатеринбург — Catherine's city, named for both Empress Catherine I and Saint Catherine)",
+      "founders": "Vasily Tatishchev and Georg Wilhelm de Gennin, on orders of Peter the Great",
+      "story": "Ekaterinburg was founded in 1723 by Peter the Great as an iron foundry and administrative centre for the Ural mining region. The Urals were Russia's industrial heartland — rich in iron, copper, malachite, and precious gems — and the city became the manufacturing engine of the expanding empire. Renamed Sverdlovsk in 1924 after Bolshevik leader Yakov Sverdlov, it served as a critical Soviet industrial hub and in World War II absorbed over 1,500 evacuated factories from western Russia. The city's darkest hour came on 16–17 July 1918, when Tsar Nicholas II, his family, and their servants were executed in the basement of the Ipatiev House — ending the 300-year Romanov dynasty. Standing precisely at the Europe–Asia continental boundary, Ekaterinburg regained its original name in 1991 and is today Russia's fourth-largest city and the self-styled 'capital of the Urals.'",
+      "era": "Early Modern"
+    }
   }
 ]
