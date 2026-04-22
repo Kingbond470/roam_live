@@ -60,7 +60,7 @@ export default function JourneysPage() {
       position: i + 1,
       name: j.name,
       description: j.tagline,
-      url: `https://nearaway.in/journeys#${j.id}`,
+      url: `https://nearaway.in/journeys/${j.id}`,
     })),
   };
 

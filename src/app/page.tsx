@@ -66,7 +66,27 @@ function resolveInitialCity(slug?: string, today?: string) {
 export async function generateMetadata({ searchParams }: Props) {
   const params = await searchParams;
   const city = resolveInitialCity(params.city, params.today);
-  if (!city) return {};
+  if (!city) {
+    return {
+      title: "Nearaway — Free Virtual City Walks on a 3D Globe",
+      description: `Explore ${cities.length} cities across 5 continents through immersive 4K walking tours. No account, no passport — just open the globe and start walking.`,
+      alternates: { canonical: "https://nearaway.in" },
+      openGraph: {
+        title: "Nearaway — Free Virtual City Walks on a 3D Globe",
+        description: `Explore ${cities.length} cities through immersive 4K virtual walking tours. No account required.`,
+        type: "website",
+        url: "https://nearaway.in",
+        siteName: "Nearaway.in",
+        images: [{ url: "/api/og", width: 1200, height: 630, alt: "Nearaway.in — Virtual City Walks" }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        site: "@nearawayin",
+        title: "Nearaway — Free Virtual City Walks on a 3D Globe",
+        images: ["/api/og"],
+      },
+    };
+  }
 
   const isToday = !!params.today;
   const titlePrefix = isToday ? `Today's Walk: ${city.name}` : `Walk ${city.name}, ${city.country}`;

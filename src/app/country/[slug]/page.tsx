@@ -83,6 +83,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `explore ${country} online`,
       `4K walk ${country}`,
       ...countryCities.map((c) => `${c.name} virtual tour`),
+      ...(COUNTRY_TAGLINES[country]
+        ? [COUNTRY_TAGLINES[country].split("—")[0].split(",")[0].trim()]
+        : []),
     ],
     alternates: { canonical: `https://nearaway.in/country/${slug}` },
     openGraph: {
@@ -124,12 +127,14 @@ export default async function CountryPage({ params }: Props) {
     .filter((c) => c.continent === continent && c.slug !== slug)
     .slice(0, 6);
 
+  const firstVideo = countryCities[0]?.videos[0];
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: `Virtual Walking Tours in ${country}`,
     description: `Explore ${country} virtually with 4K walking tours of ${countryCities.map((c) => c.name).join(", ")}.`,
     url: `https://nearaway.in/country/${slug}`,
+    ...(firstVideo ? { image: `https://img.youtube.com/vi/${firstVideo.youtubeId}/maxresdefault.jpg` } : {}),
     hasPart: countryCities.map((city) => ({
       "@type": "VideoObject",
       name: `${city.name} 4K Virtual Walk`,

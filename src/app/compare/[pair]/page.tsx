@@ -122,25 +122,44 @@ export default async function ComparePage({ params }: Props) {
   const videoA = getFeaturedVideo(cityA);
   const videoB = getFeaturedVideo(cityB);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: `${cityA.name} vs ${cityB.name} — City Comparison`,
-    description: `Compare ${cityA.name} and ${cityB.name}: culture, food, climate, and virtual walking tours.`,
-    url: `https://nearaway.in/compare/${pair}`,
-    mainEntity: [
-      {
-        "@type": "TouristAttraction",
-        name: cityA.name,
-        address: { "@type": "PostalAddress", addressCountry: cityA.countryCode },
-      },
-      {
-        "@type": "TouristAttraction",
-        name: cityB.name,
-        address: { "@type": "PostalAddress", addressCountry: cityB.countryCode },
-      },
-    ],
-  };
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: `${cityA.name} vs ${cityB.name} — City Comparison`,
+      description: `Compare ${cityA.name} and ${cityB.name}: culture, food, climate, and virtual walking tours.`,
+      url: `https://nearaway.in/compare/${pair}`,
+      mainEntity: [
+        {
+          "@type": "TouristAttraction",
+          name: cityA.name,
+          description: cityA.culture.funFact,
+          url: `https://nearaway.in/walk/${cityA.slug}`,
+          address: { "@type": "PostalAddress", addressCountry: cityA.countryCode },
+          geo: { "@type": "GeoCoordinates", latitude: cityA.coordinates.lat, longitude: cityA.coordinates.lng },
+          ...(videoA ? { image: `https://img.youtube.com/vi/${videoA.youtubeId}/maxresdefault.jpg` } : {}),
+        },
+        {
+          "@type": "TouristAttraction",
+          name: cityB.name,
+          description: cityB.culture.funFact,
+          url: `https://nearaway.in/walk/${cityB.slug}`,
+          address: { "@type": "PostalAddress", addressCountry: cityB.countryCode },
+          geo: { "@type": "GeoCoordinates", latitude: cityB.coordinates.lat, longitude: cityB.coordinates.lng },
+          ...(videoB ? { image: `https://img.youtube.com/vi/${videoB.youtubeId}/maxresdefault.jpg` } : {}),
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://nearaway.in" },
+        { "@type": "ListItem", position: 2, name: "Compare Cities", item: "https://nearaway.in/compare" },
+        { "@type": "ListItem", position: 3, name: `${cityA.name} vs ${cityB.name}`, item: `https://nearaway.in/compare/${pair}` },
+      ],
+    },
+  ];
 
   const comparisonRows = [
     { label: "Country", a: cityA.country, b: cityB.country },

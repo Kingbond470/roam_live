@@ -4,20 +4,34 @@ import { Globe, ArrowLeft, MapPin, Film, Compass, SplitSquareHorizontal, BookOpe
 import { cities } from "@/lib/cities";
 import { Flag } from "@/components/ui/Flag";
 
-export const metadata: Metadata = {
-  title: "About Nearaway — Free 4K Virtual City Walks, No Passport",
-  description:
-    "Nearaway brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. 62 cities, 5 continents, no passport required.",
-  alternates: {
-    canonical: "https://nearaway.in/about",
-  },
-  openGraph: {
-    title: "About Nearaway — A Window to Every Place on Earth",
-    description: "Explore 62 cities across 5 continents with 4K walks and deep cultural insight.",
-    url: "https://nearaway.in/about",
-    siteName: "Nearaway.in",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cityCount = cities.length;
+  const continentCount = new Set(cities.map((c) => c.continent)).size;
+  return {
+    title: "About Nearaway — Free 4K Virtual City Walks, No Passport",
+    description: `Nearaway brings immersive 4K virtual city walks and cultural intelligence to anyone with a browser. ${cityCount} cities, ${continentCount} continents, no passport required.`,
+    keywords: [
+      "virtual city walk",
+      "4K virtual tour",
+      "free virtual travel",
+      "explore cities online",
+      "immersive walking tour",
+      "virtual tourism",
+      `${cityCount} cities virtual tour`,
+      "city walks no passport",
+      "travel from home",
+    ],
+    alternates: {
+      canonical: "https://nearaway.in/about",
+    },
+    openGraph: {
+      title: "About Nearaway — A Window to Every Place on Earth",
+      description: `Explore ${cityCount} cities across ${continentCount} continents with 4K walks and deep cultural insight.`,
+      url: "https://nearaway.in/about",
+      siteName: "Nearaway.in",
+    },
+  };
+}
 
 const CONTINENTS = ["Asia", "Europe", "Americas", "Africa", "Oceania"] as const;
 
@@ -89,12 +103,30 @@ export default function AboutPage() {
   const cityCount = cities.length;
   const continentCount = new Set(cities.map((c) => c.continent)).size;
 
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Use Nearaway",
+    description: `Explore ${cityCount} cities virtually in three simple steps.`,
+    step: STEPS.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.title,
+      text: step.description,
+    })),
+  };
+
   const citiesByContinent = CONTINENTS.map((continent) => ({
     continent,
     cities: cities.filter((c) => c.continent === continent),
   }));
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
     <div className="h-full overflow-y-auto bg-[#050508] text-white">
       {/* Nav */}
       <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
@@ -349,5 +381,6 @@ export default function AboutPage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
