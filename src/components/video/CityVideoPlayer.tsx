@@ -93,7 +93,7 @@ export function CityVideoPlayer({ videoId, citySlug, onReady }: Props) {
       <BufferingOverlay isBuffering={isBuffering} />
 
       {hasError && (
-        <VideoErrorState onRetry={() => window.location.reload()} />
+        <VideoErrorState onRetry={() => useAppStore.getState().returnToGlobe()} />
       )}
     </div>
   );

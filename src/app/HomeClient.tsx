@@ -112,7 +112,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
   });
 
   // Deep-link: auto-select city, activate journey, or pre-filter continent on load
-  const { selectCity, selectCityDirect, setActivePath } = useAppStore();
+  const { selectCityDirect, setActivePath } = useAppStore();
   useEffect(() => {
     if (initialContinent) setTagFilter(initialContinent);
     if (initialJourney) setActivePath(initialJourney);
@@ -577,7 +577,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
       <CoachMark
         visible={showGlobeTip}
         message="Tap any city pin or flag to start your walk"
-        subtext="Explore 62 cities around the world, hands-free"
+        subtext={`Explore ${cities.length} cities around the world, hands-free`}
         position="bottom"
         onDismiss={dismissGlobe}
       />

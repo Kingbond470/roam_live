@@ -61,7 +61,7 @@ export function CultureCard({ city, isOpen, onClose, onCompare }: Props) {
             </div>
 
             {/* Scrollable content */}
-            <div className="scrollable overflow-y-auto px-4 sm:px-5 py-4 flex flex-col gap-4 sm:gap-5" style={{ maxHeight: "calc(85dvh - 100px)" }}>
+            <div className="scrollable overflow-y-auto px-4 sm:px-5 py-4 pb-safe flex flex-col gap-4 sm:gap-5" style={{ maxHeight: "calc(85dvh - 100px)" }}>
               {/* Origin Story */}
               {city.origin && (
                 <div className="rounded-xl border border-amber-500/20 overflow-hidden">

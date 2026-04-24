@@ -281,7 +281,7 @@ export default async function ContinentPage({ params }: Props) {
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
               {countries.map((country) => {
-                const sample = continentCities.find((c) => c.country === country)!;
+                const sample = continentCities.find((c) => c.country === country) ?? continentCities[0];
                 return (
                   <Link
                     key={country}

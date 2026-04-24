@@ -168,6 +168,7 @@ export const useAppStore = create<AppState>()(
         const { selectedCity } = get();
         if (!selectedCity || !cities.length) return;
         const idx = cities.findIndex((c) => c.slug === selectedCity.slug);
+        if (idx === -1) return; // current city not in nav list (e.g. non-path city while journey is active)
         const next =
           direction === "next"
             ? cities[(idx + 1) % cities.length]
