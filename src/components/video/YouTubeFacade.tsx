@@ -1,39 +1,26 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface Props {
   youtubeId: string;
   title: string;
+  citySlug: string;
   startSeconds?: number;
 }
 
-export function YouTubeFacade({ youtubeId, title, startSeconds = 90 }: Props) {
-  const [activated, setActivated] = useState(false);
-
-  const src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1&start=${startSeconds}`;
+export function YouTubeFacade({ youtubeId, title, citySlug }: Props) {
+  const router = useRouter();
   const thumb = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
-
-  if (activated) {
-    return (
-      <iframe
-        className="absolute inset-0 w-full h-full"
-        src={src}
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    );
-  }
 
   return (
     <button
-      onClick={() => setActivated(true)}
+      onClick={() => router.push(`/?city=${citySlug}`)}
       className="absolute inset-0 w-full h-full group"
-      aria-label={`Play ${title}`}
+      aria-label={`Watch ${title} on Nearaway`}
     >
-      {/* Thumbnail — loads instantly, is the LCP element */}
+      {/* Thumbnail — LCP element */}
       <Image
         src={thumb}
         alt={title}
@@ -43,20 +30,26 @@ export function YouTubeFacade({ youtubeId, title, startSeconds = 90 }: Props) {
         sizes="(max-width: 768px) 100vw, 90vw"
       />
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+      {/* Dark vignette */}
+      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
 
-      {/* Play button */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black/60 group-hover:bg-black/80 flex items-center justify-center transition-all group-hover:scale-110">
+      {/* Bottom-left city label */}
+      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-black/80 to-transparent" />
+
+      {/* Centred play button */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-500 group-hover:bg-amber-400 flex items-center justify-center transition-all group-hover:scale-110 shadow-lg shadow-amber-500/30">
           <svg
-            className="w-7 h-7 sm:w-9 sm:h-9 text-white fill-current ml-1"
+            className="w-7 h-7 sm:w-9 sm:h-9 text-black fill-current ml-1"
             viewBox="0 0 24 24"
             aria-hidden="true"
           >
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
+        <span className="text-white/90 text-sm font-semibold tracking-wide group-hover:text-white transition-colors">
+          Watch on Nearaway
+        </span>
       </div>
     </button>
   );

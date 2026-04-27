@@ -199,7 +199,7 @@ export default async function CityWalkPage({ params }: Props) {
               <YouTubeFacade
                 youtubeId={featuredVideo.youtubeId}
                 title={`${city.name} 4K Virtual Walk`}
-                startSeconds={90}
+                citySlug={city.slug}
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center bg-black/60">
