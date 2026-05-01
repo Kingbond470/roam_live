@@ -91,7 +91,7 @@ export function VideoScrubber({ player, isReady }: Props) {
             className="absolute left-0 top-0 h-full rounded-full"
             style={{
               width: `${progress * 100}%`,
-              background: "rgba(245,158,11,0.9)",
+              background: "color-mix(in srgb, var(--color-ember) 90%, transparent)",
               transition: dragging ? "none" : "width 0.5s linear",
             }}
           />

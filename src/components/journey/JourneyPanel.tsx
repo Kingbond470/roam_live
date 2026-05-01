@@ -47,11 +47,9 @@ export function JourneyPanel({ cities, isOpen, onClose }: Props) {
 
           {/* Bottom sheet */}
           <motion.div
-            className="fixed inset-x-0 bottom-0 rounded-t-3xl border-t border-white/10 overflow-hidden"
+            className="glass-solid fixed inset-x-0 bottom-0 rounded-t-3xl border-t border-white/10 overflow-hidden"
             style={{
               zIndex: 45,
-              background: "rgba(8,8,14,0.97)",
-              backdropFilter: "blur(24px)",
               maxHeight: "80vh",
             }}
             initial={{ y: "100%" }}

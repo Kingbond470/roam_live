@@ -31,7 +31,7 @@ export function CultureCard({ city, isOpen, onClose, onCompare }: Props) {
 
           {/* Card */}
           <motion.div
-            className="fixed bottom-0 left-0 right-0 rounded-t-3xl bg-[#0a0a10] border border-white/10"
+            className="glass-solid fixed bottom-0 left-0 right-0 rounded-t-3xl border border-white/10"
             style={{ zIndex: 49, maxHeight: "85dvh" }}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}

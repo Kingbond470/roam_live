@@ -139,9 +139,9 @@ export default async function ContinentPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <div className="h-full overflow-y-auto bg-[#050508] text-white">
+      <div className="h-full overflow-y-auto bg-void text-white">
         {/* Nav */}
-        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-[#050508]/80 backdrop-blur-md border-b border-white/5">
+        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-amber-400" />
             <span className="font-bold text-lg tracking-tight">

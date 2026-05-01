@@ -16,7 +16,7 @@ export function VideoLoadingScreen({ city, isVisible }: Props) {
         <motion.div
           key="loading-screen"
           className="absolute inset-0 flex flex-col items-center justify-center"
-          style={{ zIndex: 32, background: "#050508" }}
+          style={{ zIndex: 32, background: "var(--color-void)" }}
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeOut" } }}
         >
@@ -45,7 +45,7 @@ export function VideoLoadingScreen({ city, isVisible }: Props) {
           {/* City name */}
           <motion.h1
             className="text-white text-3xl sm:text-4xl font-bold tracking-[0.15em] uppercase mb-1"
-            style={{ fontFamily: "Georgia, serif" }}
+            style={{ fontFamily: "var(--font-serif)" }}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}

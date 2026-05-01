@@ -112,7 +112,7 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
                   isPortrait ? "top-3 sm:top-4 left-1/2 -translate-x-1/2" : "top-4 sm:top-6 left-3 sm:left-5"
                 }`}
               >
-                <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "Georgia, serif" }}>
+                <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "var(--font-serif)" }}>
                   <Flag countryCode={cityA.countryCode} flagEmoji={cityA.flagEmoji} size={16} />
                   {cityA.name}
                 </p>
@@ -144,7 +144,7 @@ export function SplitScreen({ cityA, cityB, isOpen, onClose }: Props) {
                     : "top-4 sm:top-6 right-3 sm:right-5 text-right"
                 }`}
               >
-                <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "Georgia, serif" }}>
+                <p className="text-white font-bold text-xs sm:text-base flex items-center gap-1.5" style={{ fontFamily: "var(--font-serif)" }}>
                   <Flag countryCode={cityB.countryCode} flagEmoji={cityB.flagEmoji} size={16} />
                   {cityB.name}
                 </p>

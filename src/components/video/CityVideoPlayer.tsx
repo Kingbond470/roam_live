@@ -13,7 +13,7 @@ function VideoErrorState({ onRetry }: { onRetry: () => void }) {
   const { returnToGlobe } = useAppStore();
   return (
     <div
-      className="absolute inset-0 flex flex-col items-center justify-center bg-[#050508] px-6 text-center gap-3"
+      className="absolute inset-0 flex flex-col items-center justify-center bg-void px-6 text-center gap-3"
       style={{ zIndex: 33 }}
     >
       <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1">
@@ -68,7 +68,7 @@ export function CityVideoPlayer({ videoId, citySlug, onReady }: Props) {
   useAmbientSound(selectedCity, playerMuted && !compareOpen);
 
   return (
-    <div className="fixed inset-0 w-full h-full bg-[#050508]" style={{ zIndex: 30 }}>
+    <div className="fixed inset-0 w-full h-full bg-void" style={{ zIndex: 30 }}>
 
       {/* Wrapper controls visibility — opacity here survives YouTube replacing the inner div with an iframe */}
       <div

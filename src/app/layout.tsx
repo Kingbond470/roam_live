@@ -96,7 +96,7 @@ export default function RootLayout({
         {/* Preload globe texture — largest asset on the homepage */}
         <link rel="preload" href="/earth-night.jpg" as="image" />
       </head>
-      <body className="h-full bg-[#050508] text-white overflow-hidden" suppressHydrationWarning>
+      <body className="h-full bg-void text-white overflow-hidden" suppressHydrationWarning>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         {children}

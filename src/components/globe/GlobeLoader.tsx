@@ -14,7 +14,7 @@ export function GlobeLoader() {
 
   if (timedOut) {
     return (
-      <div className="fixed inset-0 flex flex-col items-center justify-center bg-[#050508] px-6 text-center gap-4">
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-void px-6 text-center gap-4">
         <div className="w-14 h-14 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-1">
           <Globe className="w-6 h-6 text-amber-400/60" />
         </div>
@@ -42,7 +42,7 @@ export function GlobeLoader() {
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-[#050508]">
+    <div className="fixed inset-0 flex items-center justify-center bg-void">
       <div className="flex flex-col items-center gap-4">
         <div className="w-16 h-16 rounded-full border-2 border-amber-500/30 border-t-amber-500 animate-spin" />
         <p className="text-white/40 text-sm font-mono tracking-widest uppercase">

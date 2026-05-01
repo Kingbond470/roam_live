@@ -4,7 +4,11 @@ export interface Journey {
   emoji: string;
   tagline: string;
   citySlugOrder: string[];
-  accentColor: string; // hex — used for arcs + active ring
+  // Raw hex required — globe.gl arc renderer and CSS inline styles both need it.
+  // CSS custom properties (var(--color-*)) cannot be used here.
+  // Palette constraint: vibrant, saturated, and visually distinct from --color-ember (#f59e0b).
+  // Prefer Tailwind 500-level hues: purple, sky, pink, emerald, rose — avoid yellow/amber.
+  accentColor: string;
 }
 
 export const journeys: Journey[] = [
@@ -30,7 +34,7 @@ export const journeys: Journey[] = [
     emoji: "🏛️",
     tagline: "3,000 years of history in 7 cities",
     citySlugOrder: ["athens", "rome", "istanbul", "cairo", "varanasi", "kyoto", "lisbon"],
-    accentColor: "#eab308",
+    accentColor: "#10b981",
   },
   {
     id: "coastal-dreams",

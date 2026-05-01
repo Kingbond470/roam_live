@@ -90,12 +90,12 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         .backgroundImageUrl(null)
         .backgroundColor("rgba(0,0,0,0)")
         .showAtmosphere(true)
-        .atmosphereColor("#60a5fa")
-        .atmosphereAltitude(0.14)
+        .atmosphereColor("#1e40af")
+        .atmosphereAltitude(0.18)
         .pointsData(points)
         .pointLat("lat")
         .pointLng("lng")
-        .pointAltitude(0.01)
+        .pointAltitude(0.02)
         .pointRadius((d: object) => (d as GlobePoint).size)
         // BUG-01 FIX: reads hoveredSlugRef.current at call time — never stale
         .pointColor((d: object) =>
@@ -164,7 +164,7 @@ export function GlobeScene({ cities, activeTag, cityOfTheDay, activePath }: Prop
         .arcDashGap(0.15)
         .arcDashAnimateTime(2500)
         .arcAltitudeAutoScale(0.4)
-        .arcStroke(() => 0.5);
+        .arcStroke(() => 0.9);
 
       globe.pointOfView({ lat: 20, lng: 0, altitude: 2.5 });
       globe.controls().autoRotate = true;

@@ -220,7 +220,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
   }, [cities, activeTag, favoriteSlugs]);
 
   return (
-    <div className="fixed inset-0 bg-[#050508]">
+    <div className="fixed inset-0 bg-void">
 
       {/* ── Globe ── */}
       <AnimatePresence>
@@ -492,7 +492,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
                   <div className="glass flex items-center gap-2 px-3 py-2 rounded-full text-xs">
                     {streak >= 2 && (
                       <>
-                        <span className="flex items-center gap-1 text-orange-400 font-semibold">
+                        <span className="flex items-center gap-1 text-amber-400 font-semibold">
                           <Flame className="w-3 h-3" />
                           {streak}
                         </span>
@@ -510,7 +510,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
 
             {/* Filter pills — full-width scrollable */}
             <div className="relative w-full mb-4" style={{ pointerEvents: "auto" }}>
-              <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#050508] to-transparent z-10" />
+              <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-void to-transparent z-10" />
               <div
                 className="w-full overflow-x-auto flex items-center gap-1.5 px-4"
                 style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
