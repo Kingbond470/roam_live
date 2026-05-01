@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "About Nearaway — A Window to Every Place on Earth",
       description: `Explore ${cityCount} cities across ${continentCount} continents with 4K walks and deep cultural insight.`,
       url: "https://nearaway.in/about",
-      siteName: "Nearaway.in",
+      siteName: "Nearaway",
     },
   };
 }
@@ -166,7 +166,7 @@ export default function AboutPage() {
           Step inside.
         </h1>
         <p className="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-          Nearaway.in turns any device into a window onto the world's streets —
+          Nearaway turns any device into a window onto the world's streets —
           immersive 4K city walks, real local culture, and the freedom to explore
           without a flight.
         </p>
@@ -214,7 +214,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Why Nearaway.in ── */}
+      {/* ── Why Nearaway ── */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
         <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold mb-5">
           Why we built this
@@ -228,7 +228,7 @@ export default function AboutPage() {
           Marrakech at dusk, or cross Shibuya at midnight, or wander along the Seine on a grey morning — that stays.
         </p>
         <p className="text-white/55 text-base sm:text-lg leading-relaxed">
-          Nearaway.in was built for that curiosity. Not as a replacement for travel, but as a
+          Nearaway was built for that curiosity. Not as a replacement for travel, but as a
           companion to it — a place to preview, revisit, or simply wander without a reason.
         </p>
       </section>
@@ -343,7 +343,7 @@ export default function AboutPage() {
           something shifts. You stop seeing distant places as abstract.
           They become real."
         </p>
-        <p className="text-white/25 text-sm mt-6">— The Nearaway.in team</p>
+        <p className="text-white/25 text-sm mt-6">— The Nearaway team</p>
       </section>
 
       {/* ── CTA ── */}

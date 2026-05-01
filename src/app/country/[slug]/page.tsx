@@ -71,35 +71,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityNames = countryCities.map((c) => c.name).join(", ");
   const totalVideos = countryCities.reduce((s, c) => s + c.videos.length, 0);
 
-  const title = `Virtual Walking Tours in ${country} — ${countryCities.length} ${countryCities.length === 1 ? "City" : "Cities"} | Nearaway.in`;
-  const description = `Explore ${country} from your screen with immersive 4K virtual walks. ${countryCities.length > 1 ? `Cities include ${cityNames}.` : `Walk through ${cityNames}.`} ${totalVideos} walks, no passport required.`;
+  const title = `Virtual Walk ${country} — ${totalVideos}+ Free 4K Walking Tours | Nearaway`;
+  const description = `Take a free virtual walk through ${country}. ${countryCities.length > 1 ? `Explore ${cityNames} with immersive 4K street footage.` : `Walk through ${cityNames} in immersive 4K.`} ${totalVideos}+ walks, no passport required.`;
 
   return {
     title,
     description,
     keywords: [
-      `virtual tour ${country}`,
-      `${country} city walk`,
+      `virtual walk ${country}`,
+      `${country} virtual tour`,
+      `${country} walking tour`,
       `explore ${country} online`,
-      `4K walk ${country}`,
-      ...countryCities.map((c) => `${c.name} virtual tour`),
+      `${country} 4K walk`,
+      ...countryCities.map((c) => `virtual walk ${c.name}`),
       ...(COUNTRY_TAGLINES[country]
         ? [COUNTRY_TAGLINES[country].split("—")[0].split(",")[0].trim()]
         : []),
     ],
     alternates: { canonical: `https://nearaway.in/country/${slug}` },
     openGraph: {
-      title: `${flag} Virtual Walks in ${country} | Nearaway.in`,
+      title: `${flag} Virtual Walk ${country} — Free 4K Tours | Nearaway`,
       description,
       type: "website",
       url: `https://nearaway.in/country/${slug}`,
-      siteName: "Nearaway.in",
+      siteName: "Nearaway",
       images: [{ url: `/api/og?type=country&name=${encodeURIComponent(country)}`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       site: "@nearawayin",
-      title: `${flag} Virtual Walks in ${country} | Nearaway.in`,
+      title: `${flag} Virtual Walk ${country} | Nearaway`,
       description,
       images: [`/api/og?type=country&name=${encodeURIComponent(country)}`],
     },
@@ -237,6 +238,22 @@ export default async function CountryPage({ params }: Props) {
               <Globe className="w-4 h-4" />
               Explore {country} on the Globe
             </Link>
+          </div>
+        </section>
+
+        {/* SEO Intro */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-2">
+          <div className="text-white/60 leading-relaxed space-y-3 text-sm sm:text-base mb-8">
+            <p>
+              Take a free virtual walk through {country} — {totalVideos}+ immersive 4K walking tour videos across{" "}
+              {countryCities.length === 1 ? countryCities[0].name : `${countryCities.length} cities including ${countryCities.slice(0, 3).map((c) => c.name).join(", ")}`}.
+              No passport, no flights, no account required.
+            </p>
+            <p>
+              Nearaway streams street-level 4K footage from {country}&apos;s most iconic neighbourhoods,
+              letting you explore the culture, food, and atmosphere of {country} from anywhere in the world.
+              {allMustEat.length > 0 && ` Must-try local dishes include ${allMustEat.slice(0, 4).join(", ")}.`}
+            </p>
           </div>
         </section>
 

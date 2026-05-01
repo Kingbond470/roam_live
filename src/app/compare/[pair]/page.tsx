@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityB = getCityBySlug(slugB);
   if (!cityA || !cityB) return {};
 
-  const title = `${cityA.name} vs ${cityB.name} — Which City Should You Visit? | Nearaway.in`;
+  const title = `${cityA.name} vs ${cityB.name} — Virtual Walk Comparison | Nearaway`;
   const description = `Compare ${cityA.name} and ${cityB.name} side by side. Culture, food, best seasons, local tips, and immersive 4K virtual walks. No passport required.`;
 
   return {
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: "website",
       url: `https://nearaway.in/compare/${pair}`,
-      siteName: "Nearaway.in",
+      siteName: "Nearaway",
       images: [{ url: `/api/og?city=${cityA.slug}`, width: 1200, height: 630 }],
     },
     twitter: {
@@ -229,6 +229,13 @@ export default async function ComparePage({ params }: Props) {
             <p className="text-white/50 max-w-xl mx-auto">
               Compare two incredible cities side by side — culture, food, local tips, and immersive 4K virtual walks.
             </p>
+            {/* SEO intro — server-rendered for Google snippets */}
+            <p className="text-white/40 text-sm max-w-2xl mx-auto mt-4 leading-relaxed">
+              Take a free virtual walk through both {cityA.name} and {cityB.name} without leaving your screen.
+              {cityA.name} is known for {cityA.culture.funFact.split(".")[0].toLowerCase()}.
+              {" "}{cityB.name} is famous for {cityB.culture.funFact.split(".")[0].toLowerCase()}.
+              Compare culture, food, best seasons, and local tips — then explore both on Nearaway&apos;s 4K virtual walking tours.
+            </p>
           </div>
 
           {/* Video previews */}
@@ -255,7 +262,7 @@ export default async function ComparePage({ params }: Props) {
                   href={`/?city=${city.slug}`}
                   className="block text-center py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium hover:bg-amber-500/20 transition-colors"
                 >
-                  Explore {city.name} on Nearaway.in →
+                  Explore {city.name} on Nearaway →
                 </Link>
               </div>
             ))}
@@ -383,7 +390,7 @@ export default async function ComparePage({ params }: Props) {
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
             >
               <Globe className="w-4 h-4" />
-              Open in Nearaway.in
+              Open in Nearaway
             </Link>
           </div>
 

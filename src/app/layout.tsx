@@ -46,22 +46,22 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nearaway.in"),
-  title: "Nearaway.in — A Window to Every Place on Earth",
+  title: "Nearaway — Free Virtual City Walks on a 3D Globe",
   description:
     "Explore 62 cities across 5 continents with immersive 4K virtual walks and cultural intelligence. No passport required.",
-  keywords: ["virtual travel", "city walk", "4K walking tour", "travel from home", "world cities"],
+  keywords: ["virtual walk", "virtual city walk", "4K walking tour", "virtual travel", "city walk", "travel from home", "free virtual tour"],
   openGraph: {
-    title: "Nearaway.in — A Window to Every Place on Earth",
+    title: "Nearaway — Free Virtual City Walks on a 3D Globe",
     description: "Immersive 4K virtual walks across 62 cities. No passport required.",
     type: "website",
     url: "https://nearaway.in",
-    siteName: "Nearaway.in",
-    images: [{ url: "/api/og", width: 1200, height: 630, alt: "Nearaway.in — Virtual City Walks" }],
+    siteName: "Nearaway",
+    images: [{ url: "/api/og", width: 1200, height: 630, alt: "Nearaway — Free Virtual City Walks" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@nearawayin",
-    title: "Nearaway.in — A Window to Every Place on Earth",
+    title: "Nearaway — Free Virtual City Walks on a 3D Globe",
     description: "Immersive 4K virtual walks across 62 cities. No passport required.",
     images: ["/api/og"],
   },

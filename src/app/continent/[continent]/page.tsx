@@ -58,17 +58,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const continentCities = getCitiesByContinent(meta.display === "The Americas" ? "Americas" : meta.display);
   const cityCount = continentCities.length;
 
-  const title = `Virtual City Walks in ${meta.display} — ${cityCount} Cities | Nearaway.in`;
+  const title = `Virtual City Walks in ${meta.display} — ${cityCount} Cities | Nearaway`;
   return {
     title,
     description: meta.description,
     keywords: [
-      `virtual tour ${meta.display}`,
+      `virtual walk ${meta.display}`,
+      `${meta.display} virtual tour`,
       `${meta.display} city walk`,
-      `4K walk ${meta.display}`,
       `explore ${meta.display} online`,
       "virtual travel",
-      "4K city tour",
+      "4K walking tour",
     ],
     alternates: { canonical: `https://nearaway.in/continent/${continent}` },
     openGraph: {
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: meta.description,
       type: "website",
       url: `https://nearaway.in/continent/${continent}`,
-      siteName: "Nearaway.in",
+      siteName: "Nearaway",
       images: [{ url: `/api/og?type=continent&name=${continent}`, width: 1200, height: 630 }],
     },
     twitter: {
@@ -202,6 +202,15 @@ export default async function ContinentPage({ params }: Props) {
               Explore {meta.display} on the Globe
             </Link>
           </div>
+        </section>
+
+        {/* SEO Intro */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-2">
+          <p className="text-white/50 text-sm sm:text-base leading-relaxed mb-8 max-w-3xl">
+            {meta.description} Nearaway offers {totalVideos}+ free 4K virtual walk videos across{" "}
+            {continentCities.length} cities in {countries.length} countries — all streamed directly in your browser,
+            no passport or account required.
+          </p>
         </section>
 
         {/* City grid */}

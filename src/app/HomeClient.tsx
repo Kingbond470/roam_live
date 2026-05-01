@@ -674,7 +674,7 @@ export function HomeClient({ cities, initialCity, initialJourney, initialContine
         visible={visitedSlugs.length === 25 && !dismissedMilestones.includes(25)}
         emoji="✈️"
         title="25 cities — world explorer!"
-        subtitle="Nearly halfway around Nearaway.in. Impressive."
+        subtitle="Nearly halfway around Nearaway. Impressive."
         onDismiss={() => dismissMilestone(25)}
         autoDismissMs={5000}
       />

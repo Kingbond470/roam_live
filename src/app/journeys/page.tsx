@@ -6,32 +6,32 @@ import { cities } from "@/lib/cities";
 import { journeys } from "@/data/journeys";
 
 export const metadata: Metadata = {
-  title: "Curated City Journeys — Themed Virtual Walking Tours | Nearaway.in",
+  title: "Curated Virtual City Journeys — Themed 4K Walking Tours | Nearaway",
   description:
-    "Follow hand-picked routes across the world's greatest cities. Ancient Empires, Neon After Dark, Street Food Trail — thematic 4K virtual journeys, no passport required.",
+    "Follow hand-picked virtual walking routes across the world's greatest cities. Ancient Empires, Neon After Dark, Street Food Trail — thematic 4K virtual journeys, no passport required.",
   keywords: [
-    "themed virtual city tour",
-    "curated city journey",
+    "virtual city journey",
+    "themed virtual walk",
+    "curated city walk",
     "virtual travel route",
     "ancient cities virtual tour",
-    "neon cities walk",
-    "street food cities tour",
     "4K city journey",
+    "free virtual walking tour",
   ],
   alternates: { canonical: "https://nearaway.in/journeys" },
   openGraph: {
-    title: "Curated City Journeys | Nearaway.in",
+    title: "Curated Virtual City Journeys | Nearaway",
     description:
-      "Follow themed routes across the world's greatest cities — Ancient Empires, Neon After Dark, Street Food Trail, and more.",
+      "Follow themed virtual walking routes across the world's greatest cities — Ancient Empires, Neon After Dark, Street Food Trail, and more.",
     type: "website",
     url: "https://nearaway.in/journeys",
-    siteName: "Nearaway.in",
-    images: [{ url: "/api/og?type=journeys", width: 1200, height: 630, alt: "Nearaway.in City Journeys" }],
+    siteName: "Nearaway",
+    images: [{ url: "/api/og?type=journeys", width: 1200, height: 630, alt: "Nearaway — Virtual City Journeys" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@nearawayin",
-    title: "Curated City Journeys | Nearaway.in",
+    title: "Curated Virtual City Journeys | Nearaway",
     description:
       "Follow themed routes across the world's greatest cities — Ancient Empires, Neon After Dark, Street Food Trail, and more.",
     images: ["/api/og?type=journeys"],
@@ -51,7 +51,7 @@ export default function JourneysPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Nearaway.in Curated City Journeys",
+    name: "Nearaway Curated City Journeys",
     description: "Themed virtual walking tour routes across the world's greatest cities.",
     url: "https://nearaway.in/journeys",
     numberOfItems: journeys.length,

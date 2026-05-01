@@ -76,8 +76,8 @@ export async function generateMetadata({ searchParams }: Props) {
         description: `Explore ${cities.length} cities through immersive 4K virtual walking tours. No account required.`,
         type: "website",
         url: "https://nearaway.in",
-        siteName: "Nearaway.in",
-        images: [{ url: "/api/og", width: 1200, height: 630, alt: "Nearaway.in — Virtual City Walks" }],
+        siteName: "Nearaway",
+        images: [{ url: "/api/og", width: 1200, height: 630, alt: "Nearaway — Free Virtual City Walks" }],
       },
       twitter: {
         card: "summary_large_image",
@@ -92,16 +92,16 @@ export async function generateMetadata({ searchParams }: Props) {
   const titlePrefix = isToday ? `Today's Walk: ${city.name}` : `Walk ${city.name}, ${city.country}`;
 
   return {
-    title: `${titlePrefix} — Nearaway.in`,
-    description: `Take a virtual 4K walk through ${city.name}. No passport required.`,
+    title: `${titlePrefix} — Nearaway`,
+    description: `Take a free virtual walk through ${city.name}, ${city.country}. No passport required.`,
     openGraph: {
-      title: `${titlePrefix} on Nearaway.in`,
-      description: `Virtual 4K walk through ${city.name}, ${city.country}.`,
+      title: `${titlePrefix} | Nearaway`,
+      description: `Free virtual walk through ${city.name}, ${city.country}. 4K walking tour, no account required.`,
       images: [`/api/og?city=${city.slug}`],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${titlePrefix} on Nearaway.in`,
+      title: `${titlePrefix} | Nearaway`,
       images: [`/api/og?city=${city.slug}`],
     },
   };

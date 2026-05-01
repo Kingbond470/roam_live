@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `Walk ${city.name}, ${city.country} — 4K Virtual Walking Tour | Nearaway.in`;
-  const description = `Take a free virtual 4K walking tour through ${city.name}, ${city.country}. Explore ${city.culture.mustEat.slice(0, 2).join(", ")}, local culture, and more. No passport required.`;
+  const title = `Virtual Walk: ${city.name} — Free 4K Walking Tour | Nearaway`;
+  const description = `Take a free virtual walk through ${city.name}, ${city.country}. Immersive 4K street-level footage, cultural insights, local tips. No passport, no account required.`;
 
   return {
     title,
@@ -40,11 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `https://nearaway.in/walk/${city.slug}`,
     },
     openGraph: {
-      title: `Walk ${city.name} — Free 4K Virtual Tour | Nearaway.in`,
+      title: `Virtual Walk: ${city.name} — Free 4K Walking Tour | Nearaway`,
       description,
       type: "video.other",
       url: `https://nearaway.in/walk/${city.slug}`,
-      siteName: "Nearaway.in",
+      siteName: "Nearaway",
       images: [
         {
           url: `/api/og?city=${city.slug}`,
@@ -225,6 +225,7 @@ export default async function CityWalkPage({ params }: Props) {
             </div>
             <div>
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name}</h1>
+              <p className="text-amber-400/70 text-xs font-medium tracking-widest uppercase mb-1">Virtual Walk · {city.country}</p>
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{city.country}</span>
@@ -242,6 +243,23 @@ export default async function CityWalkPage({ params }: Props) {
             <Globe className="w-4 h-4" />
             Explore {city.name} on Nearaway
           </Link>
+
+          {/* SEO Intro — server-rendered text for Google snippets */}
+          <div className="mb-8 text-white/65 leading-relaxed space-y-3 text-sm sm:text-base">
+            <p>
+              Take a free virtual walk through {city.name}, {city.country} — no passport, no flights, no account required.
+              Nearaway streams immersive 4K walking tour footage from {city.name}&apos;s streets, letting you explore
+              {" "}{city.continent}&apos;s cities from anywhere in the world.
+              {city.videos && city.videos.length > 1 && ` Choose from ${city.videos.length} different walking tour videos across the city.`}
+            </p>
+            {city.origin?.story && (
+              <p>{city.origin.story}</p>
+            )}
+            <p>
+              {city.culture.funFact} The best time for a virtual walk through {city.name} is {city.culture.bestSeason.toLowerCase()}.
+              Must-try local foods include {city.culture.mustEat.slice(0, 3).join(", ")}.
+            </p>
+          </div>
 
           {/* Culture Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -382,7 +400,7 @@ export default async function CityWalkPage({ params }: Props) {
           {/* Footer CTA */}
           <div className="mt-12 text-center pb-12">
             <p className="text-white/30 text-sm mb-4">
-              Nearaway.in — A window to every place on Earth
+              Nearaway — A window to every place on Earth
             </p>
             <div className="flex items-center justify-center gap-5 text-sm">
               <Link href="/" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-medium transition-colors">

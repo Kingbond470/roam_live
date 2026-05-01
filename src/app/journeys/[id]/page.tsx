@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .filter(Boolean) as typeof cities;
 
   const cityNames = journeyCities.map((c) => c.name).join(", ");
-  const title = `${journey.name} — ${journey.tagline} | Nearaway.in Journeys`;
-  const description = `Follow the ${journey.name} virtual journey through ${cityNames}. ${journey.tagline}. Immersive 4K walks, no passport required.`;
+  const title = `${journey.name} — Virtual City Journey | Nearaway`;
+  const description = `Take the ${journey.name} virtual journey through ${cityNames}. ${journey.tagline}. Free 4K walking tours, no passport required.`;
 
   return {
     title,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: "website",
       url: `https://nearaway.in/journeys/${id}`,
-      siteName: "Nearaway.in",
+      siteName: "Nearaway",
       images: [{ url: `/api/og?type=journeys`, width: 1200, height: 630, alt: journey.name }],
     },
     twitter: {
@@ -166,6 +166,22 @@ export default async function JourneyDetailPage({ params }: Props) {
               <Compass className="w-4 h-4" />
               Start this Journey on the Globe
             </Link>
+          </div>
+        </section>
+
+        {/* SEO Intro */}
+        <section className="max-w-3xl mx-auto px-4 sm:px-6 pb-2">
+          <div className="text-white/55 leading-relaxed space-y-3 text-sm sm:text-base mb-8">
+            <p>
+              The {journey.name} is a curated virtual journey through {journeyCities.map((c) => c.name).join(", ")}.
+              Take a free virtual walk through each city in sequence — {totalVideos}+ immersive 4K walking tour videos,
+              no passport or account required.
+            </p>
+            <p>
+              This virtual journey spans {continents.length === 1 ? continents[0] : continents.join(" and ")} and covers{" "}
+              {journeyCities.length} cities hand-picked for their cultural depth and walkability.
+              {" "}{journey.tagline}.
+            </p>
           </div>
         </section>
 
