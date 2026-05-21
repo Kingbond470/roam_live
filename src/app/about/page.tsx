@@ -29,6 +29,13 @@ export async function generateMetadata(): Promise<Metadata> {
       description: `Explore ${cityCount} cities across ${continentCount} continents with 4K walks and deep cultural insight.`,
       url: "https://nearaway.in/about",
       siteName: "Nearaway",
+      images: [{ url: "/api/og", width: 1200, height: 630, alt: "Nearaway — Free Virtual City Walks" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@nearawayin",
+      title: "About Nearaway — A Window to Every Place on Earth",
+      images: ["/api/og"],
     },
   };
 }
@@ -103,6 +110,21 @@ export default function AboutPage() {
   const cityCount = cities.length;
   const continentCount = new Set(cities.map((c) => c.continent)).size;
 
+  const aboutPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Nearaway",
+    description: `Nearaway is a free virtual travel platform offering immersive 4K walking tours of ${cityCount} cities across ${continentCount} continents. No passport, no account, no download required.`,
+    url: "https://nearaway.in/about",
+    mainEntity: {
+      "@type": "Organization",
+      name: "Nearaway",
+      url: "https://nearaway.in",
+      description: "Nearaway turns any device into a window onto the world's streets — immersive 4K city walks, real local culture, and the freedom to explore without a flight.",
+      sameAs: ["https://twitter.com/nearawayin"],
+    },
+  };
+
   const howToJsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -123,6 +145,10 @@ export default function AboutPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
@@ -321,7 +347,7 @@ export default function AboutPage() {
                   {cs.map((city) => (
                     <Link
                       key={city.slug}
-                      href={`/?city=${city.slug}`}
+                      href={`/walk/${city.slug}`}
                       className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-amber-500/30 hover:bg-amber-500/5 text-sm text-white/60 hover:text-white transition-colors"
                     >
                       <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={16} />

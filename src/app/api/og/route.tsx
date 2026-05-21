@@ -7,6 +7,7 @@ export const runtime = "edge";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const cities = citiesData as any[];
+const CITY_COUNT = cities.length;
 
 const CONTINENT_EMOJI: Record<string, string> = {
   asia: "🌏",
@@ -172,7 +173,7 @@ export async function GET(req: NextRequest) {
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
             <span style={{ fontSize: 68, fontWeight: 700, color: "#ffffff", letterSpacing: "-0.02em", lineHeight: 1 }}>Curated Journeys</span>
-            <span style={{ fontSize: 26, color: "rgba(255,255,255,0.45)" }}>5 themed routes · 62 cities · No passport</span>
+            <span style={{ fontSize: 26, color: "rgba(255,255,255,0.45)" }}>5 themed routes · {CITY_COUNT} cities · No passport</span>
           </div>
           <span style={{ fontSize: 18, color: "#f59e0b", fontWeight: 700, letterSpacing: "0.06em", marginTop: "8px" }}>Nearaway.in</span>
         </div>

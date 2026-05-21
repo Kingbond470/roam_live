@@ -128,6 +128,37 @@ export default async function ContinentPage({ params }: Props) {
     ],
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Which cities in ${meta.display} can I virtually visit on Nearaway?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Nearaway offers free 4K virtual walks through ${continentCities.length} cities in ${meta.display}: ${continentCities.map((c) => c.name).join(", ")}. No account or passport required.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `How many virtual walking tours are available in ${meta.display}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Nearaway has ${totalVideos}+ 4K virtual walking tour videos across ${continentCities.length} cities in ${meta.display}, spanning ${countries.length} ${countries.length === 1 ? "country" : "countries"}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What countries in ${meta.display} does Nearaway cover?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Nearaway covers cities in ${countries.join(", ")} across ${meta.display}.`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -137,6 +168,10 @@ export default async function ContinentPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="h-full overflow-y-auto bg-void text-white">
