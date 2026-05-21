@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { cities, getCityBySlug } from "@/lib/cities";
 import { getFeaturedVideo } from "@/lib/utils";
 import { Globe, ArrowLeft, Utensils, Lightbulb } from "lucide-react";
+import { YouTubeInline } from "@/components/video/YouTubeInline";
 
 interface Props {
   params: Promise<{ pair: string }>;
@@ -288,13 +289,9 @@ export default async function ComparePage({ params }: Props) {
               <div key={city.slug}>
                 <div className="relative rounded-2xl overflow-hidden bg-black aspect-video mb-3">
                   {video ? (
-                    <iframe
-                      className="absolute inset-0 w-full h-full"
-                      src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0&modestbranding=1&start=90`}
+                    <YouTubeInline
+                      youtubeId={video.youtubeId}
                       title={`${city.name} Virtual Walk`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      loading="lazy"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-white/5">

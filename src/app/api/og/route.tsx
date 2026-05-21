@@ -1,6 +1,7 @@
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
 import citiesData from "@/data/cities.json";
+import { journeys } from "@/data/journeys";
 
 export const runtime = "edge";
 
@@ -130,7 +131,37 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  // ── Journeys OG card ──
+  // ── Per-journey OG card ──
+  if (type === "journey") {
+    const journeyId = searchParams.get("id") ?? "";
+    const journey = journeys.find((j) => j.id === journeyId);
+    if (journey) {
+      const journeyCities = journey.citySlugOrder
+        .map((s: string) => cities.find((c) => c.slug === s))
+        .filter(Boolean);
+      const cityNames = journeyCities.map((c: any) => c.name).join(" · ");
+
+      return new ImageResponse(
+        (
+          <div style={{ width: 1200, height: 630, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "#050508", fontFamily: "system-ui, sans-serif", position: "relative" }}>
+            <div style={{ position: "absolute", inset: 0, background: `radial-gradient(ellipse 80% 60% at 50% 50%, ${journey.accentColor}18 0%, transparent 70%)` }} />
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px", position: "relative", padding: "0 60px", textAlign: "center" }}>
+              <span style={{ fontSize: 80 }}>{journey.emoji}</span>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
+                <span style={{ fontSize: 68, fontWeight: 700, color: "#ffffff", letterSpacing: "-0.02em", lineHeight: 1 }}>{journey.name}</span>
+                <span style={{ fontSize: 26, color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>{journey.tagline}</span>
+              </div>
+              <span style={{ fontSize: 18, color: journey.accentColor, fontWeight: 600, letterSpacing: "0.04em" }}>{journeyCities.length} cities · {cityNames.slice(0, 60)}{cityNames.length > 60 ? "…" : ""}</span>
+              <span style={{ fontSize: 16, color: "#f59e0b", fontWeight: 700, letterSpacing: "0.06em" }}>Nearaway.in</span>
+            </div>
+          </div>
+        ),
+        { width: 1200, height: 630 }
+      );
+    }
+  }
+
+  // ── Journeys list OG card ──
   return new ImageResponse(
     (
       <div style={{ width: 1200, height: 630, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "#050508", fontFamily: "system-ui, sans-serif", position: "relative" }}>

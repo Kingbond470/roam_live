@@ -45,14 +45,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       url: `https://nearaway.in/journeys/${id}`,
       siteName: "Nearaway",
-      images: [{ url: `/api/og?type=journeys`, width: 1200, height: 630, alt: journey.name }],
+      images: [{ url: `/api/og?type=journey&id=${id}`, width: 1200, height: 630, alt: journey.name }],
     },
     twitter: {
       card: "summary_large_image",
       site: "@nearawayin",
       title: `${journey.emoji} ${journey.name} — ${journey.tagline}`,
       description,
-      images: [`/api/og?type=journeys`],
+      images: [`/api/og?type=journey&id=${id}`],
     },
   };
 }
@@ -94,6 +94,45 @@ export default async function JourneyDetailPage({ params }: Props) {
     ],
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Which cities are on the ${journey.name} virtual journey?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `The ${journey.name} journey visits ${journeyCities.map((c) => c.name).join(", ")} — ${journeyCities.length} cities total. ${journey.tagline}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `How many virtual walks does the ${journey.name} journey include?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `The ${journey.name} journey includes ${totalVideos}+ 4K virtual walking tour videos across ${journeyCities.length} cities. All walks are free — no account or passport required.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Is the ${journey.name} journey free to watch?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Yes. All virtual journeys on Nearaway are completely free. No sign-up, no subscription. Open nearaway.in and start the ${journey.name} journey instantly.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What continents does the ${journey.name} journey cover?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `The ${journey.name} journey spans ${continents.join(" and ")}, covering cities across ${continents.length === 1 ? "one continent" : `${continents.length} continents`}.`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -103,6 +142,10 @@ export default async function JourneyDetailPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="h-full overflow-y-auto bg-void text-white">

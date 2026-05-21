@@ -153,6 +153,37 @@ export default async function CountryPage({ params }: Props) {
     ],
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Which cities in ${country} can I virtually visit on Nearaway?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Nearaway offers free 4K virtual walks through ${countryCities.map((c) => c.name).join(", ")} in ${country}. No account or passport required.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `How many virtual walking tours does Nearaway have for ${country}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Nearaway has ${totalVideos}+ virtual walking tour videos across ${countryCities.length} ${countryCities.length === 1 ? "city" : "cities"} in ${country}. All are free to watch.`,
+        },
+      },
+      ...(allMustEat.length > 0 ? [{
+        "@type": "Question",
+        name: `What food is ${country} known for?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${country} is known for dishes including ${allMustEat.slice(0, 5).join(", ")}. Explore ${country}'s food culture through Nearaway's virtual city walks.`,
+        },
+      }] : []),
+    ],
+  };
+
   return (
     <>
       <script
@@ -162,6 +193,10 @@ export default async function CountryPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="h-full overflow-y-auto bg-void text-white">
