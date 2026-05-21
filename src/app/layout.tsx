@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cities } from "@/lib/cities";
 import "./globals.css";
 
 const orgJsonLd = {
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://nearaway.in"),
   title: "Nearaway — Free Virtual City Walks on a 3D Globe",
   description:
-    "Explore 62 cities across 5 continents with immersive 4K virtual walks and cultural intelligence. No passport required.",
+    `Explore ${cities.length} cities across 5 continents with immersive 4K virtual walks and cultural intelligence. No passport required.`,
   keywords: ["virtual walk", "virtual city walk", "4K walking tour", "virtual travel", "city walk", "travel from home", "free virtual tour"],
   openGraph: {
     title: "Nearaway — Free Virtual City Walks on a 3D Globe",

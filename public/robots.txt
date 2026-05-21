@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block internal/utility routes from indexing
+Disallow: /api/
+Disallow: /studio
+
+Sitemap: https://nearaway.in/sitemap.xml

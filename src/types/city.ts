@@ -16,6 +16,7 @@ export interface CityVideo {
   youtubeId: string;
   label: string;
   duration?: string;
+  publishedAt?: string; // ISO 8601 date, e.g. "2024-11-15" — for VideoObject JSON-LD uploadDate
   timeOfDay: VideoTimeOfDay;
   type: VideoType;
   isFeatured: boolean;

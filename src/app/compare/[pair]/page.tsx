@@ -161,9 +161,49 @@ export default async function ComparePage({ params }: Props) {
     },
   ];
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `What is the best time to visit ${cityA.name} vs ${cityB.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `The best time to visit ${cityA.name} is ${cityA.culture.bestSeason}. The best time to visit ${cityB.name} is ${cityB.culture.bestSeason}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What should I eat in ${cityA.name} vs ${cityB.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `In ${cityA.name}, must-try foods include ${cityA.culture.mustEat.join(", ")}. In ${cityB.name}, you should try ${cityB.culture.mustEat.join(", ")}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `What is ${cityA.name} known for compared to ${cityB.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${cityA.culture.funFact} ${cityB.culture.funFact}`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Can I take a virtual walk through ${cityA.name} and ${cityB.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Yes. Nearaway offers free 4K virtual walking tours of both ${cityA.name} and ${cityB.name}. No account, no passport required — explore both cities from your screen at nearaway.in.`,
+        },
+      },
+    ],
+  };
+
   const comparisonRows = [
     { label: "Country", a: cityA.country, b: cityB.country },
     { label: "Continent", a: cityA.continent, b: cityB.continent },
+    { label: "Population", a: cityA.population.toLocaleString(), b: cityB.population.toLocaleString() },
     { label: "Best Season", a: cityA.culture.bestSeason, b: cityB.culture.bestSeason },
     { label: "Currency", a: cityA.culture.currency, b: cityB.culture.currency },
     { label: "Greeting", a: cityA.culture.greeting, b: cityB.culture.greeting },
@@ -197,6 +237,10 @@ export default async function ComparePage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="h-full overflow-y-auto bg-void text-white">

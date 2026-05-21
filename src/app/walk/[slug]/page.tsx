@@ -78,8 +78,12 @@ export default async function CityWalkPage({ params }: Props) {
     name: `${city.name} 4K Virtual Walking Tour`,
     description: `An immersive 4K virtual walking tour through ${city.name}, ${city.country}. Explore the streets, culture, and atmosphere of ${city.name} from anywhere in the world.`,
     thumbnailUrl: `https://img.youtube.com/vi/${featuredVideo?.youtubeId}/maxresdefault.jpg`,
-    uploadDate: `${new Date().getFullYear()}-01-01`,
+    // Use per-video publishedAt if known; stable fallback avoids the "Jan 1 current year" false date
+    uploadDate: featuredVideo?.publishedAt ?? "2025-01-01",
     embedUrl: `https://www.youtube.com/embed/${featuredVideo?.youtubeId}`,
+    ...(featuredVideo?.duration && {
+      duration: featuredVideo.duration, // add if populated in cities.json
+    }),
     publisher: {
       "@type": "Organization",
       name: "Nearaway",

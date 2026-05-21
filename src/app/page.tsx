@@ -128,6 +128,35 @@ export default async function HomePage({ searchParams }: Props) {
         initialJourney={initialJourney}
         initialContinent={initialContinent}
       />
+      {/*
+        Server-rendered city index — invisible to users (position absolute, off-screen),
+        fully crawlable by Googlebot. Provides internal links so spiders can discover
+        all /walk/* pages from the homepage without depending on the JS globe.
+      */}
+      <nav aria-label="City walks index" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
+        <h2>Explore cities on Nearaway</h2>
+        <ul>
+          {cities.map((city) => (
+            <li key={city.slug}>
+              <a href={`/walk/${city.slug}`}>{city.name} virtual walk — {city.country}</a>
+            </li>
+          ))}
+        </ul>
+        <h2>Journeys</h2>
+        <ul>
+          {journeys.map((j) => (
+            <li key={j.id}>
+              <a href={`/journeys/${j.id}`}>{j.name} — {j.tagline}</a>
+            </li>
+          ))}
+        </ul>
+        <h2>Explore by continent</h2>
+        <ul>
+          {["asia", "europe", "americas", "africa", "oceania"].map((c) => (
+            <li key={c}><a href={`/continent/${c}`}>Virtual city walks in {c}</a></li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }

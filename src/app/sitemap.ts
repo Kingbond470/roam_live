@@ -6,37 +6,41 @@ import { getFeaturedVideo } from "@/lib/utils";
 const BASE = "https://nearaway.in";
 const CONTINENTS = ["asia", "europe", "americas", "africa", "oceania"];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+// Stable date — updated manually when content changes significantly.
+// Do NOT use new Date() here: every rebuild would mark all pages as "just modified",
+// wasting crawl budget and diluting recrawl signals for pages that actually changed.
+const CONTENT_DATE = new Date("2025-05-01");
+const STATIC_DATE  = new Date("2025-04-01");
 
+export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: BASE,                  lastModified: now, changeFrequency: "daily",   priority: 1.0 },
-    { url: `${BASE}/journeys`,    lastModified: now, changeFrequency: "weekly",   priority: 0.9 },
-    { url: `${BASE}/about`,       lastModified: now, changeFrequency: "monthly",  priority: 0.6 },
+    { url: BASE,                  lastModified: CONTENT_DATE, changeFrequency: "weekly",   priority: 1.0 },
+    { url: `${BASE}/journeys`,    lastModified: CONTENT_DATE, changeFrequency: "monthly",  priority: 0.9 },
+    { url: `${BASE}/about`,       lastModified: STATIC_DATE,  changeFrequency: "monthly",  priority: 0.6 },
   ];
 
   // Journey pages
   const journeyRoutes: MetadataRoute.Sitemap = journeys.map((j) => ({
     url: `${BASE}/journeys/${j.id}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
+    lastModified: CONTENT_DATE,
+    changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   // Continent pages
   const continentRoutes: MetadataRoute.Sitemap = CONTINENTS.map((c) => ({
     url: `${BASE}/continent/${c}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
+    lastModified: CONTENT_DATE,
+    changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   // Country pages
   const countryRoutes: MetadataRoute.Sitemap = getUniqueCountries().map(({ slug }) => ({
     url: `${BASE}/country/${slug}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
+    lastModified: CONTENT_DATE,
+    changeFrequency: "monthly" as const,
     priority: 0.75,
   }));
 
@@ -49,8 +53,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: `${BASE}/walk/${city.slug}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
+      lastModified: CONTENT_DATE,
+      changeFrequency: "monthly" as const,
       priority: 0.9,
       images: thumbnailUrl ? [thumbnailUrl] : undefined,
     };
@@ -89,7 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const compareRoutes: MetadataRoute.Sitemap = [...comparePairs].map((pair) => ({
     url: `${BASE}/compare/${pair}`,
-    lastModified: now,
+    lastModified: STATIC_DATE,
     changeFrequency: "monthly" as const,
     priority: 0.55,
   }));
