@@ -150,11 +150,11 @@ export default async function JourneyDetailPage({ params }: Props) {
 
       <div className="h-full overflow-y-auto bg-void text-white">
         {/* Nav */}
-        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
+        <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 bg-void/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
-            <Globe className="w-5 h-5 text-amber-400" />
+            <Globe className="w-5 h-5 text-ember" />
             <span className="font-bold text-lg tracking-tight">
-              Near<span className="text-amber-400">away</span>
+              Near<span className="text-ember">away</span>
             </span>
           </Link>
           <Link
@@ -180,7 +180,7 @@ export default async function JourneyDetailPage({ params }: Props) {
             Curated Journey
           </p>
           <div className="text-6xl sm:text-8xl mb-5">{journey.emoji}</div>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-3">{journey.name}</h1>
+          <h1 className="font-display text-4xl sm:text-6xl font-normal tracking-tight mb-3">{journey.name}</h1>
           <p className="text-white/50 text-lg max-w-xl mx-auto mb-8">{journey.tagline}</p>
 
           <div className="inline-flex items-center gap-5 sm:gap-8 bg-white/4 border border-white/8 rounded-2xl px-5 sm:px-8 py-3 sm:py-4 mb-8">
@@ -268,7 +268,7 @@ export default async function JourneyDetailPage({ params }: Props) {
                     <div className="flex items-start gap-4 mb-3">
                       <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={40} className="flex-shrink-0 rounded-sm" />
                       <div className="flex-1 min-w-0">
-                        <h2 className="text-xl font-bold text-white group-hover:text-amber-300 transition-colors">
+                        <h2 className="text-xl font-bold text-white group-hover:text-ember transition-colors">
                           {city.name}
                         </h2>
                         <div className="flex items-center gap-2 text-white/40 text-sm mt-0.5">
@@ -371,7 +371,7 @@ export default async function JourneyDetailPage({ params }: Props) {
         {/* CTA */}
         <section className="border-t border-white/6 py-16 px-4 text-center">
           <p className="text-white/40 text-sm mb-3">Ready to walk these cities?</p>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-7">
+          <h2 className="font-display text-2xl sm:text-3xl font-normal tracking-tight mb-7">
             Start the {journey.name} Journey.
           </h2>
           <Link
@@ -388,9 +388,9 @@ export default async function JourneyDetailPage({ params }: Props) {
         {/* Footer */}
         <footer className="border-t border-white/5 py-8 px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Globe className="w-4 h-4 text-amber-400" />
+            <Globe className="w-4 h-4 text-ember" />
             <span className="font-bold tracking-tight">
-              Near<span className="text-amber-400">away</span>
+              Near<span className="text-ember">away</span>
             </span>
           </div>
           <div className="flex items-center justify-center gap-4 text-white/30 text-sm">

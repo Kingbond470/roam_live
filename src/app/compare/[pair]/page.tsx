@@ -246,11 +246,11 @@ export default async function ComparePage({ params }: Props) {
 
       <div className="h-full overflow-y-auto bg-void text-white">
         {/* Nav */}
-        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
+        <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 bg-void/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
-            <Globe className="w-5 h-5 text-amber-400" />
+            <Globe className="w-5 h-5 text-ember" />
             <span className="font-bold text-lg tracking-tight">
-              Near<span className="text-amber-400">away</span>
+              Near<span className="text-ember">away</span>
             </span>
           </Link>
           <Link
@@ -266,7 +266,7 @@ export default async function ComparePage({ params }: Props) {
           {/* Header */}
           <div className="text-center mb-12">
             <p className="text-white/30 text-xs tracking-widest uppercase mb-3">City Comparison</p>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <h1 className="font-display text-2xl sm:text-4xl md:text-5xl font-normal tracking-tight mb-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
               <span>{cityA.flagEmoji} {cityA.name}</span>
               <span className="text-white/20 text-xl sm:text-3xl md:text-4xl">vs</span>
               <span>{cityB.flagEmoji} {cityB.name}</span>
@@ -301,7 +301,7 @@ export default async function ComparePage({ params }: Props) {
                 </div>
                 <Link
                   href={`/?city=${city.slug}`}
-                  className="block text-center py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium hover:bg-amber-500/20 transition-colors"
+                  className="block text-center py-2.5 rounded-xl bg-ember/10 border border-ember/20 text-ember text-sm font-medium hover:bg-ember/20 transition-colors"
                 >
                   Explore {city.name} on Nearaway →
                 </Link>
@@ -358,7 +358,7 @@ export default async function ComparePage({ params }: Props) {
                     {tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm font-medium"
+                        className="px-3 py-1.5 rounded-full bg-ember/10 border border-ember/20 text-ember text-sm font-medium"
                       >
                         {tag}
                       </span>
@@ -374,8 +374,8 @@ export default async function ComparePage({ params }: Props) {
             {[cityA, cityB].map((city) => (
               <div key={city.slug} className="rounded-2xl bg-white/4 border border-white/8 p-5">
                 <div className="flex items-center gap-2 mb-3">
-                  <Utensils className="w-3.5 h-3.5 text-amber-400/80" />
-                  <h2 className="text-xs tracking-widest uppercase text-amber-400/80">
+                  <Utensils className="w-3.5 h-3.5 text-white/30" />
+                  <h2 className="text-xs tracking-widest uppercase text-white/30">
                     Must Eat in {city.name}
                   </h2>
                 </div>
@@ -383,7 +383,7 @@ export default async function ComparePage({ params }: Props) {
                   {city.culture.mustEat.map((food) => (
                     <span
                       key={food}
-                      className="px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm"
+                      className="px-2.5 py-1 rounded-full bg-ember/10 border border-ember/20 text-ember text-sm"
                     >
                       {food}
                     </span>
@@ -398,8 +398,8 @@ export default async function ComparePage({ params }: Props) {
             {[cityA, cityB].map((city) => (
               <div key={city.slug} className="rounded-2xl bg-white/4 border border-white/8 p-5">
                 <div className="flex items-center gap-2 mb-2">
-                  <Lightbulb className="w-3.5 h-3.5 text-amber-400/80" />
-                  <h2 className="text-xs tracking-widest uppercase text-amber-400/80">
+                  <Lightbulb className="w-3.5 h-3.5 text-white/30" />
+                  <h2 className="text-xs tracking-widest uppercase text-white/30">
                     {city.name} Insider Tip
                   </h2>
                 </div>
@@ -413,9 +413,9 @@ export default async function ComparePage({ params }: Props) {
             {[cityA, cityB].map((city) => (
               <div
                 key={city.slug}
-                className="rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20 p-5"
+                className="rounded-2xl bg-gradient-to-br from-ember/10 to-ember/5 border border-ember/20 p-5"
               >
-                <p className="text-xs tracking-widest uppercase text-amber-400 mb-2">
+                <p className="text-xs tracking-widest uppercase text-ember mb-2">
                   {city.flagEmoji} {city.name} Fun Fact
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed">{city.culture.funFact}</p>
@@ -428,7 +428,7 @@ export default async function ComparePage({ params }: Props) {
             <p className="text-white/40 mb-4">Try the live side-by-side comparison in the app</p>
             <Link
               href={`/?city=${cityA.slug}`}
-              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
+              className="inline-flex items-center gap-2 bg-ember hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
             >
               <Globe className="w-4 h-4" />
               Open in Nearaway

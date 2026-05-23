@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   keywords: ["virtual walk", "virtual city walk", "4K walking tour", "virtual travel", "city walk", "travel from home", "free virtual tour"],
   openGraph: {
     title: "Nearaway — Free Virtual City Walks on a 3D Globe",
-    description: "Immersive 4K virtual walks across 62 cities. No passport required.",
+    description: `Immersive 4K virtual walks across ${cities.length} cities. No passport required.`,
     type: "website",
     url: "https://nearaway.in",
     siteName: "Nearaway",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@nearawayin",
     title: "Nearaway — Free Virtual City Walks on a 3D Globe",
-    description: "Immersive 4K virtual walks across 62 cities. No passport required.",
+    description: `Immersive 4K virtual walks across ${cities.length} cities. No passport required.`,
     images: ["/api/og"],
   },
   alternates: {

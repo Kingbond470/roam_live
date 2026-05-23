@@ -8,11 +8,11 @@ export default function NotFound() {
   return (
     <div className="h-full overflow-y-auto bg-void text-white flex flex-col">
       {/* Nav */}
-      <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
+      <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 bg-void/80 backdrop-blur-md border-b border-white/5">
         <Link href="/" className="flex items-center gap-2">
-          <Globe className="w-5 h-5 text-amber-400" />
+          <Globe className="w-5 h-5 text-ember" />
           <span className="font-bold text-lg tracking-tight">
-            Near<span className="text-amber-400">away</span>
+            Near<span className="text-ember">away</span>
           </span>
         </Link>
         <Link
@@ -37,12 +37,12 @@ export default function NotFound() {
           This city isn&apos;t on the map yet.
         </h1>
         <p className="text-white/40 text-base max-w-sm leading-relaxed mb-10">
-          The page you&apos;re looking for doesn&apos;t exist. But 62 cities do — pick one below.
+          The page you&apos;re looking for doesn&apos;t exist. But {cities.length} cities do — pick one below.
         </p>
 
         <Link
           href="/"
-          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors mb-12"
+          className="inline-flex items-center gap-2 bg-ember hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors mb-12"
         >
           <Globe className="w-4 h-4" />
           Open the Globe
@@ -58,7 +58,7 @@ export default function NotFound() {
               <Link
                 key={city.slug}
                 href={`/walk/${city.slug}`}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-amber-500/30 hover:bg-amber-500/5 text-sm text-white/50 hover:text-white transition-colors"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-ember/30 hover:bg-ember/5 text-sm text-white/50 hover:text-white transition-colors"
               >
                 <MapPin className="w-3 h-3" />
                 {city.name}

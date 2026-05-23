@@ -176,11 +176,11 @@ export default async function ContinentPage({ params }: Props) {
 
       <div className="h-full overflow-y-auto bg-void text-white">
         {/* Nav */}
-        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
+        <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 bg-void/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
-            <Globe className="w-5 h-5 text-amber-400" />
+            <Globe className="w-5 h-5 text-ember" />
             <span className="font-bold text-lg tracking-tight">
-              Near<span className="text-amber-400">away</span>
+              Near<span className="text-ember">away</span>
             </span>
           </Link>
           <Link
@@ -201,10 +201,10 @@ export default async function ContinentPage({ params }: Props) {
                 "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(245,158,11,0.07) 0%, transparent 70%)",
             }}
           />
-          <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold mb-4">
+          <p className="text-white/30 text-xs tracking-widest uppercase font-semibold mb-4">
             Virtual Walks
           </p>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
+          <h1 className="font-display text-4xl sm:text-6xl font-normal tracking-tight mb-4">
             {meta.display}
           </h1>
           <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
@@ -213,17 +213,17 @@ export default async function ContinentPage({ params }: Props) {
 
           <div className="inline-flex items-center gap-5 sm:gap-8 bg-white/4 border border-white/8 rounded-2xl px-5 sm:px-8 py-3 sm:py-4 mb-10">
             <div className="text-center">
-              <p className="text-2xl font-bold text-amber-400">{continentCities.length}</p>
+              <p className="text-2xl font-bold text-ember">{continentCities.length}</p>
               <p className="text-white/40 text-xs mt-0.5">Cities</p>
             </div>
             <div className="w-px h-8 bg-white/10" />
             <div className="text-center">
-              <p className="text-2xl font-bold text-amber-400">{countries.length}</p>
+              <p className="text-2xl font-bold text-ember">{countries.length}</p>
               <p className="text-white/40 text-xs mt-0.5">Countries</p>
             </div>
             <div className="w-px h-8 bg-white/10" />
             <div className="text-center">
-              <p className="text-2xl font-bold text-amber-400">{totalVideos}+</p>
+              <p className="text-2xl font-bold text-ember">{totalVideos}+</p>
               <p className="text-white/40 text-xs mt-0.5">Walks</p>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default async function ContinentPage({ params }: Props) {
           <div>
             <Link
               href={`/?continent=${continentLabel}`}
-              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
+              className="inline-flex items-center gap-2 bg-ember hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
             >
               <Globe className="w-4 h-4" />
               Explore {meta.display} on the Globe
@@ -258,11 +258,11 @@ export default async function ContinentPage({ params }: Props) {
               <Link
                 key={city.slug}
                 href={`/walk/${city.slug}`}
-                className="group flex items-center gap-3 rounded-2xl bg-white/[0.03] border border-white/8 p-4 hover:border-amber-500/30 hover:bg-amber-500/5 transition-colors"
+                className="group flex items-center gap-3 rounded-2xl bg-white/[0.03] border border-white/8 p-4 hover:border-ember/30 hover:bg-ember/5 transition-colors"
               >
                 <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={28} />
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-white group-hover:text-amber-300 transition-colors truncate">
+                  <p className="font-semibold text-white group-hover:text-ember transition-colors truncate">
                     {city.name}
                   </p>
                   <p className="text-white/40 text-xs mt-0.5">{city.country}</p>
@@ -281,7 +281,7 @@ export default async function ContinentPage({ params }: Props) {
           <section className="bg-white/[0.02] border-y border-white/6 py-14 px-4 sm:px-6">
             <div className="max-w-5xl mx-auto">
               <div className="flex items-center gap-2 mb-6">
-                <Compass className="w-3.5 h-3.5 text-amber-400/60" />
+                <Compass className="w-3.5 h-3.5 text-white/30" />
                 <p className="text-xs tracking-widest uppercase text-white/30">
                   Journeys through {meta.display}
                 </p>
@@ -299,7 +299,7 @@ export default async function ContinentPage({ params }: Props) {
                     >
                       <span className="text-3xl leading-none">{journey.emoji}</span>
                       <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-white group-hover:text-amber-300 transition-colors">
+                        <p className="font-semibold text-white group-hover:text-ember transition-colors">
                           {journey.name}
                         </p>
                         <p className="text-white/40 text-sm">{journey.tagline}</p>
@@ -330,7 +330,7 @@ export default async function ContinentPage({ params }: Props) {
                   <Link
                     key={country}
                     href={`/country/${countryToSlug(country)}`}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/4 border border-white/8 hover:border-amber-500/30 hover:bg-amber-500/5 text-sm text-white/60 hover:text-white transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/4 border border-white/8 hover:border-ember/30 hover:bg-ember/5 text-sm text-white/60 hover:text-white transition-colors"
                   >
                     <Flag countryCode={sample.countryCode} flagEmoji={sample.flagEmoji} size={16} />
                     <span>{country}</span>
@@ -366,12 +366,12 @@ export default async function ContinentPage({ params }: Props) {
 
         {/* CTA */}
         <section className="border-t border-white/6 py-16 px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-6">
+          <h2 className="font-display text-2xl sm:text-3xl font-normal tracking-tight mb-6">
             Ready to explore {meta.display}?
           </h2>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-7 py-3.5 rounded-full transition-colors"
+            className="inline-flex items-center gap-2 bg-ember hover:bg-amber-400 text-black font-bold px-7 py-3.5 rounded-full transition-colors"
           >
             <Globe className="w-4 h-4" />
             Open the Globe
@@ -382,9 +382,9 @@ export default async function ContinentPage({ params }: Props) {
         {/* Footer */}
         <footer className="border-t border-white/5 py-8 px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Globe className="w-4 h-4 text-amber-400" />
+            <Globe className="w-4 h-4 text-ember" />
             <span className="font-bold tracking-tight">
-              Near<span className="text-amber-400">away</span>
+              Near<span className="text-ember">away</span>
             </span>
           </div>
           <div className="flex items-center justify-center gap-4 text-white/30 text-sm flex-wrap">

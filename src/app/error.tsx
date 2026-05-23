@@ -17,11 +17,11 @@ export default function Error({ error, reset }: Props) {
   return (
     <div className="h-full overflow-y-auto bg-void text-white flex flex-col">
       {/* Nav */}
-      <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
+      <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 bg-void/80 backdrop-blur-md border-b border-white/5">
         <Link href="/" className="flex items-center gap-2">
-          <Globe className="w-5 h-5 text-amber-400" />
+          <Globe className="w-5 h-5 text-ember" />
           <span className="font-bold text-lg tracking-tight">
-            Near<span className="text-amber-400">away</span>
+            Near<span className="text-ember">away</span>
           </span>
         </Link>
         <Link
@@ -52,7 +52,7 @@ export default function Error({ error, reset }: Props) {
         <div className="flex items-center gap-3">
           <button
             onClick={reset}
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
+            className="inline-flex items-center gap-2 bg-ember hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors"
           >
             <RefreshCw className="w-4 h-4" />
             Try again

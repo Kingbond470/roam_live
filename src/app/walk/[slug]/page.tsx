@@ -179,11 +179,11 @@ export default async function CityWalkPage({ params }: Props) {
 
       <div className="h-full overflow-y-auto bg-void text-white">
         {/* Nav */}
-        <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
+        <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 bg-void/80 backdrop-blur-md border-b border-white/5">
           <Link href="/" className="flex items-center gap-2">
-            <Globe className="w-5 h-5 text-amber-400" />
+            <Globe className="w-5 h-5 text-ember" />
             <span className="font-bold text-lg tracking-tight">
-              Near<span className="text-amber-400">away</span>
+              Near<span className="text-ember">away</span>
             </span>
           </Link>
           <Link
@@ -229,7 +229,7 @@ export default async function CityWalkPage({ params }: Props) {
             </div>
             <div>
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name}</h1>
-              <p className="text-amber-400/70 text-xs font-medium tracking-widest uppercase mb-1">Virtual Walk · {city.country}</p>
+              <p className="text-white/30 text-xs font-medium tracking-widest uppercase mb-1">Virtual Walk · {city.country}</p>
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{city.country}</span>
@@ -242,7 +242,7 @@ export default async function CityWalkPage({ params }: Props) {
           {/* CTA */}
           <Link
             href={`/?city=${city.slug}`}
-            className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors mb-10"
+            className="inline-flex items-center gap-3 bg-ember hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm transition-colors mb-10"
           >
             <Globe className="w-4 h-4" />
             Explore {city.name} on Nearaway
@@ -270,7 +270,7 @@ export default async function CityWalkPage({ params }: Props) {
 
             {/* Greeting */}
             <div className="rounded-2xl bg-white/4 border border-white/8 p-5">
-              <h2 className="text-xs tracking-widest uppercase text-amber-400/80 mb-2">Local Greeting</h2>
+              <h2 className="text-xs tracking-widest uppercase text-white/30 mb-2">Local Greeting</h2>
               <p className="text-2xl font-bold mb-1">{city.culture.greeting}</p>
               <p className="text-white/40 text-sm">How locals say hello in {city.name}</p>
             </div>
@@ -278,8 +278,8 @@ export default async function CityWalkPage({ params }: Props) {
             {/* Best Season */}
             <div className="rounded-2xl bg-white/4 border border-white/8 p-5">
               <div className="flex items-center gap-2 mb-2">
-                <Clock className="w-3.5 h-3.5 text-amber-400/80" />
-                <h2 className="text-xs tracking-widest uppercase text-amber-400/80">Best Time to Visit</h2>
+                <Clock className="w-3.5 h-3.5 text-white/30" />
+                <h2 className="text-xs tracking-widest uppercase text-white/30">Best Time to Visit</h2>
               </div>
               <p className="font-semibold">{city.culture.bestSeason}</p>
             </div>
@@ -287,14 +287,14 @@ export default async function CityWalkPage({ params }: Props) {
             {/* Must Eat */}
             <div className="rounded-2xl bg-white/4 border border-white/8 p-5">
               <div className="flex items-center gap-2 mb-3">
-                <Utensils className="w-3.5 h-3.5 text-amber-400/80" />
-                <h2 className="text-xs tracking-widest uppercase text-amber-400/80">Must Eat</h2>
+                <Utensils className="w-3.5 h-3.5 text-white/30" />
+                <h2 className="text-xs tracking-widest uppercase text-white/30">Must Eat</h2>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {city.culture.mustEat.map((food) => (
                   <span
                     key={food}
-                    className="px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm"
+                    className="px-2.5 py-1 rounded-full bg-ember/10 border border-ember/20 text-ember text-sm"
                   >
                     {food}
                   </span>
@@ -305,8 +305,8 @@ export default async function CityWalkPage({ params }: Props) {
             {/* Local Tip */}
             <div className="rounded-2xl bg-white/4 border border-white/8 p-5">
               <div className="flex items-center gap-2 mb-2">
-                <Lightbulb className="w-3.5 h-3.5 text-amber-400/80" />
-                <h2 className="text-xs tracking-widest uppercase text-amber-400/80">Local Tip</h2>
+                <Lightbulb className="w-3.5 h-3.5 text-white/30" />
+                <h2 className="text-xs tracking-widest uppercase text-white/30">Local Tip</h2>
               </div>
               <p className="text-white/80 text-sm leading-relaxed">{city.culture.localTip}</p>
             </div>
@@ -314,15 +314,15 @@ export default async function CityWalkPage({ params }: Props) {
 
           {/* Origin Story */}
           {city.origin && (
-            <div className="rounded-2xl border border-amber-500/20 overflow-hidden mb-8">
-              <div className="flex items-center gap-2.5 px-5 py-3 bg-amber-500/8 border-b border-amber-500/15">
-                <Landmark className="w-4 h-4 text-amber-400/80" />
-                <h2 className="text-xs tracking-widest uppercase text-amber-400/90 font-semibold">Origin Story</h2>
-                <span className="ml-auto text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400/70 border border-amber-500/20 font-medium">
+            <div className="rounded-2xl border border-ember/20 overflow-hidden mb-8">
+              <div className="flex items-center gap-2.5 px-5 py-3 bg-ember/8 border-b border-ember/15">
+                <Landmark className="w-4 h-4 text-white/40" />
+                <h2 className="text-xs tracking-widest uppercase text-white/50 font-semibold">Origin Story</h2>
+                <span className="ml-auto text-[10px] px-2 py-0.5 rounded-full bg-ember/15 text-ember/70 border border-ember/20 font-medium">
                   {city.origin.era}
                 </span>
               </div>
-              <div className="px-5 py-4 bg-amber-500/4">
+              <div className="px-5 py-4 bg-ember/4">
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/40 mb-3">
                   <span>📅 Founded {city.origin.founded}</span>
                   {city.origin.originalName && (
@@ -336,10 +336,10 @@ export default async function CityWalkPage({ params }: Props) {
           )}
 
           {/* Fun Fact */}
-          <div className="rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20 p-5 mb-8">
+          <div className="rounded-2xl bg-gradient-to-br from-ember/10 to-ember/5 border border-ember/20 p-5 mb-8">
             <div className="flex items-center gap-2 mb-2">
-              <Star className="w-3.5 h-3.5 text-amber-400" />
-              <h2 className="text-xs tracking-widest uppercase text-amber-400 flex-1">Fun Fact</h2>
+              <Star className="w-3.5 h-3.5 text-ember" />
+              <h2 className="text-xs tracking-widest uppercase text-ember flex-1">Fun Fact</h2>
               <ShareButton citySlug={city.slug} cityName={city.name} flagEmoji={city.flagEmoji} />
             </div>
             <p className="text-white/90 leading-relaxed">{city.culture.funFact}</p>
@@ -377,7 +377,7 @@ export default async function CityWalkPage({ params }: Props) {
               <h2 className="text-xs tracking-widest uppercase text-white/30">Explore More Cities</h2>
               <Link
                 href={`/continent/${city.continent.toLowerCase()}`}
-                className="text-xs text-amber-400/60 hover:text-amber-400 transition-colors"
+                className="text-xs text-white/35 hover:text-ember transition-colors"
               >
                 All {city.continent} cities →
               </Link>
@@ -407,7 +407,7 @@ export default async function CityWalkPage({ params }: Props) {
               Nearaway — A window to every place on Earth
             </p>
             <div className="flex items-center justify-center gap-5 text-sm">
-              <Link href="/" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-medium transition-colors">
+              <Link href="/" className="inline-flex items-center gap-2 text-ember hover:text-amber-400 font-medium transition-colors">
                 <Globe className="w-4 h-4" />
                 Open the Globe
               </Link>
