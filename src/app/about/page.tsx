@@ -21,9 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "city walks no passport",
       "travel from home",
     ],
-    alternates: {
-      canonical: "https://nearaway.in/about",
-    },
+    alternates: { canonical: "https://nearaway.in/about" },
     openGraph: {
       title: "About Nearaway — A Window to Every Place on Earth",
       description: `Explore ${cityCount} cities across ${continentCount} continents with 4K walks and deep cultural insight.`,
@@ -145,268 +143,229 @@ export default function AboutPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
-      />
-    <div className="h-full overflow-y-auto bg-void text-white">
-      {/* Nav */}
-      <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-void/80 backdrop-blur-md border-b border-white/5">
-        <Link href="/" className="flex items-center gap-2">
-          <Globe className="w-5 h-5 text-amber-400" />
-          <span className="font-bold text-lg tracking-tight">
-            Near<span className="text-amber-400">away</span>
-          </span>
-        </Link>
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Globe
-        </Link>
-      </nav>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
 
-      {/* ── Hero ── */}
-      <section className="relative pt-32 pb-24 px-4 sm:px-6 text-center overflow-hidden">
-        {/* Ambient glow */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(245,158,11,0.08) 0%, transparent 70%)",
-          }}
-        />
+      <div className="h-full overflow-y-auto bg-void text-white">
 
-        <p className="text-amber-400/80 text-xs tracking-widest uppercase font-semibold mb-5">
-          A window to every place on Earth
-        </p>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6 max-w-4xl mx-auto">
-          The world is{" "}
-          <span className="text-amber-400">open</span>
-          .<br />
-          Step inside.
-        </h1>
-        <p className="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-          Nearaway turns any device into a window onto the world's streets —
-          immersive 4K city walks, real local culture, and the freedom to explore
-          without a flight.
-        </p>
-
-        <Link
-          href="/"
-          className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-bold px-7 py-3.5 rounded-full text-sm transition-colors"
-        >
-          <Globe className="w-4 h-4" />
-          Open the Globe
-        </Link>
-
-        {/* Objection handler — most important trust signal */}
-        <div className="flex items-center justify-center gap-3 mt-5 flex-wrap">
-          {["No account", "No download", "No passport"].map((item, i, arr) => (
-            <span key={item} className="flex items-center gap-3">
-              <span className="text-white/35 text-sm">{item}</span>
-              {i < arr.length - 1 && <span className="w-1 h-1 rounded-full bg-white/20" />}
+        {/* ── Nav — fixed 64px ── */}
+        <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 sm:px-8 bg-void/80 backdrop-blur-md border-b border-white/5">
+          <Link href="/" className="flex items-center gap-2">
+            <Globe className="w-5 h-5 text-ember" />
+            <span className="font-bold text-lg tracking-tight">
+              Near<span className="text-ember">away</span>
             </span>
-          ))}
-        </div>
-      </section>
+          </Link>
+          <Link href="/" className="flex items-center gap-2 text-white/50 hover:text-white text-sm transition-colors">
+            <ArrowLeft className="w-4 h-4" />
+            Globe
+          </Link>
+        </nav>
 
-      {/* ── Stats bar ── */}
-      <section className="border-y border-white/6 py-10 px-4">
-        <div className="max-w-3xl mx-auto grid grid-cols-3 gap-4 text-center">
-          <div>
-            <p className="text-3xl sm:text-5xl font-bold text-amber-400 tracking-tight">
-              {cityCount}
-            </p>
-            <p className="text-white/40 text-sm mt-1">Cities</p>
-          </div>
-          <div>
-            <p className="text-3xl sm:text-5xl font-bold text-amber-400 tracking-tight">
-              {continentCount}
-            </p>
-            <p className="text-white/40 text-sm mt-1">Continents</p>
-          </div>
-          <div>
-            <p className="text-3xl sm:text-5xl font-bold text-amber-400 tracking-tight">
-              {totalVideos}+
-            </p>
-            <p className="text-white/40 text-sm mt-1">Walks</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why Nearaway ── */}
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
-        <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold mb-5">
-          Why we built this
-        </p>
-        <h2 className="text-2xl sm:text-4xl font-bold tracking-tight mb-6">
-          Most people will never visit most places.
-        </h2>
-        <p className="text-white/55 text-base sm:text-lg leading-relaxed mb-5">
-          Cost, time, health, responsibility — there are a thousand reasons a trip doesn't happen.
-          But curiosity doesn't stop. The urge to know what it feels like to walk through
-          Marrakech at dusk, or cross Shibuya at midnight, or wander along the Seine on a grey morning — that stays.
-        </p>
-        <p className="text-white/55 text-base sm:text-lg leading-relaxed">
-          Nearaway was built for that curiosity. Not as a replacement for travel, but as a
-          companion to it — a place to preview, revisit, or simply wander without a reason.
-        </p>
-      </section>
-
-      {/* ── How it works ── */}
-      <section className="bg-white/[0.02] border-y border-white/6 py-20 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold text-center mb-12">
-            How it works
+        {/* ── Hero ── */}
+        <section className="relative pt-36 pb-24 px-4 sm:px-8 text-center overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(245,158,11,0.07) 0%, transparent 70%)" }}
+          />
+          <p className="text-white/35 text-xs tracking-[0.15em] uppercase font-medium mb-6">
+            A window to every place on Earth
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {STEPS.map((step) => (
-              <div key={step.number} className="relative">
-                <span
-                  className="block text-6xl sm:text-7xl font-bold tracking-tighter mb-4 leading-none"
-                  style={{ color: "rgba(245,158,11,0.12)" }}
-                >
-                  {step.number}
-                </span>
-                <h3 className="text-lg font-bold mb-2 -mt-2">{step.title}</h3>
-                <p className="text-white/45 text-sm leading-relaxed">{step.description}</p>
+          {/* font-display from --font-display theme token (Lora serif, weight 400) */}
+          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl font-normal tracking-tight leading-[1.05] mb-6 max-w-4xl mx-auto">
+            The world is <span className="text-ember">open</span>.<br />
+            Step inside.
+          </h1>
+          <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+            Nearaway turns any device into a window onto the world&rsquo;s streets —
+            immersive 4K city walks, real local culture, and the freedom to explore without a flight.
+          </p>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-3 bg-ember hover:bg-amber-400 text-black font-bold px-8 py-3.5 rounded-full text-sm transition-colors"
+          >
+            <Globe className="w-4 h-4" />
+            Open the Globe
+          </Link>
+          {/* Trust signal pill badges */}
+          <div className="flex items-center justify-center gap-2 mt-6 flex-wrap">
+            {["No account", "No download", "No passport"].map((item) => (
+              <span key={item} className="px-3 py-1 rounded-full text-xs text-white/40 border border-white/8 bg-surface-1">
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Stats bar ── */}
+        <section className="border-y border-white/6 py-12 px-4">
+          <div className="max-w-3xl mx-auto grid grid-cols-3 gap-4 text-center">
+            {[
+              { value: cityCount, label: "Cities" },
+              { value: continentCount, label: "Continents" },
+              { value: `${totalVideos}+`, label: "Walks" },
+            ].map(({ value, label }) => (
+              <div key={label}>
+                <p className="text-4xl sm:text-5xl font-bold text-ember tracking-tight">{value}</p>
+                <p className="text-white/35 text-xs tracking-widest uppercase mt-2">{label}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Features ── */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
-        <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold text-center mb-12">
-          What's inside
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {FEATURES.map((f) => {
-            const inner = (
-              <>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
-                    <f.icon className="w-4 h-4 text-amber-400" />
-                  </div>
-                  <h3 className="font-semibold text-sm">{f.title}</h3>
-                  {f.href && (
-                    <span className="ml-auto text-amber-400/50 text-xs">Try it →</span>
-                  )}
-                </div>
-                <p className="text-white/45 text-sm leading-relaxed">{f.description}</p>
-              </>
-            );
-            return f.href ? (
-              <Link
-                key={f.title}
-                href={f.href}
-                className="rounded-2xl bg-white/[0.03] border border-white/8 p-5 hover:border-amber-500/30 hover:bg-amber-500/5 transition-colors block"
-              >
-                {inner}
-              </Link>
-            ) : (
-              <div
-                key={f.title}
-                className="rounded-2xl bg-white/[0.03] border border-white/8 p-5 hover:border-white/16 transition-colors"
-              >
-                {inner}
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* ── Cities by continent ── */}
-      <section className="bg-white/[0.02] border-y border-white/6 py-20 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-amber-400/70 text-xs tracking-widest uppercase font-semibold text-center mb-3">
-            Explore the world
-          </p>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-12">
-            {cityCount} cities across {continentCount} continents
+        {/* ── Why Nearaway ── */}
+        <section className="max-w-3xl mx-auto px-4 sm:px-8 py-24 text-center">
+          <p className="text-white/30 text-xs tracking-[0.15em] uppercase font-medium mb-6">Why we built this</p>
+          <h2 className="font-display text-3xl sm:text-5xl font-normal tracking-tight mb-8 leading-[1.1]">
+            Most people will never visit most places.
           </h2>
+          <p className="text-white/60 text-base sm:text-lg leading-relaxed mb-5">
+            Cost, time, health, responsibility — there are a thousand reasons a trip doesn&rsquo;t happen.
+            But curiosity doesn&rsquo;t stop. The urge to know what it feels like to walk through
+            Marrakech at dusk, or cross Shibuya at midnight, or wander along the Seine on a grey morning — that stays.
+          </p>
+          <p className="text-white/60 text-base sm:text-lg leading-relaxed">
+            Nearaway was built for that curiosity. Not as a replacement for travel, but as a
+            companion to it — a place to preview, revisit, or simply wander without a reason.
+          </p>
+        </section>
 
-          <div className="flex flex-col gap-6">
-            {citiesByContinent.map(({ continent, cities: cs }) => (
-              <div key={continent}>
-                <div className="flex items-center gap-3 mb-3">
-                  <MapPin className="w-3.5 h-3.5 text-amber-400/60" />
-                  <span className="text-xs text-amber-400/70 uppercase tracking-widest font-semibold">
-                    {continent}
+        {/* ── How it works ── */}
+        <section className="bg-surface-1 border-y border-surface-border py-24 px-4 sm:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-white/30 text-xs tracking-[0.15em] uppercase font-medium text-center mb-14">
+              How it works
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {STEPS.map((step) => (
+                <div key={step.number}>
+                  <span
+                    className="font-display block text-7xl sm:text-8xl font-bold tracking-tighter mb-4 leading-none select-none"
+                    style={{ color: "rgba(245,158,11,0.10)" }}
+                  >
+                    {step.number}
                   </span>
-                  <span className="text-white/20 text-xs">{cs.length} cities</span>
+                  <h3 className="text-base font-semibold mb-2 -mt-2">{step.title}</h3>
+                  <p className="text-white/45 text-sm leading-relaxed">{step.description}</p>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {cs.map((city) => (
-                    <Link
-                      key={city.slug}
-                      href={`/walk/${city.slug}`}
-                      className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/4 border border-white/8 hover:border-amber-500/30 hover:bg-amber-500/5 text-sm text-white/60 hover:text-white transition-colors"
-                    >
-                      <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={16} />
-                      <span>{city.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Manifesto ── */}
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 py-24 text-center">
-        <p className="text-white/70 text-lg sm:text-xl leading-relaxed italic">
-          "We believe the world is better when it feels closer. When you can
-          walk a foreign street before you arrive — or long after you've left —
-          something shifts. You stop seeing distant places as abstract.
-          They become real."
-        </p>
-        <p className="text-white/25 text-sm mt-6">— The Nearaway team</p>
-      </section>
+        {/* ── Features — 24px card padding, consistent radius ── */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-8 py-24">
+          <p className="text-white/30 text-xs tracking-[0.15em] uppercase font-medium text-center mb-14">
+            What&rsquo;s inside
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {FEATURES.map((f) => {
+              const inner = (
+                <>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <f.icon className="w-4 h-4 text-white/55" />
+                    </div>
+                    <h3 className="font-semibold text-sm text-white">{f.title}</h3>
+                    {f.href && <span className="ml-auto text-ember/50 text-xs">Try it →</span>}
+                  </div>
+                  <p className="text-white/45 text-sm leading-relaxed">{f.description}</p>
+                </>
+              );
+              return f.href ? (
+                <Link
+                  key={f.title}
+                  href={f.href}
+                  className="rounded-2xl bg-surface-1 border border-surface-border p-6 hover:border-ember/25 hover:bg-surface-2 transition-colors block"
+                >
+                  {inner}
+                </Link>
+              ) : (
+                <div key={f.title} className="rounded-2xl bg-surface-1 border border-surface-border p-6">
+                  {inner}
+                </div>
+              );
+            })}
+          </div>
+        </section>
 
-      {/* ── CTA ── */}
-      <section className="border-t border-white/6 py-20 px-4 text-center">
-        <p className="text-white/40 text-sm mb-3">Ready to explore?</p>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-8">
-          Pick a city. Any city.
-        </h2>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-4 rounded-full transition-colors"
-        >
-          <Globe className="w-5 h-5" />
-          Open the Globe
-        </Link>
-        <p className="text-white/20 text-xs mt-6">
-          No account. No download. No passport.
-        </p>
-      </section>
+        {/* ── Cities by continent ── */}
+        <section className="bg-surface-1 border-y border-surface-border py-24 px-4 sm:px-8">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-white/30 text-xs tracking-[0.15em] uppercase font-medium text-center mb-4">
+              Explore the world
+            </p>
+            <h2 className="font-display text-2xl sm:text-4xl font-normal tracking-tight text-center mb-14 leading-[1.1]">
+              {cityCount} cities across {continentCount} continents
+            </h2>
+            <div className="flex flex-col gap-8">
+              {citiesByContinent.map(({ continent, cities: cs }) => (
+                <div key={continent}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-xs text-white/35 uppercase tracking-[0.15em] font-medium">{continent}</span>
+                    <span className="text-white/15 text-xs">{cs.length} cities</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {cs.map((city) => (
+                      <Link
+                        key={city.slug}
+                        href={`/walk/${city.slug}`}
+                        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/8 hover:border-ember/30 hover:bg-white/[0.07] text-sm text-white/55 hover:text-white/90 transition-colors"
+                      >
+                        <Flag countryCode={city.countryCode} flagEmoji={city.flagEmoji} size={16} />
+                        <span>{city.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/5 py-8 px-4 text-center">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <Globe className="w-4 h-4 text-amber-400" />
-          <span className="font-bold tracking-tight">
-            Near<span className="text-amber-400">away</span>
-          </span>
-        </div>
-        <div className="flex items-center justify-center gap-4 text-white/30 text-sm">
-          <Link href="/" className="hover:text-white transition-colors">Globe</Link>
-          <span>·</span>
-          <Link href="/about" className="hover:text-white transition-colors text-white/50">About</Link>
-          <span>·</span>
-          <Link href="/journeys" className="hover:text-white transition-colors">Journeys</Link>
-        </div>
-      </footer>
-    </div>
+        {/* ── Manifesto ── */}
+        <section className="max-w-2xl mx-auto px-4 sm:px-8 py-24 text-center">
+          <p className="font-display text-white/65 text-xl sm:text-2xl leading-relaxed font-normal">
+            &ldquo;We believe the world is better when it feels closer. When you can
+            walk a foreign street before you arrive — or long after you&rsquo;ve left —
+            something shifts. You stop seeing distant places as abstract. They become real.&rdquo;
+          </p>
+          <p className="text-white/20 text-sm mt-8 tracking-wide">— The Nearaway team</p>
+        </section>
+
+        {/* ── CTA band ── */}
+        <section className="border-t border-white/6 py-24 px-4 text-center">
+          <p className="text-white/35 text-sm mb-4 tracking-wide">Ready to explore?</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-normal tracking-tight mb-10 leading-[1.1]">
+            Pick a city. Any city.
+          </h2>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-3 bg-ember hover:bg-amber-400 text-black font-bold px-9 py-4 rounded-full transition-colors"
+          >
+            <Globe className="w-5 h-5" />
+            Open the Globe
+          </Link>
+          <p className="text-white/20 text-xs mt-8 tracking-widest uppercase">
+            No account &middot; No download &middot; No passport
+          </p>
+        </section>
+
+        {/* ── Footer ── */}
+        <footer className="border-t border-white/5 py-10 px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-5">
+            <Globe className="w-4 h-4 text-ember" />
+            <span className="font-bold tracking-tight">Near<span className="text-ember">away</span></span>
+          </div>
+          <div className="flex items-center justify-center gap-5 text-white/30 text-sm">
+            <Link href="/" className="hover:text-white transition-colors">Globe</Link>
+            <span className="text-white/10">·</span>
+            <Link href="/about" className="hover:text-white transition-colors text-white/50">About</Link>
+            <span className="text-white/10">·</span>
+            <Link href="/journeys" className="hover:text-white transition-colors">Journeys</Link>
+          </div>
+        </footer>
+      </div>
     </>
   );
 }

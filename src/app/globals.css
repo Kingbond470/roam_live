@@ -10,9 +10,14 @@
   --color-surface: rgba(10, 10, 15, 0.85);
 
   /* Fonts */
-  --font-serif: "Georgia", "Times New Roman", serif;
+  --font-display: var(--font-lora), Georgia, serif;
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Surface tokens — three-level elevation system */
+  --color-surface-1: rgba(255, 255, 255, 0.03);
+  --color-surface-2: rgba(255, 255, 255, 0.05);
+  --color-surface-border: rgba(255, 255, 255, 0.09);
 
   /* Animations */
   --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
