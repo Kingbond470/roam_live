@@ -9,7 +9,7 @@ const CONTINENTS = ["asia", "europe", "americas", "africa", "oceania"];
 // Stable date — updated manually when content changes significantly.
 // Do NOT use new Date() here: every rebuild would mark all pages as "just modified",
 // wasting crawl budget and diluting recrawl signals for pages that actually changed.
-const CONTENT_DATE = new Date("2025-05-01");
+const CONTENT_DATE = new Date("2025-06-24");
 const STATIC_DATE  = new Date("2025-04-01");
 
 export default function sitemap(): MetadataRoute.Sitemap {

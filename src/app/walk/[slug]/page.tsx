@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cities, getCityBySlug } from "@/lib/cities";
 import { getFeaturedVideo } from "@/lib/utils";
+import { journeys } from "@/data/journeys";
 import { Globe, ArrowLeft, MapPin, Clock, Utensils, Lightbulb, Star, Landmark } from "lucide-react";
 import { ShareButton } from "@/components/hud/ShareButton";
 import { Flag } from "@/components/ui/Flag";
@@ -22,7 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city) return {};
 
   const title = `Virtual Walk: ${city.name} — Free 4K Walking Tour | Nearaway`;
-  const description = `Take a free virtual walk through ${city.name}, ${city.country}. Immersive 4K street-level footage, cultural insights, local tips. No passport, no account required.`;
+  const funFactFirst = city.culture.funFact.split(".")[0].trim();
+  const description = `${funFactFirst}. Free 4K virtual walk through ${city.name}, ${city.country} — cultural insights, local food, no passport required.`;
 
   return {
     title,
@@ -33,6 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${city.name} 4K walk`,
       `${city.country} virtual tour`,
       `explore ${city.name} online`,
+      `things to do in ${city.name}`,
+      `${city.name} travel tips`,
+      `${city.name} culture guide`,
       "virtual travel",
       "4K city walk",
     ],
@@ -70,6 +75,7 @@ export default async function CityWalkPage({ params }: Props) {
   if (!city) notFound();
 
   const featuredVideo = getFeaturedVideo(city);
+  const cityJourneys = journeys.filter((j) => j.citySlugOrder.includes(city.slug));
 
   // JSON-LD structured data
   const videoJsonLd = {
@@ -83,6 +89,14 @@ export default async function CityWalkPage({ params }: Props) {
     embedUrl: `https://www.youtube.com/embed/${featuredVideo?.youtubeId}`,
     ...(featuredVideo?.duration && {
       duration: featuredVideo.duration, // add if populated in cities.json
+    }),
+    isAccessibleForFree: true,
+    ...(cityJourneys.length > 0 && {
+      isPartOf: cityJourneys.map((j) => ({
+        "@type": "ItemList",
+        name: j.name,
+        url: `https://nearaway.in/journeys/${j.id}`,
+      })),
     }),
     publisher: {
       "@type": "Organization",
@@ -370,6 +384,29 @@ export default async function CityWalkPage({ params }: Props) {
               </ul>
             </div>
           </div>
+
+          {/* Journeys featuring this city */}
+          {cityJourneys.length > 0 && (
+            <div className="border-t border-white/8 pt-8 mb-8">
+              <h2 className="text-xs tracking-widest uppercase text-white/30 mb-4">Part of These Journeys</h2>
+              <div className="flex flex-col gap-2">
+                {cityJourneys.map((journey) => (
+                  <Link
+                    key={journey.id}
+                    href={`/journeys/${journey.id}`}
+                    className="group flex items-center gap-3 rounded-2xl bg-white/[0.03] border border-white/8 px-4 py-3 hover:border-white/20 transition-colors"
+                  >
+                    <span className="text-2xl leading-none flex-shrink-0">{journey.emoji}</span>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-white group-hover:text-ember transition-colors text-sm">{journey.name}</p>
+                      <p className="text-white/40 text-xs mt-0.5">{journey.tagline}</p>
+                    </div>
+                    <span className="text-white/25 text-xs flex-shrink-0">{journey.citySlugOrder.length} cities →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* More cities */}
           <div className="border-t border-white/8 pt-8">
