@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Globe, ArrowLeft, MapPin, Film, Utensils, Clock } from "lucide-react";
 import { Flag } from "@/components/ui/Flag";
 import { cities, getCitiesByCountry, getUniqueCountries, countryToSlug } from "@/lib/cities";
+import { journeys } from "@/data/journeys";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -128,6 +129,12 @@ export default async function CountryPage({ params }: Props) {
     .filter((c) => c.continent === continent && c.slug !== slug)
     .slice(0, 6);
 
+  // Journeys that include at least one city from this country
+  const countrySlugs = new Set(countryCities.map((c) => c.slug));
+  const countryJourneys = journeys.filter((j) =>
+    j.citySlugOrder.some((s) => countrySlugs.has(s))
+  );
+
   const firstVideo = countryCities[0]?.videos[0];
   const jsonLd = {
     "@context": "https://schema.org",
@@ -237,7 +244,7 @@ export default async function CountryPage({ params }: Props) {
               <Flag countryCode={countryCities[0].countryCode} flagEmoji={flagEmoji} size={96} className="rounded-md shadow-lg" />
             </span>
           </div>
-          <h1 className="font-display text-4xl sm:text-6xl font-normal tracking-tight mb-3">{country}</h1>
+          <h1 className="font-display text-4xl sm:text-6xl font-normal tracking-tight mb-3">{country} Virtual Walks</h1>
           {COUNTRY_TAGLINES[country] && (
             <p className="text-white/50 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-4 italic">
               {COUNTRY_TAGLINES[country]}
@@ -358,6 +365,42 @@ export default async function CountryPage({ params }: Props) {
                     {food}
                   </span>
                 ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Journeys through this country */}
+        {countryJourneys.length > 0 && (
+          <section className="bg-white/[0.02] border-y border-white/6 py-12 px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xs tracking-widest uppercase text-white/30 mb-5">
+                Journeys through {country}
+              </p>
+              <div className="flex flex-col gap-3">
+                {countryJourneys.map((journey) => {
+                  const citiesHere = journey.citySlugOrder
+                    .map((s) => countryCities.find((c) => c.slug === s))
+                    .filter(Boolean) as typeof countryCities;
+                  return (
+                    <Link
+                      key={journey.id}
+                      href={`/journeys/${journey.id}`}
+                      className="group flex items-center gap-4 rounded-2xl bg-white/[0.03] border border-white/8 p-4 hover:border-white/20 transition-colors"
+                    >
+                      <span className="text-3xl leading-none">{journey.emoji}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-white group-hover:text-ember transition-colors">{journey.name}</p>
+                        <p className="text-white/40 text-sm">{journey.tagline}</p>
+                      </div>
+                      {citiesHere.length > 0 && (
+                        <p className="text-xs text-white/30 hidden sm:block flex-shrink-0">
+                          {citiesHere.map((c) => c.name).join(", ")}
+                        </p>
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </section>

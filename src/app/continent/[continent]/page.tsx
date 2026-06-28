@@ -205,7 +205,7 @@ export default async function ContinentPage({ params }: Props) {
             Virtual Walks
           </p>
           <h1 className="font-display text-4xl sm:text-6xl font-normal tracking-tight mb-4">
-            {meta.display}
+            {meta.display} Virtual Walks
           </h1>
           <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
             {meta.hero}

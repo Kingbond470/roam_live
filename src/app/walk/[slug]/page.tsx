@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { cities, getCityBySlug } from "@/lib/cities";
+import { cities, getCityBySlug, countryToSlug } from "@/lib/cities";
 import { getFeaturedVideo } from "@/lib/utils";
 import { journeys } from "@/data/journeys";
 import { Globe, ArrowLeft, MapPin, Clock, Utensils, Lightbulb, Star, Landmark } from "lucide-react";
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `Virtual Walk: ${city.name} — Free 4K Walking Tour | Nearaway`;
+  const title = `${city.name} Virtual Walk — Free 4K Tour | Nearaway`;
   const funFactFirst = city.culture.funFact.split(".")[0].trim();
   const description = `${funFactFirst}. Free 4K virtual walk through ${city.name}, ${city.country} — cultural insights, local food, no passport required.`;
 
@@ -30,11 +30,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     keywords: [
+      `${city.name} virtual walk`,
       `${city.name} walking tour`,
       `virtual walk ${city.name}`,
       `${city.name} 4K walk`,
       `${city.country} virtual tour`,
-      `explore ${city.name} online`,
+      `${city.name} travel guide`,
       `things to do in ${city.name}`,
       `${city.name} travel tips`,
       `${city.name} culture guide`,
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `https://nearaway.in/walk/${city.slug}`,
     },
     openGraph: {
-      title: `Virtual Walk: ${city.name} — Free 4K Walking Tour | Nearaway`,
+      title,
       description,
       type: "video.other",
       url: `https://nearaway.in/walk/${city.slug}`,
@@ -55,15 +56,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: `/api/og?city=${city.slug}`,
           width: 1200,
           height: 630,
-          alt: `Virtual walk through ${city.name}, ${city.country}`,
+          alt: `${city.name} virtual walk — 4K street-level footage, ${city.country}`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       site: "@nearawayin",
-      title: `${city.flagEmoji} Walk ${city.name} — Free 4K Virtual Tour`,
-      description: `Explore ${city.name} from your couch. Immersive 4K walking tour with cultural insights. #VirtualTravel #${city.name.replace(/\s+/g, "")}`,
+      title: `${city.flagEmoji} ${city.name} Virtual Walk — Free 4K Tour`,
+      description: `${funFactFirst}. Explore ${city.name} in immersive 4K — no passport required.`,
       images: [`/api/og?city=${city.slug}`],
     },
   };
@@ -242,13 +243,12 @@ export default async function CityWalkPage({ params }: Props) {
               </span>
             </div>
             <div>
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name}</h1>
-              <p className="text-white/30 text-xs font-medium tracking-widest uppercase mb-1">Virtual Walk · {city.country}</p>
-              <div className="flex items-center gap-2 text-white/50 text-sm">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-1">{city.name} Virtual Walk</h1>
+              <div className="flex items-center gap-2 text-white/50 text-sm mt-1">
                 <MapPin className="w-3.5 h-3.5" />
-                <span>{city.country}</span>
+                <Link href={`/country/${countryToSlug(city.country)}`} className="hover:text-ember transition-colors">{city.country}</Link>
                 <span className="w-px h-3 bg-white/20" />
-                <span>{city.continent}</span>
+                <Link href={`/continent/${city.continent.toLowerCase()}`} className="hover:text-ember transition-colors">{city.continent}</Link>
               </div>
             </div>
           </div>
@@ -265,17 +265,19 @@ export default async function CityWalkPage({ params }: Props) {
           {/* SEO Intro — server-rendered text for Google snippets */}
           <div className="mb-8 text-white/65 leading-relaxed space-y-3 text-sm sm:text-base">
             <p>
-              Take a free virtual walk through {city.name}, {city.country} — no passport, no flights, no account required.
-              Nearaway streams immersive 4K walking tour footage from {city.name}&apos;s streets, letting you explore
-              {" "}{city.continent}&apos;s cities from anywhere in the world.
-              {city.videos && city.videos.length > 1 && ` Choose from ${city.videos.length} different walking tour videos across the city.`}
+              Take a free virtual walking tour through {city.name}, {city.country} — home to {city.population.toLocaleString("en")} people
+              and one of {city.continent}&apos;s most remarkable cities.
+              Nearaway streams immersive 4K street-level footage from {city.name}, letting you explore its
+              neighbourhoods, culture, and atmosphere from anywhere in the world — no passport, no flights, no account required.
+              {city.videos && city.videos.length > 1 && ` This virtual walk collection includes ${city.videos.length} different 4K walking tour videos across ${city.name}.`}
             </p>
             {city.origin?.story && (
               <p>{city.origin.story}</p>
             )}
             <p>
-              {city.culture.funFact} The best time for a virtual walk through {city.name} is {city.culture.bestSeason.toLowerCase()}.
-              Must-try local foods include {city.culture.mustEat.slice(0, 3).join(", ")}.
+              {city.culture.funFact} The best time to take a virtual walk through {city.name} is {city.culture.bestSeason.toLowerCase()}.
+              Must-try local foods in {city.name} include {city.culture.mustEat.slice(0, 3).join(", ")}.
+              {" "}{city.culture.localTip}
             </p>
           </div>
 
